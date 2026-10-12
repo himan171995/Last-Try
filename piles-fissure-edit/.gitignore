@@ -1,0 +1,9 @@
+# Source footage and anything derived from it stay local (this repo is public).
+*.mp4
+*.mov
+*.webm
+*.wav
+*.m4a
+transcript/
+renders/
+.hyperframes/
