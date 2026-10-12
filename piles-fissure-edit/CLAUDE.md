@@ -2,8 +2,9 @@
 
 ## This environment (Claude Code cloud sessions)
 
-- **No CDN access from the renderer.** Chrome inside `check`/`render` cannot reach jsdelivr or Google Fonts. Load GSAP from `vendor/gsap.min.js` and fonts from `assets/fonts/` via `@font-face` (Inter, Noto Sans Devanagari 500/700/800). Vendor any new library or font the same way (`npm pack <pkg>` works).
+- **No CDN access from the renderer.** Chrome inside `check`/`render` cannot reach jsdelivr or Google Fonts. Load GSAP from `vendor/gsap.min.js` and fonts from `assets/fonts/` via `@font-face` (Fraunces for display, Montserrat for captions and labels). Vendor any new library or font the same way (`npm pack <pkg>` works).
 - **No HuggingFace access**, so `hyperframes init --video` / `transcribe` cannot fetch Whisper models. Transcribe with `python3 -I ../tools/transcribe.py source.mp4 transcript/hi-segments.json --lang hi` after `../tools/fetch-asr-model.sh`.
+- **`index.html` and `compositions/` are generated** by `build/compose.py` (see `build/README.md`). Change the generator or `build/transcript.py`, then run `python3 build/edl.py && python3 build/compose.py`.
 - **Source footage is not committed** (public repo). `source.mp4`, `transcript/` and `renders/` are gitignored; re-upload the footage into this folder as `source.mp4` in a new session.
 
 ## Skills — USE THESE FIRST

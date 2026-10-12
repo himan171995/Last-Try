@@ -6,11 +6,12 @@ Video editing with [HyperFrames](https://github.com/heygen-com/hyperframes) (HTM
 
 | Path | What it is |
 | --- | --- |
-| `piles-fissure-edit/` | HyperFrames project for the piles & fissure Q&A video (1920×1080, 30fps). |
+| `piles-fissure-edit/` | HyperFrames project for the piles & fissure Q&A video (1920×1080, 30fps, ~74s). Generated from `piles-fissure-edit/build/` (see its README). |
 | `.claude/skills/` | HyperFrames agent skills (v0.8.149): router `hyperframes`, `talking-head-recut`, `embedded-captions`, and the domain skills. |
 | `.claude/hooks/session-start.sh` | Cloud-session setup: HyperFrames CLI, Chrome Headless Shell, sherpa-onnx. |
 | `tools/transcribe.py` | Whisper transcription that handles Hindi (Devanagari) correctly. |
 | `tools/fetch-asr-model.sh` | Downloads the Whisper turbo ONNX model (~560 MB) from GitHub releases. |
+| `tools/make_music_bed.py` | Generates the royalty-free music bed (tanpura drone, pads, plucks). |
 
 ## Workflow
 

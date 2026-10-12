@@ -7,3 +7,6 @@
 transcript/
 renders/
 .hyperframes/
+# SFX are copied in by build/fetch_assets.sh
+assets/sfx/*.mp3
+__pycache__/

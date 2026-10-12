@@ -1,0 +1,4709 @@
+{
+ "segments": [
+  {
+   "src_in": 0.0,
+   "src_out": 4.22,
+   "out_start": 0.0
+  },
+  {
+   "src_in": 6.97,
+   "src_out": 8.18,
+   "out_start": 4.22
+  },
+  {
+   "src_in": 8.52,
+   "src_out": 9.62,
+   "out_start": 5.43
+  },
+  {
+   "src_in": 10.09,
+   "src_out": 12.6,
+   "out_start": 6.53
+  },
+  {
+   "src_in": 13.0,
+   "src_out": 14.91,
+   "out_start": 9.04
+  },
+  {
+   "src_in": 16.69,
+   "src_out": 19.89,
+   "out_start": 10.95
+  },
+  {
+   "src_in": 20.55,
+   "src_out": 22.43,
+   "out_start": 14.15
+  },
+  {
+   "src_in": 22.69,
+   "src_out": 25.02,
+   "out_start": 16.03
+  },
+  {
+   "src_in": 25.69,
+   "src_out": 28.15,
+   "out_start": 18.36
+  },
+  {
+   "src_in": 28.53,
+   "src_out": 32.54,
+   "out_start": 20.82
+  },
+  {
+   "src_in": 33.4,
+   "src_out": 34.17,
+   "out_start": 24.83
+  },
+  {
+   "src_in": 34.76,
+   "src_out": 36.15,
+   "out_start": 25.6
+  },
+  {
+   "src_in": 36.57,
+   "src_out": 38.67,
+   "out_start": 26.99
+  },
+  {
+   "src_in": 39.05,
+   "src_out": 42.17,
+   "out_start": 29.09
+  },
+  {
+   "src_in": 42.48,
+   "src_out": 43.3,
+   "out_start": 32.21
+  },
+  {
+   "src_in": 44.33,
+   "src_out": 45.15,
+   "out_start": 33.03
+  },
+  {
+   "src_in": 46.77,
+   "src_out": 48.01,
+   "out_start": 33.85
+  },
+  {
+   "src_in": 48.37,
+   "src_out": 49.32,
+   "out_start": 35.09
+  },
+  {
+   "src_in": 50.26,
+   "src_out": 51.11,
+   "out_start": 36.04
+  },
+  {
+   "src_in": 51.42,
+   "src_out": 53.23,
+   "out_start": 36.89
+  },
+  {
+   "src_in": 53.69,
+   "src_out": 54.79,
+   "out_start": 38.7
+  },
+  {
+   "src_in": 55.36,
+   "src_out": 55.99,
+   "out_start": 39.8
+  },
+  {
+   "src_in": 56.38,
+   "src_out": 58.24,
+   "out_start": 40.43
+  },
+  {
+   "src_in": 58.85,
+   "src_out": 60.88,
+   "out_start": 42.29
+  },
+  {
+   "src_in": 61.17,
+   "src_out": 64.37,
+   "out_start": 44.32
+  },
+  {
+   "src_in": 64.9,
+   "src_out": 65.87,
+   "out_start": 47.52
+  },
+  {
+   "src_in": 66.5,
+   "src_out": 67.41,
+   "out_start": 48.49
+  },
+  {
+   "src_in": 67.99,
+   "src_out": 68.82,
+   "out_start": 49.4
+  },
+  {
+   "src_in": 69.21,
+   "src_out": 70.39,
+   "out_start": 50.23
+  },
+  {
+   "src_in": 71.08,
+   "src_out": 75.39,
+   "out_start": 51.41
+  },
+  {
+   "src_in": 76.14,
+   "src_out": 77.24,
+   "out_start": 55.72
+  },
+  {
+   "src_in": 77.92,
+   "src_out": 82.06,
+   "out_start": 56.82
+  },
+  {
+   "src_in": 82.45,
+   "src_out": 85.16,
+   "out_start": 60.96
+  },
+  {
+   "src_in": 85.5,
+   "src_out": 86.46,
+   "out_start": 63.67
+  },
+  {
+   "src_in": 86.77,
+   "src_out": 88.89,
+   "out_start": 64.63
+  },
+  {
+   "src_in": 89.12,
+   "src_out": 90.45,
+   "out_start": 66.75
+  }
+ ],
+ "speech_duration": 68.08,
+ "words": [
+  {
+   "text": "Sir,",
+   "sentence": 0,
+   "src": [
+    0.09,
+    0.262
+   ],
+   "start": 0.09,
+   "end": 0.262,
+   "key": false
+  },
+  {
+   "text": "aajkal",
+   "sentence": 0,
+   "src": [
+    0.262,
+    0.606
+   ],
+   "start": 0.262,
+   "end": 0.606,
+   "key": false
+  },
+  {
+   "text": "yeh",
+   "sentence": 0,
+   "src": [
+    0.606,
+    0.778
+   ],
+   "start": 0.606,
+   "end": 0.778,
+   "key": false
+  },
+  {
+   "text": "jo",
+   "sentence": 0,
+   "src": [
+    0.778,
+    0.95
+   ],
+   "start": 0.778,
+   "end": 0.95,
+   "key": false
+  },
+  {
+   "text": "piles",
+   "sentence": 0,
+   "src": [
+    0.95,
+    1.294
+   ],
+   "start": 0.95,
+   "end": 1.294,
+   "key": true
+  },
+  {
+   "text": "aur",
+   "sentence": 0,
+   "src": [
+    1.294,
+    1.466
+   ],
+   "start": 1.294,
+   "end": 1.466,
+   "key": false
+  },
+  {
+   "text": "fissure",
+   "sentence": 0,
+   "src": [
+    1.466,
+    1.982
+   ],
+   "start": 1.466,
+   "end": 1.982,
+   "key": true
+  },
+  {
+   "text": "ki",
+   "sentence": 0,
+   "src": [
+    1.982,
+    2.154
+   ],
+   "start": 1.982,
+   "end": 2.154,
+   "key": false
+  },
+  {
+   "text": "problem",
+   "sentence": 0,
+   "src": [
+    2.154,
+    2.498
+   ],
+   "start": 2.154,
+   "end": 2.498,
+   "key": false
+  },
+  {
+   "text": "hai,",
+   "sentence": 0,
+   "src": [
+    2.498,
+    2.67
+   ],
+   "start": 2.498,
+   "end": 2.67,
+   "key": false
+  },
+  {
+   "text": "aajkal",
+   "sentence": 1,
+   "src": [
+    3.08,
+    3.36
+   ],
+   "start": 3.08,
+   "end": 3.36,
+   "key": false
+  },
+  {
+   "text": "kyun",
+   "sentence": 1,
+   "src": [
+    3.36,
+    3.5
+   ],
+   "start": 3.36,
+   "end": 3.5,
+   "key": false
+  },
+  {
+   "text": "badh",
+   "sentence": 1,
+   "src": [
+    3.5,
+    3.64
+   ],
+   "start": 3.5,
+   "end": 3.64,
+   "key": false
+  },
+  {
+   "text": "rahi",
+   "sentence": 1,
+   "src": [
+    3.64,
+    3.92
+   ],
+   "start": 3.64,
+   "end": 3.92,
+   "key": false
+  },
+  {
+   "text": "hai?",
+   "sentence": 1,
+   "src": [
+    3.92,
+    4.06
+   ],
+   "start": 3.92,
+   "end": 4.06,
+   "key": false
+  },
+  {
+   "text": "Aapne",
+   "sentence": 2,
+   "src": [
+    7.09,
+    7.356
+   ],
+   "start": 4.34,
+   "end": 4.606,
+   "key": false
+  },
+  {
+   "text": "sahi",
+   "sentence": 2,
+   "src": [
+    7.356,
+    7.621
+   ],
+   "start": 4.606,
+   "end": 4.871,
+   "key": false
+  },
+  {
+   "text": "poocha",
+   "sentence": 2,
+   "src": [
+    7.621,
+    7.887
+   ],
+   "start": 4.871,
+   "end": 5.137,
+   "key": false
+  },
+  {
+   "text": "hai.",
+   "sentence": 2,
+   "src": [
+    7.887,
+    8.02
+   ],
+   "start": 5.137,
+   "end": 5.27,
+   "key": false
+  },
+  {
+   "text": "Aaye",
+   "sentence": 3,
+   "src": [
+    8.64,
+    8.782
+   ],
+   "start": 5.55,
+   "end": 5.692,
+   "key": false
+  },
+  {
+   "text": "din",
+   "sentence": 3,
+   "src": [
+    8.782,
+    8.924
+   ],
+   "start": 5.692,
+   "end": 5.834,
+   "key": false
+  },
+  {
+   "text": "apne",
+   "sentence": 3,
+   "src": [
+    8.924,
+    9.209
+   ],
+   "start": 5.834,
+   "end": 6.119,
+   "key": false
+  },
+  {
+   "text": "paas",
+   "sentence": 3,
+   "src": [
+    9.209,
+    9.351
+   ],
+   "start": 6.119,
+   "end": 6.261,
+   "key": false
+  },
+  {
+   "text": "bahut",
+   "sentence": 3,
+   "src": [
+    9.351,
+    10.386
+   ],
+   "start": 6.261,
+   "end": 6.826,
+   "key": false
+  },
+  {
+   "text": "saare",
+   "sentence": 3,
+   "src": [
+    10.386,
+    10.67
+   ],
+   "start": 6.826,
+   "end": 7.11,
+   "key": false
+  },
+  {
+   "text": "piles",
+   "sentence": 3,
+   "src": [
+    10.67,
+    11.174
+   ],
+   "start": 7.11,
+   "end": 7.614,
+   "key": true
+  },
+  {
+   "text": "ke",
+   "sentence": 3,
+   "src": [
+    11.174,
+    11.317
+   ],
+   "start": 7.614,
+   "end": 7.757,
+   "key": false
+  },
+  {
+   "text": "patients",
+   "sentence": 3,
+   "src": [
+    11.317,
+    11.601
+   ],
+   "start": 7.757,
+   "end": 8.041,
+   "key": false
+  },
+  {
+   "text": "aa",
+   "sentence": 3,
+   "src": [
+    11.601,
+    11.743
+   ],
+   "start": 8.041,
+   "end": 8.183,
+   "key": false
+  },
+  {
+   "text": "rahe",
+   "sentence": 3,
+   "src": [
+    11.743,
+    12.298
+   ],
+   "start": 8.183,
+   "end": 8.738,
+   "key": false
+  },
+  {
+   "text": "hain.",
+   "sentence": 3,
+   "src": [
+    12.298,
+    12.44
+   ],
+   "start": 8.738,
+   "end": 8.88,
+   "key": false
+  },
+  {
+   "text": "Iska",
+   "sentence": 4,
+   "src": [
+    13.12,
+    13.411
+   ],
+   "start": 9.16,
+   "end": 9.451,
+   "key": false
+  },
+  {
+   "text": "mukhya",
+   "sentence": 4,
+   "src": [
+    13.411,
+    13.702
+   ],
+   "start": 9.451,
+   "end": 9.742,
+   "key": false
+  },
+  {
+   "text": "kaaran",
+   "sentence": 4,
+   "src": [
+    13.702,
+    13.993
+   ],
+   "start": 9.742,
+   "end": 10.033,
+   "key": false
+  },
+  {
+   "text": "hai",
+   "sentence": 4,
+   "src": [
+    13.993,
+    14.459
+   ],
+   "start": 10.033,
+   "end": 10.499,
+   "key": false
+  },
+  {
+   "text": "khaan-paan.",
+   "sentence": 4,
+   "src": [
+    14.459,
+    14.75
+   ],
+   "start": 10.499,
+   "end": 10.79,
+   "key": true
+  },
+  {
+   "text": "Raat",
+   "sentence": 5,
+   "src": [
+    16.81,
+    16.965
+   ],
+   "start": 11.07,
+   "end": 11.225,
+   "key": false
+  },
+  {
+   "text": "ko",
+   "sentence": 5,
+   "src": [
+    16.965,
+    17.119
+   ],
+   "start": 11.225,
+   "end": 11.379,
+   "key": false
+  },
+  {
+   "text": "late",
+   "sentence": 5,
+   "src": [
+    17.119,
+    17.429
+   ],
+   "start": 11.379,
+   "end": 11.689,
+   "key": true
+  },
+  {
+   "text": "sona,",
+   "sentence": 5,
+   "src": [
+    17.429,
+    18.068
+   ],
+   "start": 11.689,
+   "end": 12.328,
+   "key": false
+  },
+  {
+   "text": "yeh",
+   "sentence": 5,
+   "src": [
+    18.068,
+    18.223
+   ],
+   "start": 12.328,
+   "end": 12.483,
+   "key": false
+  },
+  {
+   "text": "to",
+   "sentence": 5,
+   "src": [
+    18.223,
+    18.377
+   ],
+   "start": 12.483,
+   "end": 12.637,
+   "key": false
+  },
+  {
+   "text": "aajkal",
+   "sentence": 5,
+   "src": [
+    18.377,
+    18.687
+   ],
+   "start": 12.637,
+   "end": 12.947,
+   "key": false
+  },
+  {
+   "text": "aam",
+   "sentence": 5,
+   "src": [
+    18.687,
+    19.111
+   ],
+   "start": 12.947,
+   "end": 13.371,
+   "key": false
+  },
+  {
+   "text": "baat",
+   "sentence": 5,
+   "src": [
+    19.111,
+    19.266
+   ],
+   "start": 13.371,
+   "end": 13.526,
+   "key": false
+  },
+  {
+   "text": "ho",
+   "sentence": 5,
+   "src": [
+    19.266,
+    19.421
+   ],
+   "start": 13.526,
+   "end": 13.681,
+   "key": false
+  },
+  {
+   "text": "gayi",
+   "sentence": 5,
+   "src": [
+    19.421,
+    19.575
+   ],
+   "start": 13.681,
+   "end": 13.835,
+   "key": false
+  },
+  {
+   "text": "hai.",
+   "sentence": 5,
+   "src": [
+    19.575,
+    19.73
+   ],
+   "start": 13.835,
+   "end": 13.99,
+   "key": false
+  },
+  {
+   "text": "Masaledaar,",
+   "sentence": 6,
+   "src": [
+    20.67,
+    21.29
+   ],
+   "start": 14.27,
+   "end": 14.89,
+   "key": true
+  },
+  {
+   "text": "tez",
+   "sentence": 7,
+   "src": [
+    21.66,
+    21.863
+   ],
+   "start": 15.26,
+   "end": 15.463,
+   "key": true
+  },
+  {
+   "text": "khaana,",
+   "sentence": 7,
+   "src": [
+    21.863,
+    22.27
+   ],
+   "start": 15.463,
+   "end": 15.87,
+   "key": false
+  },
+  {
+   "text": "teekha,",
+   "sentence": 8,
+   "src": [
+    22.81,
+    23.09
+   ],
+   "start": 16.15,
+   "end": 16.43,
+   "key": true
+  },
+  {
+   "text": "mirchi,",
+   "sentence": 9,
+   "src": [
+    23.58,
+    23.87
+   ],
+   "start": 16.92,
+   "end": 17.21,
+   "key": true
+  },
+  {
+   "text": "tala",
+   "sentence": 10,
+   "src": [
+    24.32,
+    24.536
+   ],
+   "start": 17.66,
+   "end": 17.876,
+   "key": true
+  },
+  {
+   "text": "hua",
+   "sentence": 10,
+   "src": [
+    24.536,
+    24.644
+   ],
+   "start": 17.876,
+   "end": 17.984,
+   "key": false
+  },
+  {
+   "text": "khaana.",
+   "sentence": 10,
+   "src": [
+    24.644,
+    24.86
+   ],
+   "start": 17.984,
+   "end": 18.2,
+   "key": false
+  },
+  {
+   "text": "Aise",
+   "sentence": 11,
+   "src": [
+    25.81,
+    26.168
+   ],
+   "start": 18.48,
+   "end": 18.838,
+   "key": false
+  },
+  {
+   "text": "khaane",
+   "sentence": 11,
+   "src": [
+    26.168,
+    26.526
+   ],
+   "start": 18.838,
+   "end": 19.196,
+   "key": false
+  },
+  {
+   "text": "ki",
+   "sentence": 11,
+   "src": [
+    26.526,
+    26.705
+   ],
+   "start": 19.196,
+   "end": 19.375,
+   "key": false
+  },
+  {
+   "text": "aadat",
+   "sentence": 11,
+   "src": [
+    26.705,
+    27.064
+   ],
+   "start": 19.375,
+   "end": 19.734,
+   "key": false
+  },
+  {
+   "text": "pad",
+   "sentence": 11,
+   "src": [
+    27.064,
+    27.453
+   ],
+   "start": 19.734,
+   "end": 20.123,
+   "key": false
+  },
+  {
+   "text": "jaati",
+   "sentence": 11,
+   "src": [
+    27.453,
+    27.811
+   ],
+   "start": 20.123,
+   "end": 20.481,
+   "key": false
+  },
+  {
+   "text": "hai,",
+   "sentence": 11,
+   "src": [
+    27.811,
+    27.99
+   ],
+   "start": 20.481,
+   "end": 20.66,
+   "key": false
+  },
+  {
+   "text": "aur",
+   "sentence": 12,
+   "src": [
+    28.65,
+    28.822
+   ],
+   "start": 20.94,
+   "end": 21.112,
+   "key": false
+  },
+  {
+   "text": "baar-baar",
+   "sentence": 12,
+   "src": [
+    28.822,
+    29.167
+   ],
+   "start": 21.112,
+   "end": 21.457,
+   "key": false
+  },
+  {
+   "text": "aisa",
+   "sentence": 12,
+   "src": [
+    29.167,
+    29.512
+   ],
+   "start": 21.457,
+   "end": 21.802,
+   "key": false
+  },
+  {
+   "text": "khaane",
+   "sentence": 12,
+   "src": [
+    29.512,
+    29.857
+   ],
+   "start": 21.802,
+   "end": 22.147,
+   "key": false
+  },
+  {
+   "text": "se",
+   "sentence": 12,
+   "src": [
+    29.857,
+    30.029
+   ],
+   "start": 22.147,
+   "end": 22.319,
+   "key": false
+  },
+  {
+   "text": "poori",
+   "sentence": 12,
+   "src": [
+    30.029,
+    30.374
+   ],
+   "start": 22.319,
+   "end": 22.664,
+   "key": false
+  },
+  {
+   "text": "anna-nalika",
+   "sentence": 12,
+   "src": [
+    30.374,
+    31.836
+   ],
+   "start": 22.664,
+   "end": 24.126,
+   "key": true
+  },
+  {
+   "text": "garam",
+   "sentence": 12,
+   "src": [
+    31.836,
+    32.18
+   ],
+   "start": 24.126,
+   "end": 24.47,
+   "key": true
+  },
+  {
+   "text": "ho",
+   "sentence": 12,
+   "src": [
+    32.18,
+    32.353
+   ],
+   "start": 24.47,
+   "end": 24.643,
+   "key": false
+  },
+  {
+   "text": "jaati",
+   "sentence": 12,
+   "src": [
+    32.353,
+    33.838
+   ],
+   "start": 24.643,
+   "end": 25.268,
+   "key": false
+  },
+  {
+   "text": "hai.",
+   "sentence": 12,
+   "src": [
+    33.838,
+    34.01
+   ],
+   "start": 25.268,
+   "end": 25.44,
+   "key": false
+  },
+  {
+   "text": "To",
+   "sentence": 13,
+   "src": [
+    34.88,
+    35.028
+   ],
+   "start": 25.72,
+   "end": 25.868,
+   "key": false
+  },
+  {
+   "text": "us",
+   "sentence": 13,
+   "src": [
+    35.028,
+    35.176
+   ],
+   "start": 25.868,
+   "end": 26.016,
+   "key": false
+  },
+  {
+   "text": "ushnata",
+   "sentence": 13,
+   "src": [
+    35.176,
+    35.621
+   ],
+   "start": 26.016,
+   "end": 26.461,
+   "key": true
+  },
+  {
+   "text": "ke",
+   "sentence": 13,
+   "src": [
+    35.621,
+    35.769
+   ],
+   "start": 26.461,
+   "end": 26.609,
+   "key": false
+  },
+  {
+   "text": "kaaran",
+   "sentence": 13,
+   "src": [
+    35.769,
+    36.766
+   ],
+   "start": 26.609,
+   "end": 27.186,
+   "key": false
+  },
+  {
+   "text": "jo",
+   "sentence": 13,
+   "src": [
+    36.766,
+    36.914
+   ],
+   "start": 27.186,
+   "end": 27.334,
+   "key": false
+  },
+  {
+   "text": "stool",
+   "sentence": 13,
+   "src": [
+    36.914,
+    37.062
+   ],
+   "start": 27.334,
+   "end": 27.482,
+   "key": true
+  },
+  {
+   "text": "hai,",
+   "sentence": 13,
+   "src": [
+    37.062,
+    37.211
+   ],
+   "start": 27.482,
+   "end": 27.631,
+   "key": false
+  },
+  {
+   "text": "woh",
+   "sentence": 13,
+   "src": [
+    37.211,
+    37.769
+   ],
+   "start": 27.631,
+   "end": 28.189,
+   "key": false
+  },
+  {
+   "text": "hard",
+   "sentence": 13,
+   "src": [
+    37.769,
+    37.917
+   ],
+   "start": 28.189,
+   "end": 28.337,
+   "key": true
+  },
+  {
+   "text": "ho",
+   "sentence": 13,
+   "src": [
+    37.917,
+    38.065
+   ],
+   "start": 28.337,
+   "end": 28.485,
+   "key": false
+  },
+  {
+   "text": "jaata",
+   "sentence": 13,
+   "src": [
+    38.065,
+    38.362
+   ],
+   "start": 28.485,
+   "end": 28.782,
+   "key": false
+  },
+  {
+   "text": "hai.",
+   "sentence": 13,
+   "src": [
+    38.362,
+    38.51
+   ],
+   "start": 28.782,
+   "end": 28.93,
+   "key": false
+  },
+  {
+   "text": "Aur",
+   "sentence": 14,
+   "src": [
+    39.17,
+    39.311
+   ],
+   "start": 29.21,
+   "end": 29.351,
+   "key": false
+  },
+  {
+   "text": "jab",
+   "sentence": 14,
+   "src": [
+    39.311,
+    39.451
+   ],
+   "start": 29.351,
+   "end": 29.491,
+   "key": false
+  },
+  {
+   "text": "nikalta",
+   "sentence": 14,
+   "src": [
+    39.451,
+    39.874
+   ],
+   "start": 29.491,
+   "end": 29.914,
+   "key": false
+  },
+  {
+   "text": "hai,",
+   "sentence": 14,
+   "src": [
+    39.874,
+    40.014
+   ],
+   "start": 29.914,
+   "end": 30.054,
+   "key": false
+  },
+  {
+   "text": "to",
+   "sentence": 14,
+   "src": [
+    40.014,
+    40.645
+   ],
+   "start": 30.054,
+   "end": 30.685,
+   "key": false
+  },
+  {
+   "text": "wahan",
+   "sentence": 14,
+   "src": [
+    40.645,
+    41.306
+   ],
+   "start": 30.685,
+   "end": 31.346,
+   "key": false
+  },
+  {
+   "text": "garmi",
+   "sentence": 14,
+   "src": [
+    41.306,
+    41.588
+   ],
+   "start": 31.346,
+   "end": 31.628,
+   "key": true
+  },
+  {
+   "text": "ke",
+   "sentence": 14,
+   "src": [
+    41.588,
+    41.729
+   ],
+   "start": 31.628,
+   "end": 31.769,
+   "key": false
+  },
+  {
+   "text": "kaaran",
+   "sentence": 14,
+   "src": [
+    41.729,
+    42.01
+   ],
+   "start": 31.769,
+   "end": 32.05,
+   "key": false
+  },
+  {
+   "text": "piles",
+   "sentence": 15,
+   "src": [
+    42.6,
+    42.84
+   ],
+   "start": 32.33,
+   "end": 32.57,
+   "key": true
+  },
+  {
+   "text": "jaise",
+   "sentence": 15,
+   "src": [
+    42.84,
+    43.08
+   ],
+   "start": 32.57,
+   "end": 32.81,
+   "key": false
+  },
+  {
+   "text": "tayyar",
+   "sentence": 15,
+   "src": [
+    43.08,
+    44.51
+   ],
+   "start": 32.81,
+   "end": 33.21,
+   "key": false
+  },
+  {
+   "text": "ho",
+   "sentence": 15,
+   "src": [
+    44.51,
+    44.63
+   ],
+   "start": 33.21,
+   "end": 33.33,
+   "key": false
+  },
+  {
+   "text": "jaate",
+   "sentence": 15,
+   "src": [
+    44.63,
+    44.87
+   ],
+   "start": 33.33,
+   "end": 33.57,
+   "key": false
+  },
+  {
+   "text": "hain.",
+   "sentence": 15,
+   "src": [
+    44.87,
+    44.99
+   ],
+   "start": 33.57,
+   "end": 33.69,
+   "key": false
+  },
+  {
+   "text": "Us",
+   "sentence": 16,
+   "src": [
+    46.89,
+    47.073
+   ],
+   "start": 33.97,
+   "end": 34.153,
+   "key": false
+  },
+  {
+   "text": "piles",
+   "sentence": 16,
+   "src": [
+    47.073,
+    47.44
+   ],
+   "start": 34.153,
+   "end": 34.52,
+   "key": true
+  },
+  {
+   "text": "ke",
+   "sentence": 16,
+   "src": [
+    47.44,
+    47.623
+   ],
+   "start": 34.52,
+   "end": 34.703,
+   "key": false
+  },
+  {
+   "text": "kaaran",
+   "sentence": 16,
+   "src": [
+    47.623,
+    48.63
+   ],
+   "start": 34.703,
+   "end": 35.35,
+   "key": false
+  },
+  {
+   "text": "wahan",
+   "sentence": 16,
+   "src": [
+    48.63,
+    48.997
+   ],
+   "start": 35.35,
+   "end": 35.717,
+   "key": false
+  },
+  {
+   "text": "pain",
+   "sentence": 16,
+   "src": [
+    48.997,
+    50.4
+   ],
+   "start": 35.717,
+   "end": 36.18,
+   "key": true
+  },
+  {
+   "text": "hota",
+   "sentence": 16,
+   "src": [
+    50.4,
+    50.767
+   ],
+   "start": 36.18,
+   "end": 36.547,
+   "key": false
+  },
+  {
+   "text": "hai.",
+   "sentence": 16,
+   "src": [
+    50.767,
+    50.95
+   ],
+   "start": 36.547,
+   "end": 36.73,
+   "key": false
+  },
+  {
+   "text": "Subah-subah",
+   "sentence": 17,
+   "src": [
+    51.54,
+    52.263
+   ],
+   "start": 37.01,
+   "end": 37.733,
+   "key": false
+  },
+  {
+   "text": "uthte",
+   "sentence": 17,
+   "src": [
+    52.263,
+    52.625
+   ],
+   "start": 37.733,
+   "end": 38.095,
+   "key": false
+  },
+  {
+   "text": "hi",
+   "sentence": 17,
+   "src": [
+    52.625,
+    52.805
+   ],
+   "start": 38.095,
+   "end": 38.275,
+   "key": false
+  },
+  {
+   "text": "jab",
+   "sentence": 17,
+   "src": [
+    52.805,
+    52.986
+   ],
+   "start": 38.275,
+   "end": 38.456,
+   "key": false
+  },
+  {
+   "text": "stool",
+   "sentence": 17,
+   "src": [
+    52.986,
+    53.907
+   ],
+   "start": 38.456,
+   "end": 38.917,
+   "key": true
+  },
+  {
+   "text": "pass",
+   "sentence": 17,
+   "src": [
+    53.907,
+    54.088
+   ],
+   "start": 38.917,
+   "end": 39.098,
+   "key": false
+  },
+  {
+   "text": "karte",
+   "sentence": 17,
+   "src": [
+    54.088,
+    54.449
+   ],
+   "start": 39.098,
+   "end": 39.459,
+   "key": false
+  },
+  {
+   "text": "hain,",
+   "sentence": 17,
+   "src": [
+    54.449,
+    54.63
+   ],
+   "start": 39.459,
+   "end": 39.64,
+   "key": false
+  },
+  {
+   "text": "us",
+   "sentence": 18,
+   "src": [
+    55.48,
+    55.655
+   ],
+   "start": 39.92,
+   "end": 40.095,
+   "key": false
+  },
+  {
+   "text": "waqt",
+   "sentence": 18,
+   "src": [
+    55.655,
+    56.501
+   ],
+   "start": 40.095,
+   "end": 40.551,
+   "key": false
+  },
+  {
+   "text": "anus",
+   "sentence": 18,
+   "src": [
+    56.501,
+    56.852
+   ],
+   "start": 40.551,
+   "end": 40.902,
+   "key": false
+  },
+  {
+   "text": "ke",
+   "sentence": 18,
+   "src": [
+    56.852,
+    57.027
+   ],
+   "start": 40.902,
+   "end": 41.077,
+   "key": false
+  },
+  {
+   "text": "dwaar",
+   "sentence": 18,
+   "src": [
+    57.027,
+    57.203
+   ],
+   "start": 41.077,
+   "end": 41.253,
+   "key": false
+  },
+  {
+   "text": "mein",
+   "sentence": 18,
+   "src": [
+    57.203,
+    57.378
+   ],
+   "start": 41.253,
+   "end": 41.428,
+   "key": false
+  },
+  {
+   "text": "dard",
+   "sentence": 18,
+   "src": [
+    57.378,
+    57.554
+   ],
+   "start": 41.428,
+   "end": 41.604,
+   "key": true
+  },
+  {
+   "text": "hota",
+   "sentence": 18,
+   "src": [
+    57.554,
+    57.905
+   ],
+   "start": 41.604,
+   "end": 41.955,
+   "key": false
+  },
+  {
+   "text": "hai,",
+   "sentence": 18,
+   "src": [
+    57.905,
+    58.08
+   ],
+   "start": 41.955,
+   "end": 42.13,
+   "key": false
+  },
+  {
+   "text": "aur",
+   "sentence": 19,
+   "src": [
+    58.97,
+    59.32
+   ],
+   "start": 42.41,
+   "end": 42.76,
+   "key": false
+  },
+  {
+   "text": "pain",
+   "sentence": 19,
+   "src": [
+    59.32,
+    59.67
+   ],
+   "start": 42.76,
+   "end": 43.11,
+   "key": true
+  },
+  {
+   "text": "badhta",
+   "sentence": 19,
+   "src": [
+    59.67,
+    60.37
+   ],
+   "start": 43.11,
+   "end": 43.81,
+   "key": false
+  },
+  {
+   "text": "hai.",
+   "sentence": 19,
+   "src": [
+    60.37,
+    60.72
+   ],
+   "start": 43.81,
+   "end": 44.16,
+   "key": false
+  },
+  {
+   "text": "Aksar",
+   "sentence": 20,
+   "src": [
+    61.29,
+    61.746
+   ],
+   "start": 44.44,
+   "end": 44.896,
+   "key": false
+  },
+  {
+   "text": "paaya",
+   "sentence": 20,
+   "src": [
+    61.746,
+    61.975
+   ],
+   "start": 44.896,
+   "end": 45.125,
+   "key": false
+  },
+  {
+   "text": "gaya",
+   "sentence": 20,
+   "src": [
+    61.975,
+    62.203
+   ],
+   "start": 45.125,
+   "end": 45.353,
+   "key": false
+  },
+  {
+   "text": "hai",
+   "sentence": 20,
+   "src": [
+    62.203,
+    62.431
+   ],
+   "start": 45.353,
+   "end": 45.581,
+   "key": false
+  },
+  {
+   "text": "ki",
+   "sentence": 20,
+   "src": [
+    62.431,
+    62.659
+   ],
+   "start": 45.581,
+   "end": 45.809,
+   "key": false
+  },
+  {
+   "text": "patient",
+   "sentence": 20,
+   "src": [
+    62.659,
+    63.476
+   ],
+   "start": 45.809,
+   "end": 46.626,
+   "key": false
+  },
+  {
+   "text": "sharm",
+   "sentence": 20,
+   "src": [
+    63.476,
+    63.704
+   ],
+   "start": 46.626,
+   "end": 46.854,
+   "key": true
+  },
+  {
+   "text": "ki",
+   "sentence": 20,
+   "src": [
+    63.704,
+    63.932
+   ],
+   "start": 46.854,
+   "end": 47.082,
+   "key": false
+  },
+  {
+   "text": "wajah",
+   "sentence": 20,
+   "src": [
+    63.932,
+    65.199
+   ],
+   "start": 47.082,
+   "end": 47.819,
+   "key": false
+  },
+  {
+   "text": "se",
+   "sentence": 20,
+   "src": [
+    65.199,
+    65.427
+   ],
+   "start": 47.819,
+   "end": 48.047,
+   "key": false
+  },
+  {
+   "text": "der",
+   "sentence": 20,
+   "src": [
+    65.427,
+    65.655
+   ],
+   "start": 48.047,
+   "end": 48.275,
+   "key": false
+  },
+  {
+   "text": "karte",
+   "sentence": 20,
+   "src": [
+    65.655,
+    67.022
+   ],
+   "start": 48.275,
+   "end": 49.012,
+   "key": false
+  },
+  {
+   "text": "hain.",
+   "sentence": 20,
+   "src": [
+    67.022,
+    67.25
+   ],
+   "start": 49.012,
+   "end": 49.24,
+   "key": false
+  },
+  {
+   "text": "Jab",
+   "sentence": 21,
+   "src": [
+    68.11,
+    68.348
+   ],
+   "start": 49.52,
+   "end": 49.758,
+   "key": false
+  },
+  {
+   "text": "piles",
+   "sentence": 21,
+   "src": [
+    68.348,
+    69.495
+   ],
+   "start": 49.758,
+   "end": 50.515,
+   "key": true
+  },
+  {
+   "text": "complication",
+   "sentence": 21,
+   "src": [
+    69.495,
+    71.417
+   ],
+   "start": 50.515,
+   "end": 51.747,
+   "key": true
+  },
+  {
+   "text": "create",
+   "sentence": 21,
+   "src": [
+    71.417,
+    72.134
+   ],
+   "start": 51.747,
+   "end": 52.464,
+   "key": false
+  },
+  {
+   "text": "karta",
+   "sentence": 21,
+   "src": [
+    72.134,
+    72.61
+   ],
+   "start": 52.464,
+   "end": 52.94,
+   "key": false
+  },
+  {
+   "text": "hai,",
+   "sentence": 21,
+   "src": [
+    72.61,
+    72.848
+   ],
+   "start": 52.94,
+   "end": 53.178,
+   "key": false
+  },
+  {
+   "text": "tabhi",
+   "sentence": 21,
+   "src": [
+    72.848,
+    73.325
+   ],
+   "start": 53.178,
+   "end": 53.655,
+   "key": false
+  },
+  {
+   "text": "woh",
+   "sentence": 21,
+   "src": [
+    73.325,
+    73.563
+   ],
+   "start": 53.655,
+   "end": 53.893,
+   "key": false
+  },
+  {
+   "text": "doctor",
+   "sentence": 21,
+   "src": [
+    73.563,
+    74.039
+   ],
+   "start": 53.893,
+   "end": 54.369,
+   "key": true
+  },
+  {
+   "text": "ke",
+   "sentence": 21,
+   "src": [
+    74.039,
+    74.277
+   ],
+   "start": 54.369,
+   "end": 54.607,
+   "key": false
+  },
+  {
+   "text": "paas",
+   "sentence": 21,
+   "src": [
+    74.277,
+    74.515
+   ],
+   "start": 54.607,
+   "end": 54.845,
+   "key": false
+  },
+  {
+   "text": "aate",
+   "sentence": 21,
+   "src": [
+    74.515,
+    74.992
+   ],
+   "start": 54.845,
+   "end": 55.322,
+   "key": false
+  },
+  {
+   "text": "hain.",
+   "sentence": 21,
+   "src": [
+    74.992,
+    75.23
+   ],
+   "start": 55.322,
+   "end": 55.56,
+   "key": false
+  },
+  {
+   "text": "Aapko",
+   "sentence": 22,
+   "src": [
+    76.26,
+    76.494
+   ],
+   "start": 55.84,
+   "end": 56.074,
+   "key": false
+  },
+  {
+   "text": "samajhna",
+   "sentence": 22,
+   "src": [
+    76.494,
+    76.846
+   ],
+   "start": 56.074,
+   "end": 56.426,
+   "key": false
+  },
+  {
+   "text": "chahiye",
+   "sentence": 22,
+   "src": [
+    76.846,
+    77.08
+   ],
+   "start": 56.426,
+   "end": 56.66,
+   "key": false
+  },
+  {
+   "text": "ki",
+   "sentence": 23,
+   "src": [
+    78.04,
+    78.311
+   ],
+   "start": 56.94,
+   "end": 57.211,
+   "key": false
+  },
+  {
+   "text": "shuruaat",
+   "sentence": 23,
+   "src": [
+    78.311,
+    79.054
+   ],
+   "start": 57.211,
+   "end": 57.954,
+   "key": false
+  },
+  {
+   "text": "mein",
+   "sentence": 23,
+   "src": [
+    79.054,
+    79.585
+   ],
+   "start": 57.954,
+   "end": 58.485,
+   "key": false
+  },
+  {
+   "text": "agar",
+   "sentence": 23,
+   "src": [
+    79.585,
+    80.128
+   ],
+   "start": 58.485,
+   "end": 59.028,
+   "key": false
+  },
+  {
+   "text": "khaan-paan",
+   "sentence": 23,
+   "src": [
+    80.128,
+    80.67
+   ],
+   "start": 59.028,
+   "end": 59.57,
+   "key": true
+  },
+  {
+   "text": "ka",
+   "sentence": 23,
+   "src": [
+    80.67,
+    81.201
+   ],
+   "start": 59.57,
+   "end": 60.101,
+   "key": false
+  },
+  {
+   "text": "parhez",
+   "sentence": 23,
+   "src": [
+    81.201,
+    81.744
+   ],
+   "start": 60.101,
+   "end": 60.644,
+   "key": true
+  },
+  {
+   "text": "achhe",
+   "sentence": 23,
+   "src": [
+    81.744,
+    82.956
+   ],
+   "start": 60.644,
+   "end": 61.466,
+   "key": false
+  },
+  {
+   "text": "se",
+   "sentence": 23,
+   "src": [
+    82.956,
+    83.227
+   ],
+   "start": 61.466,
+   "end": 61.737,
+   "key": false
+  },
+  {
+   "text": "kiya",
+   "sentence": 23,
+   "src": [
+    83.227,
+    83.499
+   ],
+   "start": 61.737,
+   "end": 62.009,
+   "key": false
+  },
+  {
+   "text": "jaaye,",
+   "sentence": 23,
+   "src": [
+    83.499,
+    83.77
+   ],
+   "start": 62.009,
+   "end": 62.28,
+   "key": false
+  },
+  {
+   "text": "aur",
+   "sentence": 24,
+   "src": [
+    84.0,
+    84.12
+   ],
+   "start": 62.51,
+   "end": 62.63,
+   "key": false
+  },
+  {
+   "text": "aahaar-vihaar",
+   "sentence": 24,
+   "src": [
+    84.12,
+    84.6
+   ],
+   "start": 62.63,
+   "end": 63.11,
+   "key": true
+  },
+  {
+   "text": "ka",
+   "sentence": 24,
+   "src": [
+    84.6,
+    84.72
+   ],
+   "start": 63.11,
+   "end": 63.23,
+   "key": false
+  },
+  {
+   "text": "parhez",
+   "sentence": 24,
+   "src": [
+    84.72,
+    84.96
+   ],
+   "start": 63.23,
+   "end": 63.47,
+   "key": true
+  },
+  {
+   "text": "rakha",
+   "sentence": 24,
+   "src": [
+    84.96,
+    85.82
+   ],
+   "start": 63.47,
+   "end": 63.99,
+   "key": false
+  },
+  {
+   "text": "jaaye,",
+   "sentence": 24,
+   "src": [
+    85.82,
+    85.94
+   ],
+   "start": 63.99,
+   "end": 64.11,
+   "key": false
+  },
+  {
+   "text": "to",
+   "sentence": 24,
+   "src": [
+    85.94,
+    86.06
+   ],
+   "start": 64.11,
+   "end": 64.23,
+   "key": false
+  },
+  {
+   "text": "piles",
+   "sentence": 24,
+   "src": [
+    86.06,
+    86.3
+   ],
+   "start": 64.23,
+   "end": 64.47,
+   "key": true
+  },
+  {
+   "text": "kam",
+   "sentence": 25,
+   "src": [
+    86.89,
+    87.038
+   ],
+   "start": 64.75,
+   "end": 64.898,
+   "key": false
+  },
+  {
+   "text": "ho",
+   "sentence": 25,
+   "src": [
+    87.038,
+    87.186
+   ],
+   "start": 64.898,
+   "end": 65.046,
+   "key": false
+  },
+  {
+   "text": "sakte",
+   "sentence": 25,
+   "src": [
+    87.186,
+    87.482
+   ],
+   "start": 65.046,
+   "end": 65.342,
+   "key": false
+  },
+  {
+   "text": "hain.",
+   "sentence": 25,
+   "src": [
+    87.482,
+    87.63
+   ],
+   "start": 65.342,
+   "end": 65.49,
+   "key": false
+  },
+  {
+   "text": "Shuruaat",
+   "sentence": 26,
+   "src": [
+    88.11,
+    88.361
+   ],
+   "start": 65.97,
+   "end": 66.221,
+   "key": false
+  },
+  {
+   "text": "mein",
+   "sentence": 26,
+   "src": [
+    88.361,
+    88.486
+   ],
+   "start": 66.221,
+   "end": 66.346,
+   "key": false
+  },
+  {
+   "text": "hi",
+   "sentence": 26,
+   "src": [
+    88.486,
+    88.612
+   ],
+   "start": 66.346,
+   "end": 66.472,
+   "key": false
+  },
+  {
+   "text": "woh",
+   "sentence": 26,
+   "src": [
+    88.612,
+    89.247
+   ],
+   "start": 66.472,
+   "end": 66.877,
+   "key": false
+  },
+  {
+   "text": "durust",
+   "sentence": 26,
+   "src": [
+    89.247,
+    89.498
+   ],
+   "start": 66.877,
+   "end": 67.128,
+   "key": true
+  },
+  {
+   "text": "ho",
+   "sentence": 26,
+   "src": [
+    89.498,
+    89.624
+   ],
+   "start": 67.128,
+   "end": 67.254,
+   "key": false
+  },
+  {
+   "text": "sakte",
+   "sentence": 26,
+   "src": [
+    89.624,
+    89.875
+   ],
+   "start": 67.254,
+   "end": 67.505,
+   "key": false
+  },
+  {
+   "text": "hain.",
+   "sentence": 26,
+   "src": [
+    89.875,
+    90.0
+   ],
+   "start": 67.505,
+   "end": 67.63,
+   "key": false
+  }
+ ],
+ "pages": [
+  {
+   "start": 0.03,
+   "end": 1.234,
+   "words": [
+    {
+     "text": "Sir,",
+     "sentence": 0,
+     "src": [
+      0.09,
+      0.262
+     ],
+     "start": 0.09,
+     "end": 0.262,
+     "key": false
+    },
+    {
+     "text": "aajkal",
+     "sentence": 0,
+     "src": [
+      0.262,
+      0.606
+     ],
+     "start": 0.262,
+     "end": 0.606,
+     "key": false
+    },
+    {
+     "text": "yeh",
+     "sentence": 0,
+     "src": [
+      0.606,
+      0.778
+     ],
+     "start": 0.606,
+     "end": 0.778,
+     "key": false
+    },
+    {
+     "text": "jo",
+     "sentence": 0,
+     "src": [
+      0.778,
+      0.95
+     ],
+     "start": 0.778,
+     "end": 0.95,
+     "key": false
+    },
+    {
+     "text": "piles",
+     "sentence": 0,
+     "src": [
+      0.95,
+      1.294
+     ],
+     "start": 0.95,
+     "end": 1.294,
+     "key": true
+    }
+   ]
+  },
+  {
+   "start": 1.234,
+   "end": 3.02,
+   "words": [
+    {
+     "text": "aur",
+     "sentence": 0,
+     "src": [
+      1.294,
+      1.466
+     ],
+     "start": 1.294,
+     "end": 1.466,
+     "key": false
+    },
+    {
+     "text": "fissure",
+     "sentence": 0,
+     "src": [
+      1.466,
+      1.982
+     ],
+     "start": 1.466,
+     "end": 1.982,
+     "key": true
+    },
+    {
+     "text": "ki",
+     "sentence": 0,
+     "src": [
+      1.982,
+      2.154
+     ],
+     "start": 1.982,
+     "end": 2.154,
+     "key": false
+    },
+    {
+     "text": "problem",
+     "sentence": 0,
+     "src": [
+      2.154,
+      2.498
+     ],
+     "start": 2.154,
+     "end": 2.498,
+     "key": false
+    },
+    {
+     "text": "hai,",
+     "sentence": 0,
+     "src": [
+      2.498,
+      2.67
+     ],
+     "start": 2.498,
+     "end": 2.67,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 3.02,
+   "end": 4.28,
+   "words": [
+    {
+     "text": "aajkal",
+     "sentence": 1,
+     "src": [
+      3.08,
+      3.36
+     ],
+     "start": 3.08,
+     "end": 3.36,
+     "key": false
+    },
+    {
+     "text": "kyun",
+     "sentence": 1,
+     "src": [
+      3.36,
+      3.5
+     ],
+     "start": 3.36,
+     "end": 3.5,
+     "key": false
+    },
+    {
+     "text": "badh",
+     "sentence": 1,
+     "src": [
+      3.5,
+      3.64
+     ],
+     "start": 3.5,
+     "end": 3.64,
+     "key": false
+    },
+    {
+     "text": "rahi",
+     "sentence": 1,
+     "src": [
+      3.64,
+      3.92
+     ],
+     "start": 3.64,
+     "end": 3.92,
+     "key": false
+    },
+    {
+     "text": "hai?",
+     "sentence": 1,
+     "src": [
+      3.92,
+      4.06
+     ],
+     "start": 3.92,
+     "end": 4.06,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 4.28,
+   "end": 5.49,
+   "words": [
+    {
+     "text": "Aapne",
+     "sentence": 2,
+     "src": [
+      7.09,
+      7.356
+     ],
+     "start": 4.34,
+     "end": 4.606,
+     "key": false
+    },
+    {
+     "text": "sahi",
+     "sentence": 2,
+     "src": [
+      7.356,
+      7.621
+     ],
+     "start": 4.606,
+     "end": 4.871,
+     "key": false
+    },
+    {
+     "text": "poocha",
+     "sentence": 2,
+     "src": [
+      7.621,
+      7.887
+     ],
+     "start": 4.871,
+     "end": 5.137,
+     "key": false
+    },
+    {
+     "text": "hai.",
+     "sentence": 2,
+     "src": [
+      7.887,
+      8.02
+     ],
+     "start": 5.137,
+     "end": 5.27,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 5.49,
+   "end": 6.766,
+   "words": [
+    {
+     "text": "Aaye",
+     "sentence": 3,
+     "src": [
+      8.64,
+      8.782
+     ],
+     "start": 5.55,
+     "end": 5.692,
+     "key": false
+    },
+    {
+     "text": "din",
+     "sentence": 3,
+     "src": [
+      8.782,
+      8.924
+     ],
+     "start": 5.692,
+     "end": 5.834,
+     "key": false
+    },
+    {
+     "text": "apne",
+     "sentence": 3,
+     "src": [
+      8.924,
+      9.209
+     ],
+     "start": 5.834,
+     "end": 6.119,
+     "key": false
+    },
+    {
+     "text": "paas",
+     "sentence": 3,
+     "src": [
+      9.209,
+      9.351
+     ],
+     "start": 6.119,
+     "end": 6.261,
+     "key": false
+    },
+    {
+     "text": "bahut",
+     "sentence": 3,
+     "src": [
+      9.351,
+      10.386
+     ],
+     "start": 6.261,
+     "end": 6.826,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 6.766,
+   "end": 7.981,
+   "words": [
+    {
+     "text": "saare",
+     "sentence": 3,
+     "src": [
+      10.386,
+      10.67
+     ],
+     "start": 6.826,
+     "end": 7.11,
+     "key": false
+    },
+    {
+     "text": "piles",
+     "sentence": 3,
+     "src": [
+      10.67,
+      11.174
+     ],
+     "start": 7.11,
+     "end": 7.614,
+     "key": true
+    },
+    {
+     "text": "ke",
+     "sentence": 3,
+     "src": [
+      11.174,
+      11.317
+     ],
+     "start": 7.614,
+     "end": 7.757,
+     "key": false
+    },
+    {
+     "text": "patients",
+     "sentence": 3,
+     "src": [
+      11.317,
+      11.601
+     ],
+     "start": 7.757,
+     "end": 8.041,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 7.981,
+   "end": 9.1,
+   "words": [
+    {
+     "text": "aa",
+     "sentence": 3,
+     "src": [
+      11.601,
+      11.743
+     ],
+     "start": 8.041,
+     "end": 8.183,
+     "key": false
+    },
+    {
+     "text": "rahe",
+     "sentence": 3,
+     "src": [
+      11.743,
+      12.298
+     ],
+     "start": 8.183,
+     "end": 8.738,
+     "key": false
+    },
+    {
+     "text": "hain.",
+     "sentence": 3,
+     "src": [
+      12.298,
+      12.44
+     ],
+     "start": 8.738,
+     "end": 8.88,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 9.1,
+   "end": 9.973,
+   "words": [
+    {
+     "text": "Iska",
+     "sentence": 4,
+     "src": [
+      13.12,
+      13.411
+     ],
+     "start": 9.16,
+     "end": 9.451,
+     "key": false
+    },
+    {
+     "text": "mukhya",
+     "sentence": 4,
+     "src": [
+      13.411,
+      13.702
+     ],
+     "start": 9.451,
+     "end": 9.742,
+     "key": false
+    },
+    {
+     "text": "kaaran",
+     "sentence": 4,
+     "src": [
+      13.702,
+      13.993
+     ],
+     "start": 9.742,
+     "end": 10.033,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 9.973,
+   "end": 11.01,
+   "words": [
+    {
+     "text": "hai",
+     "sentence": 4,
+     "src": [
+      13.993,
+      14.459
+     ],
+     "start": 10.033,
+     "end": 10.499,
+     "key": false
+    },
+    {
+     "text": "khaan-paan.",
+     "sentence": 4,
+     "src": [
+      14.459,
+      14.75
+     ],
+     "start": 10.499,
+     "end": 10.79,
+     "key": true
+    }
+   ]
+  },
+  {
+   "start": 11.01,
+   "end": 12.268,
+   "words": [
+    {
+     "text": "Raat",
+     "sentence": 5,
+     "src": [
+      16.81,
+      16.965
+     ],
+     "start": 11.07,
+     "end": 11.225,
+     "key": false
+    },
+    {
+     "text": "ko",
+     "sentence": 5,
+     "src": [
+      16.965,
+      17.119
+     ],
+     "start": 11.225,
+     "end": 11.379,
+     "key": false
+    },
+    {
+     "text": "late",
+     "sentence": 5,
+     "src": [
+      17.119,
+      17.429
+     ],
+     "start": 11.379,
+     "end": 11.689,
+     "key": true
+    },
+    {
+     "text": "sona,",
+     "sentence": 5,
+     "src": [
+      17.429,
+      18.068
+     ],
+     "start": 11.689,
+     "end": 12.328,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 12.268,
+   "end": 13.311,
+   "words": [
+    {
+     "text": "yeh",
+     "sentence": 5,
+     "src": [
+      18.068,
+      18.223
+     ],
+     "start": 12.328,
+     "end": 12.483,
+     "key": false
+    },
+    {
+     "text": "to",
+     "sentence": 5,
+     "src": [
+      18.223,
+      18.377
+     ],
+     "start": 12.483,
+     "end": 12.637,
+     "key": false
+    },
+    {
+     "text": "aajkal",
+     "sentence": 5,
+     "src": [
+      18.377,
+      18.687
+     ],
+     "start": 12.637,
+     "end": 12.947,
+     "key": false
+    },
+    {
+     "text": "aam",
+     "sentence": 5,
+     "src": [
+      18.687,
+      19.111
+     ],
+     "start": 12.947,
+     "end": 13.371,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 13.311,
+   "end": 14.21,
+   "words": [
+    {
+     "text": "baat",
+     "sentence": 5,
+     "src": [
+      19.111,
+      19.266
+     ],
+     "start": 13.371,
+     "end": 13.526,
+     "key": false
+    },
+    {
+     "text": "ho",
+     "sentence": 5,
+     "src": [
+      19.266,
+      19.421
+     ],
+     "start": 13.526,
+     "end": 13.681,
+     "key": false
+    },
+    {
+     "text": "gayi",
+     "sentence": 5,
+     "src": [
+      19.421,
+      19.575
+     ],
+     "start": 13.681,
+     "end": 13.835,
+     "key": false
+    },
+    {
+     "text": "hai.",
+     "sentence": 5,
+     "src": [
+      19.575,
+      19.73
+     ],
+     "start": 13.835,
+     "end": 13.99,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 14.21,
+   "end": 15.2,
+   "words": [
+    {
+     "text": "Masaledaar,",
+     "sentence": 6,
+     "src": [
+      20.67,
+      21.29
+     ],
+     "start": 14.27,
+     "end": 14.89,
+     "key": true
+    }
+   ]
+  },
+  {
+   "start": 15.2,
+   "end": 16.09,
+   "words": [
+    {
+     "text": "tez",
+     "sentence": 7,
+     "src": [
+      21.66,
+      21.863
+     ],
+     "start": 15.26,
+     "end": 15.463,
+     "key": true
+    },
+    {
+     "text": "khaana,",
+     "sentence": 7,
+     "src": [
+      21.863,
+      22.27
+     ],
+     "start": 15.463,
+     "end": 15.87,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 16.09,
+   "end": 16.86,
+   "words": [
+    {
+     "text": "teekha,",
+     "sentence": 8,
+     "src": [
+      22.81,
+      23.09
+     ],
+     "start": 16.15,
+     "end": 16.43,
+     "key": true
+    }
+   ]
+  },
+  {
+   "start": 16.86,
+   "end": 17.6,
+   "words": [
+    {
+     "text": "mirchi,",
+     "sentence": 9,
+     "src": [
+      23.58,
+      23.87
+     ],
+     "start": 16.92,
+     "end": 17.21,
+     "key": true
+    }
+   ]
+  },
+  {
+   "start": 17.6,
+   "end": 18.42,
+   "words": [
+    {
+     "text": "tala",
+     "sentence": 10,
+     "src": [
+      24.32,
+      24.536
+     ],
+     "start": 17.66,
+     "end": 17.876,
+     "key": true
+    },
+    {
+     "text": "hua",
+     "sentence": 10,
+     "src": [
+      24.536,
+      24.644
+     ],
+     "start": 17.876,
+     "end": 17.984,
+     "key": false
+    },
+    {
+     "text": "khaana.",
+     "sentence": 10,
+     "src": [
+      24.644,
+      24.86
+     ],
+     "start": 17.984,
+     "end": 18.2,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 18.42,
+   "end": 19.674,
+   "words": [
+    {
+     "text": "Aise",
+     "sentence": 11,
+     "src": [
+      25.81,
+      26.168
+     ],
+     "start": 18.48,
+     "end": 18.838,
+     "key": false
+    },
+    {
+     "text": "khaane",
+     "sentence": 11,
+     "src": [
+      26.168,
+      26.526
+     ],
+     "start": 18.838,
+     "end": 19.196,
+     "key": false
+    },
+    {
+     "text": "ki",
+     "sentence": 11,
+     "src": [
+      26.526,
+      26.705
+     ],
+     "start": 19.196,
+     "end": 19.375,
+     "key": false
+    },
+    {
+     "text": "aadat",
+     "sentence": 11,
+     "src": [
+      26.705,
+      27.064
+     ],
+     "start": 19.375,
+     "end": 19.734,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 19.674,
+   "end": 20.88,
+   "words": [
+    {
+     "text": "pad",
+     "sentence": 11,
+     "src": [
+      27.064,
+      27.453
+     ],
+     "start": 19.734,
+     "end": 20.123,
+     "key": false
+    },
+    {
+     "text": "jaati",
+     "sentence": 11,
+     "src": [
+      27.453,
+      27.811
+     ],
+     "start": 20.123,
+     "end": 20.481,
+     "key": false
+    },
+    {
+     "text": "hai,",
+     "sentence": 11,
+     "src": [
+      27.811,
+      27.99
+     ],
+     "start": 20.481,
+     "end": 20.66,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 20.88,
+   "end": 22.087,
+   "words": [
+    {
+     "text": "aur",
+     "sentence": 12,
+     "src": [
+      28.65,
+      28.822
+     ],
+     "start": 20.94,
+     "end": 21.112,
+     "key": false
+    },
+    {
+     "text": "baar-baar",
+     "sentence": 12,
+     "src": [
+      28.822,
+      29.167
+     ],
+     "start": 21.112,
+     "end": 21.457,
+     "key": false
+    },
+    {
+     "text": "aisa",
+     "sentence": 12,
+     "src": [
+      29.167,
+      29.512
+     ],
+     "start": 21.457,
+     "end": 21.802,
+     "key": false
+    },
+    {
+     "text": "khaane",
+     "sentence": 12,
+     "src": [
+      29.512,
+      29.857
+     ],
+     "start": 21.802,
+     "end": 22.147,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 22.087,
+   "end": 24.41,
+   "words": [
+    {
+     "text": "se",
+     "sentence": 12,
+     "src": [
+      29.857,
+      30.029
+     ],
+     "start": 22.147,
+     "end": 22.319,
+     "key": false
+    },
+    {
+     "text": "poori",
+     "sentence": 12,
+     "src": [
+      30.029,
+      30.374
+     ],
+     "start": 22.319,
+     "end": 22.664,
+     "key": false
+    },
+    {
+     "text": "anna-nalika",
+     "sentence": 12,
+     "src": [
+      30.374,
+      31.836
+     ],
+     "start": 22.664,
+     "end": 24.126,
+     "key": true
+    },
+    {
+     "text": "garam",
+     "sentence": 12,
+     "src": [
+      31.836,
+      32.18
+     ],
+     "start": 24.126,
+     "end": 24.47,
+     "key": true
+    }
+   ]
+  },
+  {
+   "start": 24.41,
+   "end": 25.66,
+   "words": [
+    {
+     "text": "ho",
+     "sentence": 12,
+     "src": [
+      32.18,
+      32.353
+     ],
+     "start": 24.47,
+     "end": 24.643,
+     "key": false
+    },
+    {
+     "text": "jaati",
+     "sentence": 12,
+     "src": [
+      32.353,
+      33.838
+     ],
+     "start": 24.643,
+     "end": 25.268,
+     "key": false
+    },
+    {
+     "text": "hai.",
+     "sentence": 12,
+     "src": [
+      33.838,
+      34.01
+     ],
+     "start": 25.268,
+     "end": 25.44,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 25.66,
+   "end": 27.126,
+   "words": [
+    {
+     "text": "To",
+     "sentence": 13,
+     "src": [
+      34.88,
+      35.028
+     ],
+     "start": 25.72,
+     "end": 25.868,
+     "key": false
+    },
+    {
+     "text": "us",
+     "sentence": 13,
+     "src": [
+      35.028,
+      35.176
+     ],
+     "start": 25.868,
+     "end": 26.016,
+     "key": false
+    },
+    {
+     "text": "ushnata",
+     "sentence": 13,
+     "src": [
+      35.176,
+      35.621
+     ],
+     "start": 26.016,
+     "end": 26.461,
+     "key": true
+    },
+    {
+     "text": "ke",
+     "sentence": 13,
+     "src": [
+      35.621,
+      35.769
+     ],
+     "start": 26.461,
+     "end": 26.609,
+     "key": false
+    },
+    {
+     "text": "kaaran",
+     "sentence": 13,
+     "src": [
+      35.769,
+      36.766
+     ],
+     "start": 26.609,
+     "end": 27.186,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 27.126,
+   "end": 27.571,
+   "words": [
+    {
+     "text": "jo",
+     "sentence": 13,
+     "src": [
+      36.766,
+      36.914
+     ],
+     "start": 27.186,
+     "end": 27.334,
+     "key": false
+    },
+    {
+     "text": "stool",
+     "sentence": 13,
+     "src": [
+      36.914,
+      37.062
+     ],
+     "start": 27.334,
+     "end": 27.482,
+     "key": true
+    },
+    {
+     "text": "hai,",
+     "sentence": 13,
+     "src": [
+      37.062,
+      37.211
+     ],
+     "start": 27.482,
+     "end": 27.631,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 27.571,
+   "end": 29.15,
+   "words": [
+    {
+     "text": "woh",
+     "sentence": 13,
+     "src": [
+      37.211,
+      37.769
+     ],
+     "start": 27.631,
+     "end": 28.189,
+     "key": false
+    },
+    {
+     "text": "hard",
+     "sentence": 13,
+     "src": [
+      37.769,
+      37.917
+     ],
+     "start": 28.189,
+     "end": 28.337,
+     "key": true
+    },
+    {
+     "text": "ho",
+     "sentence": 13,
+     "src": [
+      37.917,
+      38.065
+     ],
+     "start": 28.337,
+     "end": 28.485,
+     "key": false
+    },
+    {
+     "text": "jaata",
+     "sentence": 13,
+     "src": [
+      38.065,
+      38.362
+     ],
+     "start": 28.485,
+     "end": 28.782,
+     "key": false
+    },
+    {
+     "text": "hai.",
+     "sentence": 13,
+     "src": [
+      38.362,
+      38.51
+     ],
+     "start": 28.782,
+     "end": 28.93,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 29.15,
+   "end": 29.994,
+   "words": [
+    {
+     "text": "Aur",
+     "sentence": 14,
+     "src": [
+      39.17,
+      39.311
+     ],
+     "start": 29.21,
+     "end": 29.351,
+     "key": false
+    },
+    {
+     "text": "jab",
+     "sentence": 14,
+     "src": [
+      39.311,
+      39.451
+     ],
+     "start": 29.351,
+     "end": 29.491,
+     "key": false
+    },
+    {
+     "text": "nikalta",
+     "sentence": 14,
+     "src": [
+      39.451,
+      39.874
+     ],
+     "start": 29.491,
+     "end": 29.914,
+     "key": false
+    },
+    {
+     "text": "hai,",
+     "sentence": 14,
+     "src": [
+      39.874,
+      40.014
+     ],
+     "start": 29.914,
+     "end": 30.054,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 29.994,
+   "end": 32.27,
+   "words": [
+    {
+     "text": "to",
+     "sentence": 14,
+     "src": [
+      40.014,
+      40.645
+     ],
+     "start": 30.054,
+     "end": 30.685,
+     "key": false
+    },
+    {
+     "text": "wahan",
+     "sentence": 14,
+     "src": [
+      40.645,
+      41.306
+     ],
+     "start": 30.685,
+     "end": 31.346,
+     "key": false
+    },
+    {
+     "text": "garmi",
+     "sentence": 14,
+     "src": [
+      41.306,
+      41.588
+     ],
+     "start": 31.346,
+     "end": 31.628,
+     "key": true
+    },
+    {
+     "text": "ke",
+     "sentence": 14,
+     "src": [
+      41.588,
+      41.729
+     ],
+     "start": 31.628,
+     "end": 31.769,
+     "key": false
+    },
+    {
+     "text": "kaaran",
+     "sentence": 14,
+     "src": [
+      41.729,
+      42.01
+     ],
+     "start": 31.769,
+     "end": 32.05,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 32.27,
+   "end": 33.15,
+   "words": [
+    {
+     "text": "piles",
+     "sentence": 15,
+     "src": [
+      42.6,
+      42.84
+     ],
+     "start": 32.33,
+     "end": 32.57,
+     "key": true
+    },
+    {
+     "text": "jaise",
+     "sentence": 15,
+     "src": [
+      42.84,
+      43.08
+     ],
+     "start": 32.57,
+     "end": 32.81,
+     "key": false
+    },
+    {
+     "text": "tayyar",
+     "sentence": 15,
+     "src": [
+      43.08,
+      44.51
+     ],
+     "start": 32.81,
+     "end": 33.21,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 33.15,
+   "end": 33.91,
+   "words": [
+    {
+     "text": "ho",
+     "sentence": 15,
+     "src": [
+      44.51,
+      44.63
+     ],
+     "start": 33.21,
+     "end": 33.33,
+     "key": false
+    },
+    {
+     "text": "jaate",
+     "sentence": 15,
+     "src": [
+      44.63,
+      44.87
+     ],
+     "start": 33.33,
+     "end": 33.57,
+     "key": false
+    },
+    {
+     "text": "hain.",
+     "sentence": 15,
+     "src": [
+      44.87,
+      44.99
+     ],
+     "start": 33.57,
+     "end": 33.69,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 33.91,
+   "end": 35.29,
+   "words": [
+    {
+     "text": "Us",
+     "sentence": 16,
+     "src": [
+      46.89,
+      47.073
+     ],
+     "start": 33.97,
+     "end": 34.153,
+     "key": false
+    },
+    {
+     "text": "piles",
+     "sentence": 16,
+     "src": [
+      47.073,
+      47.44
+     ],
+     "start": 34.153,
+     "end": 34.52,
+     "key": true
+    },
+    {
+     "text": "ke",
+     "sentence": 16,
+     "src": [
+      47.44,
+      47.623
+     ],
+     "start": 34.52,
+     "end": 34.703,
+     "key": false
+    },
+    {
+     "text": "kaaran",
+     "sentence": 16,
+     "src": [
+      47.623,
+      48.63
+     ],
+     "start": 34.703,
+     "end": 35.35,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 35.29,
+   "end": 36.95,
+   "words": [
+    {
+     "text": "wahan",
+     "sentence": 16,
+     "src": [
+      48.63,
+      48.997
+     ],
+     "start": 35.35,
+     "end": 35.717,
+     "key": false
+    },
+    {
+     "text": "pain",
+     "sentence": 16,
+     "src": [
+      48.997,
+      50.4
+     ],
+     "start": 35.717,
+     "end": 36.18,
+     "key": true
+    },
+    {
+     "text": "hota",
+     "sentence": 16,
+     "src": [
+      50.4,
+      50.767
+     ],
+     "start": 36.18,
+     "end": 36.547,
+     "key": false
+    },
+    {
+     "text": "hai.",
+     "sentence": 16,
+     "src": [
+      50.767,
+      50.95
+     ],
+     "start": 36.547,
+     "end": 36.73,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 36.95,
+   "end": 38.396,
+   "words": [
+    {
+     "text": "Subah-subah",
+     "sentence": 17,
+     "src": [
+      51.54,
+      52.263
+     ],
+     "start": 37.01,
+     "end": 37.733,
+     "key": false
+    },
+    {
+     "text": "uthte",
+     "sentence": 17,
+     "src": [
+      52.263,
+      52.625
+     ],
+     "start": 37.733,
+     "end": 38.095,
+     "key": false
+    },
+    {
+     "text": "hi",
+     "sentence": 17,
+     "src": [
+      52.625,
+      52.805
+     ],
+     "start": 38.095,
+     "end": 38.275,
+     "key": false
+    },
+    {
+     "text": "jab",
+     "sentence": 17,
+     "src": [
+      52.805,
+      52.986
+     ],
+     "start": 38.275,
+     "end": 38.456,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 38.396,
+   "end": 39.86,
+   "words": [
+    {
+     "text": "stool",
+     "sentence": 17,
+     "src": [
+      52.986,
+      53.907
+     ],
+     "start": 38.456,
+     "end": 38.917,
+     "key": true
+    },
+    {
+     "text": "pass",
+     "sentence": 17,
+     "src": [
+      53.907,
+      54.088
+     ],
+     "start": 38.917,
+     "end": 39.098,
+     "key": false
+    },
+    {
+     "text": "karte",
+     "sentence": 17,
+     "src": [
+      54.088,
+      54.449
+     ],
+     "start": 39.098,
+     "end": 39.459,
+     "key": false
+    },
+    {
+     "text": "hain,",
+     "sentence": 17,
+     "src": [
+      54.449,
+      54.63
+     ],
+     "start": 39.459,
+     "end": 39.64,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 39.86,
+   "end": 41.193,
+   "words": [
+    {
+     "text": "us",
+     "sentence": 18,
+     "src": [
+      55.48,
+      55.655
+     ],
+     "start": 39.92,
+     "end": 40.095,
+     "key": false
+    },
+    {
+     "text": "waqt",
+     "sentence": 18,
+     "src": [
+      55.655,
+      56.501
+     ],
+     "start": 40.095,
+     "end": 40.551,
+     "key": false
+    },
+    {
+     "text": "anus",
+     "sentence": 18,
+     "src": [
+      56.501,
+      56.852
+     ],
+     "start": 40.551,
+     "end": 40.902,
+     "key": false
+    },
+    {
+     "text": "ke",
+     "sentence": 18,
+     "src": [
+      56.852,
+      57.027
+     ],
+     "start": 40.902,
+     "end": 41.077,
+     "key": false
+    },
+    {
+     "text": "dwaar",
+     "sentence": 18,
+     "src": [
+      57.027,
+      57.203
+     ],
+     "start": 41.077,
+     "end": 41.253,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 41.193,
+   "end": 42.35,
+   "words": [
+    {
+     "text": "mein",
+     "sentence": 18,
+     "src": [
+      57.203,
+      57.378
+     ],
+     "start": 41.253,
+     "end": 41.428,
+     "key": false
+    },
+    {
+     "text": "dard",
+     "sentence": 18,
+     "src": [
+      57.378,
+      57.554
+     ],
+     "start": 41.428,
+     "end": 41.604,
+     "key": true
+    },
+    {
+     "text": "hota",
+     "sentence": 18,
+     "src": [
+      57.554,
+      57.905
+     ],
+     "start": 41.604,
+     "end": 41.955,
+     "key": false
+    },
+    {
+     "text": "hai,",
+     "sentence": 18,
+     "src": [
+      57.905,
+      58.08
+     ],
+     "start": 41.955,
+     "end": 42.13,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 42.35,
+   "end": 44.38,
+   "words": [
+    {
+     "text": "aur",
+     "sentence": 19,
+     "src": [
+      58.97,
+      59.32
+     ],
+     "start": 42.41,
+     "end": 42.76,
+     "key": false
+    },
+    {
+     "text": "pain",
+     "sentence": 19,
+     "src": [
+      59.32,
+      59.67
+     ],
+     "start": 42.76,
+     "end": 43.11,
+     "key": true
+    },
+    {
+     "text": "badhta",
+     "sentence": 19,
+     "src": [
+      59.67,
+      60.37
+     ],
+     "start": 43.11,
+     "end": 43.81,
+     "key": false
+    },
+    {
+     "text": "hai.",
+     "sentence": 19,
+     "src": [
+      60.37,
+      60.72
+     ],
+     "start": 43.81,
+     "end": 44.16,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 44.38,
+   "end": 45.521,
+   "words": [
+    {
+     "text": "Aksar",
+     "sentence": 20,
+     "src": [
+      61.29,
+      61.746
+     ],
+     "start": 44.44,
+     "end": 44.896,
+     "key": false
+    },
+    {
+     "text": "paaya",
+     "sentence": 20,
+     "src": [
+      61.746,
+      61.975
+     ],
+     "start": 44.896,
+     "end": 45.125,
+     "key": false
+    },
+    {
+     "text": "gaya",
+     "sentence": 20,
+     "src": [
+      61.975,
+      62.203
+     ],
+     "start": 45.125,
+     "end": 45.353,
+     "key": false
+    },
+    {
+     "text": "hai",
+     "sentence": 20,
+     "src": [
+      62.203,
+      62.431
+     ],
+     "start": 45.353,
+     "end": 45.581,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 45.521,
+   "end": 47.759,
+   "words": [
+    {
+     "text": "ki",
+     "sentence": 20,
+     "src": [
+      62.431,
+      62.659
+     ],
+     "start": 45.581,
+     "end": 45.809,
+     "key": false
+    },
+    {
+     "text": "patient",
+     "sentence": 20,
+     "src": [
+      62.659,
+      63.476
+     ],
+     "start": 45.809,
+     "end": 46.626,
+     "key": false
+    },
+    {
+     "text": "sharm",
+     "sentence": 20,
+     "src": [
+      63.476,
+      63.704
+     ],
+     "start": 46.626,
+     "end": 46.854,
+     "key": true
+    },
+    {
+     "text": "ki",
+     "sentence": 20,
+     "src": [
+      63.704,
+      63.932
+     ],
+     "start": 46.854,
+     "end": 47.082,
+     "key": false
+    },
+    {
+     "text": "wajah",
+     "sentence": 20,
+     "src": [
+      63.932,
+      65.199
+     ],
+     "start": 47.082,
+     "end": 47.819,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 47.759,
+   "end": 49.46,
+   "words": [
+    {
+     "text": "se",
+     "sentence": 20,
+     "src": [
+      65.199,
+      65.427
+     ],
+     "start": 47.819,
+     "end": 48.047,
+     "key": false
+    },
+    {
+     "text": "der",
+     "sentence": 20,
+     "src": [
+      65.427,
+      65.655
+     ],
+     "start": 48.047,
+     "end": 48.275,
+     "key": false
+    },
+    {
+     "text": "karte",
+     "sentence": 20,
+     "src": [
+      65.655,
+      67.022
+     ],
+     "start": 48.275,
+     "end": 49.012,
+     "key": false
+    },
+    {
+     "text": "hain.",
+     "sentence": 20,
+     "src": [
+      67.022,
+      67.25
+     ],
+     "start": 49.012,
+     "end": 49.24,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 49.46,
+   "end": 51.687,
+   "words": [
+    {
+     "text": "Jab",
+     "sentence": 21,
+     "src": [
+      68.11,
+      68.348
+     ],
+     "start": 49.52,
+     "end": 49.758,
+     "key": false
+    },
+    {
+     "text": "piles",
+     "sentence": 21,
+     "src": [
+      68.348,
+      69.495
+     ],
+     "start": 49.758,
+     "end": 50.515,
+     "key": true
+    },
+    {
+     "text": "complication",
+     "sentence": 21,
+     "src": [
+      69.495,
+      71.417
+     ],
+     "start": 50.515,
+     "end": 51.747,
+     "key": true
+    }
+   ]
+  },
+  {
+   "start": 51.687,
+   "end": 53.118,
+   "words": [
+    {
+     "text": "create",
+     "sentence": 21,
+     "src": [
+      71.417,
+      72.134
+     ],
+     "start": 51.747,
+     "end": 52.464,
+     "key": false
+    },
+    {
+     "text": "karta",
+     "sentence": 21,
+     "src": [
+      72.134,
+      72.61
+     ],
+     "start": 52.464,
+     "end": 52.94,
+     "key": false
+    },
+    {
+     "text": "hai,",
+     "sentence": 21,
+     "src": [
+      72.61,
+      72.848
+     ],
+     "start": 52.94,
+     "end": 53.178,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 53.118,
+   "end": 54.547,
+   "words": [
+    {
+     "text": "tabhi",
+     "sentence": 21,
+     "src": [
+      72.848,
+      73.325
+     ],
+     "start": 53.178,
+     "end": 53.655,
+     "key": false
+    },
+    {
+     "text": "woh",
+     "sentence": 21,
+     "src": [
+      73.325,
+      73.563
+     ],
+     "start": 53.655,
+     "end": 53.893,
+     "key": false
+    },
+    {
+     "text": "doctor",
+     "sentence": 21,
+     "src": [
+      73.563,
+      74.039
+     ],
+     "start": 53.893,
+     "end": 54.369,
+     "key": true
+    },
+    {
+     "text": "ke",
+     "sentence": 21,
+     "src": [
+      74.039,
+      74.277
+     ],
+     "start": 54.369,
+     "end": 54.607,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 54.547,
+   "end": 55.78,
+   "words": [
+    {
+     "text": "paas",
+     "sentence": 21,
+     "src": [
+      74.277,
+      74.515
+     ],
+     "start": 54.607,
+     "end": 54.845,
+     "key": false
+    },
+    {
+     "text": "aate",
+     "sentence": 21,
+     "src": [
+      74.515,
+      74.992
+     ],
+     "start": 54.845,
+     "end": 55.322,
+     "key": false
+    },
+    {
+     "text": "hain.",
+     "sentence": 21,
+     "src": [
+      74.992,
+      75.23
+     ],
+     "start": 55.322,
+     "end": 55.56,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 55.78,
+   "end": 56.88,
+   "words": [
+    {
+     "text": "Aapko",
+     "sentence": 22,
+     "src": [
+      76.26,
+      76.494
+     ],
+     "start": 55.84,
+     "end": 56.074,
+     "key": false
+    },
+    {
+     "text": "samajhna",
+     "sentence": 22,
+     "src": [
+      76.494,
+      76.846
+     ],
+     "start": 56.074,
+     "end": 56.426,
+     "key": false
+    },
+    {
+     "text": "chahiye",
+     "sentence": 22,
+     "src": [
+      76.846,
+      77.08
+     ],
+     "start": 56.426,
+     "end": 56.66,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 56.88,
+   "end": 58.968,
+   "words": [
+    {
+     "text": "ki",
+     "sentence": 23,
+     "src": [
+      78.04,
+      78.311
+     ],
+     "start": 56.94,
+     "end": 57.211,
+     "key": false
+    },
+    {
+     "text": "shuruaat",
+     "sentence": 23,
+     "src": [
+      78.311,
+      79.054
+     ],
+     "start": 57.211,
+     "end": 57.954,
+     "key": false
+    },
+    {
+     "text": "mein",
+     "sentence": 23,
+     "src": [
+      79.054,
+      79.585
+     ],
+     "start": 57.954,
+     "end": 58.485,
+     "key": false
+    },
+    {
+     "text": "agar",
+     "sentence": 23,
+     "src": [
+      79.585,
+      80.128
+     ],
+     "start": 58.485,
+     "end": 59.028,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 58.968,
+   "end": 60.584,
+   "words": [
+    {
+     "text": "khaan-paan",
+     "sentence": 23,
+     "src": [
+      80.128,
+      80.67
+     ],
+     "start": 59.028,
+     "end": 59.57,
+     "key": true
+    },
+    {
+     "text": "ka",
+     "sentence": 23,
+     "src": [
+      80.67,
+      81.201
+     ],
+     "start": 59.57,
+     "end": 60.101,
+     "key": false
+    },
+    {
+     "text": "parhez",
+     "sentence": 23,
+     "src": [
+      81.201,
+      81.744
+     ],
+     "start": 60.101,
+     "end": 60.644,
+     "key": true
+    }
+   ]
+  },
+  {
+   "start": 60.584,
+   "end": 62.45,
+   "words": [
+    {
+     "text": "achhe",
+     "sentence": 23,
+     "src": [
+      81.744,
+      82.956
+     ],
+     "start": 60.644,
+     "end": 61.466,
+     "key": false
+    },
+    {
+     "text": "se",
+     "sentence": 23,
+     "src": [
+      82.956,
+      83.227
+     ],
+     "start": 61.466,
+     "end": 61.737,
+     "key": false
+    },
+    {
+     "text": "kiya",
+     "sentence": 23,
+     "src": [
+      83.227,
+      83.499
+     ],
+     "start": 61.737,
+     "end": 62.009,
+     "key": false
+    },
+    {
+     "text": "jaaye,",
+     "sentence": 23,
+     "src": [
+      83.499,
+      83.77
+     ],
+     "start": 62.009,
+     "end": 62.28,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 62.45,
+   "end": 63.17,
+   "words": [
+    {
+     "text": "aur",
+     "sentence": 24,
+     "src": [
+      84.0,
+      84.12
+     ],
+     "start": 62.51,
+     "end": 62.63,
+     "key": false
+    },
+    {
+     "text": "aahaar-vihaar",
+     "sentence": 24,
+     "src": [
+      84.12,
+      84.6
+     ],
+     "start": 62.63,
+     "end": 63.11,
+     "key": true
+    },
+    {
+     "text": "ka",
+     "sentence": 24,
+     "src": [
+      84.6,
+      84.72
+     ],
+     "start": 63.11,
+     "end": 63.23,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 63.17,
+   "end": 64.05,
+   "words": [
+    {
+     "text": "parhez",
+     "sentence": 24,
+     "src": [
+      84.72,
+      84.96
+     ],
+     "start": 63.23,
+     "end": 63.47,
+     "key": true
+    },
+    {
+     "text": "rakha",
+     "sentence": 24,
+     "src": [
+      84.96,
+      85.82
+     ],
+     "start": 63.47,
+     "end": 63.99,
+     "key": false
+    },
+    {
+     "text": "jaaye,",
+     "sentence": 24,
+     "src": [
+      85.82,
+      85.94
+     ],
+     "start": 63.99,
+     "end": 64.11,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 64.05,
+   "end": 64.69,
+   "words": [
+    {
+     "text": "to",
+     "sentence": 24,
+     "src": [
+      85.94,
+      86.06
+     ],
+     "start": 64.11,
+     "end": 64.23,
+     "key": false
+    },
+    {
+     "text": "piles",
+     "sentence": 24,
+     "src": [
+      86.06,
+      86.3
+     ],
+     "start": 64.23,
+     "end": 64.47,
+     "key": true
+    }
+   ]
+  },
+  {
+   "start": 64.69,
+   "end": 65.91,
+   "words": [
+    {
+     "text": "kam",
+     "sentence": 25,
+     "src": [
+      86.89,
+      87.038
+     ],
+     "start": 64.75,
+     "end": 64.898,
+     "key": false
+    },
+    {
+     "text": "ho",
+     "sentence": 25,
+     "src": [
+      87.038,
+      87.186
+     ],
+     "start": 64.898,
+     "end": 65.046,
+     "key": false
+    },
+    {
+     "text": "sakte",
+     "sentence": 25,
+     "src": [
+      87.186,
+      87.482
+     ],
+     "start": 65.046,
+     "end": 65.342,
+     "key": false
+    },
+    {
+     "text": "hain.",
+     "sentence": 25,
+     "src": [
+      87.482,
+      87.63
+     ],
+     "start": 65.342,
+     "end": 65.49,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 65.91,
+   "end": 66.817,
+   "words": [
+    {
+     "text": "Shuruaat",
+     "sentence": 26,
+     "src": [
+      88.11,
+      88.361
+     ],
+     "start": 65.97,
+     "end": 66.221,
+     "key": false
+    },
+    {
+     "text": "mein",
+     "sentence": 26,
+     "src": [
+      88.361,
+      88.486
+     ],
+     "start": 66.221,
+     "end": 66.346,
+     "key": false
+    },
+    {
+     "text": "hi",
+     "sentence": 26,
+     "src": [
+      88.486,
+      88.612
+     ],
+     "start": 66.346,
+     "end": 66.472,
+     "key": false
+    },
+    {
+     "text": "woh",
+     "sentence": 26,
+     "src": [
+      88.612,
+      89.247
+     ],
+     "start": 66.472,
+     "end": 66.877,
+     "key": false
+    }
+   ]
+  },
+  {
+   "start": 66.817,
+   "end": 67.93,
+   "words": [
+    {
+     "text": "durust",
+     "sentence": 26,
+     "src": [
+      89.247,
+      89.498
+     ],
+     "start": 66.877,
+     "end": 67.128,
+     "key": true
+    },
+    {
+     "text": "ho",
+     "sentence": 26,
+     "src": [
+      89.498,
+      89.624
+     ],
+     "start": 67.128,
+     "end": 67.254,
+     "key": false
+    },
+    {
+     "text": "sakte",
+     "sentence": 26,
+     "src": [
+      89.624,
+      89.875
+     ],
+     "start": 67.254,
+     "end": 67.505,
+     "key": false
+    },
+    {
+     "text": "hain.",
+     "sentence": 26,
+     "src": [
+      89.875,
+      90.0
+     ],
+     "start": 67.505,
+     "end": 67.63,
+     "key": false
+    }
+   ]
+  }
+ ]
+}
