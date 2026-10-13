@@ -1,0 +1,11 @@
+# Source footage and anything derived from it stay local (this repo is public).
+*.mp4
+*.mov
+*.webm
+*.wav
+*.m4a
+renders/
+.hyperframes/
+# SFX are copied in by build/fetch_assets.sh
+assets/sfx/*.mp3
+__pycache__/
