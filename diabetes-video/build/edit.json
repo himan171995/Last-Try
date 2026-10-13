@@ -1,0 +1,4395 @@
+{
+ "segments": [
+  {
+   "src_start": 2.99,
+   "src_end": 5.69,
+   "frames": 81,
+   "out_start": 0.0,
+   "section": "question",
+   "speaker": "patient"
+  },
+  {
+   "src_start": 5.76,
+   "src_end": 7.993,
+   "frames": 67,
+   "out_start": 2.7,
+   "section": "question",
+   "speaker": "patient"
+  },
+  {
+   "src_start": 8.24,
+   "src_end": 10.107,
+   "frames": 56,
+   "out_start": 4.933,
+   "section": "question",
+   "speaker": "patient"
+  },
+  {
+   "src_start": 10.11,
+   "src_end": 12.243,
+   "frames": 64,
+   "out_start": 6.8,
+   "section": "question",
+   "speaker": "patient"
+  },
+  {
+   "gap": true,
+   "out_start": 8.933,
+   "frames": 126,
+   "section": "intro"
+  },
+  {
+   "src_start": 14.59,
+   "src_end": 16.623,
+   "frames": 61,
+   "out_start": 13.133,
+   "section": "intro",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 16.85,
+   "src_end": 17.817,
+   "frames": 29,
+   "out_start": 15.167,
+   "section": "intro",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 18.68,
+   "src_end": 19.947,
+   "frames": 38,
+   "out_start": 16.133,
+   "section": "intro",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 20.23,
+   "src_end": 21.663,
+   "frames": 43,
+   "out_start": 17.4,
+   "section": "intro",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 21.663,
+   "src_end": 23.063,
+   "frames": 42,
+   "out_start": 18.833,
+   "section": "intro",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 23.36,
+   "src_end": 24.46,
+   "frames": 33,
+   "out_start": 20.233,
+   "section": "intro",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 25.14,
+   "src_end": 27.407,
+   "frames": 68,
+   "out_start": 21.333,
+   "section": "shloka",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 27.71,
+   "src_end": 29.743,
+   "frames": 61,
+   "out_start": 23.6,
+   "section": "shloka",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 30.4,
+   "src_end": 31.533,
+   "frames": 34,
+   "out_start": 25.633,
+   "section": "shloka",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 31.533,
+   "src_end": 32.666,
+   "frames": 34,
+   "out_start": 26.767,
+   "section": "shloka",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 33.05,
+   "src_end": 34.117,
+   "frames": 32,
+   "out_start": 27.9,
+   "section": "shloka",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 34.12,
+   "src_end": 34.853,
+   "frames": 22,
+   "out_start": 28.967,
+   "section": "shloka",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 35.72,
+   "src_end": 37.22,
+   "frames": 45,
+   "out_start": 29.7,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 37.78,
+   "src_end": 39.58,
+   "frames": 54,
+   "out_start": 31.2,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 40.59,
+   "src_end": 42.257,
+   "frames": 50,
+   "out_start": 33.0,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 43.69,
+   "src_end": 46.19,
+   "frames": 75,
+   "out_start": 34.667,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 46.68,
+   "src_end": 48.413,
+   "frames": 52,
+   "out_start": 37.167,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 48.5,
+   "src_end": 50.033,
+   "frames": 46,
+   "out_start": 38.9,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 50.26,
+   "src_end": 50.927,
+   "frames": 20,
+   "out_start": 40.433,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 51.13,
+   "src_end": 52.497,
+   "frames": 41,
+   "out_start": 41.1,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 52.57,
+   "src_end": 56.037,
+   "frames": 104,
+   "out_start": 42.467,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 56.04,
+   "src_end": 57.673,
+   "frames": 49,
+   "out_start": 45.933,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 58.03,
+   "src_end": 59.263,
+   "frames": 37,
+   "out_start": 47.567,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 59.95,
+   "src_end": 61.283,
+   "frames": 40,
+   "out_start": 48.8,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 61.71,
+   "src_end": 62.977,
+   "frames": 38,
+   "out_start": 50.133,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 63.04,
+   "src_end": 65.307,
+   "frames": 68,
+   "out_start": 51.4,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 65.31,
+   "src_end": 66.043,
+   "frames": 22,
+   "out_start": 53.667,
+   "section": "sukh",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 68.27,
+   "src_end": 69.17,
+   "frames": 27,
+   "out_start": 54.4,
+   "section": "stress",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 69.6,
+   "src_end": 72.2,
+   "frames": 78,
+   "out_start": 55.3,
+   "section": "stress",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 77.18,
+   "src_end": 79.38,
+   "frames": 66,
+   "out_start": 57.9,
+   "section": "stress",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 79.39,
+   "src_end": 81.123,
+   "frames": 52,
+   "out_start": 60.1,
+   "section": "stress",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 81.23,
+   "src_end": 82.43,
+   "frames": 36,
+   "out_start": 61.833,
+   "section": "stress",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 82.81,
+   "src_end": 84.143,
+   "frames": 40,
+   "out_start": 63.033,
+   "section": "stress",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 84.25,
+   "src_end": 85.383,
+   "frames": 34,
+   "out_start": 64.367,
+   "section": "stress",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 85.4,
+   "src_end": 86.5,
+   "frames": 33,
+   "out_start": 65.5,
+   "section": "stress",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 87.03,
+   "src_end": 88.83,
+   "frames": 54,
+   "out_start": 66.6,
+   "section": "stress",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 102.12,
+   "src_end": 103.953,
+   "frames": 55,
+   "out_start": 68.4,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 104.09,
+   "src_end": 105.257,
+   "frames": 35,
+   "out_start": 70.233,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 105.257,
+   "src_end": 105.957,
+   "frames": 21,
+   "out_start": 71.4,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 105.99,
+   "src_end": 106.623,
+   "frames": 19,
+   "out_start": 72.1,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 106.623,
+   "src_end": 108.923,
+   "frames": 69,
+   "out_start": 72.733,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 108.98,
+   "src_end": 111.113,
+   "frames": 64,
+   "out_start": 75.033,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 111.113,
+   "src_end": 111.68,
+   "frames": 17,
+   "out_start": 77.167,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 111.69,
+   "src_end": 112.623,
+   "frames": 28,
+   "out_start": 77.733,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 113.52,
+   "src_end": 114.587,
+   "frames": 32,
+   "out_start": 78.667,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 115.45,
+   "src_end": 118.85,
+   "frames": 102,
+   "out_start": 79.733,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 118.85,
+   "src_end": 121.317,
+   "frames": 74,
+   "out_start": 83.133,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 121.37,
+   "src_end": 122.503,
+   "frames": 34,
+   "out_start": 85.6,
+   "section": "dairy",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 125.31,
+   "src_end": 127.11,
+   "frames": 54,
+   "out_start": 86.733,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 127.22,
+   "src_end": 128.82,
+   "frames": 48,
+   "out_start": 88.533,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 129.37,
+   "src_end": 130.203,
+   "frames": 25,
+   "out_start": 90.133,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 130.21,
+   "src_end": 133.31,
+   "frames": 93,
+   "out_start": 90.967,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 137.09,
+   "src_end": 140.39,
+   "frames": 99,
+   "out_start": 94.067,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 140.45,
+   "src_end": 142.383,
+   "frames": 58,
+   "out_start": 97.367,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 142.39,
+   "src_end": 145.123,
+   "frames": 82,
+   "out_start": 99.3,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 145.27,
+   "src_end": 146.537,
+   "frames": 38,
+   "out_start": 102.033,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 146.74,
+   "src_end": 148.107,
+   "frames": 41,
+   "out_start": 103.3,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 148.13,
+   "src_end": 149.13,
+   "frames": 30,
+   "out_start": 104.667,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 149.17,
+   "src_end": 150.77,
+   "frames": 48,
+   "out_start": 105.667,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 151.12,
+   "src_end": 152.287,
+   "frames": 35,
+   "out_start": 107.267,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 152.51,
+   "src_end": 154.277,
+   "frames": 53,
+   "out_start": 108.433,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 154.42,
+   "src_end": 155.52,
+   "frames": 33,
+   "out_start": 110.2,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 155.72,
+   "src_end": 156.487,
+   "frames": 23,
+   "out_start": 111.3,
+   "section": "grain",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 157.16,
+   "src_end": 159.127,
+   "frames": 59,
+   "out_start": 112.067,
+   "section": "sweets",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 159.58,
+   "src_end": 161.013,
+   "frames": 43,
+   "out_start": 114.033,
+   "section": "sweets",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 161.84,
+   "src_end": 163.807,
+   "frames": 59,
+   "out_start": 115.467,
+   "section": "sweets",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 164.25,
+   "src_end": 165.217,
+   "frames": 29,
+   "out_start": 117.433,
+   "section": "sweets",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 165.22,
+   "src_end": 166.22,
+   "frames": 30,
+   "out_start": 118.4,
+   "section": "sweets",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 166.22,
+   "src_end": 168.353,
+   "frames": 64,
+   "out_start": 119.4,
+   "section": "sweets",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 168.353,
+   "src_end": 170.02,
+   "frames": 50,
+   "out_start": 121.533,
+   "section": "sweets",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 174.64,
+   "src_end": 175.573,
+   "frames": 28,
+   "out_start": 123.2,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 175.573,
+   "src_end": 176.506,
+   "frames": 28,
+   "out_start": 124.133,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 176.85,
+   "src_end": 177.75,
+   "frames": 27,
+   "out_start": 125.067,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 177.94,
+   "src_end": 179.873,
+   "frames": 58,
+   "out_start": 125.967,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 179.88,
+   "src_end": 180.913,
+   "frames": 31,
+   "out_start": 127.9,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 180.92,
+   "src_end": 181.62,
+   "frames": 21,
+   "out_start": 128.933,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 186.11,
+   "src_end": 187.077,
+   "frames": 29,
+   "out_start": 129.633,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 187.12,
+   "src_end": 188.72,
+   "frames": 48,
+   "out_start": 130.6,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 188.89,
+   "src_end": 190.49,
+   "frames": 48,
+   "out_start": 132.2,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 190.81,
+   "src_end": 192.51,
+   "frames": 51,
+   "out_start": 133.8,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 192.62,
+   "src_end": 194.453,
+   "frames": 55,
+   "out_start": 135.5,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 194.55,
+   "src_end": 196.05,
+   "frames": 45,
+   "out_start": 137.333,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 202.72,
+   "src_end": 204.553,
+   "frames": 55,
+   "out_start": 138.833,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 204.77,
+   "src_end": 205.803,
+   "frames": 31,
+   "out_start": 140.667,
+   "section": "conclusion",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 206.12,
+   "src_end": 207.52,
+   "frames": 42,
+   "out_start": 141.7,
+   "section": "conclusion",
+   "speaker": "doctor"
+  }
+ ],
+ "phrases": [
+  {
+   "start": 0.07,
+   "end": 2.57,
+   "text": "Sir, apne paas aane waale 10 patients mein se",
+   "section": "question"
+  },
+  {
+   "start": 2.93,
+   "end": 4.81,
+   "text": "6 se 7-8 patients diabetic rehte hain.",
+   "section": "question"
+  },
+  {
+   "start": 5.163,
+   "end": 6.683,
+   "text": "Aajkal apne desh mein diabetes",
+   "section": "question"
+  },
+  {
+   "start": 6.93,
+   "end": 8.8,
+   "text": "ke patients itne kyun badh rahe hain? Sir, kya kaaran hai?",
+   "section": "question"
+  },
+  {
+   "start": 13.203,
+   "end": 15.053,
+   "text": "Aaye din diabetes ke patient badhne ka",
+   "section": "intro"
+  },
+  {
+   "start": 15.397,
+   "end": 16.017,
+   "text": "main kaaran:",
+   "section": "intro"
+  },
+  {
+   "start": 16.363,
+   "end": 17.283,
+   "text": "Charakacharya ji ne",
+   "section": "intro"
+  },
+  {
+   "start": 17.63,
+   "end": 18.7,
+   "text": "kisko diabetes hota hai,",
+   "section": "intro"
+  },
+  {
+   "start": 19.03,
+   "end": 20.1,
+   "text": "kisko madhumeh hota hai,",
+   "section": "intro"
+  },
+  {
+   "start": 20.463,
+   "end": 21.213,
+   "text": "yeh bataya hua hai.",
+   "section": "intro"
+  },
+  {
+   "start": 21.403,
+   "end": 23.493,
+   "text": "Aasya-sukham, swapna-sukham, dadhini,",
+   "section": "shloka"
+  },
+  {
+   "start": 23.83,
+   "end": 25.5,
+   "text": "gramya-audaka-anupa-rasah payamsi,",
+   "section": "shloka"
+  },
+  {
+   "start": 25.863,
+   "end": 26.643,
+   "text": "navanna-panam,",
+   "section": "shloka"
+  },
+  {
+   "start": 26.954,
+   "end": 27.774,
+   "text": "guda-vaikritam cha,",
+   "section": "shloka"
+  },
+  {
+   "start": 28.13,
+   "end": 28.85,
+   "text": "prameha-hetuh",
+   "section": "shloka"
+  },
+  {
+   "start": 29.097,
+   "end": 29.567,
+   "text": "kaphakrit cha sarvam.",
+   "section": "shloka"
+  },
+  {
+   "start": 29.77,
+   "end": 31.07,
+   "text": "Yaani prameh yeh kisko hota hai?",
+   "section": "sukh"
+  },
+  {
+   "start": 31.43,
+   "end": 32.87,
+   "text": "Jo pehle ke zamaane mein rais hote the,",
+   "section": "sukh"
+  },
+  {
+   "start": 33.23,
+   "end": 34.55,
+   "text": "jinke paas zyada paisa hota hai.",
+   "section": "sukh"
+  },
+  {
+   "start": 34.897,
+   "end": 37.037,
+   "text": "Charakacharya ne aasya-sukham, swapna-sukham,",
+   "section": "sukh"
+  },
+  {
+   "start": 37.397,
+   "end": 38.797,
+   "text": "jinke paas paisa hota tha,",
+   "section": "sukh"
+  },
+  {
+   "start": 39.13,
+   "end": 40.33,
+   "text": "jo gaadi pe sote the,",
+   "section": "sukh"
+  },
+  {
+   "start": 40.663,
+   "end": 40.973,
+   "text": "aur",
+   "section": "sukh"
+  },
+  {
+   "start": 41.33,
+   "end": 42.35,
+   "text": "paisa kiske paas rahega?",
+   "section": "sukh"
+  },
+  {
+   "start": 42.697,
+   "end": 45.817,
+   "text": "Jisko chinta rahegi, jisko vyapaar ki chinta rahegi,",
+   "section": "sukh"
+  },
+  {
+   "start": 46.083,
+   "end": 47.463,
+   "text": "aur jisko chinta rahegi,",
+   "section": "sukh"
+  },
+  {
+   "start": 47.797,
+   "end": 48.667,
+   "text": "usko diabetes hoga,",
+   "section": "sukh"
+  },
+  {
+   "start": 49.03,
+   "end": 50.03,
+   "text": "aisa Charakacharya ji ne kaha hai.",
+   "section": "sukh"
+  },
+  {
+   "start": 50.363,
+   "end": 51.273,
+   "text": "To apne Ayurved mein",
+   "section": "sukh"
+  },
+  {
+   "start": 51.63,
+   "end": 53.55,
+   "text": "pehle se hi is baare mein sambhashan",
+   "section": "sukh"
+  },
+  {
+   "start": 53.827,
+   "end": 54.277,
+   "text": "ho chuka hai.",
+   "section": "sukh"
+  },
+  {
+   "start": 54.47,
+   "end": 55.17,
+   "text": "Jiske paas",
+   "section": "stress"
+  },
+  {
+   "start": 55.53,
+   "end": 57.79,
+   "text": "diabetes hai, iska matlab use chinta hai.",
+   "section": "stress"
+  },
+  {
+   "start": 58.13,
+   "end": 59.99,
+   "text": "Woh chinta mein apna vyapaar karta hai,",
+   "section": "stress"
+  },
+  {
+   "start": 60.33,
+   "end": 61.72,
+   "text": "aur woh vyapaar karte samay",
+   "section": "stress"
+  },
+  {
+   "start": 62.063,
+   "end": 62.903,
+   "text": "uska jo stress hai,",
+   "section": "stress"
+  },
+  {
+   "start": 63.263,
+   "end": 64.243,
+   "text": "to iska yeh matlab hai",
+   "section": "stress"
+  },
+  {
+   "start": 64.597,
+   "end": 65.377,
+   "text": "ki stress hi",
+   "section": "stress"
+  },
+  {
+   "start": 65.73,
+   "end": 66.48,
+   "text": "diabetes ka ek",
+   "section": "stress"
+  },
+  {
+   "start": 66.83,
+   "end": 68.27,
+   "text": "mahatvapurna kaaran, cause hai.",
+   "section": "stress"
+  },
+  {
+   "start": 68.47,
+   "end": 70.12,
+   "text": "Jo gaay se utpann",
+   "section": "dairy"
+  },
+  {
+   "start": 70.463,
+   "end": 71.273,
+   "text": "doodh,",
+   "section": "dairy"
+  },
+  {
+   "start": 71.603,
+   "end": 71.993,
+   "text": "dahi,",
+   "section": "dairy"
+  },
+  {
+   "start": 72.33,
+   "end": 72.61,
+   "text": "ghee,",
+   "section": "dairy"
+  },
+  {
+   "start": 72.96,
+   "end": 74.9,
+   "text": "iska jo zyada prayog karta hai,",
+   "section": "dairy"
+  },
+  {
+   "start": 75.263,
+   "end": 77.033,
+   "text": "use bhi diabetes hota hai.",
+   "section": "dairy"
+  },
+  {
+   "start": 77.294,
+   "end": 77.624,
+   "text": "Aisa",
+   "section": "dairy"
+  },
+  {
+   "start": 77.933,
+   "end": 78.533,
+   "text": "doosra kaaran",
+   "section": "dairy"
+  },
+  {
+   "start": 78.897,
+   "end": 79.617,
+   "text": "Charakacharya ji ne:",
+   "section": "dairy"
+  },
+  {
+   "start": 79.963,
+   "end": 83.003,
+   "text": "gramya-audaka-anupa-rasah payamsi, jo gaay, bhains hai,",
+   "section": "dairy"
+  },
+  {
+   "start": 83.343,
+   "end": 85.483,
+   "text": "unke kaaran jo dahi, doodh hote hain,",
+   "section": "dairy"
+  },
+  {
+   "start": 85.83,
+   "end": 86.6,
+   "text": "uske kaaran bhi.",
+   "section": "dairy"
+  },
+  {
+   "start": 86.803,
+   "end": 88.403,
+   "text": "Navanna-panam, guda-vaikritam cha.",
+   "section": "grain"
+  },
+  {
+   "start": 88.763,
+   "end": 90.003,
+   "text": "Navanna-panam, jo",
+   "section": "grain"
+  },
+  {
+   "start": 90.363,
+   "end": 90.853,
+   "text": "anna,",
+   "section": "grain"
+  },
+  {
+   "start": 91.187,
+   "end": 93.947,
+   "text": "nayi fasal, jo anna abhi-abhi nikle hue hain.",
+   "section": "grain"
+  },
+  {
+   "start": 94.297,
+   "end": 97.237,
+   "text": "Pichhle saal ke chaawal, puraane chaawal ka use karein.",
+   "section": "grain"
+  },
+  {
+   "start": 97.597,
+   "end": 99.187,
+   "text": "Iska matlab naye chaawal ka use",
+   "section": "grain"
+  },
+  {
+   "start": 99.45,
+   "end": 101.93,
+   "text": "nahi karna chahiye, naye anaaj ka use nahi karna chahiye,",
+   "section": "grain"
+  },
+  {
+   "start": 102.263,
+   "end": 103.193,
+   "text": "kyunki uske kaaran",
+   "section": "grain"
+  },
+  {
+   "start": 103.53,
+   "end": 104.55,
+   "text": "kaph-kaarak hota hai.",
+   "section": "grain"
+  },
+  {
+   "start": 104.897,
+   "end": 105.537,
+   "text": "Kaph badhta,",
+   "section": "grain"
+  },
+  {
+   "start": 105.897,
+   "end": 107.147,
+   "text": "to kaph ke kaaran hi",
+   "section": "grain"
+  },
+  {
+   "start": 107.497,
+   "end": 108.297,
+   "text": "diabetes hota hai.",
+   "section": "grain"
+  },
+  {
+   "start": 108.663,
+   "end": 110.073,
+   "text": "Is prakar se sambhashan",
+   "section": "grain"
+  },
+  {
+   "start": 110.43,
+   "end": 111.17,
+   "text": "Charakacharya ji ne",
+   "section": "grain"
+  },
+  {
+   "start": 111.53,
+   "end": 111.96,
+   "text": "bataya hai.",
+   "section": "grain"
+  },
+  {
+   "start": 112.137,
+   "end": 113.917,
+   "text": "Yeh bhi bataya hai ki guda-vaikritam cha,",
+   "section": "sweets"
+  },
+  {
+   "start": 114.263,
+   "end": 115.353,
+   "text": "jo zyada meetha khaata hai,",
+   "section": "sweets"
+  },
+  {
+   "start": 115.697,
+   "end": 117.307,
+   "text": "jaise ganne se banayi cheez,",
+   "section": "sweets"
+  },
+  {
+   "start": 117.663,
+   "end": 118.283,
+   "text": "shakkar ho gaya,",
+   "section": "sweets"
+  },
+  {
+   "start": 118.6,
+   "end": 119.27,
+   "text": "gud ho gaya,",
+   "section": "sweets"
+  },
+  {
+   "start": 119.62,
+   "end": 121.4,
+   "text": "aur inse banayi meethi cheezein",
+   "section": "sweets"
+  },
+  {
+   "start": 121.75,
+   "end": 123.09,
+   "text": "jo baar-baar khaata hai.",
+   "section": "sweets"
+  },
+  {
+   "start": 123.27,
+   "end": 124.0,
+   "text": "To Charakacharya ji ne",
+   "section": "conclusion"
+  },
+  {
+   "start": 124.31,
+   "end": 124.96,
+   "text": "pehle se hi",
+   "section": "conclusion"
+  },
+  {
+   "start": 125.297,
+   "end": 125.847,
+   "text": "kisko",
+   "section": "conclusion"
+  },
+  {
+   "start": 126.197,
+   "end": 127.787,
+   "text": "diabetes ho sakta hai, iske baare mein",
+   "section": "conclusion"
+  },
+  {
+   "start": 128.09,
+   "end": 128.82,
+   "text": "bahut sakhol",
+   "section": "conclusion"
+  },
+  {
+   "start": 129.093,
+   "end": 129.513,
+   "text": "bataya hai.",
+   "section": "conclusion"
+  },
+  {
+   "start": 129.863,
+   "end": 130.493,
+   "text": "Aaj bhi",
+   "section": "conclusion"
+  },
+  {
+   "start": 130.83,
+   "end": 132.08,
+   "text": "kai logon ko stress hota hai,",
+   "section": "conclusion"
+  },
+  {
+   "start": 132.43,
+   "end": 133.69,
+   "text": "aur stress ke kaaran hi,",
+   "section": "conclusion"
+  },
+  {
+   "start": 134.03,
+   "end": 135.38,
+   "text": "jinke paas zyada paisa hota hai,",
+   "section": "conclusion"
+  },
+  {
+   "start": 135.73,
+   "end": 137.22,
+   "text": "inke paas zyada sukh hota hai,",
+   "section": "conclusion"
+  },
+  {
+   "start": 137.563,
+   "end": 138.723,
+   "text": "unhi ko diabetes hota hai.",
+   "section": "conclusion"
+  },
+  {
+   "start": 139.063,
+   "end": 140.533,
+   "text": "Iska matlab sabhi log sukhi hain,",
+   "section": "conclusion"
+  },
+  {
+   "start": 140.897,
+   "end": 141.597,
+   "text": "sabhi stress mein hain,",
+   "section": "conclusion"
+  },
+  {
+   "start": 141.93,
+   "end": 142.98,
+   "text": "yahi ek kaaran maana ja sakta hai.",
+   "section": "conclusion"
+  }
+ ],
+ "words": [
+  {
+   "text": "Sir,",
+   "start": 0.07,
+   "end": 0.297,
+   "key": "sir",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "apne",
+   "start": 0.297,
+   "end": 0.575,
+   "key": "apne",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "paas",
+   "start": 0.575,
+   "end": 0.853,
+   "key": "paas",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "aane",
+   "start": 0.853,
+   "end": 1.131,
+   "key": "aane",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "waale",
+   "start": 1.131,
+   "end": 1.459,
+   "key": "waale",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "10",
+   "start": 1.459,
+   "end": 1.636,
+   "key": "10",
+   "kw": true,
+   "section": "question"
+  },
+  {
+   "text": "patients",
+   "start": 1.636,
+   "end": 2.115,
+   "key": "patients",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "mein",
+   "start": 2.115,
+   "end": 2.393,
+   "key": "mein",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "se",
+   "start": 2.393,
+   "end": 2.57,
+   "key": "se",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "6",
+   "start": 2.93,
+   "end": 3.089,
+   "key": "6",
+   "kw": true,
+   "section": "question"
+  },
+  {
+   "text": "se",
+   "start": 3.089,
+   "end": 3.247,
+   "key": "se",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "7-8",
+   "start": 3.247,
+   "end": 3.406,
+   "key": "7-8",
+   "kw": true,
+   "section": "question"
+  },
+  {
+   "text": "patients",
+   "start": 3.406,
+   "end": 3.836,
+   "key": "patients",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "diabetic",
+   "start": 3.836,
+   "end": 4.266,
+   "key": "diabetic",
+   "kw": true,
+   "section": "question"
+  },
+  {
+   "text": "rehte",
+   "start": 4.266,
+   "end": 4.561,
+   "key": "rehte",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "hain.",
+   "start": 4.561,
+   "end": 4.81,
+   "key": "hain",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "Aajkal",
+   "start": 5.163,
+   "end": 5.504,
+   "key": "aajkal",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "apne",
+   "start": 5.504,
+   "end": 5.753,
+   "key": "apne",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "desh",
+   "start": 5.753,
+   "end": 6.003,
+   "key": "desh",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "mein",
+   "start": 6.003,
+   "end": 6.252,
+   "key": "mein",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "diabetes",
+   "start": 6.252,
+   "end": 6.683,
+   "key": "diabetes",
+   "kw": true,
+   "section": "question"
+  },
+  {
+   "text": "ke",
+   "start": 6.93,
+   "end": 7.036,
+   "key": "ke",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "patients",
+   "start": 7.036,
+   "end": 7.325,
+   "key": "patients",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "itne",
+   "start": 7.325,
+   "end": 7.493,
+   "key": "itne",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "kyun",
+   "start": 7.493,
+   "end": 7.66,
+   "key": "kyun",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "badh",
+   "start": 7.66,
+   "end": 7.827,
+   "key": "badh",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "rahe",
+   "start": 7.827,
+   "end": 7.994,
+   "key": "rahe",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "hain?",
+   "start": 7.994,
+   "end": 8.161,
+   "key": "hain",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "Sir,",
+   "start": 8.161,
+   "end": 8.298,
+   "key": "sir",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "kya",
+   "start": 8.298,
+   "end": 8.435,
+   "key": "kya",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "kaaran",
+   "start": 8.435,
+   "end": 8.663,
+   "key": "kaaran",
+   "kw": true,
+   "section": "question"
+  },
+  {
+   "text": "hai?",
+   "start": 8.663,
+   "end": 8.8,
+   "key": "hai",
+   "kw": false,
+   "section": "question"
+  },
+  {
+   "text": "Aaye",
+   "start": 13.203,
+   "end": 13.443,
+   "key": "aaye",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "din",
+   "start": 13.443,
+   "end": 13.639,
+   "key": "din",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "diabetes",
+   "start": 13.639,
+   "end": 14.052,
+   "key": "diabetes",
+   "kw": true,
+   "section": "intro"
+  },
+  {
+   "text": "ke",
+   "start": 14.052,
+   "end": 14.205,
+   "key": "ke",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "patient",
+   "start": 14.205,
+   "end": 14.575,
+   "key": "patient",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "badhne",
+   "start": 14.575,
+   "end": 14.901,
+   "key": "badhne",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "ka",
+   "start": 14.901,
+   "end": 15.053,
+   "key": "ka",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "main",
+   "start": 15.397,
+   "end": 15.659,
+   "key": "main",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "kaaran:",
+   "start": 15.659,
+   "end": 16.017,
+   "key": "kaaran",
+   "kw": true,
+   "section": "intro"
+  },
+  {
+   "text": "Charakacharya",
+   "start": 16.363,
+   "end": 16.984,
+   "key": "charakacharya",
+   "kw": true,
+   "section": "intro"
+  },
+  {
+   "text": "ji",
+   "start": 16.984,
+   "end": 17.134,
+   "key": "ji",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "ne",
+   "start": 17.134,
+   "end": 17.283,
+   "key": "ne",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "kisko",
+   "start": 17.63,
+   "end": 17.898,
+   "key": "kisko",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "diabetes",
+   "start": 17.898,
+   "end": 18.288,
+   "key": "diabetes",
+   "kw": true,
+   "section": "intro"
+  },
+  {
+   "text": "hota",
+   "start": 18.288,
+   "end": 18.515,
+   "key": "hota",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "hai,",
+   "start": 18.515,
+   "end": 18.7,
+   "key": "hai",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "kisko",
+   "start": 19.03,
+   "end": 19.298,
+   "key": "kisko",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "madhumeh",
+   "start": 19.298,
+   "end": 19.689,
+   "key": "madhumeh",
+   "kw": true,
+   "section": "intro"
+  },
+  {
+   "text": "hota",
+   "start": 19.689,
+   "end": 19.915,
+   "key": "hota",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "hai,",
+   "start": 19.915,
+   "end": 20.1,
+   "key": "hai",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "yeh",
+   "start": 20.463,
+   "end": 20.624,
+   "key": "yeh",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "bataya",
+   "start": 20.624,
+   "end": 20.892,
+   "key": "bataya",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "hua",
+   "start": 20.892,
+   "end": 21.053,
+   "key": "hua",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "hai.",
+   "start": 21.053,
+   "end": 21.213,
+   "key": "hai",
+   "kw": false,
+   "section": "intro"
+  },
+  {
+   "text": "Aasya-sukham,",
+   "start": 21.403,
+   "end": 22.161,
+   "key": "aasya-sukham",
+   "kw": true,
+   "section": "shloka"
+  },
+  {
+   "text": "swapna-sukham,",
+   "start": 22.161,
+   "end": 22.978,
+   "key": "swapna-sukham",
+   "kw": true,
+   "section": "shloka"
+  },
+  {
+   "text": "dadhini,",
+   "start": 22.978,
+   "end": 23.493,
+   "key": "dadhini",
+   "kw": false,
+   "section": "shloka"
+  },
+  {
+   "text": "gramya-audaka-anupa-rasah",
+   "start": 23.83,
+   "end": 25.056,
+   "key": "gramya-audaka-anupa-rasah",
+   "kw": false,
+   "section": "shloka"
+  },
+  {
+   "text": "payamsi,",
+   "start": 25.056,
+   "end": 25.5,
+   "key": "payamsi",
+   "kw": false,
+   "section": "shloka"
+  },
+  {
+   "text": "navanna-panam,",
+   "start": 25.863,
+   "end": 26.643,
+   "key": "navanna-panam",
+   "kw": true,
+   "section": "shloka"
+  },
+  {
+   "text": "guda-vaikritam",
+   "start": 26.954,
+   "end": 27.579,
+   "key": "guda-vaikritam",
+   "kw": true,
+   "section": "shloka"
+  },
+  {
+   "text": "cha,",
+   "start": 27.579,
+   "end": 27.774,
+   "key": "cha",
+   "kw": false,
+   "section": "shloka"
+  },
+  {
+   "text": "prameha-hetuh",
+   "start": 28.13,
+   "end": 28.85,
+   "key": "prameha-hetuh",
+   "kw": false,
+   "section": "shloka"
+  },
+  {
+   "text": "kaphakrit",
+   "start": 29.097,
+   "end": 29.316,
+   "key": "kaphakrit",
+   "kw": false,
+   "section": "shloka"
+  },
+  {
+   "text": "cha",
+   "start": 29.316,
+   "end": 29.41,
+   "key": "cha",
+   "kw": false,
+   "section": "shloka"
+  },
+  {
+   "text": "sarvam.",
+   "start": 29.41,
+   "end": 29.567,
+   "key": "sarvam",
+   "kw": false,
+   "section": "shloka"
+  },
+  {
+   "text": "Yaani",
+   "start": 29.77,
+   "end": 30.011,
+   "key": "yaani",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "prameh",
+   "start": 30.011,
+   "end": 30.29,
+   "key": "prameh",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "yeh",
+   "start": 30.29,
+   "end": 30.457,
+   "key": "yeh",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "kisko",
+   "start": 30.457,
+   "end": 30.699,
+   "key": "kisko",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "hota",
+   "start": 30.699,
+   "end": 30.903,
+   "key": "hota",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "hai?",
+   "start": 30.903,
+   "end": 31.07,
+   "key": "hai",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "Jo",
+   "start": 31.43,
+   "end": 31.547,
+   "key": "jo",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "pehle",
+   "start": 31.547,
+   "end": 31.765,
+   "key": "pehle",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "ke",
+   "start": 31.765,
+   "end": 31.882,
+   "key": "ke",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "zamaane",
+   "start": 31.882,
+   "end": 32.167,
+   "key": "zamaane",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "mein",
+   "start": 32.167,
+   "end": 32.351,
+   "key": "mein",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "rais",
+   "start": 32.351,
+   "end": 32.535,
+   "key": "rais",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "hote",
+   "start": 32.535,
+   "end": 32.719,
+   "key": "hote",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "the,",
+   "start": 32.719,
+   "end": 32.87,
+   "key": "the",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "jinke",
+   "start": 33.23,
+   "end": 33.475,
+   "key": "jinke",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "paas",
+   "start": 33.475,
+   "end": 33.683,
+   "key": "paas",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "zyada",
+   "start": 33.683,
+   "end": 33.928,
+   "key": "zyada",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "paisa",
+   "start": 33.928,
+   "end": 34.173,
+   "key": "paisa",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "hota",
+   "start": 34.173,
+   "end": 34.38,
+   "key": "hota",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "hai.",
+   "start": 34.38,
+   "end": 34.55,
+   "key": "hai",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "Charakacharya",
+   "start": 34.897,
+   "end": 35.602,
+   "key": "charakacharya",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "ne",
+   "start": 35.602,
+   "end": 35.772,
+   "key": "ne",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "aasya-sukham,",
+   "start": 35.772,
+   "end": 36.38,
+   "key": "aasya-sukham",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "swapna-sukham,",
+   "start": 36.38,
+   "end": 37.037,
+   "key": "swapna-sukham",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "jinke",
+   "start": 37.397,
+   "end": 37.716,
+   "key": "jinke",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "paas",
+   "start": 37.716,
+   "end": 37.986,
+   "key": "paas",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "paisa",
+   "start": 37.986,
+   "end": 38.305,
+   "key": "paisa",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "hota",
+   "start": 38.305,
+   "end": 38.576,
+   "key": "hota",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "tha,",
+   "start": 38.576,
+   "end": 38.797,
+   "key": "tha",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "jo",
+   "start": 39.13,
+   "end": 39.309,
+   "key": "jo",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "gaadi",
+   "start": 39.309,
+   "end": 39.641,
+   "key": "gaadi",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "pe",
+   "start": 39.641,
+   "end": 39.819,
+   "key": "pe",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "sote",
+   "start": 39.819,
+   "end": 40.1,
+   "key": "sote",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "the,",
+   "start": 40.1,
+   "end": 40.33,
+   "key": "the",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "aur",
+   "start": 40.663,
+   "end": 40.973,
+   "key": "aur",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "paisa",
+   "start": 41.33,
+   "end": 41.585,
+   "key": "paisa",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "kiske",
+   "start": 41.585,
+   "end": 41.84,
+   "key": "kiske",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "paas",
+   "start": 41.84,
+   "end": 42.056,
+   "key": "paas",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "rahega?",
+   "start": 42.056,
+   "end": 42.35,
+   "key": "rahega",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "Jisko",
+   "start": 42.697,
+   "end": 43.065,
+   "key": "jisko",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "chinta",
+   "start": 43.065,
+   "end": 43.491,
+   "key": "chinta",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "rahegi,",
+   "start": 43.491,
+   "end": 43.916,
+   "key": "rahegi",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "jisko",
+   "start": 43.916,
+   "end": 44.285,
+   "key": "jisko",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "vyapaar",
+   "start": 44.285,
+   "end": 44.767,
+   "key": "vyapaar",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "ki",
+   "start": 44.767,
+   "end": 44.966,
+   "key": "ki",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "chinta",
+   "start": 44.966,
+   "end": 45.391,
+   "key": "chinta",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "rahegi,",
+   "start": 45.391,
+   "end": 45.817,
+   "key": "rahegi",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "aur",
+   "start": 46.083,
+   "end": 46.322,
+   "key": "aur",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "jisko",
+   "start": 46.322,
+   "end": 46.667,
+   "key": "jisko",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "chinta",
+   "start": 46.667,
+   "end": 47.065,
+   "key": "chinta",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "rahegi,",
+   "start": 47.065,
+   "end": 47.463,
+   "key": "rahegi",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "usko",
+   "start": 47.797,
+   "end": 48.03,
+   "key": "usko",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "diabetes",
+   "start": 48.03,
+   "end": 48.433,
+   "key": "diabetes",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "hoga,",
+   "start": 48.433,
+   "end": 48.667,
+   "key": "hoga",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "aisa",
+   "start": 49.03,
+   "end": 49.179,
+   "key": "aisa",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "Charakacharya",
+   "start": 49.179,
+   "end": 49.571,
+   "key": "charakacharya",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "ji",
+   "start": 49.571,
+   "end": 49.665,
+   "key": "ji",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "ne",
+   "start": 49.665,
+   "end": 49.76,
+   "key": "ne",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "kaha",
+   "start": 49.76,
+   "end": 49.908,
+   "key": "kaha",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "hai.",
+   "start": 49.908,
+   "end": 50.03,
+   "key": "hai",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "To",
+   "start": 50.363,
+   "end": 50.502,
+   "key": "to",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "apne",
+   "start": 50.502,
+   "end": 50.719,
+   "key": "apne",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "Ayurved",
+   "start": 50.719,
+   "end": 51.056,
+   "key": "ayurved",
+   "kw": true,
+   "section": "sukh"
+  },
+  {
+   "text": "mein",
+   "start": 51.056,
+   "end": 51.273,
+   "key": "mein",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "pehle",
+   "start": 51.63,
+   "end": 51.938,
+   "key": "pehle",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "se",
+   "start": 51.938,
+   "end": 52.104,
+   "key": "se",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "hi",
+   "start": 52.104,
+   "end": 52.27,
+   "key": "hi",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "is",
+   "start": 52.27,
+   "end": 52.436,
+   "key": "is",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "baare",
+   "start": 52.436,
+   "end": 52.744,
+   "key": "baare",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "mein",
+   "start": 52.744,
+   "end": 53.005,
+   "key": "mein",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "sambhashan",
+   "start": 53.005,
+   "end": 53.55,
+   "key": "sambhashan",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "ho",
+   "start": 53.827,
+   "end": 53.935,
+   "key": "ho",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "chuka",
+   "start": 53.935,
+   "end": 54.137,
+   "key": "chuka",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "hai.",
+   "start": 54.137,
+   "end": 54.277,
+   "key": "hai",
+   "kw": false,
+   "section": "sukh"
+  },
+  {
+   "text": "Jiske",
+   "start": 54.47,
+   "end": 54.849,
+   "key": "jiske",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "paas",
+   "start": 54.849,
+   "end": 55.17,
+   "key": "paas",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "diabetes",
+   "start": 55.53,
+   "end": 56.024,
+   "key": "diabetes",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "hai,",
+   "start": 56.024,
+   "end": 56.257,
+   "key": "hai",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "iska",
+   "start": 56.257,
+   "end": 56.543,
+   "key": "iska",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "matlab",
+   "start": 56.543,
+   "end": 56.933,
+   "key": "matlab",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "use",
+   "start": 56.933,
+   "end": 57.167,
+   "key": "use",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "chinta",
+   "start": 57.167,
+   "end": 57.556,
+   "key": "chinta",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "hai.",
+   "start": 57.556,
+   "end": 57.79,
+   "key": "hai",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "Woh",
+   "start": 58.13,
+   "end": 58.327,
+   "key": "woh",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "chinta",
+   "start": 58.327,
+   "end": 58.655,
+   "key": "chinta",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "mein",
+   "start": 58.655,
+   "end": 58.896,
+   "key": "mein",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "apna",
+   "start": 58.896,
+   "end": 59.137,
+   "key": "apna",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "vyapaar",
+   "start": 59.137,
+   "end": 59.509,
+   "key": "vyapaar",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "karta",
+   "start": 59.509,
+   "end": 59.793,
+   "key": "karta",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "hai,",
+   "start": 59.793,
+   "end": 59.99,
+   "key": "hai",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "aur",
+   "start": 60.33,
+   "end": 60.535,
+   "key": "aur",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "woh",
+   "start": 60.535,
+   "end": 60.74,
+   "key": "woh",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "vyapaar",
+   "start": 60.74,
+   "end": 61.128,
+   "key": "vyapaar",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "karte",
+   "start": 61.128,
+   "end": 61.424,
+   "key": "karte",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "samay",
+   "start": 61.424,
+   "end": 61.72,
+   "key": "samay",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "uska",
+   "start": 62.063,
+   "end": 62.283,
+   "key": "uska",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "jo",
+   "start": 62.283,
+   "end": 62.423,
+   "key": "jo",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "stress",
+   "start": 62.423,
+   "end": 62.723,
+   "key": "stress",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "hai,",
+   "start": 62.723,
+   "end": 62.903,
+   "key": "hai",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "to",
+   "start": 63.263,
+   "end": 63.398,
+   "key": "to",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "iska",
+   "start": 63.398,
+   "end": 63.609,
+   "key": "iska",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "yeh",
+   "start": 63.609,
+   "end": 63.782,
+   "key": "yeh",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "matlab",
+   "start": 63.782,
+   "end": 64.07,
+   "key": "matlab",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "hai",
+   "start": 64.07,
+   "end": 64.243,
+   "key": "hai",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "ki",
+   "start": 64.597,
+   "end": 64.785,
+   "key": "ki",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "stress",
+   "start": 64.785,
+   "end": 65.188,
+   "key": "stress",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "hi",
+   "start": 65.188,
+   "end": 65.377,
+   "key": "hi",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "diabetes",
+   "start": 65.73,
+   "end": 66.162,
+   "key": "diabetes",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "ka",
+   "start": 66.162,
+   "end": 66.321,
+   "key": "ka",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "ek",
+   "start": 66.321,
+   "end": 66.48,
+   "key": "ek",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "mahatvapurna",
+   "start": 66.83,
+   "end": 67.438,
+   "key": "mahatvapurna",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "kaaran,",
+   "start": 67.438,
+   "end": 67.775,
+   "key": "kaaran",
+   "kw": true,
+   "section": "stress"
+  },
+  {
+   "text": "cause",
+   "start": 67.775,
+   "end": 68.068,
+   "key": "cause",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "hai.",
+   "start": 68.068,
+   "end": 68.27,
+   "key": "hai",
+   "kw": false,
+   "section": "stress"
+  },
+  {
+   "text": "Jo",
+   "start": 68.47,
+   "end": 68.759,
+   "key": "jo",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "gaay",
+   "start": 68.759,
+   "end": 69.213,
+   "key": "gaay",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "se",
+   "start": 69.213,
+   "end": 69.501,
+   "key": "se",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "utpann",
+   "start": 69.501,
+   "end": 70.12,
+   "key": "utpann",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "doodh,",
+   "start": 70.463,
+   "end": 71.273,
+   "key": "doodh",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "dahi,",
+   "start": 71.603,
+   "end": 71.993,
+   "key": "dahi",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "ghee,",
+   "start": 72.33,
+   "end": 72.61,
+   "key": "ghee",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "iska",
+   "start": 72.96,
+   "end": 73.274,
+   "key": "iska",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "jo",
+   "start": 73.274,
+   "end": 73.474,
+   "key": "jo",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "zyada",
+   "start": 73.474,
+   "end": 73.845,
+   "key": "zyada",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "prayog",
+   "start": 73.845,
+   "end": 74.273,
+   "key": "prayog",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "karta",
+   "start": 74.273,
+   "end": 74.644,
+   "key": "karta",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "hai,",
+   "start": 74.644,
+   "end": 74.9,
+   "key": "hai",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "use",
+   "start": 75.263,
+   "end": 75.543,
+   "key": "use",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "bhi",
+   "start": 75.543,
+   "end": 75.822,
+   "key": "bhi",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "diabetes",
+   "start": 75.822,
+   "end": 76.412,
+   "key": "diabetes",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "hota",
+   "start": 76.412,
+   "end": 76.754,
+   "key": "hota",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "hai.",
+   "start": 76.754,
+   "end": 77.033,
+   "key": "hai",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "Aisa",
+   "start": 77.294,
+   "end": 77.624,
+   "key": "aisa",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "doosra",
+   "start": 77.933,
+   "end": 78.233,
+   "key": "doosra",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "kaaran",
+   "start": 78.233,
+   "end": 78.533,
+   "key": "kaaran",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "Charakacharya",
+   "start": 78.897,
+   "end": 79.382,
+   "key": "charakacharya",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "ji",
+   "start": 79.382,
+   "end": 79.499,
+   "key": "ji",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "ne:",
+   "start": 79.499,
+   "end": 79.617,
+   "key": "ne",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "gramya-audaka-anupa-rasah",
+   "start": 79.963,
+   "end": 81.311,
+   "key": "gramya-audaka-anupa-rasah",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "payamsi,",
+   "start": 81.311,
+   "end": 81.799,
+   "key": "payamsi",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "jo",
+   "start": 81.799,
+   "end": 82.0,
+   "key": "jo",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "gaay,",
+   "start": 82.0,
+   "end": 82.315,
+   "key": "gaay",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "bhains",
+   "start": 82.315,
+   "end": 82.745,
+   "key": "bhains",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "hai,",
+   "start": 82.745,
+   "end": 83.003,
+   "key": "hai",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "unke",
+   "start": 83.343,
+   "end": 83.641,
+   "key": "unke",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "kaaran",
+   "start": 83.641,
+   "end": 84.048,
+   "key": "kaaran",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "jo",
+   "start": 84.048,
+   "end": 84.237,
+   "key": "jo",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "dahi,",
+   "start": 84.237,
+   "end": 84.535,
+   "key": "dahi",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "doodh",
+   "start": 84.535,
+   "end": 84.887,
+   "key": "doodh",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "hote",
+   "start": 84.887,
+   "end": 85.185,
+   "key": "hote",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "hain,",
+   "start": 85.185,
+   "end": 85.483,
+   "key": "hain",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "uske",
+   "start": 85.83,
+   "end": 86.072,
+   "key": "uske",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "kaaran",
+   "start": 86.072,
+   "end": 86.402,
+   "key": "kaaran",
+   "kw": true,
+   "section": "dairy"
+  },
+  {
+   "text": "bhi.",
+   "start": 86.402,
+   "end": 86.6,
+   "key": "bhi",
+   "kw": false,
+   "section": "dairy"
+  },
+  {
+   "text": "Navanna-panam,",
+   "start": 86.803,
+   "end": 87.468,
+   "key": "navanna-panam",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "guda-vaikritam",
+   "start": 87.468,
+   "end": 88.182,
+   "key": "guda-vaikritam",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "cha.",
+   "start": 88.182,
+   "end": 88.403,
+   "key": "cha",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "Navanna-panam,",
+   "start": 88.763,
+   "end": 89.748,
+   "key": "navanna-panam",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "jo",
+   "start": 89.748,
+   "end": 90.003,
+   "key": "jo",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "anna,",
+   "start": 90.363,
+   "end": 90.853,
+   "key": "anna",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "nayi",
+   "start": 91.187,
+   "end": 91.51,
+   "key": "nayi",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "fasal,",
+   "start": 91.51,
+   "end": 91.891,
+   "key": "fasal",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "jo",
+   "start": 91.891,
+   "end": 92.097,
+   "key": "jo",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "anna",
+   "start": 92.097,
+   "end": 92.42,
+   "key": "anna",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "abhi-abhi",
+   "start": 92.42,
+   "end": 92.978,
+   "key": "abhi-abhi",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "nikle",
+   "start": 92.978,
+   "end": 93.359,
+   "key": "nikle",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "hue",
+   "start": 93.359,
+   "end": 93.624,
+   "key": "hue",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "hain.",
+   "start": 93.624,
+   "end": 93.947,
+   "key": "hain",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "Pichhle",
+   "start": 94.297,
+   "end": 94.724,
+   "key": "pichhle",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "saal",
+   "start": 94.724,
+   "end": 95.0,
+   "key": "saal",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "ke",
+   "start": 95.0,
+   "end": 95.176,
+   "key": "ke",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "chaawal,",
+   "start": 95.176,
+   "end": 95.603,
+   "key": "chaawal",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "puraane",
+   "start": 95.603,
+   "end": 96.031,
+   "key": "puraane",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "chaawal",
+   "start": 96.031,
+   "end": 96.458,
+   "key": "chaawal",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "ka",
+   "start": 96.458,
+   "end": 96.634,
+   "key": "ka",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "use",
+   "start": 96.634,
+   "end": 96.86,
+   "key": "use",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "karein.",
+   "start": 96.86,
+   "end": 97.237,
+   "key": "karein",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "Iska",
+   "start": 97.597,
+   "end": 97.847,
+   "key": "iska",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "matlab",
+   "start": 97.847,
+   "end": 98.187,
+   "key": "matlab",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "naye",
+   "start": 98.187,
+   "end": 98.437,
+   "key": "naye",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "chaawal",
+   "start": 98.437,
+   "end": 98.823,
+   "key": "chaawal",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "ka",
+   "start": 98.823,
+   "end": 98.982,
+   "key": "ka",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "use",
+   "start": 98.982,
+   "end": 99.187,
+   "key": "use",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "nahi",
+   "start": 99.45,
+   "end": 99.674,
+   "key": "nahi",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "karna",
+   "start": 99.674,
+   "end": 99.938,
+   "key": "karna",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "chahiye,",
+   "start": 99.938,
+   "end": 100.283,
+   "key": "chahiye",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "naye",
+   "start": 100.283,
+   "end": 100.507,
+   "key": "naye",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "anaaj",
+   "start": 100.507,
+   "end": 100.771,
+   "key": "anaaj",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "ka",
+   "start": 100.771,
+   "end": 100.914,
+   "key": "ka",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "use",
+   "start": 100.914,
+   "end": 101.097,
+   "key": "use",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "nahi",
+   "start": 101.097,
+   "end": 101.32,
+   "key": "nahi",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "karna",
+   "start": 101.32,
+   "end": 101.584,
+   "key": "karna",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "chahiye,",
+   "start": 101.584,
+   "end": 101.93,
+   "key": "chahiye",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "kyunki",
+   "start": 102.263,
+   "end": 102.604,
+   "key": "kyunki",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "uske",
+   "start": 102.604,
+   "end": 102.853,
+   "key": "uske",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "kaaran",
+   "start": 102.853,
+   "end": 103.193,
+   "key": "kaaran",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "kaph-kaarak",
+   "start": 103.53,
+   "end": 104.076,
+   "key": "kaph-kaarak",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "hota",
+   "start": 104.076,
+   "end": 104.337,
+   "key": "hota",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "hai.",
+   "start": 104.337,
+   "end": 104.55,
+   "key": "hai",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "Kaph",
+   "start": 104.897,
+   "end": 105.167,
+   "key": "kaph",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "badhta,",
+   "start": 105.167,
+   "end": 105.537,
+   "key": "badhta",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "to",
+   "start": 105.897,
+   "end": 106.083,
+   "key": "to",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "kaph",
+   "start": 106.083,
+   "end": 106.375,
+   "key": "kaph",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "ke",
+   "start": 106.375,
+   "end": 106.562,
+   "key": "ke",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "kaaran",
+   "start": 106.562,
+   "end": 106.96,
+   "key": "kaaran",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "hi",
+   "start": 106.96,
+   "end": 107.147,
+   "key": "hi",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "diabetes",
+   "start": 107.497,
+   "end": 107.886,
+   "key": "diabetes",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "hota",
+   "start": 107.886,
+   "end": 108.112,
+   "key": "hota",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "hai.",
+   "start": 108.112,
+   "end": 108.297,
+   "key": "hai",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "Is",
+   "start": 108.663,
+   "end": 108.853,
+   "key": "is",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "prakar",
+   "start": 108.853,
+   "end": 109.26,
+   "key": "prakar",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "se",
+   "start": 109.26,
+   "end": 109.45,
+   "key": "se",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "sambhashan",
+   "start": 109.45,
+   "end": 110.073,
+   "key": "sambhashan",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "Charakacharya",
+   "start": 110.43,
+   "end": 110.929,
+   "key": "charakacharya",
+   "kw": true,
+   "section": "grain"
+  },
+  {
+   "text": "ji",
+   "start": 110.929,
+   "end": 111.05,
+   "key": "ji",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "ne",
+   "start": 111.05,
+   "end": 111.17,
+   "key": "ne",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "bataya",
+   "start": 111.53,
+   "end": 111.799,
+   "key": "bataya",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "hai.",
+   "start": 111.799,
+   "end": 111.96,
+   "key": "hai",
+   "kw": false,
+   "section": "grain"
+  },
+  {
+   "text": "Yeh",
+   "start": 112.137,
+   "end": 112.321,
+   "key": "yeh",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "bhi",
+   "start": 112.321,
+   "end": 112.505,
+   "key": "bhi",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "bataya",
+   "start": 112.505,
+   "end": 112.812,
+   "key": "bataya",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "hai",
+   "start": 112.812,
+   "end": 112.996,
+   "key": "hai",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "ki",
+   "start": 112.996,
+   "end": 113.139,
+   "key": "ki",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "guda-vaikritam",
+   "start": 113.139,
+   "end": 113.733,
+   "key": "guda-vaikritam",
+   "kw": true,
+   "section": "sweets"
+  },
+  {
+   "text": "cha,",
+   "start": 113.733,
+   "end": 113.917,
+   "key": "cha",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "jo",
+   "start": 114.263,
+   "end": 114.393,
+   "key": "jo",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "zyada",
+   "start": 114.393,
+   "end": 114.633,
+   "key": "zyada",
+   "kw": true,
+   "section": "sweets"
+  },
+  {
+   "text": "meetha",
+   "start": 114.633,
+   "end": 114.91,
+   "key": "meetha",
+   "kw": true,
+   "section": "sweets"
+  },
+  {
+   "text": "khaata",
+   "start": 114.91,
+   "end": 115.187,
+   "key": "khaata",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "hai,",
+   "start": 115.187,
+   "end": 115.353,
+   "key": "hai",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "jaise",
+   "start": 115.697,
+   "end": 116.04,
+   "key": "jaise",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "ganne",
+   "start": 116.04,
+   "end": 116.383,
+   "key": "ganne",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "se",
+   "start": 116.383,
+   "end": 116.568,
+   "key": "se",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "banayi",
+   "start": 116.568,
+   "end": 116.964,
+   "key": "banayi",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "cheez,",
+   "start": 116.964,
+   "end": 117.307,
+   "key": "cheez",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "shakkar",
+   "start": 117.663,
+   "end": 117.964,
+   "key": "shakkar",
+   "kw": true,
+   "section": "sweets"
+  },
+  {
+   "text": "ho",
+   "start": 117.964,
+   "end": 118.088,
+   "key": "ho",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "gaya,",
+   "start": 118.088,
+   "end": 118.283,
+   "key": "gaya",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "gud",
+   "start": 118.6,
+   "end": 118.823,
+   "key": "gud",
+   "kw": true,
+   "section": "sweets"
+  },
+  {
+   "text": "ho",
+   "start": 118.823,
+   "end": 118.997,
+   "key": "ho",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "gaya,",
+   "start": 118.997,
+   "end": 119.27,
+   "key": "gaya",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "aur",
+   "start": 119.62,
+   "end": 119.852,
+   "key": "aur",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "inse",
+   "start": 119.852,
+   "end": 120.136,
+   "key": "inse",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "banayi",
+   "start": 120.136,
+   "end": 120.523,
+   "key": "banayi",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "meethi",
+   "start": 120.523,
+   "end": 120.91,
+   "key": "meethi",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "cheezein",
+   "start": 120.91,
+   "end": 121.4,
+   "key": "cheezein",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "jo",
+   "start": 121.75,
+   "end": 121.938,
+   "key": "jo",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "baar-baar",
+   "start": 121.938,
+   "end": 122.447,
+   "key": "baar-baar",
+   "kw": true,
+   "section": "sweets"
+  },
+  {
+   "text": "khaata",
+   "start": 122.447,
+   "end": 122.849,
+   "key": "khaata",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "hai.",
+   "start": 122.849,
+   "end": 123.09,
+   "key": "hai",
+   "kw": false,
+   "section": "sweets"
+  },
+  {
+   "text": "To",
+   "start": 123.27,
+   "end": 123.372,
+   "key": "to",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "Charakacharya",
+   "start": 123.372,
+   "end": 123.796,
+   "key": "charakacharya",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "ji",
+   "start": 123.796,
+   "end": 123.898,
+   "key": "ji",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "ne",
+   "start": 123.898,
+   "end": 124.0,
+   "key": "ne",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "pehle",
+   "start": 124.31,
+   "end": 124.623,
+   "key": "pehle",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "se",
+   "start": 124.623,
+   "end": 124.792,
+   "key": "se",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "hi",
+   "start": 124.792,
+   "end": 124.96,
+   "key": "hi",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "kisko",
+   "start": 125.297,
+   "end": 125.847,
+   "key": "kisko",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "diabetes",
+   "start": 126.197,
+   "end": 126.561,
+   "key": "diabetes",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "ho",
+   "start": 126.561,
+   "end": 126.695,
+   "key": "ho",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "sakta",
+   "start": 126.695,
+   "end": 126.944,
+   "key": "sakta",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "hai,",
+   "start": 126.944,
+   "end": 127.116,
+   "key": "hai",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "iske",
+   "start": 127.116,
+   "end": 127.327,
+   "key": "iske",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "baare",
+   "start": 127.327,
+   "end": 127.576,
+   "key": "baare",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "mein",
+   "start": 127.576,
+   "end": 127.787,
+   "key": "mein",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "bahut",
+   "start": 128.09,
+   "end": 128.429,
+   "key": "bahut",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "sakhol",
+   "start": 128.429,
+   "end": 128.82,
+   "key": "sakhol",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "bataya",
+   "start": 129.093,
+   "end": 129.356,
+   "key": "bataya",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "hai.",
+   "start": 129.356,
+   "end": 129.513,
+   "key": "hai",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "Aaj",
+   "start": 129.863,
+   "end": 130.178,
+   "key": "aaj",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "bhi",
+   "start": 130.178,
+   "end": 130.493,
+   "key": "bhi",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "kai",
+   "start": 130.83,
+   "end": 131.006,
+   "key": "kai",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "logon",
+   "start": 131.006,
+   "end": 131.26,
+   "key": "logon",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "ko",
+   "start": 131.26,
+   "end": 131.396,
+   "key": "ko",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "stress",
+   "start": 131.396,
+   "end": 131.689,
+   "key": "stress",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "hota",
+   "start": 131.689,
+   "end": 131.904,
+   "key": "hota",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "hai,",
+   "start": 131.904,
+   "end": 132.08,
+   "key": "hai",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "aur",
+   "start": 132.43,
+   "end": 132.644,
+   "key": "aur",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "stress",
+   "start": 132.644,
+   "end": 133.001,
+   "key": "stress",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "ke",
+   "start": 133.001,
+   "end": 133.167,
+   "key": "ke",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "kaaran",
+   "start": 133.167,
+   "end": 133.524,
+   "key": "kaaran",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "hi,",
+   "start": 133.524,
+   "end": 133.69,
+   "key": "hi",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "jinke",
+   "start": 134.03,
+   "end": 134.281,
+   "key": "jinke",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "paas",
+   "start": 134.281,
+   "end": 134.493,
+   "key": "paas",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "zyada",
+   "start": 134.493,
+   "end": 134.744,
+   "key": "zyada",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "paisa",
+   "start": 134.744,
+   "end": 134.994,
+   "key": "paisa",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "hota",
+   "start": 134.994,
+   "end": 135.206,
+   "key": "hota",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "hai,",
+   "start": 135.206,
+   "end": 135.38,
+   "key": "hai",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "inke",
+   "start": 135.73,
+   "end": 135.978,
+   "key": "inke",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "paas",
+   "start": 135.978,
+   "end": 136.227,
+   "key": "paas",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "zyada",
+   "start": 136.227,
+   "end": 136.52,
+   "key": "zyada",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "sukh",
+   "start": 136.52,
+   "end": 136.768,
+   "key": "sukh",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "hota",
+   "start": 136.768,
+   "end": 137.017,
+   "key": "hota",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "hai,",
+   "start": 137.017,
+   "end": 137.22,
+   "key": "hai",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "unhi",
+   "start": 137.563,
+   "end": 137.787,
+   "key": "unhi",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "ko",
+   "start": 137.787,
+   "end": 137.93,
+   "key": "ko",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "diabetes",
+   "start": 137.93,
+   "end": 138.316,
+   "key": "diabetes",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "hota",
+   "start": 138.316,
+   "end": 138.54,
+   "key": "hota",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "hai.",
+   "start": 138.54,
+   "end": 138.723,
+   "key": "hai",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "Iska",
+   "start": 139.063,
+   "end": 139.288,
+   "key": "iska",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "matlab",
+   "start": 139.288,
+   "end": 139.594,
+   "key": "matlab",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "sabhi",
+   "start": 139.594,
+   "end": 139.86,
+   "key": "sabhi",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "log",
+   "start": 139.86,
+   "end": 140.043,
+   "key": "log",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "sukhi",
+   "start": 140.043,
+   "end": 140.309,
+   "key": "sukhi",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "hain,",
+   "start": 140.309,
+   "end": 140.533,
+   "key": "hain",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "sabhi",
+   "start": 140.897,
+   "end": 141.079,
+   "key": "sabhi",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "stress",
+   "start": 141.079,
+   "end": 141.289,
+   "key": "stress",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "mein",
+   "start": 141.289,
+   "end": 141.443,
+   "key": "mein",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "hain,",
+   "start": 141.443,
+   "end": 141.597,
+   "key": "hain",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "yahi",
+   "start": 141.93,
+   "end": 142.084,
+   "key": "yahi",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "ek",
+   "start": 142.084,
+   "end": 142.182,
+   "key": "ek",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "kaaran",
+   "start": 142.182,
+   "end": 142.392,
+   "key": "kaaran",
+   "kw": true,
+   "section": "conclusion"
+  },
+  {
+   "text": "maana",
+   "start": 142.392,
+   "end": 142.574,
+   "key": "maana",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "ja",
+   "start": 142.574,
+   "end": 142.672,
+   "key": "ja",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "sakta",
+   "start": 142.672,
+   "end": 142.854,
+   "key": "sakta",
+   "kw": false,
+   "section": "conclusion"
+  },
+  {
+   "text": "hai.",
+   "start": 142.854,
+   "end": 142.98,
+   "key": "hai",
+   "kw": false,
+   "section": "conclusion"
+  }
+ ],
+ "sections": [
+  {
+   "name": "question",
+   "speaker": "patient",
+   "start": 0.0,
+   "end": 8.933
+  },
+  {
+   "name": "intro",
+   "speaker": "doctor",
+   "start": 13.133,
+   "end": 21.333
+  },
+  {
+   "name": "shloka",
+   "speaker": "doctor",
+   "start": 21.333,
+   "end": 29.7
+  },
+  {
+   "name": "sukh",
+   "speaker": "doctor",
+   "start": 29.7,
+   "end": 54.4
+  },
+  {
+   "name": "stress",
+   "speaker": "doctor",
+   "start": 54.4,
+   "end": 68.4
+  },
+  {
+   "name": "dairy",
+   "speaker": "doctor",
+   "start": 68.4,
+   "end": 86.733
+  },
+  {
+   "name": "grain",
+   "speaker": "doctor",
+   "start": 86.733,
+   "end": 112.067
+  },
+  {
+   "name": "sweets",
+   "speaker": "doctor",
+   "start": 112.067,
+   "end": 123.2
+  },
+  {
+   "name": "conclusion",
+   "speaker": "doctor",
+   "start": 123.2,
+   "end": 143.1
+  }
+ ],
+ "gaps": [
+  {
+   "start": 8.933,
+   "end": 13.133
+  }
+ ],
+ "speech_duration": 143.1
+}
