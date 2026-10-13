@@ -9,3 +9,5 @@ renders/
 # SFX are copied in by build/fetch_assets.sh
 assets/sfx/*.mp3
 __pycache__/
+# Cover assets are derived from the footage (doctor cut-out, blurred plate): local only.
+cover/*/assets/
