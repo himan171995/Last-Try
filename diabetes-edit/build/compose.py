@@ -252,6 +252,7 @@ people = "".join(
 clip("hook", 0, hook_end, f"""
 <div id="hook-in" class="card glass top-card">
   <div class="kicker" id="hook-k">DIABETES &middot; AYURVEDA</div>
+  <div class="people" id="hook-people">{people}</div>
   <div class="stat-row" id="hook-stat">
     <div class="stat-num"><span id="hook-6">6</span><span class="dash">&ndash;</span><span id="hook-8">8</span></div>
     <div class="stat-of">
@@ -259,21 +260,22 @@ clip("hook", 0, hook_end, f"""
       <div class="of-small">patients diabetic</div>
     </div>
   </div>
-  <div class="people" id="hook-people">{people}</div>
 </div>""", z=30)
 rise_in("#hook-in", 0.15, 0.6, 60)
 rise_in("#hook-k", 0.35, 0.4, 16)
-tw(f'tl.fromTo(".pp", {{opacity:0, y:30, scale:0.7}}, {{opacity:1, y:0, scale:1, duration:0.35, stagger:0.06, ease:"back.out(2)"}}, {f(t10 - 0.1)});')
+tw(f'tl.fromTo(".pp", {{opacity:0, y:30, scale:0.7}}, {{opacity:1, y:0, scale:1, duration:0.35, stagger:0.05, ease:"back.out(2)"}}, 0.35);')
 for i in range(6):
     tw(f'tl.fromTo("#ppd{i}", {{scale:0, opacity:0}}, {{scale:1, opacity:1, duration:0.3, ease:"back.out(2.5)"}}, {f(t6 + i * 0.05)});')
 for i in (6, 7):
     tw(f'tl.fromTo("#ppd{i}", {{scale:0, opacity:0}}, {{scale:1, opacity:0.6, duration:0.3, ease:"back.out(2.5)"}}, {f(t78 + (i - 6) * 0.06)});')
 tw(f'tl.fromTo("#hook-stat", {{opacity:0, y:30}}, {{opacity:1, y:0, duration:0.45, ease:"power3.out"}}, {f(t6 - 0.05)});')
+tw(f'tl.fromTo("#hook-people", {{scale:1}}, {{scale:1.04, duration:0.2, yoyo:true, repeat:1, ease:"power1.inOut"}}, {f(t10)});')
 tw(f'tl.fromTo("#hook-6", {{scale:1.6}}, {{scale:1, duration:0.4, ease:"back.out(2)"}}, {f(t6)});')
 tw(f'tl.fromTo("#hook-8", {{opacity:0, scale:1.6}}, {{opacity:1, scale:1, duration:0.4, ease:"back.out(2)"}}, {f(t78)});')
 fade_out("#hook-in", hook_end - 0.32, 0.3, -40)
 sfx("whoosh-cinematic", 0.05, 0.35)
-sfx("click-soft", t10 - 0.05, 0.35)
+sfx("click-soft", 0.4, 0.3)
+sfx("click-soft", t10, 0.3)
 sfx("pop", t6, 0.4)
 sfx("pop", t78, 0.35)
 
@@ -710,16 +712,16 @@ body { font-family:"Montserrat", sans-serif; color:#fff; }
 .glass { background:linear-gradient(160deg, rgba(14,34,54,0.86), rgba(7,19,31,0.80)); border:2px solid rgba(127,240,224,0.28); box-shadow:0 40px 80px rgba(0,0,0,0.45); }
 .kicker { font-weight:800; font-size:30px; letter-spacing:0.22em; color:var(--gold-l); }
 .kicker.light { color:var(--teal-l); }
-.stat-row { display:flex; align-items:center; gap:30px; margin-top:16px; }
+.stat-row { display:flex; align-items:center; gap:30px; margin-top:22px; }
 .stat-num { font-family:"Fraunces", serif; font-weight:800; font-size:220px; line-height:0.9; color:var(--coral); display:flex; align-items:baseline; }
 .stat-num span { display:inline-block; }
 .stat-num .dash { margin:0 6px; color:#ffb1a8; }
 .of-big { font-family:"Fraunces", serif; font-weight:700; font-size:110px; line-height:1; }
 .of-small { font-weight:700; font-size:36px; color:#cfe0ee; margin-top:8px; }
-.people { display:flex; justify-content:space-between; margin-top:30px; }
+.people { display:flex; justify-content:space-between; margin-top:26px; }
 .pp { position:relative; width:84px; height:84px; display:flex; align-items:center; justify-content:center; }
 .pp .ico { position:relative; z-index:2; }
-.pp-disc { position:absolute; inset:-4px; border-radius:50%; background:radial-gradient(circle, rgba(255,107,107,0.95), rgba(255,107,107,0.55)); box-shadow:0 0 30px rgba(255,107,107,0.8); }
+.pp-disc { position:absolute; inset:-4px; border-radius:50%; opacity:0; background:radial-gradient(circle, rgba(255,107,107,0.95), rgba(255,107,107,0.55)); box-shadow:0 0 30px rgba(255,107,107,0.8); }
 .qt-row { display:flex; align-items:center; justify-content:space-between; }
 .q-title { font-family:"Fraunces", serif; font-weight:800; font-size:76px; line-height:1.08; margin-top:10px; text-shadow:0 8px 30px rgba(0,0,0,0.5); }
 .tw-mask { display:inline-block; overflow:hidden; vertical-align:top; padding-bottom:8px; }

@@ -6,8 +6,13 @@
  },
  {
   "file": "assets/sfx/click-soft.mp3",
-  "start": 1.409,
-  "volume": 0.35
+  "start": 0.4,
+  "volume": 0.3
+ },
+ {
+  "file": "assets/sfx/click-soft.mp3",
+  "start": 1.459,
+  "volume": 0.3
  },
  {
   "file": "assets/sfx/pop.mp3",
