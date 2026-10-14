@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta+Malar:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one reading column under a split hero (thesis left, 3D sky dial right); sections stack, each with a narrow label column on wide screens. */
+/* Layout: split hero (today's thesis + bird picker left, live 3D day dial right), then a reading column of dated sections with a narrow label rail on wide screens. */
 :root {
   --bg: #eceef6;
   --surface: #f8f9fd;
@@ -22,21 +22,18 @@
   --day: #e2a137;
   --night: #3d4386;
   --moon: #c9cbe6;
-  --warn-bg: #fbe7d3;
-  --warn-ink: #8a3d00;
+  --note-bg: #f6ead2;
+  --note-ink: #6b4300;
   --on-day: #2a1b00;
   --on-night: #f1f1ff;
 
+  /* Effect scale used by Drik Panchang: Very Good to Very Bad. */
+  --vg: #17804f; --g: #69a873; --avg: #b0a993; --bad: #e08a3a; --vbad: #c7372b;
+
   /* Activity ramp: the accent faded toward the background by strength (1.0 to 0.2). */
   --a1: #9a640a; --a2: #aa8039; --a3: #bb9b68; --a4: #cbb798; --a5: #dcd2c7;
-  --on-a1: #ffffff; --on-a2: #1a1c38; --on-a3: #1a1c38; --on-a4: #1a1c38; --on-a5: #1a1c38;
 
-  /* One hue per bird. */
-  --vulture: #9a5527;
-  --owl: #6a6499;
-  --crow: #34425f;
-  --cock: #b8352a;
-  --peacock: #0b7a73;
+  --vulture: #9a5527; --owl: #6a6499; --crow: #34425f; --cock: #b8352a; --peacock: #0b7a73;
 
   --display: "Marcellus", "Trajan Pro", Georgia, serif;
   --body: "Mukta Malar", "Segoe UI", system-ui, sans-serif;
@@ -46,15 +43,15 @@
   --step-0: 1rem;
   --step-1: 1.25rem;
   --step-2: 1.6rem;
-  --step-3: clamp(2.4rem, 5vw + 1rem, 4.2rem);
+  --step-3: clamp(2.2rem, 4.4vw + 1rem, 3.8rem);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #121430; --surface: #1a1d40; --ink: #ecebf5; --muted: #a4a7c8; --line: #2e3263;
     --accent: #f0b24a; --day: #f0b24a; --night: #5d63ba; --moon: #d9dbf5;
-    --warn-bg: #3d2a16; --warn-ink: #ffc58a;
+    --note-bg: #33291a; --note-ink: #ffd394;
+    --vg: #38c482; --g: #84cc93; --avg: #858070; --bad: #eb9a4f; --vbad: #ff6a58;
     --a1: #f0b24a; --a2: #c49245; --a3: #97733f; --a4: #6b533a; --a5: #3e3435;
-    --on-a1: #121430; --on-a2: #121430; --on-a3: #121430; --on-a4: #ecebf5; --on-a5: #ecebf5;
     --vulture: #d6915e; --owl: #b6b0e6; --crow: #8ea4d2; --cock: #ff7c68; --peacock: #3cc9b8;
     color-scheme: dark;
   }
@@ -62,9 +59,9 @@
 :root[data-theme="dark"] {
   --bg: #121430; --surface: #1a1d40; --ink: #ecebf5; --muted: #a4a7c8; --line: #2e3263;
   --accent: #f0b24a; --day: #f0b24a; --night: #5d63ba; --moon: #d9dbf5;
-  --warn-bg: #3d2a16; --warn-ink: #ffc58a;
+  --note-bg: #33291a; --note-ink: #ffd394;
+  --vg: #38c482; --g: #84cc93; --avg: #858070; --bad: #eb9a4f; --vbad: #ff6a58;
   --a1: #f0b24a; --a2: #c49245; --a3: #97733f; --a4: #6b533a; --a5: #3e3435;
-  --on-a1: #121430; --on-a2: #121430; --on-a3: #121430; --on-a4: #ecebf5; --on-a5: #ecebf5;
   --vulture: #d6915e; --owl: #b6b0e6; --crow: #8ea4d2; --cock: #ff7c68; --peacock: #3cc9b8;
   color-scheme: dark;
 }
@@ -85,422 +82,286 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 h1, h2, h3 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; line-height: 1.15; }
 p { margin: 0; }
 .wrap { max-width: 1120px; margin: 0 auto; }
-
-.eyebrow {
-  font-family: var(--mono);
-  font-size: var(--step--1);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
+.eyebrow { font-family: var(--mono); font-size: var(--step--1); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.muted { color: var(--muted); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 
 /* Hero */
-.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: 40px;
-  align-items: center;
-  padding-block: 48px 32px;
-}
+.hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 40px; align-items: start; padding-block: 44px 28px; }
 .hero-text { display: grid; gap: 18px; min-width: 0; }
 .hero h1 { font-size: var(--step-3); letter-spacing: 0.01em; }
-.hero h1 .tamil { display: block; font-family: var(--body); font-size: 0.42em; color: var(--muted); letter-spacing: 0; margin-top: 6px; }
+.hero h1 small { display: block; font-family: var(--body); font-size: 0.4em; color: var(--muted); letter-spacing: 0; margin-top: 8px; }
 .lede { font-size: var(--step-1); line-height: 1.5; max-width: 34ch; }
-.meta { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: var(--step--1); color: var(--muted); }
-.meta code { font-family: var(--mono); }
-.chip {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 2px 10px; border-radius: 999px;
-  background: var(--warn-bg); color: var(--warn-ink);
-  font-size: var(--step--1); font-weight: 500;
-}
-.chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; background: var(--note-bg); color: var(--note-ink); font-size: var(--step--1); font-weight: 500; }
 
-.stage { position: relative; min-width: 0; }
+.picker { display: grid; gap: 8px; }
+.picker-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.bird-btn {
+  font: inherit; font-size: 0.95rem; cursor: pointer; padding: 6px 14px 6px 10px;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 999px;
+}
+.bird-btn i { width: 10px; height: 10px; border-radius: 50%; background: var(--bird); display: inline-block; }
+.bird-btn[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); font-weight: 500; }
+.picker .hint { font-size: var(--step--1); color: var(--muted); }
+
+.glance { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); margin: 0; }
+.glance div { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.glance dt { font-family: var(--mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.glance dd { margin: 2px 0 0; font-variant-numeric: tabular-nums; }
+.glance .bird-name::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--bird); margin-right: 6px; }
+
+.stage { min-width: 0; display: grid; gap: 10px; }
 .scene {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 6 / 5;
-  max-width: 100%;
-  border-radius: 6px;
-  overflow: hidden;
+  position: relative; width: 100%; aspect-ratio: 6 / 5; max-width: 100%;
+  border-radius: 6px; overflow: hidden; border: 1px solid var(--line);
   background: var(--surface);
   background:
-    radial-gradient(120% 80% at 50% 20%, color-mix(in srgb, var(--day) 18%, transparent), transparent 60%),
-    radial-gradient(120% 90% at 50% 110%, color-mix(in srgb, var(--night) 30%, transparent), transparent 70%),
+    radial-gradient(120% 80% at 50% 15%, color-mix(in srgb, var(--day) 16%, transparent), transparent 60%),
+    radial-gradient(120% 90% at 50% 110%, color-mix(in srgb, var(--night) 28%, transparent), transparent 70%),
     var(--surface);
-  border: 1px solid var(--line);
 }
 .scene canvas { display: block; width: 100%; height: 100%; }
-.tag {
-  position: absolute; left: 0; top: 0;
-  transform: translate(-50%, -50%);
-  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--muted); white-space: nowrap; pointer-events: none;
-}
-.fallback {
-  position: absolute; inset: 0; display: grid; place-items: center; padding: 24px;
-  text-align: center; color: var(--muted); font-size: var(--step--1);
-}
-.caption { margin-top: 10px; font-size: var(--step--1); color: var(--muted); max-width: 60ch; }
+.tag { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); font-family: var(--mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); white-space: nowrap; pointer-events: none; }
+.fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: var(--muted); font-size: var(--step--1); }
 
-.live {
-  margin-top: 14px;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 8px;
-}
-.live li {
-  list-style: none; display: grid; gap: 2px; padding: 8px 10px;
-  border-top: 3px solid var(--bird); background: var(--surface);
-  font-size: var(--step--1); min-width: 0;
-}
-.live b { font-weight: 500; }
-.live span { color: var(--muted); }
-.live ul, ul.live { padding: 0; margin: 0; }
-.clock { margin-top: 10px; font-family: var(--mono); font-size: var(--step--1); color: var(--muted); }
-.controls { display: flex; gap: 8px; margin-top: 10px; }
-.btn {
-  font: inherit; font-size: var(--step--1); padding: 4px 12px; cursor: pointer;
-  background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 999px;
-}
+.now-card { display: grid; gap: 6px; padding: 14px 16px; background: var(--surface); border-left: 4px solid var(--fx, var(--line)); }
+.now-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: var(--step--1); color: var(--muted); }
+.now-main { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.now-main b { font-family: var(--display); font-weight: 400; font-size: var(--step-2); }
+.now-next { font-size: var(--step--1); color: var(--muted); }
+.fx { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.fx::before { content: ""; width: 10px; height: 10px; border-radius: 2px; background: var(--fx); flex: none; }
+.plus { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: -0.05em; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { font: inherit; font-size: var(--step--1); padding: 4px 12px; cursor: pointer; background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 999px; }
 .btn:hover { border-color: var(--accent); }
+.btn[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn:disabled { opacity: 0.5; cursor: default; }
+.caption { font-size: var(--step--1); color: var(--muted); max-width: 62ch; }
 
 /* Sections */
-section.block {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 32px;
-  padding-block: 44px;
-  border-top: 1px solid var(--line);
-}
+section.block { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; padding-block: 40px; border-top: 1px solid var(--line); }
 .block > header { display: grid; gap: 8px; align-content: start; }
 .block h2 { font-size: var(--step-2); }
 .body { display: grid; gap: 18px; min-width: 0; }
-.body > p, .body > ul, .body > ol { max-width: 66ch; }
+.body > p, .body > ol, .body > ul { max-width: 66ch; }
 .note { font-size: var(--step--1); color: var(--muted); max-width: 66ch; }
 
-/* Status panel */
-.status {
-  display: grid; gap: 10px; padding: 18px 20px;
-  background: var(--warn-bg); color: var(--warn-ink); border-radius: 6px;
-  max-width: 72ch;
-}
-.status h3 { font-family: var(--body); font-weight: 700; font-size: var(--step-0); }
-.status ul { margin: 0; padding-left: 1.2em; }
+/* Best / avoid */
+.picks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.pick { background: var(--surface); padding: 14px 16px; display: grid; gap: 8px; align-content: start; border-top: 4px solid var(--fx); min-width: 0; }
+.pick h3 { font-family: var(--body); font-weight: 700; font-size: var(--step-0); display: flex; justify-content: space-between; gap: 8px; }
+.pick h3 span { font-family: var(--mono); font-weight: 400; color: var(--muted); }
+.pick ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.pick li { display: flex; gap: 10px; font-size: 0.92rem; min-width: 0; }
+.pick li .mono { font-size: 0.85rem; flex: 0 0 12.5em; white-space: nowrap; }
+.pick li.past { opacity: 0.45; }
+.pick .empty { color: var(--muted); font-size: var(--step--1); }
 
-/* Facts list */
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin: 0; border-top: 1px solid var(--line); }
-.facts div { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); min-width: 0; }
-.facts dt { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
-.facts dd { margin: 4px 0 0; }
+/* Strips */
+.strips { display: grid; gap: 22px; }
+.strip-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: var(--step--1); color: var(--muted); margin-bottom: 6px; }
+.strip-head b { color: var(--ink); font-weight: 500; }
+.strip { position: relative; display: flex; height: 40px; border-radius: 4px; overflow: visible; }
+.strip .seg { min-width: 0; border-right: 1px solid var(--bg); position: relative; }
+.strip .seg.ystart { border-left: 2px solid var(--bg); }
+.strip .seg:first-child { border-radius: 4px 0 0 4px; }
+.strip .seg:last-child { border-radius: 0 4px 4px 0; border-right: 0; }
+.strip .marker { position: absolute; top: -6px; bottom: -6px; width: 2px; background: var(--ink); border-radius: 1px; pointer-events: none; }
+.strip .marker::after { content: ""; position: absolute; top: -5px; left: -4px; border: 5px solid transparent; border-top-color: var(--ink); }
+.ticks { position: relative; height: 18px; margin-top: 4px; font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+.ticks span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.key { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: var(--step--1); color: var(--muted); }
 
-/* Anatomy of a row */
-.anatomy-scroll { overflow-x: auto; }
-.anatomy { min-width: 620px; display: grid; gap: 8px; }
-.row-mock {
-  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
-}
-.row-mock > div { padding: 12px 14px; border-left: 1px dashed var(--line); font-family: var(--mono); font-size: var(--step--1); }
-.row-mock > div:first-child { border-left: 0; }
-.row-labels { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; }
-.row-labels > div { padding: 0 14px; font-size: var(--step--1); color: var(--muted); }
-.row-labels b { display: block; color: var(--ink); font-weight: 500; }
-
-table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+/* Timetable */
 .table-scroll { overflow-x: auto; }
-th, td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
-th { font-family: var(--mono); font-size: var(--step--1); font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
-td code { font-family: var(--mono); font-size: 0.9em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.93rem; }
+.tt { min-width: 560px; }
+th, td { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+thead th { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+tr.yh th { padding-top: 22px; border-bottom: 2px solid var(--line); font-family: var(--body); font-size: var(--step-0); font-weight: 700; text-transform: none; letter-spacing: 0; color: var(--ink); }
+tr.yh th .yh-meta { font-weight: 400; color: var(--muted); margin-left: 8px; font-size: var(--step--1); }
+tr.yh.dy th { box-shadow: inset 4px 0 0 var(--day); padding-left: 12px; }
+tr.yh.nt th { box-shadow: inset 4px 0 0 var(--night); padding-left: 12px; }
+td.t { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 0.86rem; padding-left: 12px; }
+td.t .nd { font-size: 10px; color: var(--muted); margin-left: 4px; }
+.who { display: inline-flex; align-items: center; gap: 8px; }
+.who i { width: 10px; height: 10px; border-radius: 50%; background: var(--bird); flex: none; }
+tr.self td { font-weight: 500; }
+tr.now td { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+tr.now td.t { box-shadow: inset 4px 0 0 var(--accent); }
+tr.past td { opacity: 0.55; }
 
-/* Birds */
+/* Birds / activities */
 .birds { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
-.bird {
-  display: grid; gap: 4px; padding: 14px; background: var(--surface);
-  border-top: 4px solid var(--bird); min-width: 0;
-}
+.bird { display: grid; gap: 2px; padding: 12px 14px; background: var(--surface); border-top: 4px solid var(--bird); min-width: 0; }
 .bird h3 { font-size: var(--step-1); }
-.bird .ta { font-size: 1.05rem; }
 .bird .tr { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); }
-
-/* Activities */
 .acts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
 .pillars .scene { aspect-ratio: 5 / 4; }
 .pillars .narrow .pn { display: none; }
 ol.ladder { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-ol.ladder li {
-  display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; align-items: center;
-  padding: 10px 12px; background: var(--surface); border-left: 6px solid var(--sw);
-}
+ol.ladder li { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 12px; align-items: center; padding: 8px 12px; background: var(--surface); border-left: 6px solid var(--sw); }
 ol.ladder .val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: var(--step-1); }
 ol.ladder .nm { display: grid; }
 ol.ladder .nm span { font-size: var(--step--1); color: var(--muted); }
-ol.ladder .rank { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); }
 
-/* Time bars */
-.bars { display: grid; gap: 18px; }
-.bar-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: var(--step--1); color: var(--muted); margin-bottom: 6px; }
-.bar-head b { color: var(--ink); font-weight: 500; }
-.bar { display: flex; height: 44px; border-radius: 4px; overflow: hidden; }
-.seg {
-  display: grid; place-items: center; min-width: 0;
-  font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums;
-  border-right: 2px solid var(--bg); overflow: hidden; white-space: nowrap;
-}
-.seg:last-child { border-right: 0; }
-.s1 { background: var(--a1); color: var(--on-a1); }
-.s2 { background: var(--a2); color: var(--on-a2); }
-.s3 { background: var(--a3); color: var(--on-a3); }
-.s4 { background: var(--a4); color: var(--on-a4); }
-.s5 { background: var(--a5); color: var(--on-a5); }
-.axis { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 4px; }
-.key { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: var(--step--1); color: var(--muted); }
-.key span { display: inline-flex; align-items: center; gap: 6px; }
-.key i { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
-
-.daynight { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.half { padding: 14px 16px; background: var(--surface); display: grid; gap: 8px; min-width: 0; }
-.half h3 { font-family: var(--body); font-weight: 700; font-size: var(--step-0); }
-.yamas { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; }
-.yamas div { height: 26px; border-radius: 2px; display: grid; place-items: center; font-family: var(--mono); font-size: 11px; }
-.half.day .yamas div { background: var(--day); color: var(--on-day); }
-.half.night .yamas div { background: var(--night); color: var(--on-night); }
-
-.agree td:first-child { font-weight: 500; }
-.verdict { font-family: var(--mono); font-size: var(--step--1); white-space: nowrap; }
-.verdict.ok { color: var(--peacock); }
-.verdict.split { color: var(--warn-ink); }
-
+/* Method */
+.checks td:last-child, .checks th:last-child { text-align: right; padding-right: 0; }
+.ok { color: var(--vg); font-family: var(--mono); font-size: var(--step--1); white-space: nowrap; }
+.near { color: var(--bad); font-family: var(--mono); font-size: var(--step--1); white-space: nowrap; }
 .sources { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 80ch; }
 .sources li { overflow-wrap: anywhere; }
-
 footer.end { padding-block: 28px 0; border-top: 1px solid var(--line); font-size: var(--step--1); color: var(--muted); }
 
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; gap: 28px; padding-block: 32px 24px; }
+  .hero { grid-template-columns: 1fr; gap: 28px; padding-block: 28px 20px; }
   .lede { max-width: none; }
-  section.block { grid-template-columns: 1fr; gap: 16px; padding-block: 36px; }
+  section.block { grid-template-columns: 1fr; gap: 16px; padding-block: 32px; }
   .acts { grid-template-columns: 1fr; }
-  .birds { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .picks { grid-template-columns: 1fr; }
+  .birds { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
 }
 @media (max-width: 560px) {
-  .live { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .daynight { grid-template-columns: 1fr; }
   .scene { aspect-ratio: 1 / 1; }
-}
-@media (prefers-reduced-motion: reduce) {
-  * { scroll-behavior: auto !important; }
+  .glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 </style>
+
+<script type="application/json" id="pp-data">{"date":"2026-10-14","city":"New Delhi","lat":28.6139,"lon":77.209,"tzOffsetMin":330,"paksha":"Shukla","birds":{"Vulture":[{"p":"D","n":1,"a":"Dying","s":"2026-10-14T00:51Z","e":"2026-10-14T03:10Z","subs":[{"b":"Vulture","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T00:51Z","e":"2026-10-14T01:03Z"},{"b":"Owl","a":"Eating","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-14T01:03Z","e":"2026-10-14T01:32Z"},{"b":"Crow","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T01:32Z","e":"2026-10-14T02:06Z"},{"b":"Cock","a":"Ruling","r":"Enemy","ef":"Very Bad","rt":1,"std":48,"s":"2026-10-14T02:06Z","e":"2026-10-14T02:52Z"},{"b":"Peacock","a":"Sleeping","r":"Friend","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T02:52Z","e":"2026-10-14T03:10Z"}]},{"p":"D","n":2,"a":"Eating","s":"2026-10-14T03:10Z","e":"2026-10-14T05:28Z","subs":[{"b":"Vulture","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T03:10Z","e":"2026-10-14T03:38Z"},{"b":"Owl","a":"Walking","r":"Friend","ef":"Good","rt":6,"std":36,"s":"2026-10-14T03:38Z","e":"2026-10-14T04:13Z"},{"b":"Crow","a":"Ruling","r":"Enemy","ef":"Very Good","rt":9,"std":48,"s":"2026-10-14T04:13Z","e":"2026-10-14T04:59Z"},{"b":"Cock","a":"Sleeping","r":"Enemy","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T04:59Z","e":"2026-10-14T05:16Z"},{"b":"Peacock","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":12,"s":"2026-10-14T05:16Z","e":"2026-10-14T05:28Z"}]},{"p":"D","n":3,"a":"Walking","s":"2026-10-14T05:28Z","e":"2026-10-14T07:46Z","subs":[{"b":"Vulture","a":"Walking","r":"Self","ef":"Average","rt":4,"std":36,"s":"2026-10-14T05:28Z","e":"2026-10-14T06:02Z"},{"b":"Owl","a":"Ruling","r":"Friend","ef":"Good","rt":7,"std":48,"s":"2026-10-14T06:02Z","e":"2026-10-14T06:49Z"},{"b":"Crow","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":18,"s":"2026-10-14T06:49Z","e":"2026-10-14T07:06Z"},{"b":"Cock","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T07:06Z","e":"2026-10-14T07:17Z"},{"b":"Peacock","a":"Eating","r":"Friend","ef":"Good","rt":6,"std":30,"s":"2026-10-14T07:17Z","e":"2026-10-14T07:46Z"}]},{"p":"D","n":4,"a":"Ruling","s":"2026-10-14T07:46Z","e":"2026-10-14T10:05Z","subs":[{"b":"Vulture","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":48,"s":"2026-10-14T07:46Z","e":"2026-10-14T08:32Z"},{"b":"Owl","a":"Sleeping","r":"Friend","ef":"Average","rt":5,"std":18,"s":"2026-10-14T08:32Z","e":"2026-10-14T08:50Z"},{"b":"Crow","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T08:50Z","e":"2026-10-14T09:01Z"},{"b":"Cock","a":"Eating","r":"Enemy","ef":"Very Good","rt":9,"std":30,"s":"2026-10-14T09:01Z","e":"2026-10-14T09:30Z"},{"b":"Peacock","a":"Walking","r":"Friend","ef":"Good","rt":7,"std":36,"s":"2026-10-14T09:30Z","e":"2026-10-14T10:05Z"}]},{"p":"D","n":5,"a":"Sleeping","s":"2026-10-14T10:05Z","e":"2026-10-14T12:23Z","subs":[{"b":"Vulture","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T10:05Z","e":"2026-10-14T10:22Z"},{"b":"Owl","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":12,"s":"2026-10-14T10:22Z","e":"2026-10-14T10:33Z"},{"b":"Crow","a":"Eating","r":"Enemy","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T10:33Z","e":"2026-10-14T11:02Z"},{"b":"Cock","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T11:02Z","e":"2026-10-14T11:37Z"},{"b":"Peacock","a":"Ruling","r":"Friend","ef":"Average","rt":5,"std":48,"s":"2026-10-14T11:37Z","e":"2026-10-14T12:23Z"}]},{"p":"N","n":1,"a":"Walking","s":"2026-10-14T12:23Z","e":"2026-10-14T14:53Z","subs":[{"b":"Vulture","a":"Walking","r":"Self","ef":"Average","rt":4,"std":30,"s":"2026-10-14T12:23Z","e":"2026-10-14T12:54Z"},{"b":"Peacock","a":"Sleeping","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-14T12:54Z","e":"2026-10-14T13:19Z"},{"b":"Cock","a":"Eating","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T13:19Z","e":"2026-10-14T13:50Z"},{"b":"Crow","a":"Ruling","r":"Enemy","ef":"Good","rt":7,"std":24,"s":"2026-10-14T13:50Z","e":"2026-10-14T14:15Z"},{"b":"Owl","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":36,"s":"2026-10-14T14:15Z","e":"2026-10-14T14:53Z"}]},{"p":"N","n":2,"a":"Sleeping","s":"2026-10-14T14:53Z","e":"2026-10-14T17:22Z","subs":[{"b":"Vulture","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":24,"s":"2026-10-14T14:53Z","e":"2026-10-14T15:18Z"},{"b":"Peacock","a":"Eating","r":"Friend","ef":"Average","rt":4,"std":30,"s":"2026-10-14T15:18Z","e":"2026-10-14T15:49Z"},{"b":"Cock","a":"Ruling","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T15:49Z","e":"2026-10-14T16:14Z"},{"b":"Crow","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T16:14Z","e":"2026-10-14T16:51Z"},{"b":"Owl","a":"Walking","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-14T16:51Z","e":"2026-10-14T17:22Z"}]},{"p":"N","n":3,"a":"Eating","s":"2026-10-14T17:22Z","e":"2026-10-14T19:52Z","subs":[{"b":"Vulture","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T17:22Z","e":"2026-10-14T17:54Z"},{"b":"Peacock","a":"Ruling","r":"Friend","ef":"Very Good","rt":9,"std":24,"s":"2026-10-14T17:54Z","e":"2026-10-14T18:19Z"},{"b":"Cock","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T18:19Z","e":"2026-10-14T18:56Z"},{"b":"Crow","a":"Walking","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T18:56Z","e":"2026-10-14T19:27Z"},{"b":"Owl","a":"Sleeping","r":"Friend","ef":"Average","rt":4,"std":24,"s":"2026-10-14T19:27Z","e":"2026-10-14T19:52Z"}]},{"p":"N","n":4,"a":"Ruling","s":"2026-10-14T19:52Z","e":"2026-10-14T22:22Z","subs":[{"b":"Vulture","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":24,"s":"2026-10-14T19:52Z","e":"2026-10-14T20:17Z"},{"b":"Peacock","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":36,"s":"2026-10-14T20:17Z","e":"2026-10-14T20:55Z"},{"b":"Cock","a":"Walking","r":"Enemy","ef":"Good","rt":7,"std":30,"s":"2026-10-14T20:55Z","e":"2026-10-14T21:26Z"},{"b":"Crow","a":"Sleeping","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T21:26Z","e":"2026-10-14T21:51Z"},{"b":"Owl","a":"Eating","r":"Friend","ef":"Very Good","rt":9,"std":30,"s":"2026-10-14T21:51Z","e":"2026-10-14T22:22Z"}]},{"p":"N","n":5,"a":"Dying","s":"2026-10-14T22:22Z","e":"2026-10-15T00:52Z","subs":[{"b":"Vulture","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T22:22Z","e":"2026-10-14T22:59Z"},{"b":"Peacock","a":"Walking","r":"Friend","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T22:59Z","e":"2026-10-14T23:31Z"},{"b":"Cock","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":24,"s":"2026-10-14T23:31Z","e":"2026-10-14T23:56Z"},{"b":"Crow","a":"Eating","r":"Enemy","ef":"Very Bad","rt":1,"std":30,"s":"2026-10-14T23:56Z","e":"2026-10-15T00:27Z"},{"b":"Owl","a":"Ruling","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-15T00:27Z","e":"2026-10-15T00:52Z"}]}],"Owl":[{"p":"D","n":1,"a":"Eating","s":"2026-10-14T00:51Z","e":"2026-10-14T03:10Z","subs":[{"b":"Owl","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T00:51Z","e":"2026-10-14T01:20Z"},{"b":"Crow","a":"Walking","r":"Friend","ef":"Good","rt":6,"std":36,"s":"2026-10-14T01:20Z","e":"2026-10-14T01:55Z"},{"b":"Cock","a":"Ruling","r":"Enemy","ef":"Very Good","rt":9,"std":48,"s":"2026-10-14T01:55Z","e":"2026-10-14T02:41Z"},{"b":"Peacock","a":"Sleeping","r":"Enemy","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T02:41Z","e":"2026-10-14T02:58Z"},{"b":"Vulture","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":12,"s":"2026-10-14T02:58Z","e":"2026-10-14T03:10Z"}]},{"p":"D","n":2,"a":"Walking","s":"2026-10-14T03:10Z","e":"2026-10-14T05:28Z","subs":[{"b":"Owl","a":"Walking","r":"Self","ef":"Average","rt":4,"std":36,"s":"2026-10-14T03:10Z","e":"2026-10-14T03:44Z"},{"b":"Crow","a":"Ruling","r":"Friend","ef":"Good","rt":7,"std":48,"s":"2026-10-14T03:44Z","e":"2026-10-14T04:30Z"},{"b":"Cock","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":18,"s":"2026-10-14T04:30Z","e":"2026-10-14T04:48Z"},{"b":"Peacock","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T04:48Z","e":"2026-10-14T04:59Z"},{"b":"Vulture","a":"Eating","r":"Friend","ef":"Good","rt":6,"std":30,"s":"2026-10-14T04:59Z","e":"2026-10-14T05:28Z"}]},{"p":"D","n":3,"a":"Ruling","s":"2026-10-14T05:28Z","e":"2026-10-14T07:46Z","subs":[{"b":"Owl","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":48,"s":"2026-10-14T05:28Z","e":"2026-10-14T06:14Z"},{"b":"Crow","a":"Sleeping","r":"Friend","ef":"Average","rt":5,"std":18,"s":"2026-10-14T06:14Z","e":"2026-10-14T06:31Z"},{"b":"Cock","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T06:31Z","e":"2026-10-14T06:43Z"},{"b":"Peacock","a":"Eating","r":"Enemy","ef":"Very Good","rt":9,"std":30,"s":"2026-10-14T06:43Z","e":"2026-10-14T07:12Z"},{"b":"Vulture","a":"Walking","r":"Friend","ef":"Good","rt":7,"std":36,"s":"2026-10-14T07:12Z","e":"2026-10-14T07:46Z"}]},{"p":"D","n":4,"a":"Sleeping","s":"2026-10-14T07:46Z","e":"2026-10-14T10:05Z","subs":[{"b":"Owl","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T07:46Z","e":"2026-10-14T08:03Z"},{"b":"Crow","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":12,"s":"2026-10-14T08:03Z","e":"2026-10-14T08:15Z"},{"b":"Cock","a":"Eating","r":"Enemy","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T08:15Z","e":"2026-10-14T08:44Z"},{"b":"Peacock","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T08:44Z","e":"2026-10-14T09:18Z"},{"b":"Vulture","a":"Ruling","r":"Friend","ef":"Average","rt":5,"std":48,"s":"2026-10-14T09:18Z","e":"2026-10-14T10:05Z"}]},{"p":"D","n":5,"a":"Dying","s":"2026-10-14T10:05Z","e":"2026-10-14T12:23Z","subs":[{"b":"Owl","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T10:05Z","e":"2026-10-14T10:16Z"},{"b":"Crow","a":"Eating","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-14T10:16Z","e":"2026-10-14T10:45Z"},{"b":"Cock","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T10:45Z","e":"2026-10-14T11:19Z"},{"b":"Peacock","a":"Ruling","r":"Enemy","ef":"Very Bad","rt":1,"std":48,"s":"2026-10-14T11:19Z","e":"2026-10-14T12:06Z"},{"b":"Vulture","a":"Sleeping","r":"Friend","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T12:06Z","e":"2026-10-14T12:23Z"}]},{"p":"N","n":1,"a":"Dying","s":"2026-10-14T12:23Z","e":"2026-10-14T14:53Z","subs":[{"b":"Owl","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T12:23Z","e":"2026-10-14T13:00Z"},{"b":"Vulture","a":"Walking","r":"Friend","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T13:00Z","e":"2026-10-14T13:31Z"},{"b":"Peacock","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":24,"s":"2026-10-14T13:31Z","e":"2026-10-14T13:56Z"},{"b":"Cock","a":"Eating","r":"Enemy","ef":"Very Bad","rt":1,"std":30,"s":"2026-10-14T13:56Z","e":"2026-10-14T14:28Z"},{"b":"Crow","a":"Ruling","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-14T14:28Z","e":"2026-10-14T14:53Z"}]},{"p":"N","n":2,"a":"Walking","s":"2026-10-14T14:53Z","e":"2026-10-14T17:22Z","subs":[{"b":"Owl","a":"Walking","r":"Self","ef":"Average","rt":4,"std":30,"s":"2026-10-14T14:53Z","e":"2026-10-14T15:24Z"},{"b":"Vulture","a":"Sleeping","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-14T15:24Z","e":"2026-10-14T15:49Z"},{"b":"Peacock","a":"Eating","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T15:49Z","e":"2026-10-14T16:20Z"},{"b":"Cock","a":"Ruling","r":"Enemy","ef":"Good","rt":7,"std":24,"s":"2026-10-14T16:20Z","e":"2026-10-14T16:45Z"},{"b":"Crow","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":36,"s":"2026-10-14T16:45Z","e":"2026-10-14T17:22Z"}]},{"p":"N","n":3,"a":"Sleeping","s":"2026-10-14T17:22Z","e":"2026-10-14T19:52Z","subs":[{"b":"Owl","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":24,"s":"2026-10-14T17:22Z","e":"2026-10-14T17:47Z"},{"b":"Vulture","a":"Eating","r":"Friend","ef":"Average","rt":4,"std":30,"s":"2026-10-14T17:47Z","e":"2026-10-14T18:19Z"},{"b":"Peacock","a":"Ruling","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T18:19Z","e":"2026-10-14T18:44Z"},{"b":"Cock","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T18:44Z","e":"2026-10-14T19:21Z"},{"b":"Crow","a":"Walking","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-14T19:21Z","e":"2026-10-14T19:52Z"}]},{"p":"N","n":4,"a":"Eating","s":"2026-10-14T19:52Z","e":"2026-10-14T22:22Z","subs":[{"b":"Owl","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T19:52Z","e":"2026-10-14T20:23Z"},{"b":"Vulture","a":"Ruling","r":"Friend","ef":"Very Good","rt":9,"std":24,"s":"2026-10-14T20:23Z","e":"2026-10-14T20:48Z"},{"b":"Peacock","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T20:48Z","e":"2026-10-14T21:26Z"},{"b":"Cock","a":"Walking","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T21:26Z","e":"2026-10-14T21:57Z"},{"b":"Crow","a":"Sleeping","r":"Friend","ef":"Average","rt":4,"std":24,"s":"2026-10-14T21:57Z","e":"2026-10-14T22:22Z"}]},{"p":"N","n":5,"a":"Ruling","s":"2026-10-14T22:22Z","e":"2026-10-15T00:52Z","subs":[{"b":"Owl","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":24,"s":"2026-10-14T22:22Z","e":"2026-10-14T22:47Z"},{"b":"Vulture","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":36,"s":"2026-10-14T22:47Z","e":"2026-10-14T23:24Z"},{"b":"Peacock","a":"Walking","r":"Enemy","ef":"Good","rt":7,"std":30,"s":"2026-10-14T23:24Z","e":"2026-10-14T23:56Z"},{"b":"Cock","a":"Sleeping","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T23:56Z","e":"2026-10-15T00:21Z"},{"b":"Crow","a":"Eating","r":"Friend","ef":"Very Good","rt":9,"std":30,"s":"2026-10-15T00:21Z","e":"2026-10-15T00:52Z"}]}],"Crow":[{"p":"D","n":1,"a":"Walking","s":"2026-10-14T00:51Z","e":"2026-10-14T03:10Z","subs":[{"b":"Crow","a":"Walking","r":"Self","ef":"Average","rt":4,"std":36,"s":"2026-10-14T00:51Z","e":"2026-10-14T01:26Z"},{"b":"Cock","a":"Ruling","r":"Friend","ef":"Good","rt":7,"std":48,"s":"2026-10-14T01:26Z","e":"2026-10-14T02:12Z"},{"b":"Peacock","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":18,"s":"2026-10-14T02:12Z","e":"2026-10-14T02:29Z"},{"b":"Vulture","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T02:29Z","e":"2026-10-14T02:41Z"},{"b":"Owl","a":"Eating","r":"Friend","ef":"Good","rt":6,"std":30,"s":"2026-10-14T02:41Z","e":"2026-10-14T03:10Z"}]},{"p":"D","n":2,"a":"Ruling","s":"2026-10-14T03:10Z","e":"2026-10-14T05:28Z","subs":[{"b":"Crow","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":48,"s":"2026-10-14T03:10Z","e":"2026-10-14T03:56Z"},{"b":"Cock","a":"Sleeping","r":"Friend","ef":"Average","rt":5,"std":18,"s":"2026-10-14T03:56Z","e":"2026-10-14T04:13Z"},{"b":"Peacock","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T04:13Z","e":"2026-10-14T04:24Z"},{"b":"Vulture","a":"Eating","r":"Enemy","ef":"Very Good","rt":9,"std":30,"s":"2026-10-14T04:24Z","e":"2026-10-14T04:53Z"},{"b":"Owl","a":"Walking","r":"Friend","ef":"Good","rt":7,"std":36,"s":"2026-10-14T04:53Z","e":"2026-10-14T05:28Z"}]},{"p":"D","n":3,"a":"Sleeping","s":"2026-10-14T05:28Z","e":"2026-10-14T07:46Z","subs":[{"b":"Crow","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T05:28Z","e":"2026-10-14T05:45Z"},{"b":"Cock","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":12,"s":"2026-10-14T05:45Z","e":"2026-10-14T05:57Z"},{"b":"Peacock","a":"Eating","r":"Enemy","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T05:57Z","e":"2026-10-14T06:26Z"},{"b":"Vulture","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T06:26Z","e":"2026-10-14T07:00Z"},{"b":"Owl","a":"Ruling","r":"Friend","ef":"Average","rt":5,"std":48,"s":"2026-10-14T07:00Z","e":"2026-10-14T07:46Z"}]},{"p":"D","n":4,"a":"Dying","s":"2026-10-14T07:46Z","e":"2026-10-14T10:05Z","subs":[{"b":"Crow","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T07:46Z","e":"2026-10-14T07:58Z"},{"b":"Cock","a":"Eating","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-14T07:58Z","e":"2026-10-14T08:27Z"},{"b":"Peacock","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T08:27Z","e":"2026-10-14T09:01Z"},{"b":"Vulture","a":"Ruling","r":"Enemy","ef":"Very Bad","rt":1,"std":48,"s":"2026-10-14T09:01Z","e":"2026-10-14T09:47Z"},{"b":"Owl","a":"Sleeping","r":"Friend","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T09:47Z","e":"2026-10-14T10:05Z"}]},{"p":"D","n":5,"a":"Eating","s":"2026-10-14T10:05Z","e":"2026-10-14T12:23Z","subs":[{"b":"Crow","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T10:05Z","e":"2026-10-14T10:33Z"},{"b":"Cock","a":"Walking","r":"Friend","ef":"Good","rt":6,"std":36,"s":"2026-10-14T10:33Z","e":"2026-10-14T11:08Z"},{"b":"Peacock","a":"Ruling","r":"Enemy","ef":"Very Good","rt":9,"std":48,"s":"2026-10-14T11:08Z","e":"2026-10-14T11:54Z"},{"b":"Vulture","a":"Sleeping","r":"Enemy","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T11:54Z","e":"2026-10-14T12:11Z"},{"b":"Owl","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":12,"s":"2026-10-14T12:11Z","e":"2026-10-14T12:23Z"}]},{"p":"N","n":1,"a":"Ruling","s":"2026-10-14T12:23Z","e":"2026-10-14T14:53Z","subs":[{"b":"Crow","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":24,"s":"2026-10-14T12:23Z","e":"2026-10-14T12:48Z"},{"b":"Owl","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":36,"s":"2026-10-14T12:48Z","e":"2026-10-14T13:25Z"},{"b":"Vulture","a":"Walking","r":"Enemy","ef":"Good","rt":7,"std":30,"s":"2026-10-14T13:25Z","e":"2026-10-14T13:56Z"},{"b":"Peacock","a":"Sleeping","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T13:56Z","e":"2026-10-14T14:21Z"},{"b":"Cock","a":"Eating","r":"Friend","ef":"Very Good","rt":9,"std":30,"s":"2026-10-14T14:21Z","e":"2026-10-14T14:53Z"}]},{"p":"N","n":2,"a":"Dying","s":"2026-10-14T14:53Z","e":"2026-10-14T17:22Z","subs":[{"b":"Crow","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T14:53Z","e":"2026-10-14T15:30Z"},{"b":"Owl","a":"Walking","r":"Friend","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T15:30Z","e":"2026-10-14T16:01Z"},{"b":"Vulture","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":24,"s":"2026-10-14T16:01Z","e":"2026-10-14T16:26Z"},{"b":"Peacock","a":"Eating","r":"Enemy","ef":"Very Bad","rt":1,"std":30,"s":"2026-10-14T16:26Z","e":"2026-10-14T16:57Z"},{"b":"Cock","a":"Ruling","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-14T16:57Z","e":"2026-10-14T17:22Z"}]},{"p":"N","n":3,"a":"Walking","s":"2026-10-14T17:22Z","e":"2026-10-14T19:52Z","subs":[{"b":"Crow","a":"Walking","r":"Self","ef":"Average","rt":4,"std":30,"s":"2026-10-14T17:22Z","e":"2026-10-14T17:54Z"},{"b":"Owl","a":"Sleeping","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-14T17:54Z","e":"2026-10-14T18:19Z"},{"b":"Vulture","a":"Eating","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T18:19Z","e":"2026-10-14T18:50Z"},{"b":"Peacock","a":"Ruling","r":"Enemy","ef":"Good","rt":7,"std":24,"s":"2026-10-14T18:50Z","e":"2026-10-14T19:15Z"},{"b":"Cock","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":36,"s":"2026-10-14T19:15Z","e":"2026-10-14T19:52Z"}]},{"p":"N","n":4,"a":"Sleeping","s":"2026-10-14T19:52Z","e":"2026-10-14T22:22Z","subs":[{"b":"Crow","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":24,"s":"2026-10-14T19:52Z","e":"2026-10-14T20:17Z"},{"b":"Owl","a":"Eating","r":"Friend","ef":"Average","rt":4,"std":30,"s":"2026-10-14T20:17Z","e":"2026-10-14T20:48Z"},{"b":"Vulture","a":"Ruling","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T20:48Z","e":"2026-10-14T21:13Z"},{"b":"Peacock","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T21:13Z","e":"2026-10-14T21:51Z"},{"b":"Cock","a":"Walking","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-14T21:51Z","e":"2026-10-14T22:22Z"}]},{"p":"N","n":5,"a":"Eating","s":"2026-10-14T22:22Z","e":"2026-10-15T00:52Z","subs":[{"b":"Crow","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T22:22Z","e":"2026-10-14T22:53Z"},{"b":"Owl","a":"Ruling","r":"Friend","ef":"Very Good","rt":9,"std":24,"s":"2026-10-14T22:53Z","e":"2026-10-14T23:18Z"},{"b":"Vulture","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T23:18Z","e":"2026-10-14T23:56Z"},{"b":"Peacock","a":"Walking","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T23:56Z","e":"2026-10-15T00:27Z"},{"b":"Cock","a":"Sleeping","r":"Friend","ef":"Average","rt":4,"std":24,"s":"2026-10-15T00:27Z","e":"2026-10-15T00:52Z"}]}],"Cock":[{"p":"D","n":1,"a":"Ruling","s":"2026-10-14T00:51Z","e":"2026-10-14T03:10Z","subs":[{"b":"Cock","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":48,"s":"2026-10-14T00:51Z","e":"2026-10-14T01:37Z"},{"b":"Peacock","a":"Sleeping","r":"Friend","ef":"Average","rt":5,"std":18,"s":"2026-10-14T01:37Z","e":"2026-10-14T01:55Z"},{"b":"Vulture","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T01:55Z","e":"2026-10-14T02:06Z"},{"b":"Owl","a":"Eating","r":"Enemy","ef":"Very Good","rt":9,"std":30,"s":"2026-10-14T02:06Z","e":"2026-10-14T02:35Z"},{"b":"Crow","a":"Walking","r":"Friend","ef":"Good","rt":7,"std":36,"s":"2026-10-14T02:35Z","e":"2026-10-14T03:10Z"}]},{"p":"D","n":2,"a":"Sleeping","s":"2026-10-14T03:10Z","e":"2026-10-14T05:28Z","subs":[{"b":"Cock","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T03:10Z","e":"2026-10-14T03:27Z"},{"b":"Peacock","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":12,"s":"2026-10-14T03:27Z","e":"2026-10-14T03:38Z"},{"b":"Vulture","a":"Eating","r":"Enemy","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T03:38Z","e":"2026-10-14T04:07Z"},{"b":"Owl","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T04:07Z","e":"2026-10-14T04:42Z"},{"b":"Crow","a":"Ruling","r":"Friend","ef":"Average","rt":5,"std":48,"s":"2026-10-14T04:42Z","e":"2026-10-14T05:28Z"}]},{"p":"D","n":3,"a":"Dying","s":"2026-10-14T05:28Z","e":"2026-10-14T07:46Z","subs":[{"b":"Cock","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T05:28Z","e":"2026-10-14T05:39Z"},{"b":"Peacock","a":"Eating","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-14T05:39Z","e":"2026-10-14T06:08Z"},{"b":"Vulture","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T06:08Z","e":"2026-10-14T06:43Z"},{"b":"Owl","a":"Ruling","r":"Enemy","ef":"Very Bad","rt":1,"std":48,"s":"2026-10-14T06:43Z","e":"2026-10-14T07:29Z"},{"b":"Crow","a":"Sleeping","r":"Friend","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T07:29Z","e":"2026-10-14T07:46Z"}]},{"p":"D","n":4,"a":"Eating","s":"2026-10-14T07:46Z","e":"2026-10-14T10:05Z","subs":[{"b":"Cock","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T07:46Z","e":"2026-10-14T08:15Z"},{"b":"Peacock","a":"Walking","r":"Friend","ef":"Good","rt":6,"std":36,"s":"2026-10-14T08:15Z","e":"2026-10-14T08:50Z"},{"b":"Vulture","a":"Ruling","r":"Enemy","ef":"Very Good","rt":9,"std":48,"s":"2026-10-14T08:50Z","e":"2026-10-14T09:36Z"},{"b":"Owl","a":"Sleeping","r":"Enemy","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T09:36Z","e":"2026-10-14T09:53Z"},{"b":"Crow","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":12,"s":"2026-10-14T09:53Z","e":"2026-10-14T10:05Z"}]},{"p":"D","n":5,"a":"Walking","s":"2026-10-14T10:05Z","e":"2026-10-14T12:23Z","subs":[{"b":"Cock","a":"Walking","r":"Self","ef":"Average","rt":4,"std":36,"s":"2026-10-14T10:05Z","e":"2026-10-14T10:39Z"},{"b":"Peacock","a":"Ruling","r":"Friend","ef":"Good","rt":7,"std":48,"s":"2026-10-14T10:39Z","e":"2026-10-14T11:25Z"},{"b":"Vulture","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":18,"s":"2026-10-14T11:25Z","e":"2026-10-14T11:42Z"},{"b":"Owl","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T11:42Z","e":"2026-10-14T11:54Z"},{"b":"Crow","a":"Eating","r":"Friend","ef":"Good","rt":6,"std":30,"s":"2026-10-14T11:54Z","e":"2026-10-14T12:23Z"}]},{"p":"N","n":1,"a":"Eating","s":"2026-10-14T12:23Z","e":"2026-10-14T14:53Z","subs":[{"b":"Cock","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T12:23Z","e":"2026-10-14T12:54Z"},{"b":"Crow","a":"Ruling","r":"Friend","ef":"Very Good","rt":9,"std":24,"s":"2026-10-14T12:54Z","e":"2026-10-14T13:19Z"},{"b":"Owl","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T13:19Z","e":"2026-10-14T13:56Z"},{"b":"Vulture","a":"Walking","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T13:56Z","e":"2026-10-14T14:28Z"},{"b":"Peacock","a":"Sleeping","r":"Friend","ef":"Average","rt":4,"std":24,"s":"2026-10-14T14:28Z","e":"2026-10-14T14:53Z"}]},{"p":"N","n":2,"a":"Ruling","s":"2026-10-14T14:53Z","e":"2026-10-14T17:22Z","subs":[{"b":"Cock","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":24,"s":"2026-10-14T14:53Z","e":"2026-10-14T15:18Z"},{"b":"Crow","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":36,"s":"2026-10-14T15:18Z","e":"2026-10-14T15:55Z"},{"b":"Owl","a":"Walking","r":"Enemy","ef":"Good","rt":7,"std":30,"s":"2026-10-14T15:55Z","e":"2026-10-14T16:26Z"},{"b":"Vulture","a":"Sleeping","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T16:26Z","e":"2026-10-14T16:51Z"},{"b":"Peacock","a":"Eating","r":"Friend","ef":"Very Good","rt":9,"std":30,"s":"2026-10-14T16:51Z","e":"2026-10-14T17:22Z"}]},{"p":"N","n":3,"a":"Dying","s":"2026-10-14T17:22Z","e":"2026-10-14T19:52Z","subs":[{"b":"Cock","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T17:22Z","e":"2026-10-14T18:00Z"},{"b":"Crow","a":"Walking","r":"Friend","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T18:00Z","e":"2026-10-14T18:31Z"},{"b":"Owl","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":24,"s":"2026-10-14T18:31Z","e":"2026-10-14T18:56Z"},{"b":"Vulture","a":"Eating","r":"Enemy","ef":"Very Bad","rt":1,"std":30,"s":"2026-10-14T18:56Z","e":"2026-10-14T19:27Z"},{"b":"Peacock","a":"Ruling","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-14T19:27Z","e":"2026-10-14T19:52Z"}]},{"p":"N","n":4,"a":"Walking","s":"2026-10-14T19:52Z","e":"2026-10-14T22:22Z","subs":[{"b":"Cock","a":"Walking","r":"Self","ef":"Average","rt":4,"std":30,"s":"2026-10-14T19:52Z","e":"2026-10-14T20:23Z"},{"b":"Crow","a":"Sleeping","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-14T20:23Z","e":"2026-10-14T20:48Z"},{"b":"Owl","a":"Eating","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T20:48Z","e":"2026-10-14T21:20Z"},{"b":"Vulture","a":"Ruling","r":"Enemy","ef":"Good","rt":7,"std":24,"s":"2026-10-14T21:20Z","e":"2026-10-14T21:45Z"},{"b":"Peacock","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":36,"s":"2026-10-14T21:45Z","e":"2026-10-14T22:22Z"}]},{"p":"N","n":5,"a":"Sleeping","s":"2026-10-14T22:22Z","e":"2026-10-15T00:52Z","subs":[{"b":"Cock","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":24,"s":"2026-10-14T22:22Z","e":"2026-10-14T22:47Z"},{"b":"Crow","a":"Eating","r":"Friend","ef":"Average","rt":4,"std":30,"s":"2026-10-14T22:47Z","e":"2026-10-14T23:18Z"},{"b":"Owl","a":"Ruling","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T23:18Z","e":"2026-10-14T23:43Z"},{"b":"Vulture","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T23:43Z","e":"2026-10-15T00:21Z"},{"b":"Peacock","a":"Walking","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-15T00:21Z","e":"2026-10-15T00:52Z"}]}],"Peacock":[{"p":"D","n":1,"a":"Sleeping","s":"2026-10-14T00:51Z","e":"2026-10-14T03:10Z","subs":[{"b":"Peacock","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T00:51Z","e":"2026-10-14T01:09Z"},{"b":"Vulture","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":12,"s":"2026-10-14T01:09Z","e":"2026-10-14T01:20Z"},{"b":"Owl","a":"Eating","r":"Enemy","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T01:20Z","e":"2026-10-14T01:49Z"},{"b":"Crow","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T01:49Z","e":"2026-10-14T02:23Z"},{"b":"Cock","a":"Ruling","r":"Friend","ef":"Average","rt":5,"std":48,"s":"2026-10-14T02:23Z","e":"2026-10-14T03:10Z"}]},{"p":"D","n":2,"a":"Dying","s":"2026-10-14T03:10Z","e":"2026-10-14T05:28Z","subs":[{"b":"Peacock","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T03:10Z","e":"2026-10-14T03:21Z"},{"b":"Vulture","a":"Eating","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-14T03:21Z","e":"2026-10-14T03:50Z"},{"b":"Owl","a":"Walking","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T03:50Z","e":"2026-10-14T04:24Z"},{"b":"Crow","a":"Ruling","r":"Enemy","ef":"Very Bad","rt":1,"std":48,"s":"2026-10-14T04:24Z","e":"2026-10-14T05:11Z"},{"b":"Cock","a":"Sleeping","r":"Friend","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T05:11Z","e":"2026-10-14T05:28Z"}]},{"p":"D","n":3,"a":"Eating","s":"2026-10-14T05:28Z","e":"2026-10-14T07:46Z","subs":[{"b":"Peacock","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T05:28Z","e":"2026-10-14T05:57Z"},{"b":"Vulture","a":"Walking","r":"Friend","ef":"Good","rt":6,"std":36,"s":"2026-10-14T05:57Z","e":"2026-10-14T06:31Z"},{"b":"Owl","a":"Ruling","r":"Enemy","ef":"Very Good","rt":9,"std":48,"s":"2026-10-14T06:31Z","e":"2026-10-14T07:17Z"},{"b":"Crow","a":"Sleeping","r":"Enemy","ef":"Bad","rt":2,"std":18,"s":"2026-10-14T07:17Z","e":"2026-10-14T07:35Z"},{"b":"Cock","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":12,"s":"2026-10-14T07:35Z","e":"2026-10-14T07:46Z"}]},{"p":"D","n":4,"a":"Walking","s":"2026-10-14T07:46Z","e":"2026-10-14T10:05Z","subs":[{"b":"Peacock","a":"Walking","r":"Self","ef":"Average","rt":4,"std":36,"s":"2026-10-14T07:46Z","e":"2026-10-14T08:21Z"},{"b":"Vulture","a":"Ruling","r":"Friend","ef":"Good","rt":7,"std":48,"s":"2026-10-14T08:21Z","e":"2026-10-14T09:07Z"},{"b":"Owl","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":18,"s":"2026-10-14T09:07Z","e":"2026-10-14T09:24Z"},{"b":"Crow","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T09:24Z","e":"2026-10-14T09:36Z"},{"b":"Cock","a":"Eating","r":"Friend","ef":"Good","rt":6,"std":30,"s":"2026-10-14T09:36Z","e":"2026-10-14T10:05Z"}]},{"p":"D","n":5,"a":"Ruling","s":"2026-10-14T10:05Z","e":"2026-10-14T12:23Z","subs":[{"b":"Peacock","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":48,"s":"2026-10-14T10:05Z","e":"2026-10-14T10:51Z"},{"b":"Vulture","a":"Sleeping","r":"Friend","ef":"Average","rt":5,"std":18,"s":"2026-10-14T10:51Z","e":"2026-10-14T11:08Z"},{"b":"Owl","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":12,"s":"2026-10-14T11:08Z","e":"2026-10-14T11:19Z"},{"b":"Crow","a":"Eating","r":"Enemy","ef":"Very Good","rt":9,"std":30,"s":"2026-10-14T11:19Z","e":"2026-10-14T11:48Z"},{"b":"Cock","a":"Walking","r":"Friend","ef":"Good","rt":7,"std":36,"s":"2026-10-14T11:48Z","e":"2026-10-14T12:23Z"}]},{"p":"N","n":1,"a":"Sleeping","s":"2026-10-14T12:23Z","e":"2026-10-14T14:53Z","subs":[{"b":"Peacock","a":"Sleeping","r":"Self","ef":"Bad","rt":2,"std":24,"s":"2026-10-14T12:23Z","e":"2026-10-14T12:48Z"},{"b":"Cock","a":"Eating","r":"Friend","ef":"Average","rt":4,"std":30,"s":"2026-10-14T12:48Z","e":"2026-10-14T13:19Z"},{"b":"Crow","a":"Ruling","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T13:19Z","e":"2026-10-14T13:44Z"},{"b":"Owl","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T13:44Z","e":"2026-10-14T14:21Z"},{"b":"Vulture","a":"Walking","r":"Friend","ef":"Average","rt":3,"std":30,"s":"2026-10-14T14:21Z","e":"2026-10-14T14:53Z"}]},{"p":"N","n":2,"a":"Eating","s":"2026-10-14T14:53Z","e":"2026-10-14T17:22Z","subs":[{"b":"Peacock","a":"Eating","r":"Self","ef":"Good","rt":6,"std":30,"s":"2026-10-14T14:53Z","e":"2026-10-14T15:24Z"},{"b":"Cock","a":"Ruling","r":"Friend","ef":"Very Good","rt":9,"std":24,"s":"2026-10-14T15:24Z","e":"2026-10-14T15:49Z"},{"b":"Crow","a":"Dying","r":"Enemy","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T15:49Z","e":"2026-10-14T16:26Z"},{"b":"Owl","a":"Walking","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T16:26Z","e":"2026-10-14T16:57Z"},{"b":"Vulture","a":"Sleeping","r":"Friend","ef":"Average","rt":4,"std":24,"s":"2026-10-14T16:57Z","e":"2026-10-14T17:22Z"}]},{"p":"N","n":3,"a":"Ruling","s":"2026-10-14T17:22Z","e":"2026-10-14T19:52Z","subs":[{"b":"Peacock","a":"Ruling","r":"Self","ef":"Very Good","rt":10,"std":24,"s":"2026-10-14T17:22Z","e":"2026-10-14T17:47Z"},{"b":"Cock","a":"Dying","r":"Friend","ef":"Average","rt":3,"std":36,"s":"2026-10-14T17:47Z","e":"2026-10-14T18:25Z"},{"b":"Crow","a":"Walking","r":"Enemy","ef":"Good","rt":7,"std":30,"s":"2026-10-14T18:25Z","e":"2026-10-14T18:56Z"},{"b":"Owl","a":"Sleeping","r":"Enemy","ef":"Average","rt":5,"std":24,"s":"2026-10-14T18:56Z","e":"2026-10-14T19:21Z"},{"b":"Vulture","a":"Eating","r":"Friend","ef":"Very Good","rt":9,"std":30,"s":"2026-10-14T19:21Z","e":"2026-10-14T19:52Z"}]},{"p":"N","n":4,"a":"Dying","s":"2026-10-14T19:52Z","e":"2026-10-14T22:22Z","subs":[{"b":"Peacock","a":"Dying","r":"Self","ef":"Very Bad","rt":1,"std":36,"s":"2026-10-14T19:52Z","e":"2026-10-14T20:30Z"},{"b":"Cock","a":"Walking","r":"Friend","ef":"Bad","rt":2,"std":30,"s":"2026-10-14T20:30Z","e":"2026-10-14T21:01Z"},{"b":"Crow","a":"Sleeping","r":"Enemy","ef":"Very Bad","rt":1,"std":24,"s":"2026-10-14T21:01Z","e":"2026-10-14T21:26Z"},{"b":"Owl","a":"Eating","r":"Enemy","ef":"Very Bad","rt":1,"std":30,"s":"2026-10-14T21:26Z","e":"2026-10-14T21:57Z"},{"b":"Vulture","a":"Ruling","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-14T21:57Z","e":"2026-10-14T22:22Z"}]},{"p":"N","n":5,"a":"Walking","s":"2026-10-14T22:22Z","e":"2026-10-15T00:52Z","subs":[{"b":"Peacock","a":"Walking","r":"Self","ef":"Average","rt":4,"std":30,"s":"2026-10-14T22:22Z","e":"2026-10-14T22:53Z"},{"b":"Cock","a":"Sleeping","r":"Friend","ef":"Average","rt":3,"std":24,"s":"2026-10-14T22:53Z","e":"2026-10-14T23:18Z"},{"b":"Crow","a":"Eating","r":"Enemy","ef":"Good","rt":6,"std":30,"s":"2026-10-14T23:18Z","e":"2026-10-14T23:49Z"},{"b":"Owl","a":"Ruling","r":"Enemy","ef":"Good","rt":7,"std":24,"s":"2026-10-14T23:49Z","e":"2026-10-15T00:14Z"},{"b":"Vulture","a":"Dying","r":"Friend","ef":"Bad","rt":2,"std":36,"s":"2026-10-15T00:14Z","e":"2026-10-15T00:52Z"}]}]},"weekday":"Wednesday","sunrise":"2026-10-14T00:51Z","sunset":"2026-10-14T12:23Z","nextSunrise":"2026-10-15T00:52Z","dayRuler":"Owl","nightRuler":"Cock","deathBird":"Peacock"}</script>
 
 <div class="wrap">
   <section class="hero" aria-labelledby="title">
     <div class="hero-text">
-      <p class="eyebrow">Report · Drik Panchang · Bird Activities page</p>
-      <h1 id="title">Pancha Pakshi <span class="tamil">பஞ்ச பட்சி · the five-bird timetable</span></h1>
-      <p class="lede">Drik Panchang's Pancha Pakshi page gives a daily timetable for one date and place. It shows which of five birds is active in each part of the day, what each bird is doing, and how good the time is for you.</p>
-      <div class="meta">
-        <span>Prepared 14 Oct 2026</span>
-        <span>Page: <code>/pancha-pakshi/pancha-pakshi-bird-activities.html</code></span>
-        <span class="chip">Today's timings not included</span>
+      <p class="eyebrow">Pancha Pakshi · New Delhi · Shukla Paksha</p>
+      <h1 id="title">Wednesday, 14 October 2026 <small>பஞ்ச பட்சி · today's five-bird timetable</small></h1>
+      <p class="lede" id="lede">Your bird's day runs from sunrise at 6:21 AM to sunrise at 6:22 AM on Thursday.</p>
+
+      <div class="picker" role="group" aria-labelledby="picker-label">
+        <span class="eyebrow" id="picker-label">Your bird</span>
+        <div class="picker-row" id="picker"></div>
+        <span class="hint" id="picker-hint">Starts on the Peacock, the bird Drik Panchang shows by default. Don't know yours? Use <a href="https://www.drikpanchang.com/pancha-pakshi/bird/pancha-pakshi-bird-calculator.html" target="_blank" rel="noopener">Drik Panchang's bird calculator</a>.</span>
       </div>
+
+      <dl class="glance">
+        <div><dt>Sunrise</dt><dd id="g-rise">6:21 AM</dd></div>
+        <div><dt>Sunset</dt><dd id="g-set">5:53 PM</dd></div>
+        <div><dt>Next sunrise</dt><dd id="g-next">6:22 AM Thu</dd></div>
+        <div><dt>Ruling bird by day</dt><dd class="bird-name" id="g-dr" style="--bird: var(--owl)">Owl</dd></div>
+        <div><dt>Ruling bird by night</dt><dd class="bird-name" id="g-nr" style="--bird: var(--cock)">Cock</dd></div>
+        <div><dt>Dying bird today</dt><dd class="bird-name" id="g-db" style="--bird: var(--peacock)">Peacock</dd></div>
+      </dl>
+      <span class="chip">Calculated from Drik Panchang's tables · see How these times were made</span>
     </div>
 
     <div class="stage">
       <div class="scene" id="dial">
-        <canvas id="dial-canvas" aria-label="Animated 3D illustration: five birds circling a dial split into five day and five night yamas" role="img"></canvas>
-        <div class="fallback" id="dial-fallback" hidden>3D view needs WebGL, which this browser has turned off. The facts below don't depend on it.</div>
+        <canvas id="dial-canvas" role="img" aria-label="3D dial of today: outer ring shows the five day and five night yamas, inner ring shows every sub-period coloured from Very Good to Very Bad, a marker shows the current time, and the bird whose sub-period is running flies highest."></canvas>
+        <div class="fallback" id="dial-fallback" hidden>The 3D dial needs WebGL, which this browser has turned off. The timetable below has the same data.</div>
       </div>
-      <p class="clock" id="clock" aria-live="off">Marker: Day, yama 1 of 5</p>
-      <ul class="live" id="live" aria-label="Bird states in the illustration"></ul>
+      <div class="now-card" id="now-card" aria-live="polite">
+        <div class="now-top"><span id="now-clock">Now</span><span id="now-yama"></span></div>
+        <div class="now-main"><b id="now-what">—</b><span class="fx" id="now-fx"></span><span class="plus" id="now-plus"></span></div>
+        <div class="now-next" id="now-next"></div>
+      </div>
       <div class="controls">
-        <button class="btn" id="dial-toggle" type="button" aria-pressed="false">Pause</button>
+        <button class="btn" id="btn-live" type="button" aria-pressed="true">Live</button>
+        <button class="btn" id="btn-play" type="button" aria-pressed="false">Play the day</button>
       </div>
-      <p class="caption">This is an illustration. The marker sweeps through five day yamas (gold) and five night yamas (indigo). Each bird rises, glows and beats its wings faster the stronger its state. The states change on a fixed loop to show how they work. They are not a real schedule.</p>
+      <p class="caption">Outer ring: the ten yamas, gold by day and indigo by night. Inner ring: every sub-period for your bird, coloured by its rating. The marker is the time in New Delhi. The bird whose sub-period is running flies highest, and glows and flaps harder the stronger its activity.</p>
     </div>
   </section>
 
-  <section class="block" aria-labelledby="h-status">
-    <header><p class="eyebrow">Read first</p><h2 id="h-status">What this report covers</h2></header>
+  <section class="block" aria-labelledby="h-picks">
+    <header><p class="eyebrow">Today</p><h2 id="h-picks">Best and worst times</h2></header>
     <div class="body">
-      <div class="status" role="note">
-        <h3>The live timetable is not in this report</h3>
-        <p>drikpanchang.com couldn't be reached while this report was made, so it has no timings for 14 Oct 2026 or any other date. It explains what the page shows and how to read it, using copies of the page in search results and outside sources. Nothing here stands in for the real times.</p>
-        <p>Adding the real timetable needs:</p>
-        <ul>
-          <li>access to drikpanchang.com from the environment that builds the report</li>
-          <li>the date and city you want</li>
-          <li>your bird, or your birth nakshatra and paksha</li>
-        </ul>
-      </div>
-      <dl class="facts">
-        <div><dt>Birds</dt><dd>5: Vulture, Owl, Crow, Cock, Peacock</dd></div>
-        <div><dt>Activities</dt><dd>5: Ruling, Eating, Walking, Sleeping, Dying</dd></div>
-        <div><dt>Main periods</dt><dd>10 yamas: 5 by day, 5 by night</dd></div>
-        <div><dt>Day boundary</dt><dd>Sunrise to the next sunrise</dd></div>
-      </dl>
+      <p id="picks-summary"></p>
+      <div class="picks" id="picks"></div>
+      <p class="note">Ratings are the Effect column from Drik Panchang's table for your bird. Times are New Delhi time (IST). Slots marked Thu fall after midnight but still belong to Wednesday's Panchang day.</p>
     </div>
   </section>
 
-  <section class="block" aria-labelledby="h-page">
-    <header><p class="eyebrow">The page</p><h2 id="h-page">What Drik Panchang shows</h2></header>
+  <section class="block" aria-labelledby="h-strip">
+    <header><p class="eyebrow">Shape of the day</p><h2 id="h-strip">Sunrise to sunrise</h2></header>
     <div class="body">
-      <p>Each page is a timetable for one date and one city. The title follows the pattern <em>“[date] Pancha Pakshi Activities for [city]”</em>. Many copies in search results use New Delhi. The timetable has a day-time section and a night-time section. Each section is a run of time slots.</p>
-      <p>The Panchang day runs from sunrise to the next sunrise. Slots after midnight carry the next calendar date.</p>
+      <div class="strips" id="strips"></div>
+      <div class="key" id="fx-key"></div>
+    </div>
+  </section>
 
-      <h3 class="eyebrow" style="margin-top:8px">Anatomy of one slot</h3>
-      <div class="anatomy-scroll">
-        <div class="anatomy" aria-label="Columns in one time slot">
-          <div class="row-mock" aria-hidden="true">
-            <div>hh:mm – hh:mm</div><div>Bird</div><div>Activity</div><div>Rating</div><div>Relation</div>
-          </div>
-          <div class="row-labels">
-            <div><b>Time slot</b>Start and end. A date suffix means the slot is after midnight.</div>
-            <div><b>Bird</b>Which of the five birds the slot belongs to.</div>
-            <div><b>Activity</b>Ruling, Eating, Walking, Sleeping or Dying.</div>
-            <div><b>Rating</b>From Very Good to Very Bad.</div>
-            <div><b>Relation</b>Friend, Enemy or Self, compared with your bird.</div>
-          </div>
-        </div>
-      </div>
-      <p class="note">The column layout comes from indexed copies of the page. The placeholders are not real values.</p>
-
-      <h3 class="eyebrow" style="margin-top:8px">Settings in the page address</h3>
+  <section class="block" aria-labelledby="h-tt">
+    <header><p class="eyebrow">Timetable</p><h2 id="h-tt">Every sub-period</h2></header>
+    <div class="body">
       <div class="table-scroll">
-        <table>
-          <thead><tr><th>Parameter</th><th>What it sets</th><th>Example</th></tr></thead>
+        <table class="tt" id="tt" aria-describedby="tt-note">
+          <thead><tr><th scope="col" style="padding-left:12px">Time (IST)</th><th scope="col">Sub-activity</th><th scope="col">Relation to you</th><th scope="col">Effect</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="note" id="tt-note">Each yama is named after your bird's main activity in it. Its five sub-periods each belong to one bird. Relation says whether that bird is your own (Self), a Friend or an Enemy in this fortnight. The + marks copy Drik Panchang's strength marks.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-method">
+    <header><p class="eyebrow">Method</p><h2 id="h-method">How these times were made</h2></header>
+    <div class="body">
+      <p>drikpanchang.com can't be reached from the environment that built this report, so these times are calculated rather than copied from the site. The calculation uses the same steps the site does:</p>
+      <ol>
+        <li>Sunrise and sunset for New Delhi (28.61° N, 77.21° E): the moment the Sun's upper edge crosses the horizon, allowing for standard refraction.</li>
+        <li>Day and night each split into five equal yamas.</li>
+        <li>The order of activities, ratings and relations for each bird, weekday, fortnight and half-day, from the data table in the open-source <a href="https://www.npmjs.com/package/@payload-pln/panchapakshi-engine" target="_blank" rel="noopener">panchapakshi-engine</a> (MIT). That table was built from Drik Panchang pages.</li>
+        <li>Each sub-period's share of 144 parts stretched to the real length of its yama, then rounded to the nearest minute.</li>
+      </ol>
+      <p>Today is the fourth day of the waxing fortnight. The new moon ended on 10 October and the full moon is on 26 October, so the fortnight doesn't change during the day.</p>
+      <h3 class="eyebrow" style="margin-top:6px">Checked against real Drik Panchang pages</h3>
+      <div class="table-scroll">
+        <table class="checks">
+          <thead><tr><th scope="col">Page</th><th scope="col">Row</th><th scope="col">Drik Panchang</th><th scope="col">This method</th><th scope="col">Result</th></tr></thead>
           <tbody>
-            <tr><td><code>date</code></td><td>The day to show, as DD/MM/YYYY</td><td><code>date=14/10/2026</code></td></tr>
-            <tr><td><code>pakshi</code></td><td>Your bird. Changes the Friend, Enemy and Self labels.</td><td><code>pakshi=crow</code>, <code>cock</code>, <code>peacock</code></td></tr>
-            <tr><td><code>time-format</code></td><td>12-hour or 24-hour clock</td><td><code>12hour</code>, <code>24hour</code></td></tr>
-            <tr><td><code>lang</code></td><td>Page language</td><td><code>lang=en</code></td></tr>
+            <tr><td>New Delhi, 4 Jul 2026, Cock</td><td>Cock Ruling</td><td class="mono">05:28–05:49 Very Good</td><td class="mono">05:28–05:49 Very Good</td><td><span class="ok">match</span></td></tr>
+            <tr><td></td><td>Cock Walking</td><td class="mono">08:15–08:57 Average</td><td class="mono">08:15–08:57 Average</td><td><span class="ok">match</span></td></tr>
+            <tr><td></td><td>Cock Eating</td><td class="mono">11:02–11:58 Good</td><td class="mono">11:02–11:58 Good</td><td><span class="ok">match</span></td></tr>
+            <tr><td></td><td>Yama 4 start</td><td class="mono">13:49</td><td class="mono">13:49</td><td><span class="ok">match</span></td></tr>
+            <tr><td>Berlin, 13 Oct 2026, default page</td><td>Crow Ruling</td><td class="mono">08:38–09:22 Very Bad, Enemy</td><td class="mono">08:38–09:22 Very Bad, Enemy</td><td><span class="ok">match</span></td></tr>
+            <tr><td></td><td>Crow Sleeping</td><td class="mono">11:20–11:37 Bad, Enemy</td><td class="mono">11:20–11:37 Bad, Enemy</td><td><span class="ok">match</span></td></tr>
+            <tr><td></td><td>Crow Dying</td><td class="mono">13:19–13:30 Very Bad, Enemy</td><td class="mono">13:19–13:30 Very Bad, Enemy</td><td><span class="ok">match</span></td></tr>
+            <tr><td></td><td>Night yama 3</td><td class="mono">23:34–02:12</td><td class="mono">23:34–02:12</td><td><span class="ok">match</span></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="note">The city is picked on the page itself. The address you shared also had <code>signed-out=1</code> and an ad fragment (<code>#google_vignette</code>). Neither changes the timetable.</p>
+      <p class="note">The Drik Panchang values come from copies of those pages in search results. Six more times quoted in the engine's documentation for New Delhi on 3 and 10 October also agree. Two of them differ by one minute, and in both the exact time falls about 35 seconds past the minute, where rounding can go either way. Expect any time here to be within a minute of the live site.</p>
     </div>
   </section>
 
   <section class="block" aria-labelledby="h-birds">
-    <header><p class="eyebrow">Cast</p><h2 id="h-birds">The five birds</h2></header>
+    <header><p class="eyebrow">Background</p><h2 id="h-birds">The birds and their activities</h2></header>
     <div class="body">
       <div class="birds">
-        <article class="bird" style="--bird: var(--vulture)"><h3>Vulture</h3><span class="ta">வல்லூறு</span><span class="tr">Valluru</span></article>
-        <article class="bird" style="--bird: var(--owl)"><h3>Owl</h3><span class="ta">ஆந்தை</span><span class="tr">Aandhai</span></article>
-        <article class="bird" style="--bird: var(--crow)"><h3>Crow</h3><span class="ta">காகம்</span><span class="tr">Kaakam</span></article>
-        <article class="bird" style="--bird: var(--cock)"><h3>Cock</h3><span class="ta">கோழி</span><span class="tr">Kozhi</span></article>
-        <article class="bird" style="--bird: var(--peacock)"><h3>Peacock</h3><span class="ta">மயில்</span><span class="tr">Mayil</span></article>
+        <article class="bird" style="--bird: var(--vulture)"><h3>Vulture</h3><span>வல்லூறு</span><span class="tr">Valluru</span></article>
+        <article class="bird" style="--bird: var(--owl)"><h3>Owl</h3><span>ஆந்தை</span><span class="tr">Aandhai</span></article>
+        <article class="bird" style="--bird: var(--crow)"><h3>Crow</h3><span>காகம்</span><span class="tr">Kaakam</span></article>
+        <article class="bird" style="--bird: var(--cock)"><h3>Cock</h3><span>கோழி</span><span class="tr">Kozhi</span></article>
+        <article class="bird" style="--bird: var(--peacock)"><h3>Peacock</h3><span>மயில்</span><span class="tr">Mayil</span></article>
       </div>
-      <p>Pancha Pakshi Shastra comes from the Tamil Siddha tradition, and a Sanskrit text on it is credited to the sage Agastya. Each person has one bird, worked out from the nakshatra the Moon was in at birth and the paksha (waxing or waning fortnight). The page then judges every slot of the day against that bird.</p>
-    </div>
-  </section>
-
-  <section class="block" aria-labelledby="h-acts">
-    <header><p class="eyebrow">States</p><h2 id="h-acts">The five activities</h2></header>
-    <div class="body">
       <div class="acts">
         <div class="pillars">
           <div class="scene" id="pillars">
             <canvas id="pillars-canvas" role="img" aria-label="3D bar chart of activity strength: Ruling 1.0, Eating 0.8, Walking 0.6, Sleeping 0.4, Dying 0.2"></canvas>
             <div class="fallback" id="pillars-fallback" hidden>3D view needs WebGL. The same values are listed alongside.</div>
           </div>
-          <p class="caption">Pillar height is drawn to scale. The outline on each pillar is full strength (1.0).</p>
+          <p class="caption">Pillar height is drawn to scale. Each outline is full strength (1.0).</p>
         </div>
         <ol class="ladder" aria-label="Activities from strongest to weakest">
-          <li style="--sw: var(--a1)"><span class="val">1.0</span><span class="nm"><b>Ruling</b><span>Arasu · அரசு</span></span><span class="rank">strongest</span></li>
-          <li style="--sw: var(--a2)"><span class="val">0.8</span><span class="nm"><b>Eating</b><span>Oon · ஊண்</span></span><span class="rank"></span></li>
-          <li style="--sw: var(--a3)"><span class="val">0.6</span><span class="nm"><b>Walking</b><span>Nadai · நடை</span></span><span class="rank"></span></li>
-          <li style="--sw: var(--a4)"><span class="val">0.4</span><span class="nm"><b>Sleeping</b><span>Thuyil · துயில்</span></span><span class="rank"></span></li>
-          <li style="--sw: var(--a5)"><span class="val">0.2</span><span class="nm"><b>Dying</b><span>Saavu · சாவு</span></span><span class="rank">weakest</span></li>
+          <li style="--sw: var(--a1)"><span class="val">1.0</span><span class="nm"><b>Ruling</b><span>Arasu · அரசு</span></span></li>
+          <li style="--sw: var(--a2)"><span class="val">0.8</span><span class="nm"><b>Eating</b><span>Oon · ஊண்</span></span></li>
+          <li style="--sw: var(--a3)"><span class="val">0.6</span><span class="nm"><b>Walking</b><span>Nadai · நடை</span></span></li>
+          <li style="--sw: var(--a4)"><span class="val">0.4</span><span class="nm"><b>Sleeping</b><span>Thuyil · துயில்</span></span></li>
+          <li style="--sw: var(--a5)"><span class="val">0.2</span><span class="nm"><b>Dying</b><span>Saavu · சாவு</span></span></li>
         </ol>
       </div>
-      <p>Every bird passes through all five states over a day. Strength drops by one fifth at each step down the list. A slot where your bird is Ruling or Eating is treated as strong. A slot where it is Sleeping or Dying is treated as weak. The page's Rating column gives its own verdict for each slot.</p>
-      <p class="note">Strength values: VedAstro (Part 3) and Jayachandran et al. in IJMRME. Both use the same 1.0 to 0.2 scale.</p>
-    </div>
-  </section>
-
-  <section class="block" aria-labelledby="h-time">
-    <header><p class="eyebrow">Clock</p><h2 id="h-time">How the day is divided</h2></header>
-    <div class="body">
-      <div class="daynight">
-        <div class="half day">
-          <h3>Day: sunrise to sunset</h3>
-          <div class="yamas" aria-label="Five day yamas"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
-          <p class="note">5 yamas. Each is 2 h 24 min when the day is 12 hours.</p>
-        </div>
-        <div class="half night">
-          <h3>Night: sunset to sunrise</h3>
-          <div class="yamas" aria-label="Five night yamas"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
-          <p class="note">5 yamas, split the same way.</p>
-        </div>
-      </div>
-      <p>Each yama is split again into five sub-periods, one for each activity. Sources disagree on how long the sub-periods are. Both versions below fill one 144-minute yama and are drawn to scale.</p>
-      <div class="bars">
-        <div>
-          <div class="bar-head"><b>Equal split</b><span>VedAstro, Part 8: about 29 min each</span></div>
-          <div class="bar" role="img" aria-label="Five equal sub-periods of 28.8 minutes">
-            <div class="seg s1" style="flex: 28.8">28.8</div>
-            <div class="seg s2" style="flex: 28.8">28.8</div>
-            <div class="seg s3" style="flex: 28.8">28.8</div>
-            <div class="seg s4" style="flex: 28.8">28.8</div>
-            <div class="seg s5" style="flex: 28.8">28.8</div>
-          </div>
-          <div class="axis"><span>0</span><span>72 min</span><span>144 min</span></div>
-        </div>
-        <div>
-          <div class="bar-head"><b>Unequal split</b><span>IJMRME paper: 30 + 36 + 48 + 18 + 12 min</span></div>
-          <div class="bar" role="img" aria-label="Unequal sub-periods: Eating 30, Walking 36, Ruling 48, Sleeping 18, Dying 12 minutes">
-            <div class="seg s2" style="flex: 30">30</div>
-            <div class="seg s3" style="flex: 36">36</div>
-            <div class="seg s1" style="flex: 48">48</div>
-            <div class="seg s4" style="flex: 18">18</div>
-            <div class="seg s5" style="flex: 12">12</div>
-          </div>
-          <div class="axis"><span>0</span><span>72 min</span><span>144 min</span></div>
-        </div>
-        <div class="key" aria-label="Colour key">
-          <span><i style="background: var(--a1)"></i>Ruling</span>
-          <span><i style="background: var(--a2)"></i>Eating</span>
-          <span><i style="background: var(--a3)"></i>Walking</span>
-          <span><i style="background: var(--a4)"></i>Sleeping</span>
-          <span><i style="background: var(--a5)"></i>Dying</span>
-        </div>
-      </div>
-      <p class="note">The equal split doesn't give an order for the sub-periods, so its colours just run strongest to weakest. VedAstro says the order rotates and starts from the yama's main activity. Drik Panchang's own split can only be confirmed on the live page.</p>
-    </div>
-  </section>
-
-  <section class="block" aria-labelledby="h-bird">
-    <header><p class="eyebrow">Your bird</p><h2 id="h-bird">Finding your bird</h2></header>
-    <div class="body">
-      <p>Your bird comes from two facts: the nakshatra the Moon was in when you were born, and whether you were born in the waxing (Shukla) or waning (Krishna) fortnight. The same nakshatra gives a different bird in each fortnight. The Moon changes nakshatra about once a day, so the birth time matters.</p>
-      <div class="table-scroll">
-        <table class="agree">
-          <thead><tr><th>Point</th><th>What sources say</th><th>Agreement</th></tr></thead>
-          <tbody>
-            <tr><td>Inputs</td><td>Birth nakshatra plus paksha</td><td class="verdict ok">agree</td></tr>
-            <tr><td>Shukla, first group</td><td>Ashwini to Mrigashira gives Vulture</td><td class="verdict ok">agree</td></tr>
-            <tr><td>Shukla, later groups</td><td>Where Owl, Crow, Cock and Peacock start and end differs between VedAstro and Hindu Blog</td><td class="verdict split">differ</td></tr>
-            <tr><td>Krishna paksha</td><td>The order reverses, but VedAstro, Hindu Blog and Findyourfate give different tables</td><td class="verdict split">differ</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>The tables don't match, so this report doesn't include one. For results that match the timetable, use <a href="https://www.drikpanchang.com/pancha-pakshi/bird/pancha-pakshi-bird-calculator.html" target="_blank" rel="noopener">Drik Panchang's own bird calculator</a>, then open the activities page with that bird set.</p>
-    </div>
-  </section>
-
-  <section class="block" aria-labelledby="h-use">
-    <header><p class="eyebrow">Use</p><h2 id="h-use">Reading the timetable</h2></header>
-    <div class="body">
-      <ol>
-        <li>Set the date and your city on the page. Times depend on local sunrise and sunset.</li>
-        <li>Set your bird with the calculator or the <code>pakshi</code> setting, so the Relation column is filled in for you.</li>
-        <li>Traditionally the best times are slots marked <b>Self</b> or <b>Friend</b> where the activity is Ruling or Eating and the rating is Good or Very Good.</li>
-        <li>Treat Sleeping and Dying slots, and slots rated Bad or Very Bad, as the weak times.</li>
-        <li>For times after midnight, check the date suffix. That slot still belongs to the Panchang day that began at sunrise.</li>
-      </ol>
-      <p class="note">This is a traditional timing system and not a forecast. OnlineJyotish, which publishes these timings, warns against treating them as a guarantee of financial, legal or medical outcomes.</p>
+      <p>Pancha Pakshi Shastra comes from the Tamil Siddha tradition. Your bird is set by your birth nakshatra and fortnight. Each yama, your bird does one main activity. Each yama is split into five sub-periods, one per bird. Ruling and Eating are the strong states, Sleeping and Dying the weak ones. The strength values come from VedAstro and the IJMRME paper.</p>
+      <p class="note">This is a traditional timing system and not a forecast. Sites that publish it warn against treating it as a guarantee of financial, legal or medical outcomes.</p>
     </div>
   </section>
 
@@ -508,21 +369,20 @@ footer.end { padding-block: 28px 0; border-top: 1px solid var(--line); font-size
     <header><p class="eyebrow">Sources</p><h2 id="h-src">Where this comes from</h2></header>
     <div class="body">
       <ol class="sources">
-        <li><a href="https://www.drikpanchang.com/pancha-pakshi/pancha-pakshi-bird-activities.html" target="_blank" rel="noopener">Drik Panchang: Pancha Pakshi Bird Activities</a> (the page in this report, seen through search results)</li>
+        <li><a href="https://www.drikpanchang.com/pancha-pakshi/pancha-pakshi-bird-activities.html" target="_blank" rel="noopener">Drik Panchang: Pancha Pakshi Bird Activities</a>. Open it to compare with today's live page.</li>
+        <li><a href="https://www.drikpanchang.com/pancha-pakshi/pancha-pakshi-bird-activities.html?pakshi=cock" target="_blank" rel="noopener">Drik Panchang: New Delhi, 4 July 2026, Cock</a> (checked rows)</li>
         <li><a href="https://www.drikpanchang.com/pancha-pakshi/bird/pancha-pakshi-bird-calculator.html" target="_blank" rel="noopener">Drik Panchang: Pancha Pakshi Bird Calculator</a></li>
-        <li><a href="https://vedastro.org/blog/Pancha-Pakshi-Part-2-Finding-Your-Birth-Bird.html" target="_blank" rel="noopener">VedAstro: Part 2, Finding Your Birth Bird</a></li>
+        <li><a href="https://www.npmjs.com/package/@payload-pln/panchapakshi-engine" target="_blank" rel="noopener">@payload-pln/panchapakshi-engine 1.2.0</a> (data table, MIT licence)</li>
+        <li>Jean Meeus, <em>Astronomical Algorithms</em>, ch. 25 (Sun position used for sunrise and sunset)</li>
         <li><a href="https://vedastro.org/blog/Pancha-Pakshi-Part-3-The-Five-Activities.html" target="_blank" rel="noopener">VedAstro: Part 3, The Five Activities</a></li>
-        <li><a href="https://vedastro.org/blog/Pancha-Pakshi-Part-8-Sub-Activities.html" target="_blank" rel="noopener">VedAstro: Part 8, Sub-Activities and Vibrational Strength</a></li>
         <li><a href="https://ijmrme.crystalpen.in/uploads/683432bc46d6e_624.pdf" target="_blank" rel="noopener">Jayachandran et al., “Panjapatchi”, IJMRME (PDF)</a></li>
         <li><a href="https://en.wikipedia.org/wiki/Pancha_Pakshi_Shastra" target="_blank" rel="noopener">Wikipedia: Pancha Pakshi Shastra</a></li>
-        <li><a href="https://www.hindu-blog.com/2018/10/pacha-pakshi-shastra-hindu-astrology-birth-bird-astrology.html" target="_blank" rel="noopener">Hindu Blog: Pancha Pakshi Shastra</a></li>
-        <li><a href="https://www.findyourfate.com/astrology/articles/articlespage.php?topic=pancha-pakshi-shastra-an-ancient-indian-vedic-system-of-astrology&amp;language=1" target="_blank" rel="noopener">Findyourfate: Pancha Pakshi Shastra</a></li>
         <li><a href="https://www.onlinejyotish.com/free-astrology/pancha-pakshi-forecast.php" target="_blank" rel="noopener">OnlineJyotish: Pancha Pakshi forecast</a></li>
       </ol>
     </div>
   </section>
 
-  <footer class="end">Pancha Pakshi report · prepared 14 Oct 2026. The two 3D views are illustrations. All timings come from Drik Panchang.</footer>
+  <footer class="end">Pancha Pakshi report for Wednesday, 14 October 2026, New Delhi. Calculated, then checked against Drik Panchang pages.</footer>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -530,38 +390,247 @@ footer.end { padding-block: 28px 0; border-top: 1px solid var(--line); font-size
 (function () {
   "use strict";
 
-  var BIRDS = [
-    { key: "vulture", name: "Vulture", tail: 1.0, wing: 1.15 },
-    { key: "owl", name: "Owl", tail: 0.8, wing: 1.0 },
-    { key: "crow", name: "Crow", tail: 1.0, wing: 0.95 },
-    { key: "cock", name: "Cock", tail: 1.3, wing: 0.8 },
-    { key: "peacock", name: "Peacock", tail: 2.4, wing: 0.9 }
-  ];
-  var ACTS = [
-    { name: "Ruling", s: 1.0 },
-    { name: "Eating", s: 0.8 },
-    { name: "Walking", s: 0.6 },
-    { name: "Sleeping", s: 0.4 },
-    { name: "Dying", s: 0.2 }
-  ];
-
+  var DATA = JSON.parse(document.getElementById("pp-data").textContent);
+  var BIRDS = ["Vulture", "Owl", "Crow", "Cock", "Peacock"];
+  var STRENGTH = { Ruling: 1.0, Eating: 0.8, Walking: 0.6, Sleeping: 0.4, Dying: 0.2 };
+  var EFFECTS = ["Very Good", "Good", "Average", "Bad", "Very Bad"];
+  var FXVAR = { "Very Good": "--vg", "Good": "--g", "Average": "--avg", "Bad": "--bad", "Very Bad": "--vbad" };
+  var OFF = DATA.tzOffsetMin * 60000;
+  var T = function (s) { return Date.parse(s); };
+  var SR = T(DATA.sunrise), SS = T(DATA.sunset), NSR = T(DATA.nextSunrise), TOTAL = NSR - SR;
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $ = function (sel) { return document.querySelector(sel); };
 
-  function token(name) {
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || "#888888";
+  function fmt(ms) {
+    var d = new Date(ms + OFF), h = d.getUTCHours(), m = d.getUTCMinutes();
+    var ap = h < 12 ? "AM" : "PM";
+    h = h % 12 || 12;
+    return h + ":" + (m < 10 ? "0" : "") + m + " " + ap;
   }
-  function color(name) { return new THREE.Color(token(name)); }
+  function isNextDay(ms) { return new Date(ms + OFF).getUTCDate() !== 14; }
+  function fmtD(ms) { return fmt(ms) + (isNextDay(ms) ? " Thu" : ""); }
+  function token(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || "#888888"; }
+  function birdVar(b) { return "var(--" + b.toLowerCase() + ")"; }
+  function fxVar(ef) { return "var(" + FXVAR[ef] + ")"; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
+  // Flatten a bird's yamams into 50 sub-periods.
+  var FLAT = {};
+  BIRDS.forEach(function (b) {
+    var rows = [];
+    DATA.birds[b].forEach(function (y, yi) {
+      y.subs.forEach(function (u, ui) {
+        rows.push({ yi: yi, ui: ui, p: y.p, n: y.n, ya: y.a, ys: T(y.s), ye: T(y.e), b: u.b, a: u.a, r: u.r, ef: u.ef, rt: u.rt, s: T(u.s), e: T(u.e) });
+      });
+    });
+    FLAT[b] = rows;
+  });
+  var YAMAS = DATA.birds.Vulture.map(function (y) { return { p: y.p, n: y.n, s: T(y.s), e: T(y.e) }; });
+
+  function findSub(rows, t) {
+    for (var i = 0; i < rows.length; i++) if (t >= rows[i].s && t < rows[i].e) return i;
+    return t < SR ? 0 : rows.length - 1;
+  }
+  function findYama(t) {
+    for (var i = 0; i < YAMAS.length; i++) if (t >= YAMAS[i].s && t < YAMAS[i].e) return i;
+    return t < SR ? 0 : YAMAS.length - 1;
+  }
+
+  /* ---------- State ---------- */
+  var state = { bird: "Peacock", mode: "live", playStart: 0, playFrom: 0, sub: -1 };
+  var PLAY_SECONDS = 36;
+  function liveAvailable() { var n = Date.now(); return n >= SR && n < NSR; }
+  try {
+    var saved = localStorage.getItem("pp-bird");
+    if (saved && BIRDS.indexOf(saved) >= 0) state.bird = saved;
+  } catch (e) {}
+  var hash = (location.hash || "").replace("#", "").toLowerCase();
+  BIRDS.forEach(function (b) { if (b.toLowerCase() === hash) state.bird = b; });
+  if (!liveAvailable()) state.mode = "play";
+
+  function clockNow(perf) {
+    if (state.mode === "live") return Math.min(Math.max(Date.now(), SR), NSR - 1);
+    var frac = (state.playFrom + ((perf || performance.now()) - state.playStart) / 1000 / PLAY_SECONDS) % 1;
+    return SR + frac * TOTAL;
+  }
+
+  /* ---------- Picker ---------- */
+  var picker = $("#picker");
+  BIRDS.forEach(function (b) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "bird-btn";
+    btn.id = "pick-" + b.toLowerCase();
+    btn.style.setProperty("--bird", birdVar(b));
+    btn.innerHTML = "<i></i>" + b;
+    btn.addEventListener("click", function () { setBird(b); });
+    picker.appendChild(btn);
+  });
+
+  function setBird(b) {
+    state.bird = b;
+    try { localStorage.setItem("pp-bird", b); } catch (e) {}
+    BIRDS.forEach(function (x) { $("#pick-" + x.toLowerCase()).setAttribute("aria-pressed", String(x === b)); });
+    $("#lede").textContent = "The " + b + "'s day runs from sunrise at " + fmt(SR) + " to sunrise at " + fmt(NSR) + " on Thursday." +
+      (b === DATA.deathBird ? " Wednesday in the waxing fortnight is the " + b + "'s dying day." : "") +
+      (b === DATA.dayRuler ? " It is the ruling bird of the day." : "") +
+      (b === DATA.nightRuler ? " It is the ruling bird of the night." : "");
+    renderPicks();
+    renderStrips();
+    renderTable();
+    state.sub = -1;
+    if (dial3d) dial3d.rebuild();
+    tick(performance.now(), true);
+  }
+
+  /* ---------- Best / worst ---------- */
+  function renderPicks() {
+    var rows = FLAT[state.bird];
+    var groups = [
+      { title: "Very Good", ef: ["Very Good"] },
+      { title: "Good", ef: ["Good"] },
+      { title: "Very Bad: avoid", ef: ["Very Bad"] }
+    ];
+    var counts = {};
+    EFFECTS.forEach(function (e) { counts[e] = 0; });
+    rows.forEach(function (r) { counts[r.ef]++; });
+    $("#picks-summary").textContent = "For the " + state.bird + " today: " + counts["Very Good"] + " Very Good, " + counts["Good"] + " Good, " +
+      counts["Average"] + " Average, " + counts["Bad"] + " Bad and " + counts["Very Bad"] + " Very Bad sub-periods.";
+    var html = groups.map(function (g) {
+      var list = rows.filter(function (r) { return g.ef.indexOf(r.ef) >= 0; });
+      var items = list.map(function (r) {
+        return '<li data-end="' + r.e + '"><span class="mono">' + fmt(r.s) + "–" + fmtD(r.e) + '</span><span class="who"><i style="--bird:' + birdVar(r.b) + '"></i>' + esc(r.b) + " " + esc(r.a) + "</span></li>";
+      }).join("");
+      return '<div class="pick" style="--fx:' + fxVar(g.ef[0]) + '"><h3>' + g.title + "<span>" + list.length + "</span></h3>" +
+        (items ? "<ul>" + items + "</ul>" : '<p class="empty">None today.</p>') + "</div>";
+    }).join("");
+    $("#picks").innerHTML = html;
+  }
+
+  /* ---------- Strips ---------- */
+  function renderStrips() {
+    var rows = FLAT[state.bird];
+    var halves = [
+      { label: "Day", from: SR, to: SS, p: "D" },
+      { label: "Night", from: SS, to: NSR, p: "N" }
+    ];
+    $("#strips").innerHTML = halves.map(function (h) {
+      var segs = rows.filter(function (r) { return r.p === h.p; }).map(function (r) {
+        return '<div class="seg' + (r.ui === 0 ? " ystart" : "") + '" style="flex:' + (r.e - r.s) + ";background:" + fxVar(r.ef) + '" title="' +
+          fmtD(r.s) + "–" + fmtD(r.e) + " · " + esc(r.b) + " " + esc(r.a) + " · " + esc(r.ef) + '"></div>';
+      }).join("");
+      var ticks = "";
+      var start = new Date(h.from + OFF);
+      var firstHour = Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate(), start.getUTCHours() + 1) - OFF;
+      for (var t = firstHour; t < h.to; t += 3600000) {
+        var hr = new Date(t + OFF).getUTCHours();
+        if (hr % 2) continue;
+        var pct = (t - h.from) / (h.to - h.from) * 100;
+        if (pct < 3 || pct > 97) continue;
+        ticks += '<span style="left:' + pct.toFixed(2) + '%">' + ((hr % 12) || 12) + (hr < 12 ? "a" : "p") + "</span>";
+      }
+      return '<div><div class="strip-head"><b>' + h.label + "</b><span>" + fmtD(h.from) + " – " + fmtD(h.to) + "</span></div>" +
+        '<div class="strip" id="strip-' + h.p + '" role="img" aria-label="' + h.label + " sub-periods coloured by effect\">" + segs +
+        '<div class="marker" hidden></div></div><div class="ticks" aria-hidden="true">' + ticks + "</div></div>";
+    }).join("");
+    $("#fx-key").innerHTML = EFFECTS.map(function (e) { return '<span class="fx" style="--fx:' + fxVar(e) + '">' + e + "</span>"; }).join("");
+  }
+  function placeStripMarkers(t) {
+    [["D", SR, SS], ["N", SS, NSR]].forEach(function (h) {
+      var el = document.querySelector("#strip-" + h[0] + " .marker");
+      if (!el) return;
+      var inside = t >= h[1] && t < h[2];
+      el.hidden = !inside;
+      if (inside) el.style.left = ((t - h[1]) / (h[2] - h[1]) * 100).toFixed(3) + "%";
+    });
+  }
+
+  /* ---------- Timetable ---------- */
+  function renderTable() {
+    var b = state.bird, html = "";
+    DATA.birds[b].forEach(function (y, yi) {
+      var half = y.p === "D" ? "Day" : "Night";
+      html += '<tr class="yh ' + (y.p === "D" ? "dy" : "nt") + '"><th colspan="4" scope="rowgroup">' + half + " yama " + y.n +
+        '<span class="yh-meta">' + fmtD(T(y.s)) + " – " + fmtD(T(y.e)) + " · " + esc(b) + " " + esc(y.a) + "</span></th></tr>";
+      y.subs.forEach(function (u, ui) {
+        var s = T(u.s), e = T(u.e);
+        html += '<tr id="r-' + yi + "-" + ui + '" class="' + (u.r === "Self" ? "self" : "") + '" data-s="' + s + '" data-e="' + e + '">' +
+          '<td class="t">' + fmt(s) + "–" + fmt(e) + (isNextDay(e) ? '<span class="nd">Thu</span>' : "") + "</td>" +
+          '<td><span class="who"><i style="--bird:' + birdVar(u.b) + '"></i>' + esc(u.b) + " " + esc(u.a) + "</span></td>" +
+          "<td>" + esc(u.r) + "</td>" +
+          '<td><span class="fx" style="--fx:' + fxVar(u.ef) + '">' + esc(u.ef) + '</span> <span class="plus" aria-label="' + u.rt + ' plus marks">' + "+".repeat(u.rt) + "</span></td></tr>";
+      });
+    });
+    document.querySelector("#tt tbody").innerHTML = html;
+  }
+  function markRows(t) {
+    var live = state.mode === "live";
+    document.querySelectorAll("#tt tbody tr[data-s]").forEach(function (tr) {
+      var s = +tr.getAttribute("data-s"), e = +tr.getAttribute("data-e");
+      tr.classList.toggle("now", t >= s && t < e);
+      tr.classList.toggle("past", live && e <= t);
+    });
+    document.querySelectorAll("#picks li[data-end]").forEach(function (li) {
+      li.classList.toggle("past", live && +li.getAttribute("data-end") <= t);
+    });
+  }
+
+  /* ---------- Now card ---------- */
+  var lastMinute = -1;
+  function updateNow(t, force) {
+    var rows = FLAT[state.bird];
+    var i = findSub(rows, t);
+    var minute = Math.floor(t / 60000);
+    if (minute !== lastMinute || force) {
+      lastMinute = minute;
+      $("#now-clock").textContent = (state.mode === "live" ? "Now · " : "Playing · ") + fmtD(t) + " IST";
+    }
+    if (i === state.sub && !force) return;
+    state.sub = i;
+    var r = rows[i];
+    var card = $("#now-card");
+    card.style.setProperty("--fx", fxVar(r.ef));
+    $("#now-yama").textContent = (r.p === "D" ? "Day" : "Night") + " yama " + r.n + " · " + fmt(r.s) + "–" + fmtD(r.e);
+    $("#now-what").textContent = r.b + " · " + r.a;
+    var fx = $("#now-fx");
+    fx.style.setProperty("--fx", fxVar(r.ef));
+    fx.textContent = r.ef + " · " + r.r;
+    $("#now-plus").textContent = "+".repeat(r.rt);
+    var nx = rows[i + 1];
+    $("#now-next").textContent = nx ? "Next at " + fmtD(nx.s) + ": " + nx.b + " " + nx.a + ", " + nx.ef : "Next: the new Panchang day starts at sunrise.";
+    markRows(t);
+    placeStripMarkers(t);
+  }
+
+  /* ---------- Controls ---------- */
+  var btnLive = $("#btn-live"), btnPlay = $("#btn-play");
+  function setMode(m) {
+    if (m === "live" && !liveAvailable()) m = "play";
+    if (m === "play") { state.playFrom = state.mode === "live" && liveAvailable() ? (Date.now() - SR) / TOTAL : 0; state.playStart = performance.now(); }
+    state.mode = m;
+    btnLive.setAttribute("aria-pressed", String(m === "live"));
+    btnPlay.setAttribute("aria-pressed", String(m === "play"));
+    state.sub = -1;
+    tick(performance.now(), true);
+    ensureLoop();
+  }
+  btnLive.addEventListener("click", function () { setMode("live"); });
+  btnPlay.addEventListener("click", function () { setMode(state.mode === "play" ? "live" : "play"); });
+  if (!liveAvailable()) {
+    btnLive.disabled = true;
+    btnLive.textContent = "Live (14 Oct only)";
+  }
+
+  /* ---------- 3D helpers ---------- */
   var themeListeners = [];
   function onTheme(fn) { themeListeners.push(fn); }
   function fireTheme() { themeListeners.forEach(function (fn) { fn(); }); }
   if (window.matchMedia) {
     var mq = window.matchMedia("(prefers-color-scheme: dark)");
-    if (mq.addEventListener) mq.addEventListener("change", fireTheme);
-    else if (mq.addListener) mq.addListener(fireTheme);
+    if (mq.addEventListener) mq.addEventListener("change", fireTheme); else if (mq.addListener) mq.addListener(fireTheme);
   }
   new MutationObserver(fireTheme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "class", "style"] });
-
+  function color(name) { return new THREE.Color(token(name)); }
   function makeRenderer(canvas, fallback) {
     if (typeof THREE === "undefined") { fallback.hidden = false; return null; }
     try {
@@ -569,187 +638,118 @@ footer.end { padding-block: 28px 0; border-top: 1px solid var(--line); font-size
       r.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
       r.setClearColor(0x000000, 0);
       return r;
-    } catch (e) {
-      fallback.hidden = false;
-      return null;
-    }
+    } catch (e) { fallback.hidden = false; return null; }
   }
-
-  function visibilityGate(el, cb) {
-    var visible = true;
-    if ("IntersectionObserver" in window) {
-      new IntersectionObserver(function (entries) {
-        visible = entries[0].isIntersecting;
-        cb(visible && !document.hidden);
-      }, { threshold: 0.01 }).observe(el);
-    }
-    document.addEventListener("visibilitychange", function () { cb(visible && !document.hidden); });
-  }
-
   function project(v, camera, w, h) {
     var p = v.clone().project(camera);
-    return { x: (p.x * 0.5 + 0.5) * w, y: (-p.y * 0.5 + 0.5) * h, behind: p.z > 1 };
+    return { x: (p.x * 0.5 + 0.5) * w, y: (-p.y * 0.5 + 0.5) * h };
+  }
+  function triangle(a, b, c) {
+    var g = new THREE.BufferGeometry();
+    g.setAttribute("position", new THREE.Float32BufferAttribute([].concat(a, b, c), 3));
+    g.computeVertexNormals();
+    return g;
   }
 
-  /* ---------- Hero: sky dial with five birds ---------- */
-  (function dial() {
-    var host = document.getElementById("dial");
-    var canvas = document.getElementById("dial-canvas");
-    var renderer = makeRenderer(canvas, document.getElementById("dial-fallback"));
-    var liveList = document.getElementById("live");
-    var clock = document.getElementById("clock");
-    var toggle = document.getElementById("dial-toggle");
-
-    // The legend renders even without WebGL.
-    var liveItems = BIRDS.map(function (b) {
-      var li = document.createElement("li");
-      li.style.setProperty("--bird", "var(--" + b.key + ")");
-      li.innerHTML = "<b>" + b.name + "</b><span></span>";
-      liveList.appendChild(li);
-      return li.querySelector("span");
-    });
-    function setLegend(tick) {
-      BIRDS.forEach(function (b, i) {
-        liveItems[i].textContent = ACTS[(i + tick) % 5].name;
-      });
-    }
-    setLegend(0);
-    if (!renderer) { toggle.hidden = true; return; }
-
+  /* ---------- Hero dial ---------- */
+  var dial3d = (function () {
+    var host = $("#dial");
+    var renderer = makeRenderer($("#dial-canvas"), $("#dial-fallback"));
+    if (!renderer) return null;
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
-    var R_IN = 3.0, R_OUT = 3.55;
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x404060, 0.75));
+    var key = new THREE.DirectionalLight(0xffffff, 0.7); key.position.set(3, 6, 4); scene.add(key);
+    var markLight = new THREE.PointLight(0xffffff, 0.9, 12); scene.add(markLight);
 
-    var hemi = new THREE.HemisphereLight(0xffffff, 0x404060, 0.75);
-    scene.add(hemi);
-    var key = new THREE.DirectionalLight(0xffffff, 0.7);
-    key.position.set(3, 6, 4);
-    scene.add(key);
-    var sunLight = new THREE.PointLight(0xffffff, 0.9, 12);
-    scene.add(sunLight);
-
-    // Dial: angle a runs from sunrise (left) across the far side (day) to sunset (right), then the near side (night).
-    var segs = [];
-    var GAP = 0.025;
-    for (var k = 0; k < 10; k++) {
-      var a0 = k * Math.PI / 5, a1 = (k + 1) * Math.PI / 5;
-      var g = new THREE.RingGeometry(R_IN, R_OUT, 12, 1, Math.PI - a1 + GAP, (a1 - a0) - 2 * GAP);
-      var m = new THREE.MeshStandardMaterial({ side: THREE.DoubleSide, roughness: 0.6, metalness: 0.1, transparent: true });
-      var mesh = new THREE.Mesh(g, m);
-      mesh.rotation.x = -Math.PI / 2;
-      scene.add(mesh);
-      segs.push({ mesh: mesh, isDay: k < 5 });
+    var R_IN = 3.05, R_OUT = 3.5, S_IN = 2.5, S_OUT = 2.92;
+    function ang(t) { return 2 * Math.PI * (t - SR) / TOTAL; }
+    function arc(rIn, rOut, a0, a1, gap, mat) {
+      var len = Math.max(0.002, (a1 - a0) - 2 * gap);
+      var g = new THREE.RingGeometry(rIn, rOut, Math.max(3, Math.ceil(len * 30)), 1, Math.PI - a1 + gap, len);
+      var m = new THREE.Mesh(g, mat);
+      m.rotation.x = -Math.PI / 2;
+      return m;
     }
-    var tickRing = new THREE.Mesh(
-      new THREE.RingGeometry(R_OUT + 0.08, R_OUT + 0.11, 96),
-      new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, transparent: true, opacity: 0.5 })
-    );
-    tickRing.rotation.x = -Math.PI / 2;
-    scene.add(tickRing);
+    var yamaSegs = YAMAS.map(function (y) {
+      var mat = new THREE.MeshStandardMaterial({ side: THREE.DoubleSide, roughness: 0.6, metalness: 0.1, transparent: true });
+      var mesh = arc(R_IN, R_OUT, ang(y.s), ang(y.e), 0.01, mat);
+      scene.add(mesh);
+      return { mesh: mesh, isDay: y.p === "D" };
+    });
+    var subGroup = new THREE.Group(); scene.add(subGroup);
+    var subSegs = [];
+    function rebuild() {
+      subSegs.forEach(function (s) { subGroup.remove(s.mesh); s.mesh.geometry.dispose(); s.mesh.material.dispose(); });
+      subSegs = FLAT[state.bird].map(function (r) {
+        var mat = new THREE.MeshStandardMaterial({ side: THREE.DoubleSide, roughness: 0.55, metalness: 0.05, transparent: true });
+        var mesh = arc(S_IN, S_OUT, ang(r.s), ang(r.e), 0.004, mat);
+        subGroup.add(mesh);
+        return { mesh: mesh, r: r };
+      });
+      applyTheme();
+    }
+    var ticks = new THREE.Mesh(new THREE.RingGeometry(R_OUT + 0.08, R_OUT + 0.11, 128), new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, transparent: true, opacity: 0.5 }));
+    ticks.rotation.x = -Math.PI / 2; scene.add(ticks);
 
-    // Horizon line from sunrise to sunset.
-    var horizonGeo = new THREE.BufferGeometry().setFromPoints([
-      new THREE.Vector3(-R_OUT - 0.3, 0.01, 0), new THREE.Vector3(R_OUT + 0.3, 0.01, 0)
-    ]);
-    var horizon = new THREE.Line(horizonGeo, new THREE.LineBasicMaterial({ transparent: true, opacity: 0.45 }));
-    scene.add(horizon);
-
-    // Central gem.
-    var gem = new THREE.Mesh(
-      new THREE.IcosahedronGeometry(0.42, 0),
-      new THREE.MeshStandardMaterial({ flatShading: true, roughness: 0.35, metalness: 0.3, emissiveIntensity: 0.45 })
-    );
-    gem.position.y = 0.55;
-    scene.add(gem);
-
-    // Sun / moon marker.
-    var marker = new THREE.Mesh(
-      new THREE.SphereGeometry(0.2, 24, 16),
-      new THREE.MeshStandardMaterial({ emissiveIntensity: 1.0, roughness: 0.4 })
-    );
+    var gem = new THREE.Mesh(new THREE.IcosahedronGeometry(0.38, 0), new THREE.MeshStandardMaterial({ flatShading: true, roughness: 0.35, metalness: 0.3, emissiveIntensity: 0.5 }));
+    gem.position.y = 0.5; scene.add(gem);
+    var marker = new THREE.Mesh(new THREE.SphereGeometry(0.19, 24, 16), new THREE.MeshStandardMaterial({ emissiveIntensity: 1.0, roughness: 0.4 }));
     scene.add(marker);
+    var handGeo = new THREE.BufferGeometry();
+    handGeo.setAttribute("position", new THREE.Float32BufferAttribute([0, 0.02, 0, 1, 0.02, 0], 3));
+    var hand = new THREE.Line(handGeo, new THREE.LineBasicMaterial({ transparent: true, opacity: 0.6 }));
+    scene.add(hand);
 
-    // Stars.
-    var starGeo = new THREE.BufferGeometry();
     var starPos = [];
-    for (var s = 0; s < 260; s++) {
-      var th = Math.random() * Math.PI * 2;
-      var ph = Math.random() * Math.PI * 0.42;
-      var rr = 11 + Math.random() * 4;
+    for (var s = 0; s < 240; s++) {
+      var th = Math.random() * Math.PI * 2, ph = Math.random() * Math.PI * 0.42, rr = 11 + Math.random() * 4;
       starPos.push(rr * Math.sin(ph) * Math.cos(th), rr * Math.cos(ph) - 1.5, rr * Math.sin(ph) * Math.sin(th));
     }
-    starGeo.setAttribute("position", new THREE.Float32BufferAttribute(starPos, 3));
+    var starGeo = new THREE.BufferGeometry(); starGeo.setAttribute("position", new THREE.Float32BufferAttribute(starPos, 3));
     var stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ size: 0.06, transparent: true, opacity: 0.7 }));
     scene.add(stars);
 
-    // Birds. Each model points its beak along +Z so lookAt() faces it along its path.
-    function triangle(a, b, c) {
-      var geo = new THREE.BufferGeometry();
-      geo.setAttribute("position", new THREE.Float32BufferAttribute([].concat(a, b, c), 3));
-      geo.computeVertexNormals();
-      return geo;
-    }
-    var birds = BIRDS.map(function (b, i) {
+    var SHAPE = { Vulture: [1.0, 1.15], Owl: [0.8, 1.0], Crow: [1.0, 0.95], Cock: [1.3, 0.8], Peacock: [2.4, 0.9] };
+    var birds = BIRDS.map(function (name, i) {
       var mat = new THREE.MeshStandardMaterial({ flatShading: true, side: THREE.DoubleSide, roughness: 0.5, metalness: 0.05 });
-      var group = new THREE.Group();
-      var body = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.48, 6), mat);
-      body.rotation.x = Math.PI / 2;
-      group.add(body);
-      var span = 0.55 * b.wing;
+      var g = new THREE.Group();
+      var body = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.48, 6), mat); body.rotation.x = Math.PI / 2; g.add(body);
+      var span = 0.55 * SHAPE[name][1], tl = SHAPE[name][0];
       var right = new THREE.Mesh(triangle([0, 0, 0.13], [0, 0, -0.12], [span, 0, -0.06]), mat);
       var left = new THREE.Mesh(triangle([0, 0, 0.13], [0, 0, -0.12], [-span, 0, -0.06]), mat);
-      group.add(right); group.add(left);
-      var t = b.tail;
-      var tail = new THREE.Mesh(triangle([0, 0, -0.18], [-0.12 * t, 0.02 * t, -0.18 - 0.22 * t], [0.12 * t, 0.02 * t, -0.18 - 0.22 * t]), mat);
-      group.add(tail);
-      scene.add(group);
-      return {
-        group: group, mat: mat, right: right, left: left,
-        radius: 1.15 + i * 0.4,
-        speed: 1.1 - i * 0.12,
-        phase: i * 1.256,
-        flap: Math.random() * 6,
-        h: 1, glow: 0.3, scale: 1, rate: 6
-      };
+      g.add(right); g.add(left);
+      g.add(new THREE.Mesh(triangle([0, 0, -0.18], [-0.12 * tl, 0.02 * tl, -0.18 - 0.22 * tl], [0.12 * tl, 0.02 * tl, -0.18 - 0.22 * tl]), mat));
+      scene.add(g);
+      return { name: name, g: g, mat: mat, right: right, left: left, radius: 0.9 + i * 0.33, speed: 1.0 - i * 0.11, phase: i * 1.256, flap: i, h: 0.4, glow: 0.05, scale: 0.85, rate: 3 };
     });
 
-    // Overlay tags.
-    function addTag(text, pos) {
-      var el = document.createElement("div");
-      el.className = "tag";
-      el.textContent = text;
-      host.appendChild(el);
-      return { el: el, pos: pos };
+    function addTag(text, a, r, y) {
+      var el = document.createElement("div"); el.className = "tag"; el.textContent = text; host.appendChild(el);
+      return { el: el, pos: new THREE.Vector3(-r * Math.cos(a), y, -r * Math.sin(a)) };
     }
+    var noon = Date.UTC(2026, 9, 14, 12) - OFF, midnight = Date.UTC(2026, 9, 15, 0) - OFF;
     var tags = [
-      addTag("Sunrise", new THREE.Vector3(-R_OUT - 0.2, 0.42, 0)),
-      addTag("Sunset", new THREE.Vector3(R_OUT + 0.2, 0.42, 0)),
-      addTag("Day", new THREE.Vector3(0, 0, -R_OUT - 0.45)),
-      addTag("Night", new THREE.Vector3(0, 0, R_OUT + 0.45))
+      addTag("Sunrise " + fmt(SR), 0, R_OUT + 0.35, 0.45),
+      addTag("Sunset " + fmt(SS), ang(SS), R_OUT + 0.35, 0.45),
+      addTag("Noon", ang(noon), R_OUT + 0.4, 0.1),
+      addTag("Midnight", ang(midnight), R_OUT + 0.45, 0.1)
     ];
 
+    var dayC, moonC, fxC = {};
     function applyTheme() {
-      var day = color("--day"), night = color("--night");
-      segs.forEach(function (sg) {
-        var c = sg.isDay ? day : night;
-        sg.mesh.material.color.copy(c);
-        sg.mesh.material.emissive.copy(c);
-      });
-      tickRing.material.color.copy(color("--muted"));
-      horizon.material.color.copy(color("--muted"));
-      gem.material.color.copy(color("--accent"));
-      gem.material.emissive.copy(color("--accent"));
+      dayC = color("--day"); moonC = color("--moon");
+      EFFECTS.forEach(function (e) { fxC[e] = color(FXVAR[e]); });
+      var nightC = color("--night");
+      yamaSegs.forEach(function (sg) { var c = sg.isDay ? dayC : nightC; sg.mesh.material.color.copy(c); sg.mesh.material.emissive.copy(c); });
+      subSegs.forEach(function (sg) { var c = fxC[sg.r.ef]; sg.mesh.material.color.copy(c); sg.mesh.material.emissive.copy(c); });
+      ticks.material.color.copy(color("--muted"));
+      hand.material.color.copy(color("--ink"));
       stars.material.color.copy(color("--muted"));
-      birds.forEach(function (bd, i) {
-        var c = color("--" + BIRDS[i].key);
-        bd.mat.color.copy(c);
-        bd.mat.emissive.copy(c);
-      });
-      dayColor = day; moonColor = color("--moon");
+      birds.forEach(function (bd) { var c = color("--" + bd.name.toLowerCase()); bd.mat.color.copy(c); bd.mat.emissive.copy(c); });
     }
-    var dayColor, moonColor;
-    applyTheme();
-    onTheme(function () { applyTheme(); if (!running) render(lastT); });
+    rebuild();
+    onTheme(function () { applyTheme(); draw(lastT, lastNow); });
 
     var size = { w: 1, h: 1 };
     function resize() {
@@ -760,67 +760,61 @@ footer.end { padding-block: 28px 0; border-top: 1px solid var(--line); font-size
       camera.aspect = w / h;
       var k = Math.max(1.1, 1.38 / camera.aspect);
       camera.position.set(0, 5.0 * k, 8.8 * k);
-      camera.lookAt(0, 0.6, 0);
+      camera.lookAt(0, 0.55, 0);
       camera.updateProjectionMatrix();
     }
-    if ("ResizeObserver" in window) new ResizeObserver(function () { resize(); if (!running) render(lastT); }).observe(host);
-    window.addEventListener("resize", resize);
+    if ("ResizeObserver" in window) new ResizeObserver(function () { resize(); draw(lastT, lastNow); }).observe(host);
     resize();
 
-    var CYCLE = 15;          // seconds for a full sunrise-to-sunrise sweep
-    var STATE_EVERY = 1.5;   // seconds between display-state changes
-    var lastTick = -1, lastYama = -1;
     var tmp = new THREE.Vector3(), ahead = new THREE.Vector3();
+    var lastT = 0, lastNow = SR;
+    function draw(t, now) {
+      lastT = t; lastNow = now;
+      var a = ang(now), mid = (R_IN + R_OUT) / 2;
+      var isDay = now < SS;
+      marker.position.set(-mid * Math.cos(a), 0.22, -mid * Math.sin(a));
+      var mc = isDay ? dayC : moonC;
+      marker.material.color.copy(mc); marker.material.emissive.copy(mc);
+      markLight.position.copy(marker.position).setY(1.2); markLight.color.copy(mc);
+      handGeo.attributes.position.setXYZ(1, -mid * Math.cos(a), 0.02, -mid * Math.sin(a));
+      handGeo.attributes.position.needsUpdate = true;
 
-    function render(t) {
-      var a = ((t / CYCLE) % 1) * Math.PI * 2;
-      var yama = Math.floor(a / (Math.PI / 5)) % 10;
-      marker.position.set(-(R_IN + R_OUT) / 2 * Math.cos(a), 0.22, -(R_IN + R_OUT) / 2 * Math.sin(a));
-      var isDay = yama < 5;
-      marker.material.color.copy(isDay ? dayColor : moonColor);
-      marker.material.emissive.copy(isDay ? dayColor : moonColor);
-      sunLight.position.copy(marker.position).setY(1.2);
-      sunLight.color.copy(isDay ? dayColor : moonColor);
-
-      segs.forEach(function (sg, k) {
-        var on = k === yama;
-        sg.mesh.material.emissiveIntensity = on ? 0.55 : 0.08;
-        sg.mesh.material.opacity = on ? 1 : 0.62;
-        sg.mesh.position.y = on ? 0.04 : 0;
+      var yi = findYama(now);
+      yamaSegs.forEach(function (sg, k) {
+        var on = k === yi;
+        sg.mesh.material.emissiveIntensity = on ? 0.5 : 0.06;
+        sg.mesh.material.opacity = on ? 1 : 0.6;
+        sg.mesh.position.y = on ? 0.03 : 0;
       });
-      if (yama !== lastYama) {
-        lastYama = yama;
-        clock.textContent = "Marker: " + (isDay ? "Day" : "Night") + ", yama " + ((yama % 5) + 1) + " of 5";
-      }
+      var rows = FLAT[state.bird], si = findSub(rows, now), cur = rows[si];
+      subSegs.forEach(function (sg, k) {
+        var on = k === si;
+        sg.mesh.material.emissiveIntensity = on ? 0.6 : 0.12;
+        sg.mesh.material.opacity = on ? 1 : (k < si && state.mode === "live" ? 0.35 : 0.8);
+        sg.mesh.position.y = on ? 0.09 : 0;
+      });
+      var fc = fxC[cur.ef];
+      gem.material.color.copy(fc); gem.material.emissive.copy(fc);
 
-      var tick = Math.floor(t / STATE_EVERY);
-      if (tick !== lastTick) { lastTick = tick; setLegend(((tick % 5) + 5) % 5); }
-
-      var dt = 0.016;
+      var follow = reduceMotion ? 1 : 0.12;
       birds.forEach(function (bd, i) {
-        var st = ACTS[(i + ((tick % 5) + 5) % 5) % 5].s;
-        var targetH = 0.45 + st * 1.7;
-        var follow = reduceMotion ? 1 : 0.14;
-        bd.h += (targetH - bd.h) * follow;
-        bd.glow += ((0.05 + st * 0.55) - bd.glow) * follow;
-        bd.scale += ((0.8 + st * 0.45) - bd.scale) * follow;
-        bd.rate += ((3 + st * 16) - bd.rate) * follow;
-        var ang = bd.phase + t * bd.speed;
-        tmp.set(bd.radius * Math.cos(ang), bd.h + Math.sin(t * 2.6 + i) * 0.06, -bd.radius * Math.sin(ang));
-        ahead.set(bd.radius * Math.cos(ang + 0.1), tmp.y, -bd.radius * Math.sin(ang + 0.1));
-        bd.group.position.copy(tmp);
-        bd.group.lookAt(ahead);
-        bd.group.scale.setScalar(bd.scale);
-        bd.flap += bd.rate * dt;
-        var amp = 0.25 + st * 0.45;
-        bd.right.rotation.z = Math.sin(bd.flap) * amp;
-        bd.left.rotation.z = -Math.sin(bd.flap) * amp;
+        var active = bd.name === cur.b;
+        var st = active ? STRENGTH[cur.a] : 0.15;
+        bd.h += ((active ? 0.7 + st * 1.6 : 0.35) - bd.h) * follow;
+        bd.glow += ((active ? 0.15 + st * 0.6 : 0.03) - bd.glow) * follow;
+        bd.scale += ((active ? 1.0 + st * 0.35 : 0.8) - bd.scale) * follow;
+        bd.rate += ((active ? 4 + st * 14 : 2) - bd.rate) * follow;
+        var an = bd.phase + t * bd.speed;
+        tmp.set(bd.radius * Math.cos(an), bd.h + Math.sin(t * 2.4 + i) * 0.05, -bd.radius * Math.sin(an));
+        ahead.set(bd.radius * Math.cos(an + 0.1), tmp.y, -bd.radius * Math.sin(an + 0.1));
+        bd.g.position.copy(tmp); bd.g.lookAt(ahead); bd.g.scale.setScalar(bd.scale);
+        bd.flap += bd.rate * 0.016;
+        var amp = active ? 0.3 + st * 0.45 : 0.15;
+        bd.right.rotation.z = Math.sin(bd.flap) * amp; bd.left.rotation.z = -Math.sin(bd.flap) * amp;
         bd.mat.emissiveIntensity = bd.glow;
       });
-
-      gem.rotation.y = t * 0.9;
-      gem.rotation.x = Math.sin(t * 1.0) * 0.2;
-      stars.rotation.y = t * 0.03;
+      gem.rotation.y = t * 0.8; gem.rotation.x = Math.sin(t) * 0.2;
+      stars.rotation.y = t * 0.02;
 
       renderer.render(scene, camera);
       tags.forEach(function (tg) {
@@ -830,94 +824,70 @@ footer.end { padding-block: 28px 0; border-top: 1px solid var(--line); font-size
         tg.el.style.transform = "translate(" + x.toFixed(1) + "px," + p.y.toFixed(1) + "px) translate(-50%,-50%)";
       });
     }
-
-    var running = false, paused = reduceMotion, onScreen = true, start = performance.now(), lastT = 6, offset = 6;
-    function loop(now) {
-      if (!running) return;
-      lastT = offset + (now - start) / 1000;
-      render(lastT);
-      requestAnimationFrame(loop);
-    }
-    function setRunning(want) {
-      if (want && !running) {
-        running = true;
-        start = performance.now();
-        offset = lastT;
-        requestAnimationFrame(loop);
-      } else if (!want) {
-        running = false;
-      }
-    }
-    toggle.addEventListener("click", function () {
-      paused = !paused;
-      toggle.textContent = paused ? "Play" : "Pause";
-      toggle.setAttribute("aria-pressed", String(paused));
-      setRunning(!paused && onScreen);
-    });
-    if (reduceMotion) { toggle.textContent = "Play"; toggle.setAttribute("aria-pressed", "true"); }
-    visibilityGate(host, function (vis) { onScreen = vis; setRunning(vis && !paused); });
-
-    render(lastT);
-    setRunning(!paused);
+    var visible = true;
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; ensureLoop(); }, { threshold: 0.01 }).observe(host);
+    return { draw: draw, rebuild: rebuild, isVisible: function () { return visible && !document.hidden; } };
   })();
+
+  /* ---------- Main loop ---------- */
+  var running = false;
+  function tick(perf, force) {
+    var now = clockNow(perf);
+    updateNow(now, force);
+    if (dial3d) dial3d.draw(perf / 1000, now);
+  }
+  function frame(perf) {
+    if (!running) return;
+    tick(perf, false);
+    if (!wantLoop()) { running = false; return; }
+    requestAnimationFrame(frame);
+  }
+  function wantLoop() {
+    if (document.hidden) return false;
+    if (reduceMotion && state.mode === "live") return false;
+    return dial3d ? dial3d.isVisible() || state.mode === "play" : state.mode === "play";
+  }
+  function ensureLoop() {
+    if (!running && wantLoop()) { running = true; requestAnimationFrame(frame); }
+  }
+  document.addEventListener("visibilitychange", ensureLoop);
+  setInterval(function () { if (!running) tick(performance.now(), false); }, 20000);
+
+  setBird(state.bird);
+  setMode(state.mode);
 
   /* ---------- Activity strength pillars ---------- */
   (function pillars() {
-    var host = document.getElementById("pillars");
-    var canvas = document.getElementById("pillars-canvas");
-    var renderer = makeRenderer(canvas, document.getElementById("pillars-fallback"));
+    var host = $("#pillars");
+    var renderer = makeRenderer($("#pillars-canvas"), $("#pillars-fallback"));
     if (!renderer) return;
-
+    var ACTS = [["Ruling", 1.0], ["Eating", 0.8], ["Walking", 0.6], ["Sleeping", 0.4], ["Dying", 0.2]];
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
     scene.add(new THREE.HemisphereLight(0xffffff, 0x404060, 0.8));
-    var dl = new THREE.DirectionalLight(0xffffff, 0.75);
-    dl.position.set(4, 7, 5);
-    scene.add(dl);
-
-    var group = new THREE.Group();
-    scene.add(group);
-    var H = 3.0, W = 0.72, GAPX = 1.2;
+    var dl = new THREE.DirectionalLight(0xffffff, 0.75); dl.position.set(4, 7, 5); scene.add(dl);
+    var group = new THREE.Group(); scene.add(group);
+    var H = 3.0, W = 0.72, GAP = 1.2;
     var cols = ACTS.map(function (act, i) {
-      var x = (i - 2) * GAPX;
+      var x = (i - 2) * GAP;
       var mat = new THREE.MeshStandardMaterial({ roughness: 0.45, metalness: 0.15 });
-      var box = new THREE.Mesh(new THREE.BoxGeometry(W, act.s * H, W), mat);
-      box.position.set(x, (act.s * H) / 2, 0);
-      group.add(box);
-      var ghost = new THREE.LineSegments(
-        new THREE.EdgesGeometry(new THREE.BoxGeometry(W, H, W)),
-        new THREE.LineBasicMaterial({ transparent: true, opacity: 0.45 })
-      );
-      ghost.position.set(x, H / 2, 0);
-      group.add(ghost);
-      var lab = document.createElement("div");
-      lab.className = "tag";
-      lab.innerHTML = '<span class="pn">' + act.name + "<br></span>" + act.s.toFixed(1);
-      lab.style.textAlign = "center";
-      lab.style.lineHeight = "1.3";
+      var box = new THREE.Mesh(new THREE.BoxGeometry(W, act[1] * H, W), mat); box.position.set(x, act[1] * H / 2, 0); group.add(box);
+      var ghost = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(W, H, W)), new THREE.LineBasicMaterial({ transparent: true, opacity: 0.45 }));
+      ghost.position.set(x, H / 2, 0); group.add(ghost);
+      var lab = document.createElement("div"); lab.className = "tag"; lab.style.textAlign = "center"; lab.style.lineHeight = "1.3";
+      lab.innerHTML = '<span class="pn">' + act[0] + "<br></span>" + act[1].toFixed(1);
       host.appendChild(lab);
-      return { box: box, ghost: ghost, mat: mat, lab: lab, base: new THREE.Vector3(x, -0.6, 0), i: i };
+      return { mat: mat, ghost: ghost, lab: lab, base: new THREE.Vector3(x, -0.6, 0), i: i };
     });
     var floor = new THREE.GridHelper(8, 16);
-    floor.material.vertexColors = false;
-    floor.material.needsUpdate = true;
-    floor.material.transparent = true;
-    floor.material.opacity = 0.35;
+    floor.material.vertexColors = false; floor.material.needsUpdate = true; floor.material.transparent = true; floor.material.opacity = 0.35;
     group.add(floor);
-
     function applyTheme() {
-      cols.forEach(function (c) {
-        c.mat.color.copy(color("--a" + (c.i + 1)));
-        c.ghost.material.color.copy(color("--muted"));
-      });
-      var m = color("--line");
-      if (Array.isArray(floor.material)) floor.material.forEach(function (fm) { fm.color.copy(m); });
-      else floor.material.color.copy(m);
+      cols.forEach(function (c) { c.mat.color.copy(color("--a" + (c.i + 1))); c.ghost.material.color.copy(color("--muted")); });
+      floor.material.color.copy(color("--line"));
     }
     applyTheme();
-    onTheme(function () { applyTheme(); if (!running) render(lastT); });
-
-    var size = { w: 1, h: 1 };
+    var size = { w: 1, h: 1 }, lastT = 0.6;
     function resize() {
       var w = host.clientWidth, h = host.clientHeight;
       if (!w || !h) return;
@@ -926,16 +896,11 @@ footer.end { padding-block: 28px 0; border-top: 1px solid var(--line); font-size
       renderer.setSize(w, h, false);
       camera.aspect = w / h;
       var k = Math.max(1, 1.35 / camera.aspect);
-      camera.position.set(0, 3.4 * k, 9.2 * k);
-      camera.lookAt(0, 1.25, 0);
-      camera.updateProjectionMatrix();
+      camera.position.set(0, 3.4 * k, 9.2 * k); camera.lookAt(0, 1.25, 0); camera.updateProjectionMatrix();
     }
-    if ("ResizeObserver" in window) new ResizeObserver(function () { resize(); if (!running) render(lastT); }).observe(host);
-    window.addEventListener("resize", resize);
-    resize();
-
     var world = new THREE.Vector3();
     function render(t) {
+      lastT = t;
       group.rotation.y = Math.sin(t * 0.9) * 0.32;
       group.updateMatrixWorld();
       renderer.render(scene, camera);
@@ -945,20 +910,18 @@ footer.end { padding-block: 28px 0; border-top: 1px solid var(--line); font-size
         c.lab.style.transform = "translate(" + p.x.toFixed(1) + "px," + p.y.toFixed(1) + "px) translate(-50%,-50%)";
       });
     }
-
-    var running = false, onScreen = false, start = performance.now(), lastT = 0.6, offset = 0.6;
-    function loop(now) {
-      if (!running) return;
-      lastT = offset + (now - start) / 1000;
-      render(lastT);
-      requestAnimationFrame(loop);
-    }
-    function setRunning(want) {
+    onTheme(function () { applyTheme(); render(lastT); });
+    if ("ResizeObserver" in window) new ResizeObserver(function () { resize(); render(lastT); }).observe(host);
+    resize();
+    var on = false, go = false, start = 0, offset = 0.6;
+    function loop(now) { if (!go) return; render(offset + (now - start) / 1000); requestAnimationFrame(loop); }
+    function set(want) {
       if (reduceMotion) want = false;
-      if (want && !running) { running = true; start = performance.now(); offset = lastT; requestAnimationFrame(loop); }
-      else if (!want) running = false;
+      if (want && !go) { go = true; start = performance.now(); offset = lastT; requestAnimationFrame(loop); }
+      else if (!want) go = false;
     }
-    visibilityGate(host, function (vis) { onScreen = vis; setRunning(vis); });
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { on = en[0].isIntersecting; set(on && !document.hidden); }, { threshold: 0.01 }).observe(host);
+    document.addEventListener("visibilitychange", function () { set(on && !document.hidden); });
     render(lastT);
   })();
 })();
