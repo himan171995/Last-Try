@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+<title>Pancha Pakshi Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta+Malar:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column under a split hero (thesis left, 3D sky dial right); sections stack, each with a narrow label column on wide screens. */
+:root {
+  --bg: #eceef6;
+  --surface: #f8f9fd;
+  --ink: #1a1c38;
+  --muted: #555a7c;
+  --line: #d3d6e6;
+  --accent: #9a640a;
+  --day: #e2a137;
+  --night: #3d4386;
+  --moon: #c9cbe6;
+  --warn-bg: #fbe7d3;
+  --warn-ink: #8a3d00;
+  --on-day: #2a1b00;
+  --on-night: #f1f1ff;
+
+  /* Activity ramp: the accent faded toward the background by strength (1.0 to 0.2). */
+  --a1: #9a640a; --a2: #aa8039; --a3: #bb9b68; --a4: #cbb798; --a5: #dcd2c7;
+  --on-a1: #ffffff; --on-a2: #1a1c38; --on-a3: #1a1c38; --on-a4: #1a1c38; --on-a5: #1a1c38;
+
+  /* One hue per bird. */
+  --vulture: #9a5527;
+  --owl: #6a6499;
+  --crow: #34425f;
+  --cock: #b8352a;
+  --peacock: #0b7a73;
+
+  --display: "Marcellus", "Trajan Pro", Georgia, serif;
+  --body: "Mukta Malar", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.25rem;
+  --step-2: 1.6rem;
+  --step-3: clamp(2.4rem, 5vw + 1rem, 4.2rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121430; --surface: #1a1d40; --ink: #ecebf5; --muted: #a4a7c8; --line: #2e3263;
+    --accent: #f0b24a; --day: #f0b24a; --night: #5d63ba; --moon: #d9dbf5;
+    --warn-bg: #3d2a16; --warn-ink: #ffc58a;
+    --a1: #f0b24a; --a2: #c49245; --a3: #97733f; --a4: #6b533a; --a5: #3e3435;
+    --on-a1: #121430; --on-a2: #121430; --on-a3: #121430; --on-a4: #ecebf5; --on-a5: #ecebf5;
+    --vulture: #d6915e; --owl: #b6b0e6; --crow: #8ea4d2; --cock: #ff7c68; --peacock: #3cc9b8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121430; --surface: #1a1d40; --ink: #ecebf5; --muted: #a4a7c8; --line: #2e3263;
+  --accent: #f0b24a; --day: #f0b24a; --night: #5d63ba; --moon: #d9dbf5;
+  --warn-bg: #3d2a16; --warn-ink: #ffc58a;
+  --a1: #f0b24a; --a2: #c49245; --a3: #97733f; --a4: #6b533a; --a5: #3e3435;
+  --on-a1: #121430; --on-a2: #121430; --on-a3: #121430; --on-a4: #ecebf5; --on-a5: #ecebf5;
+  --vulture: #d6915e; --owl: #b6b0e6; --crow: #8ea4d2; --cock: #ff7c68; --peacock: #3cc9b8;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; line-height: 1.15; }
+p { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 40px;
+  align-items: center;
+  padding-block: 48px 32px;
+}
+.hero-text { display: grid; gap: 18px; min-width: 0; }
+.hero h1 { font-size: var(--step-3); letter-spacing: 0.01em; }
+.hero h1 .tamil { display: block; font-family: var(--body); font-size: 0.42em; color: var(--muted); letter-spacing: 0; margin-top: 6px; }
+.lede { font-size: var(--step-1); line-height: 1.5; max-width: 34ch; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: var(--step--1); color: var(--muted); }
+.meta code { font-family: var(--mono); }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 2px 10px; border-radius: 999px;
+  background: var(--warn-bg); color: var(--warn-ink);
+  font-size: var(--step--1); font-weight: 500;
+}
+.chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+.stage { position: relative; min-width: 0; }
+.scene {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  max-width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--surface);
+  background:
+    radial-gradient(120% 80% at 50% 20%, color-mix(in srgb, var(--day) 18%, transparent), transparent 60%),
+    radial-gradient(120% 90% at 50% 110%, color-mix(in srgb, var(--night) 30%, transparent), transparent 70%),
+    var(--surface);
+  border: 1px solid var(--line);
+}
+.scene canvas { display: block; width: 100%; height: 100%; }
+.tag {
+  position: absolute; left: 0; top: 0;
+  transform: translate(-50%, -50%);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--muted); white-space: nowrap; pointer-events: none;
+}
+.fallback {
+  position: absolute; inset: 0; display: grid; place-items: center; padding: 24px;
+  text-align: center; color: var(--muted); font-size: var(--step--1);
+}
+.caption { margin-top: 10px; font-size: var(--step--1); color: var(--muted); max-width: 60ch; }
+
+.live {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+.live li {
+  list-style: none; display: grid; gap: 2px; padding: 8px 10px;
+  border-top: 3px solid var(--bird); background: var(--surface);
+  font-size: var(--step--1); min-width: 0;
+}
+.live b { font-weight: 500; }
+.live span { color: var(--muted); }
+.live ul, ul.live { padding: 0; margin: 0; }
+.clock { margin-top: 10px; font-family: var(--mono); font-size: var(--step--1); color: var(--muted); }
+.controls { display: flex; gap: 8px; margin-top: 10px; }
+.btn {
+  font: inherit; font-size: var(--step--1); padding: 4px 12px; cursor: pointer;
+  background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 999px;
+}
+.btn:hover { border-color: var(--accent); }
+
+/* Sections */
+section.block {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 32px;
+  padding-block: 44px;
+  border-top: 1px solid var(--line);
+}
+.block > header { display: grid; gap: 8px; align-content: start; }
+.block h2 { font-size: var(--step-2); }
+.body { display: grid; gap: 18px; min-width: 0; }
+.body > p, .body > ul, .body > ol { max-width: 66ch; }
+.note { font-size: var(--step--1); color: var(--muted); max-width: 66ch; }
+
+/* Status panel */
+.status {
+  display: grid; gap: 10px; padding: 18px 20px;
+  background: var(--warn-bg); color: var(--warn-ink); border-radius: 6px;
+  max-width: 72ch;
+}
+.status h3 { font-family: var(--body); font-weight: 700; font-size: var(--step-0); }
+.status ul { margin: 0; padding-left: 1.2em; }
+
+/* Facts list */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin: 0; border-top: 1px solid var(--line); }
+.facts div { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.facts dt { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.facts dd { margin: 4px 0 0; }
+
+/* Anatomy of a row */
+.anatomy-scroll { overflow-x: auto; }
+.anatomy { min-width: 620px; display: grid; gap: 8px; }
+.row-mock {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+}
+.row-mock > div { padding: 12px 14px; border-left: 1px dashed var(--line); font-family: var(--mono); font-size: var(--step--1); }
+.row-mock > div:first-child { border-left: 0; }
+.row-labels { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; }
+.row-labels > div { padding: 0 14px; font-size: var(--step--1); color: var(--muted); }
+.row-labels b { display: block; color: var(--ink); font-weight: 500; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+.table-scroll { overflow-x: auto; }
+th, td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--mono); font-size: var(--step--1); font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+td code { font-family: var(--mono); font-size: 0.9em; }
+
+/* Birds */
+.birds { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.bird {
+  display: grid; gap: 4px; padding: 14px; background: var(--surface);
+  border-top: 4px solid var(--bird); min-width: 0;
+}
+.bird h3 { font-size: var(--step-1); }
+.bird .ta { font-size: 1.05rem; }
+.bird .tr { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); }
+
+/* Activities */
+.acts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.pillars .scene { aspect-ratio: 5 / 4; }
+.pillars .narrow .pn { display: none; }
+ol.ladder { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+ol.ladder li {
+  display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; align-items: center;
+  padding: 10px 12px; background: var(--surface); border-left: 6px solid var(--sw);
+}
+ol.ladder .val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: var(--step-1); }
+ol.ladder .nm { display: grid; }
+ol.ladder .nm span { font-size: var(--step--1); color: var(--muted); }
+ol.ladder .rank { font-family: var(--mono); font-size: var(--step--1); color: var(--muted); }
+
+/* Time bars */
+.bars { display: grid; gap: 18px; }
+.bar-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: var(--step--1); color: var(--muted); margin-bottom: 6px; }
+.bar-head b { color: var(--ink); font-weight: 500; }
+.bar { display: flex; height: 44px; border-radius: 4px; overflow: hidden; }
+.seg {
+  display: grid; place-items: center; min-width: 0;
+  font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums;
+  border-right: 2px solid var(--bg); overflow: hidden; white-space: nowrap;
+}
+.seg:last-child { border-right: 0; }
+.s1 { background: var(--a1); color: var(--on-a1); }
+.s2 { background: var(--a2); color: var(--on-a2); }
+.s3 { background: var(--a3); color: var(--on-a3); }
+.s4 { background: var(--a4); color: var(--on-a4); }
+.s5 { background: var(--a5); color: var(--on-a5); }
+.axis { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 4px; }
+.key { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: var(--step--1); color: var(--muted); }
+.key span { display: inline-flex; align-items: center; gap: 6px; }
+.key i { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+
+.daynight { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.half { padding: 14px 16px; background: var(--surface); display: grid; gap: 8px; min-width: 0; }
+.half h3 { font-family: var(--body); font-weight: 700; font-size: var(--step-0); }
+.yamas { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; }
+.yamas div { height: 26px; border-radius: 2px; display: grid; place-items: center; font-family: var(--mono); font-size: 11px; }
+.half.day .yamas div { background: var(--day); color: var(--on-day); }
+.half.night .yamas div { background: var(--night); color: var(--on-night); }
+
+.agree td:first-child { font-weight: 500; }
+.verdict { font-family: var(--mono); font-size: var(--step--1); white-space: nowrap; }
+.verdict.ok { color: var(--peacock); }
+.verdict.split { color: var(--warn-ink); }
+
+.sources { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 80ch; }
+.sources li { overflow-wrap: anywhere; }
+
+footer.end { padding-block: 28px 0; border-top: 1px solid var(--line); font-size: var(--step--1); color: var(--muted); }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; padding-block: 32px 24px; }
+  .lede { max-width: none; }
+  section.block { grid-template-columns: 1fr; gap: 16px; padding-block: 36px; }
+  .acts { grid-template-columns: 1fr; }
+  .birds { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+}
+@media (max-width: 560px) {
+  .live { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .daynight { grid-template-columns: 1fr; }
+  .scene { aspect-ratio: 1 / 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}
+</style>
+
+<div class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <div class="hero-text">
+      <p class="eyebrow">Report · Drik Panchang · Bird Activities page</p>
+      <h1 id="title">Pancha Pakshi <span class="tamil">பஞ்ச பட்சி · the five-bird timetable</span></h1>
+      <p class="lede">Drik Panchang's Pancha Pakshi page gives a daily timetable for one date and place. It shows which of five birds is active in each part of the day, what each bird is doing, and how good the time is for you.</p>
+      <div class="meta">
+        <span>Prepared 14 Oct 2026</span>
+        <span>Page: <code>/pancha-pakshi/pancha-pakshi-bird-activities.html</code></span>
+        <span class="chip">Today's timings not included</span>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="scene" id="dial">
+        <canvas id="dial-canvas" aria-label="Animated 3D illustration: five birds circling a dial split into five day and five night yamas" role="img"></canvas>
+        <div class="fallback" id="dial-fallback" hidden>3D view needs WebGL, which this browser has turned off. The facts below don't depend on it.</div>
+      </div>
+      <p class="clock" id="clock" aria-live="off">Marker: Day, yama 1 of 5</p>
+      <ul class="live" id="live" aria-label="Bird states in the illustration"></ul>
+      <div class="controls">
+        <button class="btn" id="dial-toggle" type="button" aria-pressed="false">Pause</button>
+      </div>
+      <p class="caption">This is an illustration. The marker sweeps through five day yamas (gold) and five night yamas (indigo). Each bird rises, glows and beats its wings faster the stronger its state. The states change on a fixed loop to show how they work. They are not a real schedule.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-status">
+    <header><p class="eyebrow">Read first</p><h2 id="h-status">What this report covers</h2></header>
+    <div class="body">
+      <div class="status" role="note">
+        <h3>The live timetable is not in this report</h3>
+        <p>drikpanchang.com couldn't be reached while this report was made, so it has no timings for 14 Oct 2026 or any other date. It explains what the page shows and how to read it, using copies of the page in search results and outside sources. Nothing here stands in for the real times.</p>
+        <p>Adding the real timetable needs:</p>
+        <ul>
+          <li>access to drikpanchang.com from the environment that builds the report</li>
+          <li>the date and city you want</li>
+          <li>your bird, or your birth nakshatra and paksha</li>
+        </ul>
+      </div>
+      <dl class="facts">
+        <div><dt>Birds</dt><dd>5: Vulture, Owl, Crow, Cock, Peacock</dd></div>
+        <div><dt>Activities</dt><dd>5: Ruling, Eating, Walking, Sleeping, Dying</dd></div>
+        <div><dt>Main periods</dt><dd>10 yamas: 5 by day, 5 by night</dd></div>
+        <div><dt>Day boundary</dt><dd>Sunrise to the next sunrise</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-page">
+    <header><p class="eyebrow">The page</p><h2 id="h-page">What Drik Panchang shows</h2></header>
+    <div class="body">
+      <p>Each page is a timetable for one date and one city. The title follows the pattern <em>“[date] Pancha Pakshi Activities for [city]”</em>. Many copies in search results use New Delhi. The timetable has a day-time section and a night-time section. Each section is a run of time slots.</p>
+      <p>The Panchang day runs from sunrise to the next sunrise. Slots after midnight carry the next calendar date.</p>
+
+      <h3 class="eyebrow" style="margin-top:8px">Anatomy of one slot</h3>
+      <div class="anatomy-scroll">
+        <div class="anatomy" aria-label="Columns in one time slot">
+          <div class="row-mock" aria-hidden="true">
+            <div>hh:mm – hh:mm</div><div>Bird</div><div>Activity</div><div>Rating</div><div>Relation</div>
+          </div>
+          <div class="row-labels">
+            <div><b>Time slot</b>Start and end. A date suffix means the slot is after midnight.</div>
+            <div><b>Bird</b>Which of the five birds the slot belongs to.</div>
+            <div><b>Activity</b>Ruling, Eating, Walking, Sleeping or Dying.</div>
+            <div><b>Rating</b>From Very Good to Very Bad.</div>
+            <div><b>Relation</b>Friend, Enemy or Self, compared with your bird.</div>
+          </div>
+        </div>
+      </div>
+      <p class="note">The column layout comes from indexed copies of the page. The placeholders are not real values.</p>
+
+      <h3 class="eyebrow" style="margin-top:8px">Settings in the page address</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Parameter</th><th>What it sets</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><code>date</code></td><td>The day to show, as DD/MM/YYYY</td><td><code>date=14/10/2026</code></td></tr>
+            <tr><td><code>pakshi</code></td><td>Your bird. Changes the Friend, Enemy and Self labels.</td><td><code>pakshi=crow</code>, <code>cock</code>, <code>peacock</code></td></tr>
+            <tr><td><code>time-format</code></td><td>12-hour or 24-hour clock</td><td><code>12hour</code>, <code>24hour</code></td></tr>
+            <tr><td><code>lang</code></td><td>Page language</td><td><code>lang=en</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The city is picked on the page itself. The address you shared also had <code>signed-out=1</code> and an ad fragment (<code>#google_vignette</code>). Neither changes the timetable.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-birds">
+    <header><p class="eyebrow">Cast</p><h2 id="h-birds">The five birds</h2></header>
+    <div class="body">
+      <div class="birds">
+        <article class="bird" style="--bird: var(--vulture)"><h3>Vulture</h3><span class="ta">வல்லூறு</span><span class="tr">Valluru</span></article>
+        <article class="bird" style="--bird: var(--owl)"><h3>Owl</h3><span class="ta">ஆந்தை</span><span class="tr">Aandhai</span></article>
+        <article class="bird" style="--bird: var(--crow)"><h3>Crow</h3><span class="ta">காகம்</span><span class="tr">Kaakam</span></article>
+        <article class="bird" style="--bird: var(--cock)"><h3>Cock</h3><span class="ta">கோழி</span><span class="tr">Kozhi</span></article>
+        <article class="bird" style="--bird: var(--peacock)"><h3>Peacock</h3><span class="ta">மயில்</span><span class="tr">Mayil</span></article>
+      </div>
+      <p>Pancha Pakshi Shastra comes from the Tamil Siddha tradition, and a Sanskrit text on it is credited to the sage Agastya. Each person has one bird, worked out from the nakshatra the Moon was in at birth and the paksha (waxing or waning fortnight). The page then judges every slot of the day against that bird.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-acts">
+    <header><p class="eyebrow">States</p><h2 id="h-acts">The five activities</h2></header>
+    <div class="body">
+      <div class="acts">
+        <div class="pillars">
+          <div class="scene" id="pillars">
+            <canvas id="pillars-canvas" role="img" aria-label="3D bar chart of activity strength: Ruling 1.0, Eating 0.8, Walking 0.6, Sleeping 0.4, Dying 0.2"></canvas>
+            <div class="fallback" id="pillars-fallback" hidden>3D view needs WebGL. The same values are listed alongside.</div>
+          </div>
+          <p class="caption">Pillar height is drawn to scale. The outline on each pillar is full strength (1.0).</p>
+        </div>
+        <ol class="ladder" aria-label="Activities from strongest to weakest">
+          <li style="--sw: var(--a1)"><span class="val">1.0</span><span class="nm"><b>Ruling</b><span>Arasu · அரசு</span></span><span class="rank">strongest</span></li>
+          <li style="--sw: var(--a2)"><span class="val">0.8</span><span class="nm"><b>Eating</b><span>Oon · ஊண்</span></span><span class="rank"></span></li>
+          <li style="--sw: var(--a3)"><span class="val">0.6</span><span class="nm"><b>Walking</b><span>Nadai · நடை</span></span><span class="rank"></span></li>
+          <li style="--sw: var(--a4)"><span class="val">0.4</span><span class="nm"><b>Sleeping</b><span>Thuyil · துயில்</span></span><span class="rank"></span></li>
+          <li style="--sw: var(--a5)"><span class="val">0.2</span><span class="nm"><b>Dying</b><span>Saavu · சாவு</span></span><span class="rank">weakest</span></li>
+        </ol>
+      </div>
+      <p>Every bird passes through all five states over a day. Strength drops by one fifth at each step down the list. A slot where your bird is Ruling or Eating is treated as strong. A slot where it is Sleeping or Dying is treated as weak. The page's Rating column gives its own verdict for each slot.</p>
+      <p class="note">Strength values: VedAstro (Part 3) and Jayachandran et al. in IJMRME. Both use the same 1.0 to 0.2 scale.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-time">
+    <header><p class="eyebrow">Clock</p><h2 id="h-time">How the day is divided</h2></header>
+    <div class="body">
+      <div class="daynight">
+        <div class="half day">
+          <h3>Day: sunrise to sunset</h3>
+          <div class="yamas" aria-label="Five day yamas"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
+          <p class="note">5 yamas. Each is 2 h 24 min when the day is 12 hours.</p>
+        </div>
+        <div class="half night">
+          <h3>Night: sunset to sunrise</h3>
+          <div class="yamas" aria-label="Five night yamas"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
+          <p class="note">5 yamas, split the same way.</p>
+        </div>
+      </div>
+      <p>Each yama is split again into five sub-periods, one for each activity. Sources disagree on how long the sub-periods are. Both versions below fill one 144-minute yama and are drawn to scale.</p>
+      <div class="bars">
+        <div>
+          <div class="bar-head"><b>Equal split</b><span>VedAstro, Part 8: about 29 min each</span></div>
+          <div class="bar" role="img" aria-label="Five equal sub-periods of 28.8 minutes">
+            <div class="seg s1" style="flex: 28.8">28.8</div>
+            <div class="seg s2" style="flex: 28.8">28.8</div>
+            <div class="seg s3" style="flex: 28.8">28.8</div>
+            <div class="seg s4" style="flex: 28.8">28.8</div>
+            <div class="seg s5" style="flex: 28.8">28.8</div>
+          </div>
+          <div class="axis"><span>0</span><span>72 min</span><span>144 min</span></div>
+        </div>
+        <div>
+          <div class="bar-head"><b>Unequal split</b><span>IJMRME paper: 30 + 36 + 48 + 18 + 12 min</span></div>
+          <div class="bar" role="img" aria-label="Unequal sub-periods: Eating 30, Walking 36, Ruling 48, Sleeping 18, Dying 12 minutes">
+            <div class="seg s2" style="flex: 30">30</div>
+            <div class="seg s3" style="flex: 36">36</div>
+            <div class="seg s1" style="flex: 48">48</div>
+            <div class="seg s4" style="flex: 18">18</div>
+            <div class="seg s5" style="flex: 12">12</div>
+          </div>
+          <div class="axis"><span>0</span><span>72 min</span><span>144 min</span></div>
+        </div>
+        <div class="key" aria-label="Colour key">
+          <span><i style="background: var(--a1)"></i>Ruling</span>
+          <span><i style="background: var(--a2)"></i>Eating</span>
+          <span><i style="background: var(--a3)"></i>Walking</span>
+          <span><i style="background: var(--a4)"></i>Sleeping</span>
+          <span><i style="background: var(--a5)"></i>Dying</span>
+        </div>
+      </div>
+      <p class="note">The equal split doesn't give an order for the sub-periods, so its colours just run strongest to weakest. VedAstro says the order rotates and starts from the yama's main activity. Drik Panchang's own split can only be confirmed on the live page.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-bird">
+    <header><p class="eyebrow">Your bird</p><h2 id="h-bird">Finding your bird</h2></header>
+    <div class="body">
+      <p>Your bird comes from two facts: the nakshatra the Moon was in when you were born, and whether you were born in the waxing (Shukla) or waning (Krishna) fortnight. The same nakshatra gives a different bird in each fortnight. The Moon changes nakshatra about once a day, so the birth time matters.</p>
+      <div class="table-scroll">
+        <table class="agree">
+          <thead><tr><th>Point</th><th>What sources say</th><th>Agreement</th></tr></thead>
+          <tbody>
+            <tr><td>Inputs</td><td>Birth nakshatra plus paksha</td><td class="verdict ok">agree</td></tr>
+            <tr><td>Shukla, first group</td><td>Ashwini to Mrigashira gives Vulture</td><td class="verdict ok">agree</td></tr>
+            <tr><td>Shukla, later groups</td><td>Where Owl, Crow, Cock and Peacock start and end differs between VedAstro and Hindu Blog</td><td class="verdict split">differ</td></tr>
+            <tr><td>Krishna paksha</td><td>The order reverses, but VedAstro, Hindu Blog and Findyourfate give different tables</td><td class="verdict split">differ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The tables don't match, so this report doesn't include one. For results that match the timetable, use <a href="https://www.drikpanchang.com/pancha-pakshi/bird/pancha-pakshi-bird-calculator.html" target="_blank" rel="noopener">Drik Panchang's own bird calculator</a>, then open the activities page with that bird set.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-use">
+    <header><p class="eyebrow">Use</p><h2 id="h-use">Reading the timetable</h2></header>
+    <div class="body">
+      <ol>
+        <li>Set the date and your city on the page. Times depend on local sunrise and sunset.</li>
+        <li>Set your bird with the calculator or the <code>pakshi</code> setting, so the Relation column is filled in for you.</li>
+        <li>Traditionally the best times are slots marked <b>Self</b> or <b>Friend</b> where the activity is Ruling or Eating and the rating is Good or Very Good.</li>
+        <li>Treat Sleeping and Dying slots, and slots rated Bad or Very Bad, as the weak times.</li>
+        <li>For times after midnight, check the date suffix. That slot still belongs to the Panchang day that began at sunrise.</li>
+      </ol>
+      <p class="note">This is a traditional timing system and not a forecast. OnlineJyotish, which publishes these timings, warns against treating them as a guarantee of financial, legal or medical outcomes.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-src">
+    <header><p class="eyebrow">Sources</p><h2 id="h-src">Where this comes from</h2></header>
+    <div class="body">
+      <ol class="sources">
+        <li><a href="https://www.drikpanchang.com/pancha-pakshi/pancha-pakshi-bird-activities.html" target="_blank" rel="noopener">Drik Panchang: Pancha Pakshi Bird Activities</a> (the page in this report, seen through search results)</li>
+        <li><a href="https://www.drikpanchang.com/pancha-pakshi/bird/pancha-pakshi-bird-calculator.html" target="_blank" rel="noopener">Drik Panchang: Pancha Pakshi Bird Calculator</a></li>
+        <li><a href="https://vedastro.org/blog/Pancha-Pakshi-Part-2-Finding-Your-Birth-Bird.html" target="_blank" rel="noopener">VedAstro: Part 2, Finding Your Birth Bird</a></li>
+        <li><a href="https://vedastro.org/blog/Pancha-Pakshi-Part-3-The-Five-Activities.html" target="_blank" rel="noopener">VedAstro: Part 3, The Five Activities</a></li>
+        <li><a href="https://vedastro.org/blog/Pancha-Pakshi-Part-8-Sub-Activities.html" target="_blank" rel="noopener">VedAstro: Part 8, Sub-Activities and Vibrational Strength</a></li>
+        <li><a href="https://ijmrme.crystalpen.in/uploads/683432bc46d6e_624.pdf" target="_blank" rel="noopener">Jayachandran et al., “Panjapatchi”, IJMRME (PDF)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Pancha_Pakshi_Shastra" target="_blank" rel="noopener">Wikipedia: Pancha Pakshi Shastra</a></li>
+        <li><a href="https://www.hindu-blog.com/2018/10/pacha-pakshi-shastra-hindu-astrology-birth-bird-astrology.html" target="_blank" rel="noopener">Hindu Blog: Pancha Pakshi Shastra</a></li>
+        <li><a href="https://www.findyourfate.com/astrology/articles/articlespage.php?topic=pancha-pakshi-shastra-an-ancient-indian-vedic-system-of-astrology&amp;language=1" target="_blank" rel="noopener">Findyourfate: Pancha Pakshi Shastra</a></li>
+        <li><a href="https://www.onlinejyotish.com/free-astrology/pancha-pakshi-forecast.php" target="_blank" rel="noopener">OnlineJyotish: Pancha Pakshi forecast</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="end">Pancha Pakshi report · prepared 14 Oct 2026. The two 3D views are illustrations. All timings come from Drik Panchang.</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var BIRDS = [
+    { key: "vulture", name: "Vulture", tail: 1.0, wing: 1.15 },
+    { key: "owl", name: "Owl", tail: 0.8, wing: 1.0 },
+    { key: "crow", name: "Crow", tail: 1.0, wing: 0.95 },
+    { key: "cock", name: "Cock", tail: 1.3, wing: 0.8 },
+    { key: "peacock", name: "Peacock", tail: 2.4, wing: 0.9 }
+  ];
+  var ACTS = [
+    { name: "Ruling", s: 1.0 },
+    { name: "Eating", s: 0.8 },
+    { name: "Walking", s: 0.6 },
+    { name: "Sleeping", s: 0.4 },
+    { name: "Dying", s: 0.2 }
+  ];
+
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function token(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || "#888888";
+  }
+  function color(name) { return new THREE.Color(token(name)); }
+
+  var themeListeners = [];
+  function onTheme(fn) { themeListeners.push(fn); }
+  function fireTheme() { themeListeners.forEach(function (fn) { fn(); }); }
+  if (window.matchMedia) {
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq.addEventListener) mq.addEventListener("change", fireTheme);
+    else if (mq.addListener) mq.addListener(fireTheme);
+  }
+  new MutationObserver(fireTheme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "class", "style"] });
+
+  function makeRenderer(canvas, fallback) {
+    if (typeof THREE === "undefined") { fallback.hidden = false; return null; }
+    try {
+      var r = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+      r.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      r.setClearColor(0x000000, 0);
+      return r;
+    } catch (e) {
+      fallback.hidden = false;
+      return null;
+    }
+  }
+
+  function visibilityGate(el, cb) {
+    var visible = true;
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting;
+        cb(visible && !document.hidden);
+      }, { threshold: 0.01 }).observe(el);
+    }
+    document.addEventListener("visibilitychange", function () { cb(visible && !document.hidden); });
+  }
+
+  function project(v, camera, w, h) {
+    var p = v.clone().project(camera);
+    return { x: (p.x * 0.5 + 0.5) * w, y: (-p.y * 0.5 + 0.5) * h, behind: p.z > 1 };
+  }
+
+  /* ---------- Hero: sky dial with five birds ---------- */
+  (function dial() {
+    var host = document.getElementById("dial");
+    var canvas = document.getElementById("dial-canvas");
+    var renderer = makeRenderer(canvas, document.getElementById("dial-fallback"));
+    var liveList = document.getElementById("live");
+    var clock = document.getElementById("clock");
+    var toggle = document.getElementById("dial-toggle");
+
+    // The legend renders even without WebGL.
+    var liveItems = BIRDS.map(function (b) {
+      var li = document.createElement("li");
+      li.style.setProperty("--bird", "var(--" + b.key + ")");
+      li.innerHTML = "<b>" + b.name + "</b><span></span>";
+      liveList.appendChild(li);
+      return li.querySelector("span");
+    });
+    function setLegend(tick) {
+      BIRDS.forEach(function (b, i) {
+        liveItems[i].textContent = ACTS[(i + tick) % 5].name;
+      });
+    }
+    setLegend(0);
+    if (!renderer) { toggle.hidden = true; return; }
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+    var R_IN = 3.0, R_OUT = 3.55;
+
+    var hemi = new THREE.HemisphereLight(0xffffff, 0x404060, 0.75);
+    scene.add(hemi);
+    var key = new THREE.DirectionalLight(0xffffff, 0.7);
+    key.position.set(3, 6, 4);
+    scene.add(key);
+    var sunLight = new THREE.PointLight(0xffffff, 0.9, 12);
+    scene.add(sunLight);
+
+    // Dial: angle a runs from sunrise (left) across the far side (day) to sunset (right), then the near side (night).
+    var segs = [];
+    var GAP = 0.025;
+    for (var k = 0; k < 10; k++) {
+      var a0 = k * Math.PI / 5, a1 = (k + 1) * Math.PI / 5;
+      var g = new THREE.RingGeometry(R_IN, R_OUT, 12, 1, Math.PI - a1 + GAP, (a1 - a0) - 2 * GAP);
+      var m = new THREE.MeshStandardMaterial({ side: THREE.DoubleSide, roughness: 0.6, metalness: 0.1, transparent: true });
+      var mesh = new THREE.Mesh(g, m);
+      mesh.rotation.x = -Math.PI / 2;
+      scene.add(mesh);
+      segs.push({ mesh: mesh, isDay: k < 5 });
+    }
+    var tickRing = new THREE.Mesh(
+      new THREE.RingGeometry(R_OUT + 0.08, R_OUT + 0.11, 96),
+      new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, transparent: true, opacity: 0.5 })
+    );
+    tickRing.rotation.x = -Math.PI / 2;
+    scene.add(tickRing);
+
+    // Horizon line from sunrise to sunset.
+    var horizonGeo = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(-R_OUT - 0.3, 0.01, 0), new THREE.Vector3(R_OUT + 0.3, 0.01, 0)
+    ]);
+    var horizon = new THREE.Line(horizonGeo, new THREE.LineBasicMaterial({ transparent: true, opacity: 0.45 }));
+    scene.add(horizon);
+
+    // Central gem.
+    var gem = new THREE.Mesh(
+      new THREE.IcosahedronGeometry(0.42, 0),
+      new THREE.MeshStandardMaterial({ flatShading: true, roughness: 0.35, metalness: 0.3, emissiveIntensity: 0.45 })
+    );
+    gem.position.y = 0.55;
+    scene.add(gem);
+
+    // Sun / moon marker.
+    var marker = new THREE.Mesh(
+      new THREE.SphereGeometry(0.2, 24, 16),
+      new THREE.MeshStandardMaterial({ emissiveIntensity: 1.0, roughness: 0.4 })
+    );
+    scene.add(marker);
+
+    // Stars.
+    var starGeo = new THREE.BufferGeometry();
+    var starPos = [];
+    for (var s = 0; s < 260; s++) {
+      var th = Math.random() * Math.PI * 2;
+      var ph = Math.random() * Math.PI * 0.42;
+      var rr = 11 + Math.random() * 4;
+      starPos.push(rr * Math.sin(ph) * Math.cos(th), rr * Math.cos(ph) - 1.5, rr * Math.sin(ph) * Math.sin(th));
+    }
+    starGeo.setAttribute("position", new THREE.Float32BufferAttribute(starPos, 3));
+    var stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ size: 0.06, transparent: true, opacity: 0.7 }));
+    scene.add(stars);
+
+    // Birds. Each model points its beak along +Z so lookAt() faces it along its path.
+    function triangle(a, b, c) {
+      var geo = new THREE.BufferGeometry();
+      geo.setAttribute("position", new THREE.Float32BufferAttribute([].concat(a, b, c), 3));
+      geo.computeVertexNormals();
+      return geo;
+    }
+    var birds = BIRDS.map(function (b, i) {
+      var mat = new THREE.MeshStandardMaterial({ flatShading: true, side: THREE.DoubleSide, roughness: 0.5, metalness: 0.05 });
+      var group = new THREE.Group();
+      var body = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.48, 6), mat);
+      body.rotation.x = Math.PI / 2;
+      group.add(body);
+      var span = 0.55 * b.wing;
+      var right = new THREE.Mesh(triangle([0, 0, 0.13], [0, 0, -0.12], [span, 0, -0.06]), mat);
+      var left = new THREE.Mesh(triangle([0, 0, 0.13], [0, 0, -0.12], [-span, 0, -0.06]), mat);
+      group.add(right); group.add(left);
+      var t = b.tail;
+      var tail = new THREE.Mesh(triangle([0, 0, -0.18], [-0.12 * t, 0.02 * t, -0.18 - 0.22 * t], [0.12 * t, 0.02 * t, -0.18 - 0.22 * t]), mat);
+      group.add(tail);
+      scene.add(group);
+      return {
+        group: group, mat: mat, right: right, left: left,
+        radius: 1.15 + i * 0.4,
+        speed: 0.42 - i * 0.045,
+        phase: i * 1.256,
+        flap: Math.random() * 6,
+        h: 1, glow: 0.3, scale: 1, rate: 6
+      };
+    });
+
+    // Overlay tags.
+    function addTag(text, pos) {
+      var el = document.createElement("div");
+      el.className = "tag";
+      el.textContent = text;
+      host.appendChild(el);
+      return { el: el, pos: pos };
+    }
+    var tags = [
+      addTag("Sunrise", new THREE.Vector3(-R_OUT - 0.2, 0.42, 0)),
+      addTag("Sunset", new THREE.Vector3(R_OUT + 0.2, 0.42, 0)),
+      addTag("Day", new THREE.Vector3(0, 0, -R_OUT - 0.45)),
+      addTag("Night", new THREE.Vector3(0, 0, R_OUT + 0.45))
+    ];
+
+    function applyTheme() {
+      var day = color("--day"), night = color("--night");
+      segs.forEach(function (sg) {
+        var c = sg.isDay ? day : night;
+        sg.mesh.material.color.copy(c);
+        sg.mesh.material.emissive.copy(c);
+      });
+      tickRing.material.color.copy(color("--muted"));
+      horizon.material.color.copy(color("--muted"));
+      gem.material.color.copy(color("--accent"));
+      gem.material.emissive.copy(color("--accent"));
+      stars.material.color.copy(color("--muted"));
+      birds.forEach(function (bd, i) {
+        var c = color("--" + BIRDS[i].key);
+        bd.mat.color.copy(c);
+        bd.mat.emissive.copy(c);
+      });
+      dayColor = day; moonColor = color("--moon");
+    }
+    var dayColor, moonColor;
+    applyTheme();
+    onTheme(function () { applyTheme(); if (!running) render(lastT); });
+
+    var size = { w: 1, h: 1 };
+    function resize() {
+      var w = host.clientWidth, h = host.clientHeight;
+      if (!w || !h) return;
+      size.w = w; size.h = h;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      var k = Math.max(1.1, 1.38 / camera.aspect);
+      camera.position.set(0, 5.0 * k, 8.8 * k);
+      camera.lookAt(0, 0.6, 0);
+      camera.updateProjectionMatrix();
+    }
+    if ("ResizeObserver" in window) new ResizeObserver(function () { resize(); if (!running) render(lastT); }).observe(host);
+    window.addEventListener("resize", resize);
+    resize();
+
+    var CYCLE = 40;          // seconds for a full sunrise-to-sunrise sweep
+    var STATE_EVERY = 4;     // seconds between display-state changes
+    var lastTick = -1, lastYama = -1;
+    var tmp = new THREE.Vector3(), ahead = new THREE.Vector3();
+
+    function render(t) {
+      var a = ((t / CYCLE) % 1) * Math.PI * 2;
+      var yama = Math.floor(a / (Math.PI / 5)) % 10;
+      marker.position.set(-(R_IN + R_OUT) / 2 * Math.cos(a), 0.22, -(R_IN + R_OUT) / 2 * Math.sin(a));
+      var isDay = yama < 5;
+      marker.material.color.copy(isDay ? dayColor : moonColor);
+      marker.material.emissive.copy(isDay ? dayColor : moonColor);
+      sunLight.position.copy(marker.position).setY(1.2);
+      sunLight.color.copy(isDay ? dayColor : moonColor);
+
+      segs.forEach(function (sg, k) {
+        var on = k === yama;
+        sg.mesh.material.emissiveIntensity = on ? 0.55 : 0.08;
+        sg.mesh.material.opacity = on ? 1 : 0.62;
+        sg.mesh.position.y = on ? 0.04 : 0;
+      });
+      if (yama !== lastYama) {
+        lastYama = yama;
+        clock.textContent = "Marker: " + (isDay ? "Day" : "Night") + ", yama " + ((yama % 5) + 1) + " of 5";
+      }
+
+      var tick = Math.floor(t / STATE_EVERY);
+      if (tick !== lastTick) { lastTick = tick; setLegend(((tick % 5) + 5) % 5); }
+
+      var dt = 0.016;
+      birds.forEach(function (bd, i) {
+        var st = ACTS[(i + ((tick % 5) + 5) % 5) % 5].s;
+        var targetH = 0.45 + st * 1.7;
+        var follow = reduceMotion ? 1 : 0.05;
+        bd.h += (targetH - bd.h) * follow;
+        bd.glow += ((0.05 + st * 0.55) - bd.glow) * follow;
+        bd.scale += ((0.8 + st * 0.45) - bd.scale) * follow;
+        bd.rate += ((1.5 + st * 9) - bd.rate) * follow;
+        var ang = bd.phase + t * bd.speed;
+        tmp.set(bd.radius * Math.cos(ang), bd.h + Math.sin(t * 1.3 + i) * 0.06, -bd.radius * Math.sin(ang));
+        ahead.set(bd.radius * Math.cos(ang + 0.1), tmp.y, -bd.radius * Math.sin(ang + 0.1));
+        bd.group.position.copy(tmp);
+        bd.group.lookAt(ahead);
+        bd.group.scale.setScalar(bd.scale);
+        bd.flap += bd.rate * dt;
+        var amp = 0.25 + st * 0.45;
+        bd.right.rotation.z = Math.sin(bd.flap) * amp;
+        bd.left.rotation.z = -Math.sin(bd.flap) * amp;
+        bd.mat.emissiveIntensity = bd.glow;
+      });
+
+      gem.rotation.y = t * 0.35;
+      gem.rotation.x = Math.sin(t * 0.4) * 0.2;
+      stars.rotation.y = t * 0.01;
+
+      renderer.render(scene, camera);
+      tags.forEach(function (tg) {
+        var p = project(tg.pos, camera, size.w, size.h);
+        var hw = tg.el.offsetWidth / 2 + 8;
+        var x = Math.min(Math.max(p.x, hw), size.w - hw);
+        tg.el.style.transform = "translate(" + x.toFixed(1) + "px," + p.y.toFixed(1) + "px) translate(-50%,-50%)";
+      });
+    }
+
+    var running = false, paused = reduceMotion, onScreen = true, start = performance.now(), lastT = 6, offset = 6;
+    function loop(now) {
+      if (!running) return;
+      lastT = offset + (now - start) / 1000;
+      render(lastT);
+      requestAnimationFrame(loop);
+    }
+    function setRunning(want) {
+      if (want && !running) {
+        running = true;
+        start = performance.now();
+        offset = lastT;
+        requestAnimationFrame(loop);
+      } else if (!want) {
+        running = false;
+      }
+    }
+    toggle.addEventListener("click", function () {
+      paused = !paused;
+      toggle.textContent = paused ? "Play" : "Pause";
+      toggle.setAttribute("aria-pressed", String(paused));
+      setRunning(!paused && onScreen);
+    });
+    if (reduceMotion) { toggle.textContent = "Play"; toggle.setAttribute("aria-pressed", "true"); }
+    visibilityGate(host, function (vis) { onScreen = vis; setRunning(vis && !paused); });
+
+    render(lastT);
+    setRunning(!paused);
+  })();
+
+  /* ---------- Activity strength pillars ---------- */
+  (function pillars() {
+    var host = document.getElementById("pillars");
+    var canvas = document.getElementById("pillars-canvas");
+    var renderer = makeRenderer(canvas, document.getElementById("pillars-fallback"));
+    if (!renderer) return;
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x404060, 0.8));
+    var dl = new THREE.DirectionalLight(0xffffff, 0.75);
+    dl.position.set(4, 7, 5);
+    scene.add(dl);
+
+    var group = new THREE.Group();
+    scene.add(group);
+    var H = 3.0, W = 0.72, GAPX = 1.2;
+    var cols = ACTS.map(function (act, i) {
+      var x = (i - 2) * GAPX;
+      var mat = new THREE.MeshStandardMaterial({ roughness: 0.45, metalness: 0.15 });
+      var box = new THREE.Mesh(new THREE.BoxGeometry(W, act.s * H, W), mat);
+      box.position.set(x, (act.s * H) / 2, 0);
+      group.add(box);
+      var ghost = new THREE.LineSegments(
+        new THREE.EdgesGeometry(new THREE.BoxGeometry(W, H, W)),
+        new THREE.LineBasicMaterial({ transparent: true, opacity: 0.45 })
+      );
+      ghost.position.set(x, H / 2, 0);
+      group.add(ghost);
+      var lab = document.createElement("div");
+      lab.className = "tag";
+      lab.innerHTML = '<span class="pn">' + act.name + "<br></span>" + act.s.toFixed(1);
+      lab.style.textAlign = "center";
+      lab.style.lineHeight = "1.3";
+      host.appendChild(lab);
+      return { box: box, ghost: ghost, mat: mat, lab: lab, base: new THREE.Vector3(x, -0.6, 0), i: i };
+    });
+    var floor = new THREE.GridHelper(8, 16);
+    floor.material.vertexColors = false;
+    floor.material.needsUpdate = true;
+    floor.material.transparent = true;
+    floor.material.opacity = 0.35;
+    group.add(floor);
+
+    function applyTheme() {
+      cols.forEach(function (c) {
+        c.mat.color.copy(color("--a" + (c.i + 1)));
+        c.ghost.material.color.copy(color("--muted"));
+      });
+      var m = color("--line");
+      if (Array.isArray(floor.material)) floor.material.forEach(function (fm) { fm.color.copy(m); });
+      else floor.material.color.copy(m);
+    }
+    applyTheme();
+    onTheme(function () { applyTheme(); if (!running) render(lastT); });
+
+    var size = { w: 1, h: 1 };
+    function resize() {
+      var w = host.clientWidth, h = host.clientHeight;
+      if (!w || !h) return;
+      size.w = w; size.h = h;
+      host.classList.toggle("narrow", w < 480);
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      var k = Math.max(1, 1.35 / camera.aspect);
+      camera.position.set(0, 3.4 * k, 9.2 * k);
+      camera.lookAt(0, 1.25, 0);
+      camera.updateProjectionMatrix();
+    }
+    if ("ResizeObserver" in window) new ResizeObserver(function () { resize(); if (!running) render(lastT); }).observe(host);
+    window.addEventListener("resize", resize);
+    resize();
+
+    var world = new THREE.Vector3();
+    function render(t) {
+      group.rotation.y = Math.sin(t * 0.35) * 0.32;
+      group.updateMatrixWorld();
+      renderer.render(scene, camera);
+      cols.forEach(function (c) {
+        world.copy(c.base).applyMatrix4(group.matrixWorld);
+        var p = project(world, camera, size.w, size.h);
+        c.lab.style.transform = "translate(" + p.x.toFixed(1) + "px," + p.y.toFixed(1) + "px) translate(-50%,-50%)";
+      });
+    }
+
+    var running = false, onScreen = false, start = performance.now(), lastT = 0.6, offset = 0.6;
+    function loop(now) {
+      if (!running) return;
+      lastT = offset + (now - start) / 1000;
+      render(lastT);
+      requestAnimationFrame(loop);
+    }
+    function setRunning(want) {
+      if (reduceMotion) want = false;
+      if (want && !running) { running = true; start = performance.now(); offset = lastT; requestAnimationFrame(loop); }
+      else if (!want) running = false;
+    }
+    visibilityGate(host, function (vis) { onScreen = vis; setRunning(vis); });
+    render(lastT);
+  })();
+})();
+</script>
+
+</body>
+</html>
