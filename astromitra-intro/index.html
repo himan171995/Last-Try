@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>ASTROMITRA RADHAA intro</title>
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Cinzel"; src: url("assets/fonts/cinzel-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+      @font-face { font-family: "Cinzel"; src: url("assets/fonts/cinzel-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+      @font-face { font-family: "Montserrat"; src: url("assets/fonts/montserrat-latin-wght.woff2") format("woff2"); font-weight: 100 900; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #05071a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #05071a; font-family: "Montserrat", sans-serif; }
+      #all, #sky, #seal, #seal-rot { position: absolute; inset: 0; }
+      #sky { background: radial-gradient(circle at 50% 46%, #18205a 0%, #0b1033 48%, #05071a 100%); }
+      #underglow { position: absolute; left: 360px; top: 760px; width: 1200px; height: 600px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(90, 15, 30, 0.45), rgba(90, 15, 30, 0)); }
+      .star { position: absolute; border-radius: 50%; background: #f6ead3; }
+      #seal { transform-origin: 960px 450px; }
+      #seal-rot { transform-origin: 960px 450px; }
+      svg { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+      .gl { fill: none; stroke: #d4a84b; stroke-width: 3; stroke-dasharray: 1; stroke-dashoffset: 1; stroke-linecap: round; }
+      .trace { fill: none; stroke: #f3d98b; stroke-width: 4; stroke-dasharray: 1; stroke-dashoffset: 1; stroke-linecap: round; opacity: 0.85; }
+      .ring { fill: none; stroke: #d4a84b; stroke-width: 3; stroke-dasharray: 1; stroke-dashoffset: 1; }
+      .ring-in { fill: none; stroke: #d4a84b; stroke-width: 1.5; stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0.45; }
+      .dot { fill: #e07a1f; stroke: #f3d98b; stroke-width: 2; }
+      #spark { position: absolute; left: 900px; top: 390px; width: 120px; height: 120px; border-radius: 50%;
+        background: radial-gradient(closest-side, #fff6dc, rgba(243, 217, 139, 0.7) 30%, rgba(224, 122, 31, 0) 100%); }
+      #halo { position: absolute; left: 860px; top: 350px; width: 200px; height: 200px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(243, 217, 139, 0.42), rgba(243, 217, 139, 0)); }
+      .num { position: absolute; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;
+        font: 700 86px/1 "Cinzel"; color: #f6ead3; text-shadow: 0 0 18px rgba(212, 168, 75, 0.45); }
+      .num-center { color: #f3d98b; }
+      .num-odd { color: #f6ead3; }
+      .num-even { color: #d4a84b; }
+      .tag { position: absolute; width: 60px; height: 40px; border-radius: 20px; display: flex; align-items: center; justify-content: center;
+        background: #5a0f1e; border: 2px solid #e07a1f; color: #f6ead3; font: 800 22px/1 "Montserrat"; }
+      #flash { position: absolute; left: 560px; top: 420px; width: 800px; height: 420px; border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(255, 240, 200, 0.28), rgba(243, 217, 139, 0)); }
+      #lockup { position: absolute; left: 0; right: 0; top: 570px; display: flex; flex-direction: column; align-items: center; }
+      #word-wrap { position: relative; padding: 6px 30px; }
+      #word { display: flex; gap: 8px; font: 700 112px/1.05 "Cinzel"; white-space: nowrap;
+        filter: drop-shadow(0 4px 18px rgba(212, 168, 75, 0.35)); }
+      .ch { display: inline-block; color: #f3d98b;
+        background: linear-gradient(180deg, #fbe7a8 0%, #f3d98b 35%, #d4a84b 70%, #a87b2e 100%);
+        -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+      .sp { display: inline-block; width: 38px; }
+      #glint { position: absolute; right: 10px; top: -14px; width: 70px; height: 70px;
+        background: radial-gradient(closest-side, #fffaf0, rgba(243, 217, 139, 0.6) 25%, rgba(243, 217, 139, 0) 70%),
+          linear-gradient(0deg, rgba(0,0,0,0) 46%, #fff6dc 50%, rgba(0,0,0,0) 54%),
+          linear-gradient(90deg, rgba(0,0,0,0) 46%, #fff6dc 50%, rgba(0,0,0,0) 54%); }
+      #rule { width: 760px; height: 3px; margin-top: 18px; background: linear-gradient(90deg, rgba(224, 122, 31, 0), #e07a1f 20%, #f3d98b 50%, #e07a1f 80%, rgba(224, 122, 31, 0)); }
+      #services { margin-top: 26px; font: 600 26px/1 "Montserrat"; letter-spacing: 0.2em; color: #f6ead3; text-transform: uppercase; }
+      #tagline { margin-top: 22px; font: 600 36px/1 "Cinzel"; letter-spacing: 0.08em; color: #d4a84b; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6.3" data-width="1920" data-height="1080">
+      <!-- generated by build.py -->
+      <div id="all">
+      <div id="sky" data-layout-ignore></div>
+      <div id="underglow" data-layout-ignore></div>
+      <div class="star" id="st-0" style="left:889px;top:403px;width:2px;height:2px;opacity:0.26"></div>
+      <div class="star" id="st-1" style="left:1299px;top:365px;width:3px;height:3px;opacity:0.56"></div>
+      <div class="star" id="st-2" style="left:155px;top:599px;width:3px;height:3px;opacity:0.47"></div>
+      <div class="star" id="st-3" style="left:1398px;top:183px;width:3px;height:3px;opacity:0.58"></div>
+      <div class="star" id="st-4" style="left:811px;top:182px;width:2px;height:2px;opacity:0.23"></div>
+      <div class="star" id="st-5" style="left:972px;top:998px;width:3px;height:3px;opacity:0.21"></div>
+      <div class="star" id="st-6" style="left:1322px;top:853px;width:2px;height:2px;opacity:0.57"></div>
+      <div class="star" id="st-7" style="left:394px;top:242px;width:3px;height:3px;opacity:0.55"></div>
+      <div class="star" id="st-8" style="left:1483px;top:984px;width:3px;height:3px;opacity:0.30"></div>
+      <div class="star" id="st-9" style="left:1554px;top:215px;width:2px;height:2px;opacity:0.55"></div>
+      <div class="star" id="st-10" style="left:105px;top:409px;width:3px;height:3px;opacity:0.24"></div>
+      <div class="star" id="st-11" style="left:455px;top:795px;width:2px;height:2px;opacity:0.58"></div>
+      <div class="star" id="st-12" style="left:7px;top:826px;width:2px;height:2px;opacity:0.56"></div>
+      <div class="star" id="st-13" style="left:390px;top:9px;width:2px;height:2px;opacity:0.24"></div>
+      <div class="star" id="st-14" style="left:1762px;top:541px;width:3px;height:3px;opacity:0.39"></div>
+      <div class="star" id="st-15" style="left:1768px;top:454px;width:3px;height:3px;opacity:0.26"></div>
+      <div class="star" id="st-16" style="left:1469px;top:757px;width:2px;height:2px;opacity:0.25"></div>
+      <div class="star" id="st-17" style="left:1169px;top:1035px;width:2px;height:2px;opacity:0.29"></div>
+      <div class="star" id="st-18" style="left:1312px;top:920px;width:4px;height:4px;opacity:0.29"></div>
+      <div class="star" id="st-19" style="left:1910px;top:1078px;width:2px;height:2px;opacity:0.54"></div>
+      <div class="star" id="st-20" style="left:773px;top:979px;width:2px;height:2px;opacity:0.44"></div>
+      <div class="star" id="st-21" style="left:83px;top:395px;width:4px;height:4px;opacity:0.40"></div>
+      <div class="star" id="st-22" style="left:1085px;top:743px;width:2px;height:2px;opacity:0.23"></div>
+      <div class="star" id="st-23" style="left:1693px;top:395px;width:2px;height:2px;opacity:0.35"></div>
+      <div class="star" id="st-24" style="left:1893px;top:620px;width:2px;height:2px;opacity:0.34"></div>
+      <div class="star" id="st-25" style="left:1167px;top:1px;width:2px;height:2px;opacity:0.27"></div>
+      <div class="star" id="st-26" style="left:853px;top:351px;width:2px;height:2px;opacity:0.31"></div>
+      <div class="star" id="st-27" style="left:547px;top:559px;width:2px;height:2px;opacity:0.19"></div>
+      <div class="star" id="st-28" style="left:1499px;top:872px;width:3px;height:3px;opacity:0.33"></div>
+      <div class="star" id="st-29" style="left:1493px;top:611px;width:2px;height:2px;opacity:0.36"></div>
+      <div class="star" id="st-30" style="left:443px;top:1041px;width:3px;height:3px;opacity:0.39"></div>
+      <div class="star" id="st-31" style="left:1835px;top:605px;width:2px;height:2px;opacity:0.46"></div>
+      <div class="star" id="st-32" style="left:328px;top:911px;width:2px;height:2px;opacity:0.19"></div>
+      <div class="star" id="st-33" style="left:1804px;top:874px;width:2px;height:2px;opacity:0.58"></div>
+      <div class="star" id="st-34" style="left:1893px;top:655px;width:2px;height:2px;opacity:0.20"></div>
+      <div class="star" id="st-35" style="left:865px;top:850px;width:2px;height:2px;opacity:0.44"></div>
+      <div class="star" id="st-36" style="left:1856px;top:383px;width:2px;height:2px;opacity:0.38"></div>
+      <div class="star" id="st-37" style="left:533px;top:1039px;width:4px;height:4px;opacity:0.41"></div>
+      <div class="star" id="st-38" style="left:1336px;top:71px;width:3px;height:3px;opacity:0.24"></div>
+      <div class="star" id="st-39" style="left:1079px;top:858px;width:3px;height:3px;opacity:0.55"></div>
+      <div class="star" id="st-40" style="left:325px;top:773px;width:3px;height:3px;opacity:0.55"></div>
+      <div class="star" id="st-41" style="left:949px;top:107px;width:2px;height:2px;opacity:0.30"></div>
+      <div class="star" id="st-42" style="left:246px;top:862px;width:2px;height:2px;opacity:0.25"></div>
+      <div class="star" id="st-43" style="left:1516px;top:928px;width:2px;height:2px;opacity:0.25"></div>
+      <div class="star" id="st-44" style="left:877px;top:604px;width:3px;height:3px;opacity:0.21"></div>
+      <div class="star" id="st-45" style="left:1053px;top:640px;width:2px;height:2px;opacity:0.40"></div>
+      <div class="star" id="st-46" style="left:1807px;top:31px;width:3px;height:3px;opacity:0.55"></div>
+      <div class="star" id="st-47" style="left:1045px;top:565px;width:3px;height:3px;opacity:0.45"></div>
+      <div class="star" id="st-48" style="left:1529px;top:948px;width:3px;height:3px;opacity:0.41"></div>
+      <div class="star" id="st-49" style="left:577px;top:783px;width:4px;height:4px;opacity:0.24"></div>
+      <div class="star" id="st-50" style="left:191px;top:531px;width:2px;height:2px;opacity:0.39"></div>
+      <div class="star" id="st-51" style="left:1223px;top:57px;width:3px;height:3px;opacity:0.19"></div>
+      <div class="star" id="st-52" style="left:468px;top:495px;width:2px;height:2px;opacity:0.53"></div>
+      <div class="star" id="st-53" style="left:1401px;top:675px;width:2px;height:2px;opacity:0.20"></div>
+      <div class="star" id="st-54" style="left:1146px;top:662px;width:4px;height:4px;opacity:0.35"></div>
+      <div class="star" id="st-55" style="left:1130px;top:87px;width:2px;height:2px;opacity:0.44"></div>
+      <div class="star" id="st-56" style="left:348px;top:70px;width:2px;height:2px;opacity:0.44"></div>
+      <div class="star" id="st-57" style="left:1050px;top:513px;width:4px;height:4px;opacity:0.51"></div>
+      <div class="star" id="st-58" style="left:641px;top:845px;width:2px;height:2px;opacity:0.37"></div>
+      <div class="star" id="st-59" style="left:862px;top:160px;width:3px;height:3px;opacity:0.59"></div>
+      <div class="star" id="st-60" style="left:1599px;top:115px;width:2px;height:2px;opacity:0.46"></div>
+      <div class="star" id="st-61" style="left:867px;top:140px;width:2px;height:2px;opacity:0.23"></div>
+      <div class="star" id="st-62" style="left:101px;top:81px;width:4px;height:4px;opacity:0.59"></div>
+      <div class="star" id="st-63" style="left:715px;top:800px;width:3px;height:3px;opacity:0.44"></div>
+      <div class="star" id="st-64" style="left:385px;top:944px;width:2px;height:2px;opacity:0.28"></div>
+      <div class="star" id="st-65" style="left:492px;top:559px;width:2px;height:2px;opacity:0.19"></div>
+      <div class="star" id="st-66" style="left:486px;top:660px;width:2px;height:2px;opacity:0.40"></div>
+      <div class="star" id="st-67" style="left:801px;top:971px;width:3px;height:3px;opacity:0.54"></div>
+      <div class="star" id="st-68" style="left:1162px;top:238px;width:2px;height:2px;opacity:0.47"></div>
+      <div class="star" id="st-69" style="left:254px;top:42px;width:2px;height:2px;opacity:0.59"></div>
+      <div class="star" id="st-70" style="left:1510px;top:974px;width:2px;height:2px;opacity:0.55"></div>
+      <div class="star" id="st-71" style="left:1766px;top:1045px;width:2px;height:2px;opacity:0.19"></div>
+      <div class="star" id="st-72" style="left:843px;top:450px;width:2px;height:2px;opacity:0.39"></div>
+      <div class="star" id="st-73" style="left:666px;top:904px;width:3px;height:3px;opacity:0.36"></div>
+      <div class="star" id="st-74" style="left:151px;top:325px;width:3px;height:3px;opacity:0.44"></div>
+      <div class="star" id="st-75" style="left:1091px;top:475px;width:2px;height:2px;opacity:0.32"></div>
+      <div class="star" id="st-76" style="left:113px;top:99px;width:2px;height:2px;opacity:0.41"></div>
+      <div class="star" id="st-77" style="left:362px;top:769px;width:4px;height:4px;opacity:0.56"></div>
+      <div class="star" id="st-78" style="left:1812px;top:93px;width:3px;height:3px;opacity:0.58"></div>
+      <div class="star" id="st-79" style="left:1151px;top:1016px;width:4px;height:4px;opacity:0.49"></div>
+      <div class="star" id="st-80" style="left:406px;top:585px;width:2px;height:2px;opacity:0.21"></div>
+      <div class="star" id="st-81" style="left:1286px;top:456px;width:2px;height:2px;opacity:0.54"></div>
+      <div class="star" id="st-82" style="left:621px;top:900px;width:3px;height:3px;opacity:0.39"></div>
+      <div class="star" id="st-83" style="left:889px;top:3px;width:3px;height:3px;opacity:0.27"></div>
+      <div class="star" id="st-84" style="left:430px;top:1062px;width:2px;height:2px;opacity:0.20"></div>
+      <div class="star" id="st-85" style="left:286px;top:176px;width:2px;height:2px;opacity:0.39"></div>
+      <div class="star" id="st-86" style="left:1516px;top:436px;width:3px;height:3px;opacity:0.34"></div>
+      <div class="star" id="st-87" style="left:1126px;top:938px;width:3px;height:3px;opacity:0.47"></div>
+      <div class="star" id="st-88" style="left:689px;top:292px;width:2px;height:2px;opacity:0.56"></div>
+      <div class="star" id="st-89" style="left:1089px;top:863px;width:2px;height:2px;opacity:0.42"></div>
+      <div id="spark" data-layout-ignore></div>
+      <div id="seal" data-layout-allow-overflow>
+        <div id="halo" data-layout-ignore></div>
+        <div id="seal-rot" data-layout-allow-overflow>
+        <svg viewBox="0 0 1920 1080" aria-hidden="true">
+          <rect id="g-frame" x="735.0" y="225.0" width="450.0" height="450.0" rx="6" class="gl" pathLength="1" />
+          <line id="g-v0" x1="885.0" y1="225.0" x2="885.0" y2="675.0" class="gl" pathLength="1" />
+          <line id="g-v1" x1="1035.0" y1="225.0" x2="1035.0" y2="675.0" class="gl" pathLength="1" />
+          <line id="g-h0" x1="735.0" y1="375.0" x2="1185.0" y2="375.0" class="gl" pathLength="1" />
+          <line id="g-h1" x1="735.0" y1="525.0" x2="1185.0" y2="525.0" class="gl" pathLength="1" />
+          <line id="tr-0" x1="701.0" y1="300" x2="1219.0" y2="300" class="trace" pathLength="1" />
+          <line id="tr-1" x1="701.0" y1="450" x2="1219.0" y2="450" class="trace" pathLength="1" />
+          <line id="tr-2" x1="701.0" y1="600" x2="1219.0" y2="600" class="trace" pathLength="1" />
+          <line id="tr-3" x1="810" y1="191.0" x2="810" y2="709.0" class="trace" pathLength="1" />
+          <line id="tr-4" x1="960" y1="191.0" x2="960" y2="709.0" class="trace" pathLength="1" />
+          <line id="tr-5" x1="1110" y1="191.0" x2="1110" y2="709.0" class="trace" pathLength="1" />
+          <line id="tr-6" x1="701.0" y1="191.0" x2="1219.0" y2="709.0" class="trace" pathLength="1" />
+          <line id="tr-7" x1="1219.0" y1="191.0" x2="701.0" y2="709.0" class="trace" pathLength="1" />
+          <circle id="ring" cx="960" cy="450" r="322" class="ring" pathLength="1" />
+          <circle id="ring-in" cx="960" cy="450" r="300" class="ring-in" pathLength="1" />
+          <circle id="dot-0" cx="960.0" cy="128.0" r="11" class="dot" />
+          <circle id="dot-1" cx="1167.0" cy="203.3" r="11" class="dot" />
+          <circle id="dot-2" cx="1277.1" cy="394.1" r="11" class="dot" />
+          <circle id="dot-3" cx="1238.9" cy="611.0" r="11" class="dot" />
+          <circle id="dot-4" cx="1070.1" cy="752.6" r="11" class="dot" />
+          <circle id="dot-5" cx="849.9" cy="752.6" r="11" class="dot" />
+          <circle id="dot-6" cx="681.1" cy="611.0" r="11" class="dot" />
+          <circle id="dot-7" cx="642.9" cy="394.1" r="11" class="dot" />
+          <circle id="dot-8" cx="753.0" cy="203.3" r="11" class="dot" />
+        </svg>
+        </div>
+        <div id="n-1" class="num num-odd" style="left:900px;top:540px">1</div>
+        <div id="n-2" class="num num-even" style="left:1050px;top:240px">2</div>
+        <div id="n-3" class="num num-odd" style="left:750px;top:390px">3</div>
+        <div id="n-4" class="num num-even" style="left:750px;top:240px">4</div>
+        <div id="n-5" class="num num-center" style="left:900px;top:390px">5</div>
+        <div id="n-6" class="num num-even" style="left:1050px;top:540px">6</div>
+        <div id="n-7" class="num num-odd" style="left:1050px;top:390px">7</div>
+        <div id="n-8" class="num num-even" style="left:750px;top:540px">8</div>
+        <div id="n-9" class="num num-odd" style="left:900px;top:240px">9</div>
+        <div id="tag-0" class="tag" style="left:1233.0px;top:280px">15</div>
+        <div id="tag-1" class="tag" style="left:1233.0px;top:430px">15</div>
+        <div id="tag-2" class="tag" style="left:1233.0px;top:580px">15</div>
+        <div id="tag-3" class="tag" style="left:780px;top:725.0px">15</div>
+        <div id="tag-4" class="tag" style="left:930px;top:725.0px">15</div>
+        <div id="tag-5" class="tag" style="left:1080px;top:725.0px">15</div>
+        <div id="tag-6" class="tag" style="left:1221.0px;top:717.0px">15</div>
+        <div id="tag-7" class="tag" style="left:639.0px;top:717.0px">15</div>
+      </div>
+      <div id="flash" data-layout-ignore></div>
+      <div id="lockup">
+        <div id="word-wrap"><div id="word" aria-label="ASTROMITRA RADHAA"><span class="ch">A</span><span class="ch">S</span><span class="ch">T</span><span class="ch">R</span><span class="ch">O</span><span class="ch">M</span><span class="ch">I</span><span class="ch">T</span><span class="ch">R</span><span class="ch">A</span><span class="sp"></span><span class="ch">R</span><span class="ch">A</span><span class="ch">D</span><span class="ch">H</span><span class="ch">A</span><span class="ch">A</span></div><div id="glint" data-layout-ignore></div></div>
+        <div id="rule"></div>
+        <div id="services">Astro Numerology &#183; Lo Shu Grid &#183; Future Forecasting &#183; Life Management</div>
+        <div id="tagline">Know your numbers. Manage your life.</div>
+      </div>
+      </div>
+      <audio id="music" src="assets/audio/intro-sting.wav" data-start="0" data-duration="6.3" data-track-index="10" data-volume="1"></audio>
+      <audio id="sfx-0-whoosh-short" src="assets/sfx/whoosh-short.mp3" data-start="0.19" data-duration="0.57" data-track-index="11" data-volume="0.35"></audio>
+      <audio id="sfx-1-ping" src="assets/sfx/ping.mp3" data-start="1.73" data-duration="1.32" data-track-index="12" data-volume="0.25"></audio>
+      <audio id="sfx-2-whoosh-cinematic" src="assets/sfx/whoosh-cinematic.mp3" data-start="2.75" data-duration="3.55" data-track-index="11" data-volume="0.4"></audio>
+      <audio id="sfx-3-sparkle" src="assets/sfx/sparkle.mp3" data-start="4.65" data-duration="1.65" data-track-index="12" data-volume="0.3"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#sky", {opacity: 0}, {opacity: 1, duration: 0.5, ease: "power1.out"}, 0);
+      tl.fromTo(".star", {scale: 0.2}, {scale: 1, duration: 0.8, stagger: {each: 0.006, from: "random"}, ease: "power2.out"}, 0.05);
+      tl.fromTo(".star", {opacity: 0.15}, {opacity: 0.75, duration: 0.9, stagger: {each: 0.04, from: "random", yoyo: true, repeat: 7}, ease: "sine.inOut", immediateRender: false}, 0.9);
+      tl.fromTo("#spark", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.35, ease: "expo.out"}, 0.05);
+      tl.to("#spark", {scale: 2.6, opacity: 0, duration: 0.45, ease: "power2.in"}, 0.4);
+      tl.fromTo("#g-frame", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut"}, 0.35);
+      tl.fromTo("#g-v0", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.42, ease: "power2.out"}, 0.50);
+      tl.fromTo("#g-v1", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.42, ease: "power2.out"}, 0.57);
+      tl.fromTo("#g-h0", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.42, ease: "power2.out"}, 0.64);
+      tl.fromTo("#g-h1", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.42, ease: "power2.out"}, 0.71);
+      tl.fromTo("#n-5", {scale: 1.8, opacity: 0, y: -10}, {scale: 1, opacity: 1, y: 0, duration: 0.42, ease: "back.out(2.2)"}, 0.95);
+      tl.fromTo("#n-9", {scale: 1.8, opacity: 0, y: -10}, {scale: 1, opacity: 1, y: 0, duration: 0.42, ease: "back.out(2.2)"}, 1.12);
+      tl.fromTo("#n-1", {scale: 1.8, opacity: 0, y: -10}, {scale: 1, opacity: 1, y: 0, duration: 0.42, ease: "back.out(2.2)"}, 1.23);
+      tl.fromTo("#n-3", {scale: 1.8, opacity: 0, y: -10}, {scale: 1, opacity: 1, y: 0, duration: 0.42, ease: "back.out(2.2)"}, 1.34);
+      tl.fromTo("#n-7", {scale: 1.8, opacity: 0, y: -10}, {scale: 1, opacity: 1, y: 0, duration: 0.42, ease: "back.out(2.2)"}, 1.45);
+      tl.fromTo("#n-4", {scale: 1.8, opacity: 0, y: -10}, {scale: 1, opacity: 1, y: 0, duration: 0.42, ease: "back.out(2.2)"}, 1.6);
+      tl.fromTo("#n-6", {scale: 1.8, opacity: 0, y: -10}, {scale: 1, opacity: 1, y: 0, duration: 0.42, ease: "back.out(2.2)"}, 1.7);
+      tl.fromTo("#n-2", {scale: 1.8, opacity: 0, y: -10}, {scale: 1, opacity: 1, y: 0, duration: 0.42, ease: "back.out(2.2)"}, 1.8);
+      tl.fromTo("#n-8", {scale: 1.8, opacity: 0, y: -10}, {scale: 1, opacity: 1, y: 0, duration: 0.42, ease: "back.out(2.2)"}, 1.9);
+      tl.fromTo("#halo", {scale: 0.3, opacity: 0}, {scale: 1, opacity: 1, duration: 0.6, ease: "power2.out"}, 0.95);
+      tl.fromTo("#tr-0", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.32, ease: "power2.out"}, 2.05);
+      tl.fromTo("#tag-0", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)"}, 2.25);
+      tl.fromTo("#tr-1", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.32, ease: "power2.out"}, 2.12);
+      tl.fromTo("#tag-1", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)"}, 2.32);
+      tl.fromTo("#tr-2", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.32, ease: "power2.out"}, 2.19);
+      tl.fromTo("#tag-2", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)"}, 2.39);
+      tl.fromTo("#tr-3", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.32, ease: "power2.out"}, 2.26);
+      tl.fromTo("#tag-3", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)"}, 2.46);
+      tl.fromTo("#tr-4", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.32, ease: "power2.out"}, 2.33);
+      tl.fromTo("#tag-4", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)"}, 2.53);
+      tl.fromTo("#tr-5", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.32, ease: "power2.out"}, 2.40);
+      tl.fromTo("#tag-5", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)"}, 2.60);
+      tl.fromTo("#tr-6", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.32, ease: "power2.out"}, 2.47);
+      tl.fromTo("#tag-6", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)"}, 2.67);
+      tl.fromTo("#tr-7", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.32, ease: "power2.out"}, 2.54);
+      tl.fromTo("#tag-7", {scale: 0, opacity: 0}, {scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)"}, 2.74);
+      tl.to(".trace", {opacity: 0, duration: 0.35}, 2.75);
+      tl.to(".tag", {scale: 0.4, opacity: 0, duration: 0.3, ease: "power2.in"}, 2.75);
+      tl.fromTo("#ring", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut"}, 2.75);
+      tl.fromTo("#ring-in", {strokeDashoffset: 1}, {strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut"}, 2.83);
+      tl.fromTo(".dot", {scale: 0, transformOrigin: "50% 50%"}, {scale: 1, duration: 0.35, stagger: 0.04, ease: "back.out(3)"}, 2.85);
+      tl.to("#seal", {scale: 0.52, y: -122, duration: 0.65, ease: "power3.inOut"}, 3.00);
+      tl.fromTo("#flash", {opacity: 0, scale: 0.6}, {opacity: 1, scale: 1.4, duration: 0.18, ease: "power2.out"}, 3.45);
+      tl.to("#flash", {opacity: 0, duration: 0.6, ease: "power2.in"}, 3.65);
+      tl.fromTo(".ch", {opacity: 0, y: 46, scale: 1.25}, {opacity: 1, y: 0, scale: 1, duration: 0.55, stagger: {each: 0.035, from: "center"}, ease: "expo.out"}, 3.38);
+      tl.fromTo("#rule", {scaleX: 0}, {scaleX: 1, duration: 0.5, ease: "power3.out"}, 3.90);
+      tl.fromTo("#services", {opacity: 0, y: 18}, {opacity: 1, y: 0, duration: 0.45, ease: "power3.out"}, 4.05);
+      tl.fromTo("#tagline", {opacity: 0, y: 18}, {opacity: 1, y: 0, duration: 0.45, ease: "power3.out"}, 4.30);
+      tl.fromTo("#glint", {scale: 0, rotation: -45, opacity: 0}, {scale: 1, rotation: 0, opacity: 1, duration: 0.35, ease: "back.out(2)"}, 4.65);
+      tl.to("#glint", {scale: 0.2, rotation: 45, opacity: 0, duration: 0.45, ease: "power2.in"}, 5.02);
+      tl.to("#all", {opacity: 0, duration: 0.45, ease: "power2.in"}, 5.85);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

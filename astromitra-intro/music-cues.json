@@ -1,0 +1,99 @@
+{
+ "seconds": 6.3,
+ "key": "D",
+ "seed": 5,
+ "drone": {
+  "start": 0.0,
+  "end": 6.3,
+  "level": 0.5
+ },
+ "riser": {
+  "start": 1.65,
+  "end": 3.5,
+  "level": 0.3
+ },
+ "events": [
+  {
+   "type": "pluck",
+   "t": 0.97,
+   "level": 0.42,
+   "note": 0
+  },
+  {
+   "type": "pluck",
+   "t": 1.1400000000000001,
+   "level": 0.42,
+   "note": 2
+  },
+  {
+   "type": "pluck",
+   "t": 1.25,
+   "level": 0.42,
+   "note": 4
+  },
+  {
+   "type": "pluck",
+   "t": 1.36,
+   "level": 0.42,
+   "note": 7
+  },
+  {
+   "type": "pluck",
+   "t": 1.47,
+   "level": 0.42,
+   "note": 9
+  },
+  {
+   "type": "pluck",
+   "t": 1.62,
+   "level": 0.42,
+   "note": 12
+  },
+  {
+   "type": "pluck",
+   "t": 1.72,
+   "level": 0.42,
+   "note": 14
+  },
+  {
+   "type": "pluck",
+   "t": 1.82,
+   "level": 0.42,
+   "note": 16
+  },
+  {
+   "type": "pluck",
+   "t": 1.92,
+   "level": 0.42,
+   "note": 19
+  },
+  {
+   "type": "impact",
+   "t": 3.5,
+   "level": 0.95
+  },
+  {
+   "type": "bell",
+   "t": 3.5,
+   "level": 0.85,
+   "note": 0
+  },
+  {
+   "type": "bell",
+   "t": 4.65,
+   "level": 0.35,
+   "note": 7
+  },
+  {
+   "type": "shimmer",
+   "t": 2.05,
+   "level": 0.35
+  },
+  {
+   "type": "shimmer",
+   "t": 4.6,
+   "level": 0.4
+  }
+ ],
+ "tail_fade": 0.6
+}
