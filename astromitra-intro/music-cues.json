@@ -1,99 +1,248 @@
 {
- "seconds": 6.3,
+ "seconds": 26.4,
  "key": "D",
  "seed": 5,
  "drone": {
   "start": 0.0,
-  "end": 6.3,
+  "end": 26.4,
   "level": 0.5
  },
  "riser": {
-  "start": 1.65,
-  "end": 3.5,
+  "start": 20.150000000000002,
+  "end": 22.55,
   "level": 0.3
  },
  "events": [
   {
+   "type": "bell",
+   "t": 0.45,
+   "level": 0.5,
+   "note": 0
+  },
+  {
    "type": "pluck",
-   "t": 0.97,
+   "t": 0.47,
+   "level": 0.35,
+   "note": 0
+  },
+  {
+   "type": "pluck",
+   "t": 0.59,
+   "level": 0.35,
+   "note": 2
+  },
+  {
+   "type": "pluck",
+   "t": 0.71,
+   "level": 0.35,
+   "note": 4
+  },
+  {
+   "type": "pluck",
+   "t": 0.83,
+   "level": 0.35,
+   "note": 7
+  },
+  {
+   "type": "pluck",
+   "t": 0.95,
+   "level": 0.35,
+   "note": 9
+  },
+  {
+   "type": "pluck",
+   "t": 5.3,
+   "level": 0.38,
+   "note": 0
+  },
+  {
+   "type": "pluck",
+   "t": 5.72,
+   "level": 0.38,
+   "note": 2
+  },
+  {
+   "type": "pluck",
+   "t": 6.44,
+   "level": 0.38,
+   "note": 4
+  },
+  {
+   "type": "pluck",
+   "t": 6.86,
+   "level": 0.38,
+   "note": 7
+  },
+  {
+   "type": "pluck",
+   "t": 7.28,
+   "level": 0.38,
+   "note": 9
+  },
+  {
+   "type": "pluck",
+   "t": 7.7,
+   "level": 0.38,
+   "note": 12
+  },
+  {
+   "type": "pluck",
+   "t": 8.12,
+   "level": 0.38,
+   "note": 14
+  },
+  {
+   "type": "bell",
+   "t": 8.34,
+   "level": 0.45,
+   "note": 7
+  },
+  {
+   "type": "shimmer",
+   "t": 9.04,
+   "level": 0.3
+  },
+  {
+   "type": "pluck",
+   "t": 11.4,
    "level": 0.42,
    "note": 0
   },
   {
    "type": "pluck",
-   "t": 1.1400000000000001,
-   "level": 0.42,
-   "note": 2
-  },
-  {
-   "type": "pluck",
-   "t": 1.25,
+   "t": 12.45,
    "level": 0.42,
    "note": 4
   },
   {
    "type": "pluck",
-   "t": 1.36,
+   "t": 13.5,
    "level": 0.42,
    "note": 7
   },
   {
    "type": "pluck",
-   "t": 1.47,
-   "level": 0.42,
-   "note": 9
-  },
-  {
-   "type": "pluck",
-   "t": 1.62,
+   "t": 14.55,
    "level": 0.42,
    "note": 12
   },
   {
-   "type": "pluck",
-   "t": 1.72,
-   "level": 0.42,
-   "note": 14
-  },
-  {
-   "type": "pluck",
-   "t": 1.82,
-   "level": 0.42,
-   "note": 16
-  },
-  {
-   "type": "pluck",
-   "t": 1.92,
-   "level": 0.42,
-   "note": 19
-  },
-  {
-   "type": "impact",
-   "t": 3.5,
-   "level": 0.95
+   "type": "bell",
+   "t": 16.9,
+   "level": 0.4,
+   "note": 4
   },
   {
    "type": "bell",
-   "t": 3.5,
-   "level": 0.85,
-   "note": 0
-  },
-  {
-   "type": "bell",
-   "t": 4.65,
-   "level": 0.35,
+   "t": 17.7,
+   "level": 0.45,
    "note": 7
   },
   {
    "type": "shimmer",
-   "t": 2.05,
+   "t": 17.7,
    "level": 0.35
   },
   {
+   "type": "pluck",
+   "t": 20.27,
+   "level": 0.4,
+   "note": 0
+  },
+  {
+   "type": "pluck",
+   "t": 20.4,
+   "level": 0.4,
+   "note": 2
+  },
+  {
+   "type": "pluck",
+   "t": 20.49,
+   "level": 0.4,
+   "note": 4
+  },
+  {
+   "type": "pluck",
+   "t": 20.58,
+   "level": 0.4,
+   "note": 7
+  },
+  {
+   "type": "pluck",
+   "t": 20.67,
+   "level": 0.4,
+   "note": 9
+  },
+  {
+   "type": "pluck",
+   "t": 20.79,
+   "level": 0.4,
+   "note": 12
+  },
+  {
+   "type": "pluck",
+   "t": 20.87,
+   "level": 0.4,
+   "note": 14
+  },
+  {
+   "type": "pluck",
+   "t": 20.95,
+   "level": 0.4,
+   "note": 16
+  },
+  {
+   "type": "pluck",
+   "t": 21.03,
+   "level": 0.4,
+   "note": 19
+  },
+  {
+   "type": "impact",
+   "t": 22.55,
+   "level": 0.95
+  },
+  {
+   "type": "bell",
+   "t": 22.55,
+   "level": 0.85,
+   "note": 0
+  },
+  {
    "type": "shimmer",
-   "t": 4.6,
-   "level": 0.4
+   "t": 21.2,
+   "level": 0.3
+  },
+  {
+   "type": "bell",
+   "t": 23.75,
+   "level": 0.35,
+   "note": 7
+  },
+  {
+   "type": "bell",
+   "t": 3.6,
+   "level": 0.3,
+   "note": 12
+  },
+  {
+   "type": "bell",
+   "t": 10.6,
+   "level": 0.3,
+   "note": 12
+  },
+  {
+   "type": "bell",
+   "t": 16.8,
+   "level": 0.3,
+   "note": 12
+  },
+  {
+   "type": "bell",
+   "t": 19.8,
+   "level": 0.3,
+   "note": 12
   }
  ],
- "tail_fade": 0.6
+ "tail_fade": 0.8
 }
