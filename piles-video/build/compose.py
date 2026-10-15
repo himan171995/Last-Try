@@ -155,7 +155,7 @@ tw(f'tl.fromTo("#lt-p", {{clipPath:"inset(0% 100% 0% 0%)", opacity:0}}, {{clipPa
 tw(f'tl.to("#lt", {{opacity:0, x:-40, duration:0.3, ease:"power2.in"}}, {f(lt0 + 3.1)});')
 sfx("click-soft", lt0 + 0.1, 0.35)
 t_har = at("har", a0)
-card("a-cycle", t_har - 0.2, at("iska") - 0.1, f"""
+card("a-cycle", t_har - 0.15, at("iska") - 0.1, f"""
   <div class="c-k">PATIENT</div>
   <div class="steps">
     <div class="st" id="as0">{icon("check", 64)}<span>Ek baar theek</span></div>
@@ -164,25 +164,25 @@ card("a-cycle", t_har - 0.2, at("iska") - 0.1, f"""
     <div class="st-a">&rarr;</div>
     <div class="st bad" id="as2">{icon("repeat", 64)}<span>Phir wahi problem</span></div>
   </div>""")
-pop_in("#as0", t_har - 0.1, 0.4, 0.6)
+pop_in("#as0", t_har - 0.15, 0.4, 0.6)
 pop_in("#as1", at("chaar", t_har) - 0.05, 0.4, 0.6)
 pop_in("#as2", at("phir") - 0.05, 0.4, 0.6)
 sfx("pop", at("chaar", t_har), 0.3)
 sfx("pop", at("phir"), 0.3)
 t_dw = at("dwaar", a0)
-card("a-dwaar", at("iska") + 0.1, sec_end("answer") + 0.1, f"""
+card("a-dwaar", at("jo", at("piles", sec("answer"))) - 0.2, sec_end("answer") + 0.1, f"""
   <div class="c-k">MAIN KAARAN</div>
   <div class="row">{anat_small.replace('class="anat-mini"', 'class="anat-mini" id="ad-svg"')}<div class="terms">
     <div class="term big" id="ad0">Anus dwaar</div>
     <div class="term ok" id="ad1">{icon("sparkles", 54)}Saaf</div></div></div>""")
-pop_in("#ad0", t_dw - 0.1, 0.4, 0.6)
+pop_in("#ad0", t_dw - 0.3, 0.4, 0.6)
 pop_in("#ad1", at("saaf", a0) - 0.05, 0.4, 0.6)
 sfx("ping", at("saaf", a0), 0.3)
 
 # ================================================================== ROUTINE (full-screen B-roll)
 r0 = at("to", sec("routine")) - 0.1
 r1 = sec_end("routine") + 0.05
-items = [("toothbrush", "Brush", "brush"), ("toothbrush", "Daant", "daaton"), ("eye", "Aankhen", "aankhon"), ("nose", "Naak", "naak"), ("ear", "Kaan", "kaan")]
+items = [("toothbrush", "Brush", "brush"), ("toothbrush", "Brush, daant", "brush"), ("eye", "Aankhen", "aankhon"), ("nose", "Naak", "naak"), ("ear", "Kaan", "kaan")]
 cards_html = "".join(f'<div class="rt" id="rt{k}">{icon(ic, 150)}<div class="rt-l">{lbl}</div><div class="rt-ok" id="rk{k}">{icon("check", 64)}</div></div>'
                      for k, (ic, lbl, _) in enumerate(items[1:]))
 full("routine", r0, r1, f"""
@@ -191,10 +191,10 @@ full("routine", r0, r1, f"""
   <div class="rt-row">{cards_html}</div>
 </div>""", z=30)
 tw(f'tl.fromTo("#rt-in", {{clipPath:"inset(0% 0% 0% 100%)"}}, {{clipPath:"inset(0% 0% 0% 0%)", duration:0.24, ease:"power3.out"}}, {f(r0)});')
-rise_in("#rt-t", r0 + 0.1, 0.4, 20)
+rise_in("#rt-t", r0 + 0.02, 0.3, 16)
 for k, (_, _, wd) in enumerate(items[1:]):
     tt = at(wd, sec("routine"))
-    pop_in(f"#rt{k}", tt - 0.15 if k else r0 + 0.25, 0.45, 0.4)
+    pop_in(f"#rt{k}", tt - 0.15 if k else r0 + 0.15, 0.45, 0.4)
     pop_in(f"#rk{k}", tt + 0.25, 0.35, 0.2)
     sfx("click-soft", tt + 0.25, 0.35)
 tw(f'tl.to("#rt-in", {{clipPath:"inset(0% 100% 0% 0%)", duration:0.22, ease:"power3.in"}}, {f(r1 - 0.22)});')
@@ -204,17 +204,17 @@ sfx("whoosh-short", r1 - 0.2, 0.3)
 # ================================================================== CLEAN
 c0 = sec("clean")
 t_woh = at("woh", c0)
-card("c-dwaar", c0 + 0.1, t_woh - 0.15, f"""
+card("c-dwaar", at("mootra") - 0.3, t_woh - 0.15, f"""
   <div class="c-k">WAISE HI</div>
   <div class="row c">{icon("droplet", 110)}{icon("soap", 110)}</div>
   <div class="big c" id="cd0">Jo dwaar hain</div>
   <div class="small c" id="cd1">woh acche se saaf karein</div>""")
-pop_in("#cd0", at("dwaar", c0) - 0.25, 0.45, 0.7)
+pop_in("#cd0", at("mootra") - 0.15, 0.45, 0.7)
 pop_in("#cd1", at("dwaar", c0) + 0.25, 0.4, 0.7)
 sfx("pop", at("dwaar", c0), 0.3)
 clip("c-pop", t_woh - 0.05, sec_end("clean") + 0.05, """
 <div class="pop" id="cp"><div class="pop-l" id="cp0">Acche se saaf karein</div><div class="pop-l gold-t" id="cp1">= baar-baar problem nahi</div></div>""", "", 22, 2)
-pop_in("#cp0", at("saaf", t_woh) - 0.1, 0.45, 0.7)
+pop_in("#cp0", t_woh, 0.45, 0.7)
 pop_in("#cp1", at("baar-baar", t_woh) - 0.05, 0.45, 0.7)
 tw(f'tl.to("#cp", {{opacity:0, y:-20, duration:0.3}}, {f(sec_end("clean") - 0.25)});')
 sfx("pop", at("saaf", t_woh), 0.3)

@@ -31,10 +31,10 @@ def loudnorm_params(path, chain, target):
 
 
 def main():
-    voice = A("assets/audio/dialog.wav")
-    ln = loudnorm_params(A("assets/audio/dialog-raw.wav"), VOICE_CHAIN, -16)
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", A("assets/audio/dialog-raw.wav"), "-af",
-                    f"{VOICE_CHAIN},{ln},aresample=48000,apad=whole_dur={TOTAL}", "-ac", "2", "-c:a", "pcm_s24le", voice], check=True)
+    # dialogue is already cleaned and loudness-matched per speaker by build/aroll.py
+    voice = A("assets/audio/voice60.wav")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", A("assets/audio/dialog.wav"), "-af",
+                    f"volume=2dB,aresample=48000,apad=whole_dur={TOTAL}", "-ac", "2", "-c:a", "pcm_s24le", voice], check=True)
 
     inputs = ["-i", voice, "-i", A("assets/audio/score.wav")]
     for s in SFX:
