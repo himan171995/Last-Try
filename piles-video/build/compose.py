@@ -12,29 +12,32 @@ from kit import *  # noqa: F401,F403  (helpers: at, sec, clip, full, icon, tw, s
 from kit import BODY, FULL, JS, SFX, WORDS, SPEECH_END, TOTAL, W, H, rnd
 
 GOLD = "#E8B44A"
-TAKE_END = 57.0            # takeaway card holds until here, end card to 60.00
+TAKE_END = round(SPEECH_END + 1.7, 3)   # takeaway card holds until here, end card to 60.00
 SEGS = EDIT["segments"]
 
 # ================================================================== CAMERA
 # preset -> (scale, origin x %, origin y %); origins sit on the subject's face so it stays put.
 PRESET = {
-    "WIDE": (1.0, 50, 50), "DOC_120": (1.2, 34, 39), "DOC_140": (1.4, 34, 39), "DOC_160": (1.6, 34, 38),
-    "A_130": (1.3, 53, 18), "YOUNG": (1.9, 100, 37),
+    "WIDE": (1.0, 50, 50), "DOC_120": (1.2, 34, 39), "DOC_140": (1.4, 34, 39), "DOC_160": (1.45, 34, 38),
+    "A_130": (1.25, 53, 18), "A_145": (1.42, 53, 18), "YOUNG": (1.7, 100, 37),
 }
 CAM = [  # (start, preset, push-to scale or None)
-    (0.0, "DOC_140", 1.5),
-    (sec("question"), "A_130", 1.38),
-    (sec("answer"), "WIDE", 1.05),
-    (at("ki", sec("answer")) - 0.12, "DOC_120", 1.27),
-    (at("iska") - 0.1, "DOC_140", 1.5),
-    (sec("routine"), "DOC_120", 1.25),
-    (sec("clean"), "DOC_140", 1.48),
-    (at("woh", sec("clean")) - 0.12, "DOC_160", 1.7),
+    (0.0, "DOC_140", 1.47),
+    (sec("question"), "A_130", 1.32),
+    (at("lekin") - 0.12, "A_145", 1.5),
+    (sec("answer"), "WIDE", 1.04),
+    (at("ki", sec("answer")) - 0.12, "DOC_120", 1.26),
+    (at("har") - 0.12, "DOC_140", 1.44),
+    (at("iska") - 0.12, "DOC_120", 1.3),
+    (at("jo", at("piles", sec("answer"))) - 0.12, "DOC_160", 1.5),
+    (sec("routine"), "WIDE", 1.05),
+    (sec("clean"), "DOC_140", 1.47),
     (sec("advice"), "WIDE", 1.04),
-    (at("ki", sec("advice")) - 0.12, "DOC_120", 1.26),
-    (at("anus", sec("advice")) - 0.15, "YOUNG", 1.95),
-    (at("thoda") - 0.15, "DOC_140", 1.5),
-    (sec("takeaway"), "DOC_160", 1.75),
+    (at("ki", sec("advice")) - 0.12, "DOC_120", 1.27),
+    (at("anus", sec("advice")) - 0.15, "YOUNG", 1.74),
+    (at("ungli") - 0.12, "DOC_140", 1.45),
+    (at("thoda") - 0.12, "DOC_120", 1.3),
+    (sec("takeaway"), "DOC_160", 1.52),
 ]
 for i, (t0, name, push) in enumerate(CAM):
     t1 = CAM[i + 1][0] if i + 1 < len(CAM) else SPEECH_END
@@ -84,9 +87,9 @@ card("q-terms", t_piles - 0.15, at("lekin") - 0.05, f"""
     <div class="term" id="qt0"><span class="dot pile"></span>Piles</div>
     <div class="term" id="qt1"><span class="dot fis"></span>Fissure</div>
     <div class="term ok" id="qt2">{icon("check", 54)}Theek bhi ho jaata hai</div></div></div>""", "left")
-pop_in("#qt0", t_piles, 0.4, 0.6)
-pop_in("#qt1", at("fissure") - 0.05, 0.4, 0.6)
-pop_in("#qt2", at("theek", q0) - 0.05, 0.4, 0.6)
+pop_in("#qt0", t_piles - 0.05, 0.4, 0.6)
+pop_in("#qt1", at("fissure") - 0.1, 0.4, 0.6)
+pop_in("#qt2", at("theek", q0) - 0.1, 0.4, 0.6)
 sfx("pop", t_piles, 0.3)
 sfx("pop", at("fissure"), 0.3)
 card("q-loop", at("lekin") - 0.05, sec_end("question") + 0.05, f"""
@@ -97,15 +100,15 @@ card("q-loop", at("lekin") - 0.05, sec_end("question") + 0.05, f"""
   <div class="loop-l"><div class="big" id="ql1">4&ndash;6 mahine baad</div><div class="big gold-t" id="ql2">Recurrent</div><div class="small" id="ql3">Aisa kyun?</div></div>""", "left")
 tw(f'tl.fromTo("#lr", {{strokeDashoffset:1}}, {{strokeDashoffset:0, duration:1.6, ease:"power2.inOut"}}, {f(at("chaar-chhe") - 0.1)});')
 tw(f'tl.fromTo("#lr-ic", {{rotation:0}}, {{rotation:360, duration:1.6, ease:"power2.inOut"}}, {f(at("chaar-chhe") - 0.1)});')
-pop_in("#ql1", at("chaar-chhe") - 0.05, 0.4, 0.7)
-pop_in("#ql2", t_rec - 0.05, 0.4, 0.7)
+pop_in("#ql1", at("lekin") + 0.1, 0.4, 0.7)
+pop_in("#ql2", at("lekin") + 0.25, 0.4, 0.7)
 pop_in("#ql3", at("aisa") - 0.05, 0.4, 0.7)
 sfx("whoosh-short", at("lekin") - 0.1, 0.3)
 sfx("ping", t_rec, 0.3)
 
 # ================================================================== ANATOMY B-ROLL (gap + answer start)
 g = EDIT["gaps"][0]
-an0, an1 = g["start"] - 0.05, at("ki", sec("answer")) - 0.12
+an0, an1 = g["start"] - 0.05, at("aapne") - 0.12
 anat = """<svg class="anat" viewBox="0 0 700 760" width="700" height="760">
   <defs>
     <linearGradient id="wall" x1="0" x2="1"><stop offset="0" stop-color="#d98a8a"/><stop offset="0.5" stop-color="#f1b3ad"/><stop offset="1" stop-color="#d98a8a"/></linearGradient>
@@ -137,9 +140,9 @@ tw(f'tl.fromTo(["#an-wl","#an-wr"], {{strokeDashoffset:1}}, {{strokeDashoffset:0
 tw(f'tl.fromTo("#an-int", {{scale:0, transformOrigin:"50% 50%"}}, {{scale:1, duration:0.4, ease:"back.out(2)"}}, {f(an0 + 0.7)});')
 tw(f'tl.fromTo("#an-ext", {{scale:0, transformOrigin:"50% 50%"}}, {{scale:1, duration:0.4, ease:"back.out(2)"}}, {f(an0 + 0.95)});')
 tw(f'tl.fromTo("#an-fis", {{opacity:0}}, {{opacity:1, duration:0.3}}, {f(an0 + 1.15)});')
-for k, dt in enumerate([0.35, 0.8, 1.2, 1.0, 1.5]):
+for k, dt in enumerate([0.3, 0.6, 0.85, 0.75, 1.0]):
     pop_in(f"#al{k + 1}", an0 + dt, 0.4, 0.6)
-tw(f'tl.fromTo("#an-ring", {{opacity:0, scale:0.6, transformOrigin:"50% 50%"}}, {{opacity:1, scale:1, duration:0.4, ease:"back.out(2)"}}, {f(an0 + 1.6)});')
+tw(f'tl.fromTo("#an-ring", {{opacity:0, scale:0.6, transformOrigin:"50% 50%"}}, {{opacity:1, scale:1, duration:0.4, ease:"back.out(2)"}}, {f(an0 + 1.1)});')
 tw(f'tl.to("#an-in", {{opacity:0, scale:0.96, filter:"blur(8px)", duration:0.22, ease:"power2.in"}}, {f(an1 - 0.22)});')
 sfx("whoosh", an0 - 0.1, 0.4)
 sfx("click-soft", an0 + 0.8, 0.3)
@@ -165,8 +168,8 @@ card("a-cycle", t_har - 0.15, at("iska") - 0.1, f"""
     <div class="st bad" id="as2">{icon("repeat", 64)}<span>Phir wahi problem</span></div>
   </div>""")
 pop_in("#as0", t_har - 0.15, 0.4, 0.6)
-pop_in("#as1", at("chaar", t_har) - 0.05, 0.4, 0.6)
-pop_in("#as2", at("phir") - 0.05, 0.4, 0.6)
+pop_in("#as1", t_har + 0.1, 0.4, 0.6)
+pop_in("#as2", at("phir") - 0.1, 0.4, 0.6)
 sfx("pop", at("chaar", t_har), 0.3)
 sfx("pop", at("phir"), 0.3)
 t_dw = at("dwaar", a0)
@@ -175,15 +178,15 @@ card("a-dwaar", at("jo", at("piles", sec("answer"))) - 0.2, sec_end("answer") + 
   <div class="row">{anat_small.replace('class="anat-mini"', 'class="anat-mini" id="ad-svg"')}<div class="terms">
     <div class="term big" id="ad0">Anus dwaar</div>
     <div class="term ok" id="ad1">{icon("sparkles", 54)}Saaf</div></div></div>""")
-pop_in("#ad0", t_dw - 0.3, 0.4, 0.6)
-pop_in("#ad1", at("saaf", a0) - 0.05, 0.4, 0.6)
+pop_in("#ad0", at("jo", at("piles", sec("answer"))) - 0.05, 0.4, 0.6)
+pop_in("#ad1", at("saaf", a0) - 0.1, 0.4, 0.6)
 sfx("ping", at("saaf", a0), 0.3)
 
 # ================================================================== ROUTINE (full-screen B-roll)
 r0 = at("to", sec("routine")) - 0.1
 r1 = sec_end("routine") + 0.05
 items = [("toothbrush", "Brush", "brush"), ("toothbrush", "Brush, daant", "brush"), ("eye", "Aankhen", "aankhon"), ("nose", "Naak", "naak"), ("ear", "Kaan", "kaan")]
-cards_html = "".join(f'<div class="rt" id="rt{k}">{icon(ic, 150)}<div class="rt-l">{lbl}</div><div class="rt-ok" id="rk{k}">{icon("check", 64)}</div></div>'
+cards_html = "".join(f'<div class="rt" id="rt{k}">{icon(ic, 210)}<div class="rt-l">{lbl}</div><div class="rt-ok" id="rk{k}">{icon("check", 64)}</div></div>'
                      for k, (ic, lbl, _) in enumerate(items[1:]))
 full("routine", r0, r1, f"""
 <div id="rt-in" class="scene warm">
@@ -203,28 +206,18 @@ sfx("whoosh-short", r1 - 0.2, 0.3)
 
 # ================================================================== CLEAN
 c0 = sec("clean")
-t_woh = at("woh", c0)
-card("c-dwaar", at("mootra") - 0.3, t_woh - 0.15, f"""
+card("c-dwaar", c0 + 0.05, sec_end("clean") + 0.05, f"""
   <div class="c-k">WAISE HI</div>
   <div class="row c">{icon("droplet", 110)}{icon("soap", 110)}</div>
-  <div class="big c" id="cd0">Jo dwaar hain</div>
-  <div class="small c" id="cd1">woh acche se saaf karein</div>""")
+  <div class="big c" id="cd0">Jo dwaar hain</div>""")
 pop_in("#cd0", at("mootra") - 0.15, 0.45, 0.7)
-pop_in("#cd1", at("dwaar", c0) + 0.25, 0.4, 0.7)
-sfx("pop", at("dwaar", c0), 0.3)
-clip("c-pop", t_woh - 0.05, sec_end("clean") + 0.05, """
-<div class="pop" id="cp"><div class="pop-l" id="cp0">Acche se saaf karein</div><div class="pop-l gold-t" id="cp1">= baar-baar problem nahi</div></div>""", "", 22, 2)
-pop_in("#cp0", t_woh, 0.45, 0.7)
-pop_in("#cp1", at("baar-baar", t_woh) - 0.05, 0.45, 0.7)
-tw(f'tl.to("#cp", {{opacity:0, y:-20, duration:0.3}}, {f(sec_end("clean") - 0.25)});')
-sfx("pop", at("saaf", t_woh), 0.3)
-sfx("ping", at("baar-baar", t_woh), 0.3)
+sfx("pop", at("mootra"), 0.3)
 leak(c0, 0.45)
 
 # ================================================================== ADVICE
 d0 = sec("advice")
 t_thoda = at("thoda")
-card("d-advice", d0 + 0.1, at("anus", d0) - 0.2, f"""
+card("d-advice", d0 + 0.05, at("anus", d0) - 0.2, f"""
   <div class="c-k">DOCTOR KI SALAH</div>
   <div class="row c">{icon("stethoscope", 120)}</div>
   <div class="big c" id="dv0">Patient ko yahi kehna hai</div>""", "right")
@@ -233,8 +226,8 @@ card("d-daily", t_thoda - 0.15, sec_end("advice") + 0.05, f"""
   <div class="row c">{icon("droplet", 100)}{icon("sparkles", 100)}</div>
   <div class="big c" id="dd0">Thoda clean karna</div>
   <div class="big c gold-t" id="dd1">Hamesha</div>""", "right")
-pop_in("#dd0", at("clean") - 0.1, 0.4, 0.7)
-pop_in("#dd1", at("hamesha") - 0.05, 0.45, 0.6)
+pop_in("#dd0", t_thoda - 0.05, 0.4, 0.7)
+pop_in("#dd1", at("hamesha") - 0.1, 0.45, 0.6)
 sfx("pop", at("clean"), 0.3)
 sfx("ping", at("hamesha"), 0.3)
 sfx("whoosh-short", at("anus", d0) - 0.2, 0.25)
@@ -262,7 +255,7 @@ rise_in("#tc2", SPEECH_END + 0.0, 0.4, 16)
 e0 = TAKE_END
 full("endcard", e0, TOTAL, f"""
 <div id="ec-in" class="scene light">
-  <div class="ec-logo" id="ec-logo">{icon("herb", 110)}</div>
+  <div class="ec-logo" id="ec-logo"><img class="ec-por" src="assets/portrait.jpg" alt="" /></div>
   <div class="ec-n" id="ec-n">Dr. Mohan Padole</div>
   <div class="ec-rule" id="ec-rule"></div>
   <div class="ec-s" id="ec-s">Saikrupa Ayurvedic Hospital, Nagpur</div>

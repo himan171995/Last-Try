@@ -42,7 +42,7 @@ def main():
     fc = [
         "[0:a]asplit=2[v][vsc]",
         # score sits ~15 dB under the voice, ducks further while he speaks, and swells for the end card
-        f"[1:a]volume='0.38*(1+0.9*min(1,max(0,(t-56.8)/0.7)))':eval=frame,aresample=48000[mus]",
+        f"[1:a]volume='0.38*(1+0.9*min(1,max(0,(t-54.3)/0.7)))':eval=frame,aresample=48000[mus]",
         "[mus][vsc]sidechaincompress=threshold=0.035:ratio=5:attack=40:release=450:makeup=1[musd]",
     ]
     labels = []

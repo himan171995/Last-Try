@@ -11,7 +11,7 @@ import re
 from transcript import KEYWORDS, SECTIONS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PAD_PRE, PAD_POST, GAP_IN, FPS = 0.07, 0.12, 0.22, 30
+PAD_PRE, PAD_POST, GAP_IN, FPS = 0.07, 0.12, 0.30, 30
 
 segments, phrases, words, sections, gaps = [], [], [], [], []
 t = 0.0

@@ -13,7 +13,7 @@ SECTIONS = [
         (0.02, 4.40, "Patient ek baar treatment kara leta hai, uska piles aur fissure ka problem theek bhi ho jaata hai,"),
         (4.74, 8.36, "lekin chaar-chhe mahine baad uska problem wapas, uska recurrent hota hai. Aisa kyun?"),
     ]),
-    ("answer", "doctor", 1.4, [
+    ("answer", "doctor", 1.6, [
         (10.23, 11.15, "Haan, bahut baar,"),
         (11.46, 12.67, "aapne jo sahi observe kiya hai,"),
         (13.42, 15.32, "ki patient ek baar theek hone ke baad"),
@@ -32,7 +32,6 @@ SECTIONS = [
     ("clean", "doctor", 0.0, [
         (35.40, 36.63, "Waise hi jo …"),
         (37.06, 39.12, "mootra ke, jo indriyon ke jo dwaar hain,"),
-        (39.85, 43.57, "woh agar acche se saaf karein, to baar-baar yeh problem nahi aati hai."),
     ]),
     ("advice", "doctor", 0.0, [
         (44.38, 46.47, "To mujhe apne patient ko bhi yahi kehna hai"),

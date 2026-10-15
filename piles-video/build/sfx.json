@@ -46,97 +46,87 @@
  },
  {
   "file": "assets/sfx/click-soft.mp3",
-  "start": 16.837,
+  "start": 15.403,
   "volume": 0.35
  },
  {
   "file": "assets/sfx/pop.mp3",
-  "start": 19.242,
+  "start": 19.622,
   "volume": 0.3
  },
  {
   "file": "assets/sfx/pop.mp3",
-  "start": 20.578,
+  "start": 20.958,
   "volume": 0.3
  },
  {
   "file": "assets/sfx/ping.mp3",
-  "start": 26.831,
+  "start": 27.435,
   "volume": 0.3
  },
  {
   "file": "assets/sfx/whoosh.mp3",
-  "start": 28.75,
+  "start": 29.35,
   "volume": 0.35
  },
  {
   "file": "assets/sfx/click-soft.mp3",
-  "start": 29.489,
+  "start": 30.089,
   "volume": 0.35
  },
  {
   "file": "assets/sfx/click-soft.mp3",
-  "start": 32.407,
+  "start": 33.12,
   "volume": 0.35
  },
  {
   "file": "assets/sfx/click-soft.mp3",
-  "start": 34.44,
+  "start": 35.21,
   "volume": 0.35
  },
  {
   "file": "assets/sfx/click-soft.mp3",
-  "start": 35.265,
+  "start": 36.035,
   "volume": 0.35
  },
  {
   "file": "assets/sfx/whoosh-short.mp3",
-  "start": 35.817,
+  "start": 36.583,
   "volume": 0.3
  },
  {
   "file": "assets/sfx/pop.mp3",
-  "start": 39.175,
-  "volume": 0.3
- },
- {
-  "file": "assets/sfx/pop.mp3",
-  "start": 41.155,
-  "volume": 0.3
- },
- {
-  "file": "assets/sfx/ping.mp3",
-  "start": 41.979,
+  "start": 38.464,
   "volume": 0.3
  },
  {
   "file": "assets/sfx/whoosh-short.mp3",
-  "start": 47.205,
+  "start": 43.919,
   "volume": 0.25
  },
  {
   "file": "assets/sfx/pop.mp3",
-  "start": 50.924,
+  "start": 47.737,
   "volume": 0.3
  },
  {
   "file": "assets/sfx/ping.mp3",
-  "start": 51.611,
+  "start": 48.424,
   "volume": 0.3
  },
  {
   "file": "assets/sfx/impact-bass-2.mp3",
-  "start": 54.77,
+  "start": 51.603,
   "volume": 0.3
  },
  {
   "file": "assets/sfx/whoosh-cinematic.mp3",
-  "start": 56.85,
+  "start": 54.383,
   "volume": 0.35
  },
  {
   "file": "assets/sfx/chime.mp3",
-  "start": 57.2,
+  "start": 54.733,
   "volume": 0.35
  }
 ]

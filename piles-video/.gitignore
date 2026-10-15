@@ -9,3 +9,4 @@ output/
 .hyperframes/
 assets/sfx/*.mp3
 __pycache__/
+assets/portrait.jpg

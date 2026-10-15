@@ -71,16 +71,16 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
 .scene { position:absolute; inset:0; overflow:hidden; }
 .scene.light { background:radial-gradient(110% 90% at 50% 35%, #ffffff 0%, #fbf5e8 55%, #f1e3c4 100%); }
 .scene.warm { background:radial-gradient(110% 90% at 50% 30%, #fffaf0 0%, #fbeccb 55%, #f0d9a6 100%); }
-.sc-title { position:absolute; left:0; right:0; top:60px; display:flex; justify-content:center; align-items:center; gap:20px; font-weight:800; font-size:62px; }
-.an-wrap { position:absolute; left:640px; top:150px; width:640px; height:695px; }
-.anat { width:640px; height:695px; display:block; }
-.lbl { position:absolute; display:flex; align-items:center; gap:12px; padding:8px 22px; border-radius:999px; background:#fff; border:2px solid var(--gold); font-weight:700; font-size:32px; white-space:nowrap; box-shadow:0 10px 24px rgba(0,0,0,0.12); }
+.sc-title { position:absolute; left:0; right:0; top:46px; display:flex; justify-content:center; align-items:center; gap:20px; font-weight:800; font-size:62px; }
+.an-wrap { position:absolute; left:620px; top:140px; width:700px; height:760px; }
+.anat { width:700px; height:760px; display:block; }
+.lbl { position:absolute; display:flex; align-items:center; gap:12px; padding:10px 26px; border-radius:999px; background:#fff; border:3px solid var(--gold); font-weight:700; font-size:40px; white-space:nowrap; box-shadow:0 10px 24px rgba(0,0,0,0.12); }
 .lbl .ln { width:14px; height:14px; border-radius:50%; background:var(--gold); }
-.l1 { left:-330px; top:110px; } .l2 { left:-380px; top:360px; } .l3 { left:430px; top:490px; } .l4 { left:-390px; top:590px; } .l5 { left:450px; top:600px; }
-.rt-row { position:absolute; left:0; right:0; top:250px; display:flex; justify-content:center; gap:40px; }
-.rt { position:relative; width:320px; height:360px; border-radius:36px; background:#fff; border:2px solid rgba(232,180,74,0.6); box-shadow:0 30px 60px rgba(120,80,20,0.18);
+.l1 { left:-360px; top:120px; } .l2 { left:-460px; top:385px; } .l3 { left:470px; top:525px; } .l4 { left:-470px; top:640px; } .l5 { left:490px; top:640px; }
+.rt-row { position:absolute; left:0; right:0; top:210px; display:flex; justify-content:center; gap:44px; }
+.rt { position:relative; width:380px; height:470px; border-radius:36px; background:#fff; border:2px solid rgba(232,180,74,0.6); box-shadow:0 30px 60px rgba(120,80,20,0.18);
   display:flex; flex-direction:column; align-items:center; justify-content:center; }
-.rt-l { font-weight:800; font-size:48px; margin-top:18px; }
+.rt-l { font-weight:800; font-size:52px; margin-top:22px; text-align:center; line-height:1.1; }
 .rt-ok { position:absolute; top:-22px; right:-22px; }
 .pop { position:absolute; right:90px; top:170px; width:760px; padding:30px 40px; border-radius:32px; background:rgba(255,253,248,0.95); border:2px solid rgba(232,180,74,0.65); box-shadow:0 30px 70px rgba(0,0,0,0.35); }
 .pop-l { font-weight:800; font-size:56px; line-height:1.2; }
@@ -91,17 +91,18 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
 .tc-l { position:absolute; left:0; right:0; text-align:center; font-weight:800; font-size:96px; }
 #tc0 { top:330px; } #tc1 { top:460px; }
 .tc-by { position:absolute; left:0; right:0; top:640px; text-align:center; font-weight:600; font-size:40px; color:var(--gold-d); }
-.ec-logo { position:absolute; left:0; right:0; top:150px; display:flex; justify-content:center; }
-.ec-n { position:absolute; left:0; right:0; top:290px; text-align:center; font-family:"Fraunces", serif; font-weight:800; font-size:110px; }
-.ec-rule { position:absolute; left:660px; width:600px; top:440px; height:6px; border-radius:3px; background:linear-gradient(90deg, transparent, var(--gold), transparent); }
-.ec-s { position:absolute; left:0; right:0; top:470px; text-align:center; font-weight:700; font-size:46px; color:var(--gold-d); }
-.ec-sub { position:absolute; left:0; right:0; top:600px; margin:0 auto; width:max-content; display:flex; align-items:center; gap:18px; padding:16px 50px 16px 34px; border-radius:999px;
+.ec-logo { position:absolute; left:0; right:0; top:70px; display:flex; justify-content:center; }
+.ec-por { width:250px; height:250px; border-radius:50%; object-fit:cover; border:6px solid var(--gold); box-shadow:0 20px 50px rgba(0,0,0,0.25); }
+.ec-n { position:absolute; left:0; right:0; top:345px; text-align:center; font-family:"Fraunces", serif; font-weight:800; font-size:110px; }
+.ec-rule { position:absolute; left:660px; width:600px; top:490px; height:6px; border-radius:3px; background:linear-gradient(90deg, transparent, var(--gold), transparent); }
+.ec-s { position:absolute; left:0; right:0; top:515px; text-align:center; font-weight:700; font-size:46px; color:var(--gold-d); }
+.ec-sub { position:absolute; left:0; right:0; top:640px; margin:0 auto; width:max-content; display:flex; align-items:center; gap:18px; padding:16px 50px 16px 34px; border-radius:999px;
   background:var(--gold); color:#1f2328; font-weight:800; font-size:48px; box-shadow:0 20px 40px rgba(184,134,42,0.35); }
 .ec-dis { position:absolute; left:0; right:0; bottom:70px; text-align:center; font-weight:500; font-size:28px; color:var(--muted); }
 
 /* captions */
 .cap-clip { pointer-events:none; }
-.cap { position:absolute; left:160px; right:160px; top:900px; text-align:center; font-weight:700; font-size:62px; line-height:1.2; color:#fff;
+.cap { position:absolute; left:160px; right:160px; top:890px; text-align:center; font-weight:700; font-size:68px; line-height:1.2; color:#fff;
   text-shadow:0 3px 14px rgba(0,0,0,0.8), 0 0 3px rgba(0,0,0,0.9); paint-order:stroke fill; -webkit-text-stroke:7px rgba(10,10,10,0.6); }
 .cw { display:inline-block; margin:0 0.14em; }
 .cap.onlight { left:0; right:0; margin:0 auto; width:max-content; max-width:1600px; padding:6px 34px 10px; border-radius:22px; background:rgba(24,22,18,0.78); }
@@ -112,7 +113,7 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
       <!-- generated by build/compose.py: edit the generator, then re-run it -->
       <div id="camfx" data-layout-allow-overflow>
         <div id="cam" data-layout-allow-overflow>
-          <video id="aroll" class="clip" src="assets/video/aroll.mp4" muted playsinline data-start="0" data-duration="56.000" data-track-index="0"></video>
+          <video id="aroll" class="clip" src="assets/video/aroll.mp4" muted playsinline data-start="0" data-duration="52.833" data-track-index="0"></video>
         </div>
       </div>
       <div class="vignette"></div>
@@ -135,7 +136,7 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
     <svg class="loop-ring" viewBox="0 0 320 320" width="320" height="320"><circle id="lr" cx="160" cy="160" r="128" fill="none" stroke="#E8B44A" stroke-width="12" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" transform="rotate(-90 160 160)"/></svg>
     <div class="loop-c"><img id="lr-ic" class="ico " src="assets/icons/repeat.webp" alt="" style="width:120px;height:120px" /></div>
   </div>
-  <div class="loop-l"><div class="big" id="ql1">4&ndash;6 mahine baad</div><div class="big gold-t" id="ql2">Recurrent</div><div class="small" id="ql3">Aisa kyun?</div></div></div></div><div id="anatomy" class="clip fullscene" data-start="12.383" data-duration="4.254" data-track-index="3" style="z-index:30">
+  <div class="loop-l"><div class="big" id="ql1">4&ndash;6 mahine baad</div><div class="big gold-t" id="ql2">Recurrent</div><div class="small" id="ql3">Aisa kyun?</div></div></div></div><div id="anatomy" class="clip fullscene" data-start="12.383" data-duration="2.820" data-track-index="3" style="z-index:30">
 <div id="an-in" class="scene light">
   <div class="sc-title" id="an-t">Piles aur Fissure</div>
   <div class="an-wrap"><svg class="anat" viewBox="0 0 700 760" width="700" height="760">
@@ -158,9 +159,9 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
     <div class="lbl l4" id="al4"><span class="ln"></span>External piles</div>
     <div class="lbl l5" id="al5"><span class="ln"></span>Anus dwaar</div>
   </div>
-</div></div><div id="lower-third" class="clip " data-start="16.737" data-duration="3.400" data-track-index="4" style="z-index:24">
+</div></div><div id="lower-third" class="clip " data-start="15.303" data-duration="3.400" data-track-index="4" style="z-index:24">
 <div class="lt" id="lt"><div class="lt-bar" id="lt-bar"></div><div class="lt-p" id="lt-p">
-  <div class="lt-n">Dr. Mohan Padole</div><div class="lt-s">Saikrupa Ayurvedic Hospital, Nagpur</div></div></div></div><div id="a-cycle" class="clip " data-start="18.907" data-duration="3.750" data-track-index="2" style="z-index:20"><div id="a-cycle-in" class="card right">
+  <div class="lt-n">Dr. Mohan Padole</div><div class="lt-s">Saikrupa Ayurvedic Hospital, Nagpur</div></div></div></div><div id="a-cycle" class="clip " data-start="19.287" data-duration="3.816" data-track-index="2" style="z-index:20"><div id="a-cycle-in" class="card right">
   <div class="c-k">PATIENT</div>
   <div class="steps">
     <div class="st" id="as0"><img class="ico " src="assets/icons/check.webp" alt="" style="width:64px;height:64px" /><span>Ek baar theek</span></div>
@@ -168,7 +169,7 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
     <div class="st" id="as1"><img class="ico " src="assets/icons/calendar.webp" alt="" style="width:64px;height:64px" /><span>Har 4&ndash;6 mahine</span></div>
     <div class="st-a">&rarr;</div>
     <div class="st bad" id="as2"><img class="ico " src="assets/icons/repeat.webp" alt="" style="width:64px;height:64px" /><span>Phir wahi problem</span></div>
-  </div></div></div><div id="a-dwaar" class="clip " data-start="25.157" data-duration="2.243" data-track-index="2" style="z-index:20"><div id="a-dwaar-in" class="card right">
+  </div></div></div><div id="a-dwaar" class="clip " data-start="25.760" data-duration="2.240" data-track-index="2" style="z-index:20"><div id="a-dwaar-in" class="card right">
   <div class="c-k">MAIN KAARAN</div>
   <div class="row"><svg class="anat-mini" id="ad-svg" viewBox="0 0 300 340" width="300" height="340">
   <path d="M95 10 C95 90 110 160 128 220 L136 300 M205 10 C205 90 190 160 172 220 L164 300" fill="none" stroke="#e7a3a3" stroke-width="22" stroke-linecap="round"/>
@@ -178,68 +179,72 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
   <path d="M168 262 l10 12" stroke="#7a2b2b" stroke-width="5" stroke-linecap="round"/>
 </svg><div class="terms">
     <div class="term big" id="ad0">Anus dwaar</div>
-    <div class="term ok" id="ad1"><img class="ico " src="assets/icons/sparkles.webp" alt="" style="width:54px;height:54px" />Saaf</div></div></div></div></div><div id="routine" class="clip fullscene" data-start="28.870" data-duration="7.147" data-track-index="3" style="z-index:30">
+    <div class="term ok" id="ad1"><img class="ico " src="assets/icons/sparkles.webp" alt="" style="width:54px;height:54px" />Saaf</div></div></div></div></div><div id="routine" class="clip fullscene" data-start="29.470" data-duration="7.313" data-track-index="3" style="z-index:30">
 <div id="rt-in" class="scene warm">
   <div class="sc-title" id="rt-t"><img class="ico " src="assets/icons/sunrise.webp" alt="" style="width:96px;height:96px" /><span>Subah uthte hi safai</span></div>
-  <div class="rt-row"><div class="rt" id="rt0"><img class="ico " src="assets/icons/toothbrush.webp" alt="" style="width:150px;height:150px" /><div class="rt-l">Brush, daant</div><div class="rt-ok" id="rk0"><img class="ico " src="assets/icons/check.webp" alt="" style="width:64px;height:64px" /></div></div><div class="rt" id="rt1"><img class="ico " src="assets/icons/eye.webp" alt="" style="width:150px;height:150px" /><div class="rt-l">Aankhen</div><div class="rt-ok" id="rk1"><img class="ico " src="assets/icons/check.webp" alt="" style="width:64px;height:64px" /></div></div><div class="rt" id="rt2"><img class="ico " src="assets/icons/nose.webp" alt="" style="width:150px;height:150px" /><div class="rt-l">Naak</div><div class="rt-ok" id="rk2"><img class="ico " src="assets/icons/check.webp" alt="" style="width:64px;height:64px" /></div></div><div class="rt" id="rt3"><img class="ico " src="assets/icons/ear.webp" alt="" style="width:150px;height:150px" /><div class="rt-l">Kaan</div><div class="rt-ok" id="rk3"><img class="ico " src="assets/icons/check.webp" alt="" style="width:64px;height:64px" /></div></div></div>
-</div></div><div id="c-dwaar" class="clip " data-start="37.390" data-duration="2.617" data-track-index="2" style="z-index:20"><div id="c-dwaar-in" class="card right">
+  <div class="rt-row"><div class="rt" id="rt0"><img class="ico " src="assets/icons/toothbrush.webp" alt="" style="width:210px;height:210px" /><div class="rt-l">Brush, daant</div><div class="rt-ok" id="rk0"><img class="ico " src="assets/icons/check.webp" alt="" style="width:64px;height:64px" /></div></div><div class="rt" id="rt1"><img class="ico " src="assets/icons/eye.webp" alt="" style="width:210px;height:210px" /><div class="rt-l">Aankhen</div><div class="rt-ok" id="rk1"><img class="ico " src="assets/icons/check.webp" alt="" style="width:64px;height:64px" /></div></div><div class="rt" id="rt2"><img class="ico " src="assets/icons/nose.webp" alt="" style="width:210px;height:210px" /><div class="rt-l">Naak</div><div class="rt-ok" id="rk2"><img class="ico " src="assets/icons/check.webp" alt="" style="width:64px;height:64px" /></div></div><div class="rt" id="rt3"><img class="ico " src="assets/icons/ear.webp" alt="" style="width:210px;height:210px" /><div class="rt-l">Kaan</div><div class="rt-ok" id="rk3"><img class="ico " src="assets/icons/check.webp" alt="" style="width:64px;height:64px" /></div></div></div>
+</div></div><div id="c-dwaar" class="clip " data-start="36.783" data-duration="3.900" data-track-index="2" style="z-index:20"><div id="c-dwaar-in" class="card right">
   <div class="c-k">WAISE HI</div>
   <div class="row c"><img class="ico " src="assets/icons/droplet.webp" alt="" style="width:110px;height:110px" /><img class="ico " src="assets/icons/soap.webp" alt="" style="width:110px;height:110px" /></div>
-  <div class="big c" id="cd0">Jo dwaar hain</div>
-  <div class="small c" id="cd1">woh acche se saaf karein</div></div></div><div id="c-pop" class="clip " data-start="40.107" data-duration="3.943" data-track-index="2" style="z-index:22">
-<div class="pop" id="cp"><div class="pop-l" id="cp0">Acche se saaf karein</div><div class="pop-l gold-t" id="cp1">= baar-baar problem nahi</div></div></div><div id="d-advice" class="clip " data-start="44.100" data-duration="3.105" data-track-index="2" style="z-index:20"><div id="d-advice-in" class="card right">
+  <div class="big c" id="cd0">Jo dwaar hain</div></div></div><div id="d-advice" class="clip " data-start="40.683" data-duration="3.236" data-track-index="2" style="z-index:20"><div id="d-advice-in" class="card right">
   <div class="c-k">DOCTOR KI SALAH</div>
   <div class="row c"><img class="ico " src="assets/icons/stethoscope.webp" alt="" style="width:120px;height:120px" /></div>
-  <div class="big c" id="dv0">Patient ko yahi kehna hai</div></div></div><div id="d-daily" class="clip " data-start="50.140" data-duration="2.077" data-track-index="2" style="z-index:20"><div id="d-daily-in" class="card right">
+  <div class="big c" id="dv0">Patient ko yahi kehna hai</div></div></div><div id="d-daily" class="clip " data-start="46.953" data-duration="2.097" data-track-index="2" style="z-index:20"><div id="d-daily-in" class="card right">
   <div class="c-k">SALAH</div>
   <div class="row c"><img class="ico " src="assets/icons/droplet.webp" alt="" style="width:100px;height:100px" /><img class="ico " src="assets/icons/sparkles.webp" alt="" style="width:100px;height:100px" /></div>
   <div class="big c" id="dd0">Thoda clean karna</div>
-  <div class="big c gold-t" id="dd1">Hamesha</div></div></div><div id="k-pop" class="clip " data-start="52.217" data-duration="3.233" data-track-index="2" style="z-index:22">
-<div class="take" id="tk"><div class="take-l" id="tk0">Baar-baar yeh problem</div><div class="take-l gold-t" id="tk1">nahi aayegi</div></div></div><div id="takecard" class="clip fullscene" data-start="55.400" data-duration="1.850" data-track-index="3" style="z-index:35">
+  <div class="big c gold-t" id="dd1">Hamesha</div></div></div><div id="k-pop" class="clip " data-start="49.050" data-duration="3.233" data-track-index="2" style="z-index:22">
+<div class="take" id="tk"><div class="take-l" id="tk0">Baar-baar yeh problem</div><div class="take-l gold-t" id="tk1">nahi aayegi</div></div></div><div id="takecard" class="clip fullscene" data-start="52.233" data-duration="2.550" data-track-index="3" style="z-index:35">
 <div id="tc-in" class="scene light">
   <div class="tc-q">&ldquo;</div>
   <div class="tc-l" id="tc0">Hamesha clean karna</div>
   <div class="tc-l gold-t" id="tc1">= baar-baar problem nahi aayegi</div>
   <div class="tc-by" id="tc2">&mdash; Dr. Mohan Padole</div>
-</div></div><div id="endcard" class="clip fullscene" data-start="57.000" data-duration="3.000" data-track-index="3" style="z-index:40">
+</div></div><div id="endcard" class="clip fullscene" data-start="54.533" data-duration="5.467" data-track-index="3" style="z-index:40">
 <div id="ec-in" class="scene light">
-  <div class="ec-logo" id="ec-logo"><img class="ico " src="assets/icons/herb.webp" alt="" style="width:110px;height:110px" /></div>
+  <div class="ec-logo" id="ec-logo"><img class="ec-por" src="assets/portrait.jpg" alt="" /></div>
   <div class="ec-n" id="ec-n">Dr. Mohan Padole</div>
   <div class="ec-rule" id="ec-rule"></div>
   <div class="ec-s" id="ec-s">Saikrupa Ayurvedic Hospital, Nagpur</div>
   <div class="ec-sub" id="ec-sub"><img class="ico " src="assets/icons/bell.webp" alt="" style="width:60px;height:60px" /><span>Subscribe</span></div>
   <div class="ec-dis" id="ec-dis">For educational purposes only. Consult a doctor before starting any treatment.</div>
-</div></div><div id="cap0" class="clip cap-clip" data-start="0.020" data-duration="0.999" data-track-index="5" style="z-index:60"><div class="cap" id="cap0-in"><span class="cw" id="cw0-0">Woh</span><span class="cw" id="cw0-1">agar</span><span class="cw" id="cw0-2">acche</span><span class="cw" id="cw0-3">se</span></div></div><div id="cap1" class="clip cap-clip" data-start="1.019" data-duration="0.649" data-track-index="5" style="z-index:60"><div class="cap" id="cap1-in"><span class="cw kw" id="cw1-0">saaf</span><span class="cw" id="cw1-1">karein,</span></div></div><div id="cap2" class="clip cap-clip" data-start="1.668" data-duration="1.298" data-track-index="5" style="z-index:60"><div class="cap" id="cap2-in"><span class="cw" id="cw2-0">to</span><span class="cw kw" id="cw2-1">baar-baar</span><span class="cw" id="cw2-2">yeh</span><span class="cw kw" id="cw2-3">problem</span></div></div><div id="cap3" class="clip cap-clip" data-start="2.966" data-duration="0.954" data-track-index="5" style="z-index:60"><div class="cap" id="cap3-in"><span class="cw" id="cw3-0">nahi</span><span class="cw" id="cw3-1">aati</span><span class="cw" id="cw3-2">hai.</span></div></div><div id="cap4" class="clip cap-clip" data-start="3.920" data-duration="0.723" data-track-index="5" style="z-index:60"><div class="cap" id="cap4-in"><span class="cw" id="cw4-0">Patient</span><span class="cw" id="cw4-1">ek</span><span class="cw" id="cw4-2">baar</span></div></div><div id="cap5" class="clip cap-clip" data-start="4.643" data-duration="1.074" data-track-index="5" style="z-index:60"><div class="cap" id="cap5-in"><span class="cw kw" id="cw5-0">treatment</span><span class="cw" id="cw5-1">kara</span><span class="cw" id="cw5-2">leta</span><span class="cw" id="cw5-3">hai,</span></div></div><div id="cap6" class="clip cap-clip" data-start="5.717" data-duration="1.033" data-track-index="5" style="z-index:60"><div class="cap" id="cap6-in"><span class="cw" id="cw6-0">uska</span><span class="cw kw" id="cw6-1">piles</span><span class="cw" id="cw6-2">aur</span><span class="cw kw" id="cw6-3">fissure</span></div></div><div id="cap7" class="clip cap-clip" data-start="6.750" data-duration="0.951" data-track-index="5" style="z-index:60"><div class="cap" id="cap7-in"><span class="cw" id="cw7-0">ka</span><span class="cw kw" id="cw7-1">problem</span><span class="cw kw" id="cw7-2">theek</span><span class="cw" id="cw7-3">bhi</span></div></div><div id="cap8" class="clip cap-clip" data-start="7.701" data-duration="0.936" data-track-index="5" style="z-index:60"><div class="cap" id="cap8-in"><span class="cw" id="cw8-0">ho</span><span class="cw" id="cw8-1">jaata</span><span class="cw" id="cw8-2">hai,</span></div></div><div id="cap9" class="clip cap-clip" data-start="8.637" data-duration="1.013" data-track-index="5" style="z-index:60"><div class="cap" id="cap9-in"><span class="cw" id="cw9-0">lekin</span><span class="cw kw" id="cw9-1">chaar-chhe</span><span class="cw kw" id="cw9-2">mahine</span></div></div><div id="cap10" class="clip cap-clip" data-start="9.650" data-duration="1.076" data-track-index="5" style="z-index:60"><div class="cap" id="cap10-in"><span class="cw" id="cw10-0">baad</span><span class="cw" id="cw10-1">uska</span><span class="cw kw" id="cw10-2">problem</span><span class="cw" id="cw10-3">wapas,</span></div></div><div id="cap11" class="clip cap-clip" data-start="10.726" data-duration="1.076" data-track-index="5" style="z-index:60"><div class="cap" id="cap11-in"><span class="cw" id="cw11-0">uska</span><span class="cw kw" id="cw11-1">recurrent</span><span class="cw" id="cw11-2">hota</span><span class="cw" id="cw11-3">hai.</span></div></div><div id="cap12" class="clip cap-clip" data-start="11.802" data-duration="1.005" data-track-index="5" style="z-index:60"><div class="cap" id="cap12-in"><span class="cw" id="cw12-0">Aisa</span><span class="cw" id="cw12-1">kyun?</span></div></div><div id="cap13" class="clip cap-clip" data-start="13.853" data-duration="1.220" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap13-in"><span class="cw" id="cw13-0">Haan,</span><span class="cw" id="cw13-1">bahut</span><span class="cw" id="cw13-2">baar,</span></div></div><div id="cap14" class="clip cap-clip" data-start="15.073" data-duration="0.854" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap14-in"><span class="cw" id="cw14-0">aapne</span><span class="cw" id="cw14-1">jo</span><span class="cw" id="cw14-2">sahi</span><span class="cw" id="cw14-3">observe</span></div></div><div id="cap15" class="clip cap-clip" data-start="15.927" data-duration="0.780" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap15-in"><span class="cw" id="cw15-0">kiya</span><span class="cw" id="cw15-1">hai,</span></div></div><div id="cap16" class="clip cap-clip" data-start="16.707" data-duration="0.950" data-track-index="5" style="z-index:60"><div class="cap" id="cap16-in"><span class="cw" id="cw16-0">ki</span><span class="cw" id="cw16-1">patient</span><span class="cw" id="cw16-2">ek</span><span class="cw" id="cw16-3">baar</span></div></div><div id="cap17" class="clip cap-clip" data-start="17.657" data-duration="1.350" data-track-index="5" style="z-index:60"><div class="cap" id="cap17-in"><span class="cw kw" id="cw17-0">theek</span><span class="cw" id="cw17-1">hone</span><span class="cw" id="cw17-2">ke</span><span class="cw" id="cw17-3">baad</span></div></div><div id="cap18" class="clip cap-clip" data-start="19.007" data-duration="0.760" data-track-index="5" style="z-index:60"><div class="cap" id="cap18-in"><span class="cw" id="cw18-0">har</span><span class="cw" id="cw18-1">chaar</span><span class="cw kw" id="cw18-2">mahine,</span></div></div><div id="cap19" class="clip cap-clip" data-start="19.767" data-duration="0.987" data-track-index="5" style="z-index:60"><div class="cap" id="cap19-in"><span class="cw" id="cw19-0">chhe</span><span class="cw kw" id="cw19-1">mahine</span><span class="cw" id="cw19-2">baad</span><span class="cw" id="cw19-3">phir</span></div></div><div id="cap20" class="clip cap-clip" data-start="20.754" data-duration="0.864" data-track-index="5" style="z-index:60"><div class="cap" id="cap20-in"><span class="cw" id="cw20-0">se</span><span class="cw" id="cw20-1">usi</span><span class="cw kw" id="cw20-2">problem</span><span class="cw" id="cw20-3">par</span></div></div><div id="cap21" class="clip cap-clip" data-start="21.618" data-duration="1.089" data-track-index="5" style="z-index:60"><div class="cap" id="cap21-in"><span class="cw" id="cw21-0">lekar</span><span class="cw" id="cw21-1">aata</span><span class="cw" id="cw21-2">hai.</span></div></div><div id="cap22" class="clip cap-clip" data-start="22.707" data-duration="1.100" data-track-index="5" style="z-index:60"><div class="cap" id="cap22-in"><span class="cw" id="cw22-0">Iska</span><span class="cw" id="cw22-1">main</span><span class="cw kw" id="cw22-2">kaaran</span><span class="cw" id="cw22-3">hai</span></div></div><div id="cap23" class="clip cap-clip" data-start="23.807" data-duration="0.733" data-track-index="5" style="z-index:60"><div class="cap" id="cap23-in"><span class="cw" id="cw23-0">ki</span><span class="cw kw" id="cw23-1">piles</span><span class="cw" id="cw23-2">mein</span><span class="cw" id="cw23-3">kya</span></div></div><div id="cap24" class="clip cap-clip" data-start="24.540" data-duration="0.767" data-track-index="5" style="z-index:60"><div class="cap" id="cap24-in"><span class="cw" id="cw24-0">hota</span><span class="cw" id="cw24-1">hai,</span></div></div><div id="cap25" class="clip cap-clip" data-start="25.307" data-duration="1.255" data-track-index="5" style="z-index:60"><div class="cap" id="cap25-in"><span class="cw" id="cw25-0">jo</span><span class="cw kw" id="cw25-1">anus</span><span class="cw kw" id="cw25-2">dwaar</span><span class="cw" id="cw25-3">hai,</span></div></div><div id="cap26" class="clip cap-clip" data-start="26.562" data-duration="1.292" data-track-index="5" style="z-index:60"><div class="cap" id="cap26-in"><span class="cw" id="cw26-0">…</span><span class="cw kw" id="cw26-1">saaf…</span><span class="cw" id="cw26-2">Jaise</span><span class="cw" id="cw26-3">hum-aap</span></div></div><div id="cap27" class="clip cap-clip" data-start="27.854" data-duration="1.066" data-track-index="5" style="z-index:60"><div class="cap" id="cap27-in"><span class="cw" id="cw27-0">subah</span><span class="cw" id="cw27-1">uthte</span><span class="cw" id="cw27-2">hain,</span></div></div><div id="cap28" class="clip cap-clip" data-start="28.920" data-duration="0.706" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap28-in"><span class="cw" id="cw28-0">to</span><span class="cw" id="cw28-1">hum</span><span class="cw kw" id="cw28-2">brush</span><span class="cw" id="cw28-3">karte</span></div></div><div id="cap29" class="clip cap-clip" data-start="29.626" data-duration="0.581" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap29-in"><span class="cw" id="cw29-0">hain,</span></div></div><div id="cap30" class="clip cap-clip" data-start="30.207" data-duration="0.772" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap30-in"><span class="cw kw" id="cw30-0">daaton</span><span class="cw" id="cw30-1">ke</span><span class="cw" id="cw30-2">andar</span><span class="cw" id="cw30-3">ka</span></div></div><div id="cap31" class="clip cap-clip" data-start="30.979" data-duration="1.128" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap31-in"><span class="cw" id="cw31-0">mal</span><span class="cw" id="cw31-1">nikaalte</span><span class="cw" id="cw31-2">hain,</span></div></div><div id="cap32" class="clip cap-clip" data-start="32.107" data-duration="0.796" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap32-in"><span class="cw kw" id="cw32-0">aankhon</span><span class="cw" id="cw32-1">ke</span><span class="cw" id="cw32-2">andar</span><span class="cw" id="cw32-3">ke</span></div></div><div id="cap33" class="clip cap-clip" data-start="32.903" data-duration="1.237" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap33-in"><span class="cw kw" id="cw33-0">chipad</span><span class="cw" id="cw33-1">nikaalte</span><span class="cw" id="cw33-2">hain,</span></div></div><div id="cap34" class="clip cap-clip" data-start="34.140" data-duration="0.825" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap34-in"><span class="cw kw" id="cw34-0">naak</span><span class="cw kw" id="cw34-1">saaf</span><span class="cw" id="cw34-2">karte</span><span class="cw" id="cw34-3">hain,</span></div></div><div id="cap35" class="clip cap-clip" data-start="34.965" data-duration="1.022" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap35-in"><span class="cw kw" id="cw35-0">kaan</span><span class="cw kw" id="cw35-1">saaf</span><span class="cw" id="cw35-2">karte</span><span class="cw" id="cw35-3">hain.</span></div></div><div id="cap36" class="clip cap-clip" data-start="35.987" data-duration="1.653" data-track-index="5" style="z-index:60"><div class="cap" id="cap36-in"><span class="cw" id="cw36-0">Waise</span><span class="cw" id="cw36-1">hi</span><span class="cw" id="cw36-2">jo</span><span class="cw" id="cw36-3">…</span></div></div><div id="cap37" class="clip cap-clip" data-start="37.640" data-duration="0.527" data-track-index="5" style="z-index:60"><div class="cap" id="cap37-in"><span class="cw" id="cw37-0">mootra</span><span class="cw" id="cw37-1">ke,</span></div></div><div id="cap38" class="clip cap-clip" data-start="38.167" data-duration="0.958" data-track-index="5" style="z-index:60"><div class="cap" id="cap38-in"><span class="cw" id="cw38-0">jo</span><span class="cw kw" id="cw38-1">indriyon</span><span class="cw" id="cw38-2">ke</span><span class="cw" id="cw38-3">jo</span></div></div><div id="cap39" class="clip cap-clip" data-start="39.125" data-duration="0.982" data-track-index="5" style="z-index:60"><div class="cap" id="cap39-in"><span class="cw kw" id="cw39-0">dwaar</span><span class="cw" id="cw39-1">hain,</span></div></div><div id="cap40" class="clip cap-clip" data-start="40.107" data-duration="0.998" data-track-index="5" style="z-index:60"><div class="cap" id="cap40-in"><span class="cw" id="cw40-0">woh</span><span class="cw" id="cw40-1">agar</span><span class="cw" id="cw40-2">acche</span><span class="cw" id="cw40-3">se</span></div></div><div id="cap41" class="clip cap-clip" data-start="41.105" data-duration="0.649" data-track-index="5" style="z-index:60"><div class="cap" id="cap41-in"><span class="cw kw" id="cw41-0">saaf</span><span class="cw" id="cw41-1">karein,</span></div></div><div id="cap42" class="clip cap-clip" data-start="41.754" data-duration="1.299" data-track-index="5" style="z-index:60"><div class="cap" id="cap42-in"><span class="cw" id="cw42-0">to</span><span class="cw kw" id="cw42-1">baar-baar</span><span class="cw" id="cw42-2">yeh</span><span class="cw kw" id="cw42-3">problem</span></div></div><div id="cap43" class="clip cap-clip" data-start="43.053" data-duration="0.967" data-track-index="5" style="z-index:60"><div class="cap" id="cap43-in"><span class="cw" id="cw43-0">nahi</span><span class="cw" id="cw43-1">aati</span><span class="cw" id="cw43-2">hai.</span></div></div><div id="cap44" class="clip cap-clip" data-start="44.020" data-duration="1.034" data-track-index="5" style="z-index:60"><div class="cap" id="cap44-in"><span class="cw" id="cw44-0">To</span><span class="cw" id="cw44-1">mujhe</span><span class="cw" id="cw44-2">apne</span><span class="cw" id="cw44-3">patient</span></div></div><div id="cap45" class="clip cap-clip" data-start="45.054" data-duration="0.862" data-track-index="5" style="z-index:60"><div class="cap" id="cap45-in"><span class="cw" id="cw45-0">ko</span><span class="cw" id="cw45-1">bhi</span><span class="cw" id="cw45-2">yahi</span><span class="cw" id="cw45-3">kehna</span></div></div><div id="cap46" class="clip cap-clip" data-start="45.916" data-duration="0.591" data-track-index="5" style="z-index:60"><div class="cap" id="cap46-in"><span class="cw" id="cw46-0">hai</span></div></div><div id="cap47" class="clip cap-clip" data-start="46.507" data-duration="1.436" data-track-index="5" style="z-index:60"><div class="cap" id="cap47-in"><span class="cw" id="cw47-0">ki</span><span class="cw kw" id="cw47-1">baar-baar</span><span class="cw kw" id="cw47-2">anus</span><span class="cw" id="cw47-3">ke</span></div></div><div id="cap48" class="clip cap-clip" data-start="47.943" data-duration="1.306" data-track-index="5" style="z-index:60"><div class="cap" id="cap48-in"><span class="cw" id="cw48-0">…,</span><span class="cw" id="cw48-1">ek</span><span class="cw" id="cw48-2">ungli</span><span class="cw" id="cw48-3">andar</span></div></div><div id="cap49" class="clip cap-clip" data-start="49.249" data-duration="0.991" data-track-index="5" style="z-index:60"><div class="cap" id="cap49-in"><span class="cw" id="cw49-0">daal</span><span class="cw" id="cw49-1">ke</span></div></div><div id="cap50" class="clip cap-clip" data-start="50.240" data-duration="1.321" data-track-index="5" style="z-index:60"><div class="cap" id="cap50-in"><span class="cw" id="cw50-0">thoda</span><span class="cw" id="cw50-1">usko</span><span class="cw kw" id="cw50-2">clean</span><span class="cw" id="cw50-3">karna</span></div></div><div id="cap51" class="clip cap-clip" data-start="51.561" data-duration="0.626" data-track-index="5" style="z-index:60"><div class="cap" id="cap51-in"><span class="cw kw" id="cw51-0">hamesha.</span></div></div><div id="cap52" class="clip cap-clip" data-start="52.187" data-duration="1.223" data-track-index="5" style="z-index:60"><div class="cap" id="cap52-in"><span class="cw" id="cw52-0">To</span><span class="cw kw" id="cw52-1">baar-baar</span><span class="cw" id="cw52-2">yeh</span><span class="cw" id="cw52-3">…</span></div></div><div id="cap53" class="clip cap-clip" data-start="53.410" data-duration="1.397" data-track-index="5" style="z-index:60"><div class="cap" id="cap53-in"><span class="cw" id="cw53-0">jo</span><span class="cw" id="cw53-1">aane</span><span class="cw" id="cw53-2">waali</span><span class="cw kw" id="cw53-3">problem,</span></div></div><div id="cap54" class="clip cap-clip" data-start="54.807" data-duration="0.573" data-track-index="5" style="z-index:60"><div class="cap" id="cap54-in"><span class="cw" id="cw54-0">woh</span><span class="cw" id="cw54-1">nahi</span></div></div>
+</div></div><div id="cap0" class="clip cap-clip" data-start="0.020" data-duration="0.999" data-track-index="5" style="z-index:60"><div class="cap" id="cap0-in"><span class="cw" id="cw0-0">Woh</span><span class="cw" id="cw0-1">agar</span><span class="cw" id="cw0-2">acche</span><span class="cw" id="cw0-3">se</span></div></div><div id="cap1" class="clip cap-clip" data-start="1.019" data-duration="0.649" data-track-index="5" style="z-index:60"><div class="cap" id="cap1-in"><span class="cw kw" id="cw1-0">saaf</span><span class="cw" id="cw1-1">karein,</span></div></div><div id="cap2" class="clip cap-clip" data-start="1.668" data-duration="1.298" data-track-index="5" style="z-index:60"><div class="cap" id="cap2-in"><span class="cw" id="cw2-0">to</span><span class="cw kw" id="cw2-1">baar-baar</span><span class="cw" id="cw2-2">yeh</span><span class="cw kw" id="cw2-3">problem</span></div></div><div id="cap3" class="clip cap-clip" data-start="2.966" data-duration="0.954" data-track-index="5" style="z-index:60"><div class="cap" id="cap3-in"><span class="cw" id="cw3-0">nahi</span><span class="cw" id="cw3-1">aati</span><span class="cw" id="cw3-2">hai.</span></div></div><div id="cap4" class="clip cap-clip" data-start="3.920" data-duration="0.723" data-track-index="5" style="z-index:60"><div class="cap" id="cap4-in"><span class="cw" id="cw4-0">Patient</span><span class="cw" id="cw4-1">ek</span><span class="cw" id="cw4-2">baar</span></div></div><div id="cap5" class="clip cap-clip" data-start="4.643" data-duration="1.074" data-track-index="5" style="z-index:60"><div class="cap" id="cap5-in"><span class="cw kw" id="cw5-0">treatment</span><span class="cw" id="cw5-1">kara</span><span class="cw" id="cw5-2">leta</span><span class="cw" id="cw5-3">hai,</span></div></div><div id="cap6" class="clip cap-clip" data-start="5.717" data-duration="1.033" data-track-index="5" style="z-index:60"><div class="cap" id="cap6-in"><span class="cw" id="cw6-0">uska</span><span class="cw kw" id="cw6-1">piles</span><span class="cw" id="cw6-2">aur</span><span class="cw kw" id="cw6-3">fissure</span></div></div><div id="cap7" class="clip cap-clip" data-start="6.750" data-duration="0.951" data-track-index="5" style="z-index:60"><div class="cap" id="cap7-in"><span class="cw" id="cw7-0">ka</span><span class="cw kw" id="cw7-1">problem</span><span class="cw kw" id="cw7-2">theek</span><span class="cw" id="cw7-3">bhi</span></div></div><div id="cap8" class="clip cap-clip" data-start="7.701" data-duration="0.936" data-track-index="5" style="z-index:60"><div class="cap" id="cap8-in"><span class="cw" id="cw8-0">ho</span><span class="cw" id="cw8-1">jaata</span><span class="cw" id="cw8-2">hai,</span></div></div><div id="cap9" class="clip cap-clip" data-start="8.637" data-duration="1.013" data-track-index="5" style="z-index:60"><div class="cap" id="cap9-in"><span class="cw" id="cw9-0">lekin</span><span class="cw kw" id="cw9-1">chaar-chhe</span><span class="cw kw" id="cw9-2">mahine</span></div></div><div id="cap10" class="clip cap-clip" data-start="9.650" data-duration="1.076" data-track-index="5" style="z-index:60"><div class="cap" id="cap10-in"><span class="cw" id="cw10-0">baad</span><span class="cw" id="cw10-1">uska</span><span class="cw kw" id="cw10-2">problem</span><span class="cw" id="cw10-3">wapas,</span></div></div><div id="cap11" class="clip cap-clip" data-start="10.726" data-duration="1.076" data-track-index="5" style="z-index:60"><div class="cap" id="cap11-in"><span class="cw" id="cw11-0">uska</span><span class="cw kw" id="cw11-1">recurrent</span><span class="cw" id="cw11-2">hota</span><span class="cw" id="cw11-3">hai.</span></div></div><div id="cap12" class="clip cap-clip" data-start="11.802" data-duration="1.005" data-track-index="5" style="z-index:60"><div class="cap" id="cap12-in"><span class="cw" id="cw12-0">Aisa</span><span class="cw" id="cw12-1">kyun?</span></div></div><div id="cap13" class="clip cap-clip" data-start="14.053" data-duration="1.220" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap13-in"><span class="cw" id="cw13-0">Haan,</span><span class="cw" id="cw13-1">bahut</span><span class="cw" id="cw13-2">baar,</span></div></div><div id="cap14" class="clip cap-clip" data-start="15.273" data-duration="0.854" data-track-index="5" style="z-index:60"><div class="cap" id="cap14-in"><span class="cw" id="cw14-0">aapne</span><span class="cw" id="cw14-1">jo</span><span class="cw" id="cw14-2">sahi</span><span class="cw" id="cw14-3">observe</span></div></div><div id="cap15" class="clip cap-clip" data-start="16.127" data-duration="0.860" data-track-index="5" style="z-index:60"><div class="cap" id="cap15-in"><span class="cw" id="cw15-0">kiya</span><span class="cw" id="cw15-1">hai,</span></div></div><div id="cap16" class="clip cap-clip" data-start="16.987" data-duration="0.950" data-track-index="5" style="z-index:60"><div class="cap" id="cap16-in"><span class="cw" id="cw16-0">ki</span><span class="cw" id="cw16-1">patient</span><span class="cw" id="cw16-2">ek</span><span class="cw" id="cw16-3">baar</span></div></div><div id="cap17" class="clip cap-clip" data-start="17.937" data-duration="1.450" data-track-index="5" style="z-index:60"><div class="cap" id="cap17-in"><span class="cw kw" id="cw17-0">theek</span><span class="cw" id="cw17-1">hone</span><span class="cw" id="cw17-2">ke</span><span class="cw" id="cw17-3">baad</span></div></div><div id="cap18" class="clip cap-clip" data-start="19.387" data-duration="0.760" data-track-index="5" style="z-index:60"><div class="cap" id="cap18-in"><span class="cw" id="cw18-0">har</span><span class="cw" id="cw18-1">chaar</span><span class="cw kw" id="cw18-2">mahine,</span></div></div><div id="cap19" class="clip cap-clip" data-start="20.147" data-duration="0.987" data-track-index="5" style="z-index:60"><div class="cap" id="cap19-in"><span class="cw" id="cw19-0">chhe</span><span class="cw kw" id="cw19-1">mahine</span><span class="cw" id="cw19-2">baad</span><span class="cw" id="cw19-3">phir</span></div></div><div id="cap20" class="clip cap-clip" data-start="21.134" data-duration="0.864" data-track-index="5" style="z-index:60"><div class="cap" id="cap20-in"><span class="cw" id="cw20-0">se</span><span class="cw" id="cw20-1">usi</span><span class="cw kw" id="cw20-2">problem</span><span class="cw" id="cw20-3">par</span></div></div><div id="cap21" class="clip cap-clip" data-start="21.998" data-duration="1.155" data-track-index="5" style="z-index:60"><div class="cap" id="cap21-in"><span class="cw" id="cw21-0">lekar</span><span class="cw" id="cw21-1">aata</span><span class="cw" id="cw21-2">hai.</span></div></div><div id="cap22" class="clip cap-clip" data-start="23.153" data-duration="1.167" data-track-index="5" style="z-index:60"><div class="cap" id="cap22-in"><span class="cw" id="cw22-0">Iska</span><span class="cw" id="cw22-1">main</span><span class="cw kw" id="cw22-2">kaaran</span><span class="cw" id="cw22-3">hai</span></div></div><div id="cap23" class="clip cap-clip" data-start="24.320" data-duration="0.733" data-track-index="5" style="z-index:60"><div class="cap" id="cap23-in"><span class="cw" id="cw23-0">ki</span><span class="cw kw" id="cw23-1">piles</span><span class="cw" id="cw23-2">mein</span><span class="cw" id="cw23-3">kya</span></div></div><div id="cap24" class="clip cap-clip" data-start="25.053" data-duration="0.857" data-track-index="5" style="z-index:60"><div class="cap" id="cap24-in"><span class="cw" id="cw24-0">hota</span><span class="cw" id="cw24-1">hai,</span></div></div><div id="cap25" class="clip cap-clip" data-start="25.910" data-duration="1.255" data-track-index="5" style="z-index:60"><div class="cap" id="cap25-in"><span class="cw" id="cw25-0">jo</span><span class="cw kw" id="cw25-1">anus</span><span class="cw kw" id="cw25-2">dwaar</span><span class="cw" id="cw25-3">hai,</span></div></div><div id="cap26" class="clip cap-clip" data-start="27.165" data-duration="1.289" data-track-index="5" style="z-index:60"><div class="cap" id="cap26-in"><span class="cw" id="cw26-0">…</span><span class="cw kw" id="cw26-1">saaf…</span><span class="cw" id="cw26-2">Jaise</span><span class="cw" id="cw26-3">hum-aap</span></div></div><div id="cap27" class="clip cap-clip" data-start="28.454" data-duration="1.066" data-track-index="5" style="z-index:60"><div class="cap" id="cap27-in"><span class="cw" id="cw27-0">subah</span><span class="cw" id="cw27-1">uthte</span><span class="cw" id="cw27-2">hain,</span></div></div><div id="cap28" class="clip cap-clip" data-start="29.520" data-duration="0.706" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap28-in"><span class="cw" id="cw28-0">to</span><span class="cw" id="cw28-1">hum</span><span class="cw kw" id="cw28-2">brush</span><span class="cw" id="cw28-3">karte</span></div></div><div id="cap29" class="clip cap-clip" data-start="30.226" data-duration="0.631" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap29-in"><span class="cw" id="cw29-0">hain,</span></div></div><div id="cap30" class="clip cap-clip" data-start="30.857" data-duration="0.772" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap30-in"><span class="cw kw" id="cw30-0">daaton</span><span class="cw" id="cw30-1">ke</span><span class="cw" id="cw30-2">andar</span><span class="cw" id="cw30-3">ka</span></div></div><div id="cap31" class="clip cap-clip" data-start="31.629" data-duration="1.191" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap31-in"><span class="cw" id="cw31-0">mal</span><span class="cw" id="cw31-1">nikaalte</span><span class="cw" id="cw31-2">hain,</span></div></div><div id="cap32" class="clip cap-clip" data-start="32.820" data-duration="0.796" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap32-in"><span class="cw kw" id="cw32-0">aankhon</span><span class="cw" id="cw32-1">ke</span><span class="cw" id="cw32-2">andar</span><span class="cw" id="cw32-3">ke</span></div></div><div id="cap33" class="clip cap-clip" data-start="33.616" data-duration="1.294" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap33-in"><span class="cw kw" id="cw33-0">chipad</span><span class="cw" id="cw33-1">nikaalte</span><span class="cw" id="cw33-2">hain,</span></div></div><div id="cap34" class="clip cap-clip" data-start="34.910" data-duration="0.825" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap34-in"><span class="cw kw" id="cw34-0">naak</span><span class="cw kw" id="cw34-1">saaf</span><span class="cw" id="cw34-2">karte</span><span class="cw" id="cw34-3">hain,</span></div></div><div id="cap35" class="clip cap-clip" data-start="35.735" data-duration="1.018" data-track-index="5" style="z-index:60"><div class="cap onlight" id="cap35-in"><span class="cw kw" id="cw35-0">kaan</span><span class="cw kw" id="cw35-1">saaf</span><span class="cw" id="cw35-2">karte</span><span class="cw" id="cw35-3">hain.</span></div></div><div id="cap36" class="clip cap-clip" data-start="36.753" data-duration="1.661" data-track-index="5" style="z-index:60"><div class="cap" id="cap36-in"><span class="cw" id="cw36-0">Waise</span><span class="cw" id="cw36-1">hi</span><span class="cw" id="cw36-2">jo</span><span class="cw" id="cw36-3">…</span></div></div><div id="cap37" class="clip cap-clip" data-start="38.414" data-duration="0.527" data-track-index="5" style="z-index:60"><div class="cap" id="cap37-in"><span class="cw" id="cw37-0">mootra</span><span class="cw" id="cw37-1">ke,</span></div></div><div id="cap38" class="clip cap-clip" data-start="38.941" data-duration="0.958" data-track-index="5" style="z-index:60"><div class="cap" id="cap38-in"><span class="cw" id="cw38-0">jo</span><span class="cw kw" id="cw38-1">indriyon</span><span class="cw" id="cw38-2">ke</span><span class="cw" id="cw38-3">jo</span></div></div><div id="cap39" class="clip cap-clip" data-start="39.899" data-duration="0.754" data-track-index="5" style="z-index:60"><div class="cap" id="cap39-in"><span class="cw kw" id="cw39-0">dwaar</span><span class="cw" id="cw39-1">hain,</span></div></div><div id="cap40" class="clip cap-clip" data-start="40.653" data-duration="1.035" data-track-index="5" style="z-index:60"><div class="cap" id="cap40-in"><span class="cw" id="cw40-0">To</span><span class="cw" id="cw40-1">mujhe</span><span class="cw" id="cw40-2">apne</span><span class="cw" id="cw40-3">patient</span></div></div><div id="cap41" class="clip cap-clip" data-start="41.688" data-duration="0.861" data-track-index="5" style="z-index:60"><div class="cap" id="cap41-in"><span class="cw" id="cw41-0">ko</span><span class="cw" id="cw41-1">bhi</span><span class="cw" id="cw41-2">yahi</span><span class="cw" id="cw41-3">kehna</span></div></div><div id="cap42" class="clip cap-clip" data-start="42.549" data-duration="0.671" data-track-index="5" style="z-index:60"><div class="cap" id="cap42-in"><span class="cw" id="cw42-0">hai</span></div></div><div id="cap43" class="clip cap-clip" data-start="43.220" data-duration="1.436" data-track-index="5" style="z-index:60"><div class="cap" id="cap43-in"><span class="cw" id="cw43-0">ki</span><span class="cw kw" id="cw43-1">baar-baar</span><span class="cw kw" id="cw43-2">anus</span><span class="cw" id="cw43-3">ke</span></div></div><div id="cap44" class="clip cap-clip" data-start="44.656" data-duration="1.306" data-track-index="5" style="z-index:60"><div class="cap" id="cap44-in"><span class="cw" id="cw44-0">…,</span><span class="cw" id="cw44-1">ek</span><span class="cw" id="cw44-2">ungli</span><span class="cw" id="cw44-3">andar</span></div></div><div id="cap45" class="clip cap-clip" data-start="45.962" data-duration="1.091" data-track-index="5" style="z-index:60"><div class="cap" id="cap45-in"><span class="cw" id="cw45-0">daal</span><span class="cw" id="cw45-1">ke</span></div></div><div id="cap46" class="clip cap-clip" data-start="47.053" data-duration="1.321" data-track-index="5" style="z-index:60"><div class="cap" id="cap46-in"><span class="cw" id="cw46-0">thoda</span><span class="cw" id="cw46-1">usko</span><span class="cw kw" id="cw46-2">clean</span><span class="cw" id="cw46-3">karna</span></div></div><div id="cap47" class="clip cap-clip" data-start="48.374" data-duration="0.646" data-track-index="5" style="z-index:60"><div class="cap" id="cap47-in"><span class="cw kw" id="cw47-0">hamesha.</span></div></div><div id="cap48" class="clip cap-clip" data-start="49.020" data-duration="1.223" data-track-index="5" style="z-index:60"><div class="cap" id="cap48-in"><span class="cw" id="cw48-0">To</span><span class="cw kw" id="cw48-1">baar-baar</span><span class="cw" id="cw48-2">yeh</span><span class="cw" id="cw48-3">…</span></div></div><div id="cap49" class="clip cap-clip" data-start="50.243" data-duration="1.398" data-track-index="5" style="z-index:60"><div class="cap" id="cap49-in"><span class="cw" id="cw49-0">jo</span><span class="cw" id="cw49-1">aane</span><span class="cw" id="cw49-2">waali</span><span class="cw kw" id="cw49-3">problem,</span></div></div><div id="cap50" class="clip cap-clip" data-start="51.641" data-duration="0.572" data-track-index="5" style="z-index:60"><div class="cap" id="cap50-in"><span class="cw" id="cw50-0">woh</span><span class="cw" id="cw50-1">nahi</span></div></div>
       <div id="leak" data-layout-ignore></div>
     </div>
     <script>
       const tl = gsap.timeline({ paused: true });
             tl.set("#cam", {scale:1.4, x:0, transformOrigin:"34% 39%"}, 0.000);
-      tl.to("#cam", {scale:1.5, duration:3.900, ease:"sine.inOut"}, 0.001);
-      tl.set("#cam", {scale:1.3, x:0, transformOrigin:"53% 18%"}, 3.900);
-      tl.to("#cam", {scale:1.38, duration:9.933, ease:"sine.inOut"}, 3.901);
-      tl.set("#cam", {scale:1.0, x:0, transformOrigin:"50% 50%"}, 13.833);
-      tl.to("#cam", {scale:1.05, duration:2.804, ease:"sine.inOut"}, 13.834);
-      tl.set("#cam", {scale:1.2, x:0, transformOrigin:"34% 39%"}, 16.637);
-      tl.to("#cam", {scale:1.27, duration:6.020, ease:"sine.inOut"}, 16.638);
-      tl.set("#cam", {scale:1.4, x:0, transformOrigin:"34% 39%"}, 22.657);
-      tl.to("#cam", {scale:1.5, duration:4.643, ease:"sine.inOut"}, 22.658);
-      tl.set("#cam", {scale:1.2, x:0, transformOrigin:"34% 39%"}, 27.300);
-      tl.to("#cam", {scale:1.25, duration:8.667, ease:"sine.inOut"}, 27.301);
-      tl.set("#cam", {scale:1.4, x:0, transformOrigin:"34% 39%"}, 35.967);
-      tl.to("#cam", {scale:1.48, duration:4.070, ease:"sine.inOut"}, 35.968);
-      tl.set("#cam", {scale:1.6, x:0, transformOrigin:"34% 38%"}, 40.037);
-      tl.to("#cam", {scale:1.7, duration:3.963, ease:"sine.inOut"}, 40.038);
-      tl.set("#cam", {scale:1.0, x:0, transformOrigin:"50% 50%"}, 44.000);
-      tl.to("#cam", {scale:1.04, duration:2.437, ease:"sine.inOut"}, 44.001);
-      tl.set("#cam", {scale:1.2, x:0, transformOrigin:"34% 39%"}, 46.437);
-      tl.to("#cam", {scale:1.26, duration:0.818, ease:"sine.inOut"}, 46.438);
-      tl.set("#cam", {scale:1.9, x:0, transformOrigin:"100% 37%"}, 47.255);
-      tl.to("#cam", {scale:1.95, duration:2.885, ease:"sine.inOut"}, 47.256);
-      tl.set("#cam", {scale:1.4, x:0, transformOrigin:"34% 39%"}, 50.140);
-      tl.to("#cam", {scale:1.5, duration:2.027, ease:"sine.inOut"}, 50.141);
-      tl.set("#cam", {scale:1.6, x:0, transformOrigin:"34% 38%"}, 52.167);
-      tl.to("#cam", {scale:1.75, duration:3.833, ease:"sine.inOut"}, 52.168);
+      tl.to("#cam", {scale:1.47, duration:3.900, ease:"sine.inOut"}, 0.001);
+      tl.set("#cam", {scale:1.25, x:0, transformOrigin:"53% 18%"}, 3.900);
+      tl.to("#cam", {scale:1.32, duration:4.667, ease:"sine.inOut"}, 3.901);
+      tl.set("#cam", {scale:1.42, x:0, transformOrigin:"53% 18%"}, 8.567);
+      tl.to("#cam", {scale:1.5, duration:5.466, ease:"sine.inOut"}, 8.568);
+      tl.set("#cam", {scale:1.0, x:0, transformOrigin:"50% 50%"}, 14.033);
+      tl.to("#cam", {scale:1.04, duration:2.884, ease:"sine.inOut"}, 14.034);
+      tl.set("#cam", {scale:1.2, x:0, transformOrigin:"34% 39%"}, 16.917);
+      tl.to("#cam", {scale:1.26, duration:2.400, ease:"sine.inOut"}, 16.918);
+      tl.set("#cam", {scale:1.4, x:0, transformOrigin:"34% 39%"}, 19.317);
+      tl.to("#cam", {scale:1.44, duration:3.766, ease:"sine.inOut"}, 19.318);
+      tl.set("#cam", {scale:1.2, x:0, transformOrigin:"34% 39%"}, 23.083);
+      tl.to("#cam", {scale:1.3, duration:2.757, ease:"sine.inOut"}, 23.084);
+      tl.set("#cam", {scale:1.45, x:0, transformOrigin:"34% 38%"}, 25.840);
+      tl.to("#cam", {scale:1.5, duration:2.060, ease:"sine.inOut"}, 25.841);
+      tl.set("#cam", {scale:1.0, x:0, transformOrigin:"50% 50%"}, 27.900);
+      tl.to("#cam", {scale:1.05, duration:8.833, ease:"sine.inOut"}, 27.901);
+      tl.set("#cam", {scale:1.4, x:0, transformOrigin:"34% 39%"}, 36.733);
+      tl.to("#cam", {scale:1.47, duration:3.900, ease:"sine.inOut"}, 36.734);
+      tl.set("#cam", {scale:1.0, x:0, transformOrigin:"50% 50%"}, 40.633);
+      tl.to("#cam", {scale:1.04, duration:2.517, ease:"sine.inOut"}, 40.634);
+      tl.set("#cam", {scale:1.2, x:0, transformOrigin:"34% 39%"}, 43.150);
+      tl.to("#cam", {scale:1.27, duration:0.819, ease:"sine.inOut"}, 43.151);
+      tl.set("#cam", {scale:1.7, x:0, transformOrigin:"100% 37%"}, 43.969);
+      tl.to("#cam", {scale:1.74, duration:1.075, ease:"sine.inOut"}, 43.970);
+      tl.set("#cam", {scale:1.4, x:0, transformOrigin:"34% 39%"}, 45.044);
+      tl.to("#cam", {scale:1.45, duration:1.939, ease:"sine.inOut"}, 45.045);
+      tl.set("#cam", {scale:1.2, x:0, transformOrigin:"34% 39%"}, 46.983);
+      tl.to("#cam", {scale:1.3, duration:2.017, ease:"sine.inOut"}, 46.984);
+      tl.set("#cam", {scale:1.45, x:0, transformOrigin:"34% 38%"}, 49.000);
+      tl.to("#cam", {scale:1.52, duration:3.833, ease:"sine.inOut"}, 49.001);
       tl.fromTo("#camfx", {scale:1}, {scale:1.06, duration:0.12, yoyo:true, repeat:1, ease:"power2.out"}, 1.843);
       tl.fromTo("#camfx", {x:0, filter:"blur(0px)"}, {immediateRender:false, x:-260, filter:"blur(14px)", duration:0.13, ease:"power2.in"}, 3.770);
       tl.fromTo("#camfx", {x:260, filter:"blur(14px)"}, {immediateRender:false, x:0, filter:"blur(0px)", duration:0.14, ease:"power2.out", immediateRender:false}, 3.900);
@@ -248,15 +253,15 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
       tl.to("#hk", {opacity:0, y:-30, duration:0.25, ease:"power2.in"}, 3.550);
       tl.fromTo("#q-terms-in", {opacity:0, x:-60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 5.845);
       tl.to("#q-terms-in", {opacity:0, x:-40, duration:0.3, ease:"power2.in"}, 8.337);
-      tl.fromTo("#qt0", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 5.995);
-      tl.fromTo("#qt1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 6.399);
-      tl.fromTo("#qt2", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 7.246);
+      tl.fromTo("#qt0", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 5.945);
+      tl.fromTo("#qt1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 6.349);
+      tl.fromTo("#qt2", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 7.196);
       tl.fromTo("#q-loop-in", {opacity:0, x:-60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 8.637);
       tl.to("#q-loop-in", {opacity:0, x:-40, duration:0.3, ease:"power2.in"}, 12.183);
       tl.fromTo("#lr", {strokeDashoffset:1}, {strokeDashoffset:0, duration:1.6, ease:"power2.inOut"}, 8.856);
       tl.fromTo("#lr-ic", {rotation:0}, {rotation:360, duration:1.6, ease:"power2.inOut"}, 8.856);
-      tl.fromTo("#ql1", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 8.906);
-      tl.fromTo("#ql2", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 10.953);
+      tl.fromTo("#ql1", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 8.787);
+      tl.fromTo("#ql2", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 8.937);
       tl.fromTo("#ql3", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 11.802);
       tl.fromTo("#an-in", {opacity:0, scale:1.08, filter:"blur(10px)"}, {opacity:1, scale:1, filter:"blur(0px)", duration:0.25, ease:"power2.out"}, 12.383);
       tl.fromTo("#an-t", {opacity:0, y:20}, {opacity:1, y:0, duration:0.4, ease:"power3.out"}, 12.483);
@@ -264,65 +269,61 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
       tl.fromTo("#an-int", {scale:0, transformOrigin:"50% 50%"}, {scale:1, duration:0.4, ease:"back.out(2)"}, 13.083);
       tl.fromTo("#an-ext", {scale:0, transformOrigin:"50% 50%"}, {scale:1, duration:0.4, ease:"back.out(2)"}, 13.333);
       tl.fromTo("#an-fis", {opacity:0}, {opacity:1, duration:0.3}, 13.533);
-      tl.fromTo("#al1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 12.733);
-      tl.fromTo("#al2", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 13.183);
-      tl.fromTo("#al3", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 13.583);
-      tl.fromTo("#al4", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 13.383);
-      tl.fromTo("#al5", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 13.883);
-      tl.fromTo("#an-ring", {opacity:0, scale:0.6, transformOrigin:"50% 50%"}, {opacity:1, scale:1, duration:0.4, ease:"back.out(2)"}, 13.983);
-      tl.to("#an-in", {opacity:0, scale:0.96, filter:"blur(8px)", duration:0.22, ease:"power2.in"}, 16.417);
-      tl.fromTo("#lt-bar", {scaleY:0}, {scaleY:1, duration:0.3, ease:"power3.out"}, 16.737);
-      tl.fromTo("#lt-p", {clipPath:"inset(0% 100% 0% 0%)", opacity:0}, {clipPath:"inset(0% 0% 0% 0%)", opacity:1, duration:0.5, ease:"power3.out"}, 16.837);
-      tl.to("#lt", {opacity:0, x:-40, duration:0.3, ease:"power2.in"}, 19.837);
-      tl.fromTo("#a-cycle-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 18.907);
-      tl.to("#a-cycle-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 22.357);
-      tl.fromTo("#as0", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 18.907);
-      tl.fromTo("#as1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 19.192);
-      tl.fromTo("#as2", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 20.528);
-      tl.fromTo("#a-dwaar-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 25.157);
-      tl.to("#a-dwaar-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 27.100);
-      tl.fromTo("#ad0", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 25.621);
-      tl.fromTo("#ad1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 26.781);
-      tl.fromTo("#rt-in", {clipPath:"inset(0% 0% 0% 100%)"}, {clipPath:"inset(0% 0% 0% 0%)", duration:0.24, ease:"power3.out"}, 28.870);
-      tl.fromTo("#rt-t", {opacity:0, y:16}, {opacity:1, y:0, duration:0.3, ease:"power3.out"}, 28.890);
-      tl.fromTo("#rt0", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 29.020);
-      tl.fromTo("#rk0", {opacity:0, scale:0.2, y:0}, {opacity:1, scale:1, y:0, duration:0.35, ease:"back.out(2.2)"}, 29.489);
-      tl.fromTo("#rt1", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 32.007);
-      tl.fromTo("#rk1", {opacity:0, scale:0.2, y:0}, {opacity:1, scale:1, y:0, duration:0.35, ease:"back.out(2.2)"}, 32.407);
-      tl.fromTo("#rt2", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 34.040);
-      tl.fromTo("#rk2", {opacity:0, scale:0.2, y:0}, {opacity:1, scale:1, y:0, duration:0.35, ease:"back.out(2.2)"}, 34.440);
-      tl.fromTo("#rt3", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 34.865);
-      tl.fromTo("#rk3", {opacity:0, scale:0.2, y:0}, {opacity:1, scale:1, y:0, duration:0.35, ease:"back.out(2.2)"}, 35.265);
-      tl.to("#rt-in", {clipPath:"inset(0% 100% 0% 0%)", duration:0.22, ease:"power3.in"}, 35.797);
-      tl.fromTo("#c-dwaar-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 37.390);
-      tl.to("#c-dwaar-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 39.707);
-      tl.fromTo("#cd0", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 37.540);
-      tl.fromTo("#cd1", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 39.425);
-      tl.fromTo("#cp0", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 40.157);
-      tl.fromTo("#cp1", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 41.929);
-      tl.to("#cp", {opacity:0, y:-20, duration:0.3}, 43.750);
-      tl.fromTo("#leak", {opacity:0, xPercent:-12}, {opacity:0.45, xPercent:0, duration:0.16, ease:"power1.out"}, 35.847);
-      tl.to("#leak", {opacity:0, xPercent:10, duration:0.45, ease:"power1.in"}, 36.017);
-      tl.fromTo("#d-advice-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 44.100);
-      tl.to("#d-advice-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 46.905);
-      tl.fromTo("#d-daily-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 50.140);
-      tl.to("#d-daily-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 51.917);
-      tl.fromTo("#dd0", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 50.824);
-      tl.fromTo("#dd1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 51.561);
-      tl.fromTo("#tk0", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.5, ease:"back.out(2.2)"}, 52.341);
-      tl.fromTo("#tk1", {opacity:0, scale:0.5, y:0}, {opacity:1, scale:1, y:0, duration:0.5, ease:"back.out(2.2)"}, 55.070);
-      tl.fromTo("#tc-in", {opacity:0, scale:1.06, filter:"blur(10px)"}, {opacity:1, scale:1, filter:"blur(0px)", duration:0.25}, 55.400);
-      tl.fromTo("#tc0", {opacity:0, y:24}, {opacity:1, y:0, duration:0.4, ease:"power3.out"}, 55.550);
-      tl.fromTo("#tc1", {opacity:0, y:24}, {opacity:1, y:0, duration:0.4, ease:"power3.out"}, 55.750);
-      tl.fromTo("#tc2", {opacity:0, y:16}, {opacity:1, y:0, duration:0.4, ease:"power3.out"}, 56.000);
-      tl.fromTo("#ec-in", {clipPath:"circle(0% at 50% 50%)"}, {clipPath:"circle(130% at 50% 50%)", duration:0.25, ease:"power3.out"}, 57.000);
-      tl.fromTo("#ec-logo", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 57.150);
-      tl.fromTo("#ec-n", {opacity:0, y:26}, {opacity:1, y:0, duration:0.45, ease:"power3.out"}, 57.250);
-      tl.fromTo("#ec-rule", {scaleX:0}, {scaleX:1, duration:0.45, ease:"power3.out"}, 57.400);
-      tl.fromTo("#ec-s", {opacity:0, y:18}, {opacity:1, y:0, duration:0.45, ease:"power3.out"}, 57.450);
-      tl.fromTo("#ec-sub", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 57.850);
-      tl.fromTo("#ec-sub", {scale:1}, {immediateRender:false, scale:1.06, duration:0.25, yoyo:true, repeat:3, ease:"sine.inOut"}, 58.500);
-      tl.fromTo("#ec-dis", {opacity:0, y:10}, {opacity:1, y:0, duration:0.4, ease:"power3.out"}, 57.700);
+      tl.fromTo("#al1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 12.683);
+      tl.fromTo("#al2", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 12.983);
+      tl.fromTo("#al3", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 13.233);
+      tl.fromTo("#al4", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 13.133);
+      tl.fromTo("#al5", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 13.383);
+      tl.fromTo("#an-ring", {opacity:0, scale:0.6, transformOrigin:"50% 50%"}, {opacity:1, scale:1, duration:0.4, ease:"back.out(2)"}, 13.483);
+      tl.to("#an-in", {opacity:0, scale:0.96, filter:"blur(8px)", duration:0.22, ease:"power2.in"}, 14.983);
+      tl.fromTo("#lt-bar", {scaleY:0}, {scaleY:1, duration:0.3, ease:"power3.out"}, 15.303);
+      tl.fromTo("#lt-p", {clipPath:"inset(0% 100% 0% 0%)", opacity:0}, {clipPath:"inset(0% 0% 0% 0%)", opacity:1, duration:0.5, ease:"power3.out"}, 15.403);
+      tl.to("#lt", {opacity:0, x:-40, duration:0.3, ease:"power2.in"}, 18.403);
+      tl.fromTo("#a-cycle-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 19.287);
+      tl.to("#a-cycle-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 22.803);
+      tl.fromTo("#as0", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 19.287);
+      tl.fromTo("#as1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 19.537);
+      tl.fromTo("#as2", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 20.858);
+      tl.fromTo("#a-dwaar-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 25.760);
+      tl.to("#a-dwaar-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 27.700);
+      tl.fromTo("#ad0", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 25.910);
+      tl.fromTo("#ad1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 27.335);
+      tl.fromTo("#rt-in", {clipPath:"inset(0% 0% 0% 100%)"}, {clipPath:"inset(0% 0% 0% 0%)", duration:0.24, ease:"power3.out"}, 29.470);
+      tl.fromTo("#rt-t", {opacity:0, y:16}, {opacity:1, y:0, duration:0.3, ease:"power3.out"}, 29.490);
+      tl.fromTo("#rt0", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 29.620);
+      tl.fromTo("#rk0", {opacity:0, scale:0.2, y:0}, {opacity:1, scale:1, y:0, duration:0.35, ease:"back.out(2.2)"}, 30.089);
+      tl.fromTo("#rt1", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 32.720);
+      tl.fromTo("#rk1", {opacity:0, scale:0.2, y:0}, {opacity:1, scale:1, y:0, duration:0.35, ease:"back.out(2.2)"}, 33.120);
+      tl.fromTo("#rt2", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 34.810);
+      tl.fromTo("#rk2", {opacity:0, scale:0.2, y:0}, {opacity:1, scale:1, y:0, duration:0.35, ease:"back.out(2.2)"}, 35.210);
+      tl.fromTo("#rt3", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 35.635);
+      tl.fromTo("#rk3", {opacity:0, scale:0.2, y:0}, {opacity:1, scale:1, y:0, duration:0.35, ease:"back.out(2.2)"}, 36.035);
+      tl.to("#rt-in", {clipPath:"inset(0% 100% 0% 0%)", duration:0.22, ease:"power3.in"}, 36.563);
+      tl.fromTo("#c-dwaar-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 36.783);
+      tl.to("#c-dwaar-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 40.383);
+      tl.fromTo("#cd0", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 38.314);
+      tl.fromTo("#leak", {opacity:0, xPercent:-12}, {opacity:0.45, xPercent:0, duration:0.16, ease:"power1.out"}, 36.613);
+      tl.to("#leak", {opacity:0, xPercent:10, duration:0.45, ease:"power1.in"}, 36.783);
+      tl.fromTo("#d-advice-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 40.683);
+      tl.to("#d-advice-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 43.619);
+      tl.fromTo("#d-daily-in", {opacity:0, x:60}, {opacity:1, x:0, duration:0.45, ease:"power3.out"}, 46.953);
+      tl.to("#d-daily-in", {opacity:0, x:40, duration:0.3, ease:"power2.in"}, 48.750);
+      tl.fromTo("#dd0", {opacity:0, scale:0.7, y:0}, {opacity:1, scale:1, y:0, duration:0.4, ease:"back.out(2.2)"}, 47.053);
+      tl.fromTo("#dd1", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 48.324);
+      tl.fromTo("#tk0", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.5, ease:"back.out(2.2)"}, 49.174);
+      tl.fromTo("#tk1", {opacity:0, scale:0.5, y:0}, {opacity:1, scale:1, y:0, duration:0.5, ease:"back.out(2.2)"}, 51.903);
+      tl.fromTo("#tc-in", {opacity:0, scale:1.06, filter:"blur(10px)"}, {opacity:1, scale:1, filter:"blur(0px)", duration:0.25}, 52.233);
+      tl.fromTo("#tc0", {opacity:0, y:24}, {opacity:1, y:0, duration:0.4, ease:"power3.out"}, 52.383);
+      tl.fromTo("#tc1", {opacity:0, y:24}, {opacity:1, y:0, duration:0.4, ease:"power3.out"}, 52.583);
+      tl.fromTo("#tc2", {opacity:0, y:16}, {opacity:1, y:0, duration:0.4, ease:"power3.out"}, 52.833);
+      tl.fromTo("#ec-in", {clipPath:"circle(0% at 50% 50%)"}, {clipPath:"circle(130% at 50% 50%)", duration:0.25, ease:"power3.out"}, 54.533);
+      tl.fromTo("#ec-logo", {opacity:0, scale:0.4, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 54.683);
+      tl.fromTo("#ec-n", {opacity:0, y:26}, {opacity:1, y:0, duration:0.45, ease:"power3.out"}, 54.783);
+      tl.fromTo("#ec-rule", {scaleX:0}, {scaleX:1, duration:0.45, ease:"power3.out"}, 54.933);
+      tl.fromTo("#ec-s", {opacity:0, y:18}, {opacity:1, y:0, duration:0.45, ease:"power3.out"}, 54.983);
+      tl.fromTo("#ec-sub", {opacity:0, scale:0.6, y:0}, {opacity:1, scale:1, y:0, duration:0.45, ease:"back.out(2.2)"}, 55.383);
+      tl.fromTo("#ec-sub", {scale:1}, {immediateRender:false, scale:1.06, duration:0.25, yoyo:true, repeat:3, ease:"sine.inOut"}, 56.033);
+      tl.fromTo("#ec-dis", {opacity:0, y:10}, {opacity:1, y:0, duration:0.4, ease:"power3.out"}, 55.233);
       tl.fromTo("#cap0-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 0.020);
       tl.fromTo("#cw0-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 0.070);
       tl.to("#cw0-0", {color:"#ffffff", duration:0.1}, 0.295);
@@ -424,324 +425,294 @@ body { font-family:"Poppins", sans-serif; color:var(--ink); }
       tl.to("#cw12-0", {color:"#ffffff", duration:0.1}, 12.079);
       tl.fromTo("#cw12-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 12.079);
       tl.to("#cw12-1", {color:"#ffffff", duration:0.1}, 12.307);
-      tl.fromTo("#cap13-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 13.853);
-      tl.fromTo("#cw13-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 13.903);
-      tl.to("#cw13-0", {color:"#ffffff", duration:0.1}, 14.192);
-      tl.fromTo("#cw13-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 14.192);
-      tl.to("#cw13-1", {color:"#ffffff", duration:0.1}, 14.534);
-      tl.fromTo("#cw13-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 14.534);
-      tl.to("#cw13-2", {color:"#ffffff", duration:0.1}, 14.823);
-      tl.fromTo("#cap14-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 15.073);
-      tl.fromTo("#cw14-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 15.123);
-      tl.to("#cw14-0", {color:"#ffffff", duration:0.1}, 15.355);
-      tl.fromTo("#cw14-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 15.355);
-      tl.to("#cw14-1", {color:"#ffffff", duration:0.1}, 15.479);
-      tl.fromTo("#cw14-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 15.479);
-      tl.to("#cw14-2", {color:"#ffffff", duration:0.1}, 15.675);
-      tl.fromTo("#cw14-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 15.675);
-      tl.to("#cw14-3", {color:"#ffffff", duration:0.1}, 15.977);
-      tl.fromTo("#cap15-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 15.927);
-      tl.fromTo("#cw15-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 15.977);
-      tl.to("#cw15-0", {color:"#ffffff", duration:0.1}, 16.173);
-      tl.fromTo("#cw15-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 16.173);
-      tl.to("#cw15-1", {color:"#ffffff", duration:0.1}, 16.333);
-      tl.fromTo("#cap16-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 16.707);
-      tl.fromTo("#cw16-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 16.757);
-      tl.to("#cw16-0", {color:"#ffffff", duration:0.1}, 16.915);
-      tl.fromTo("#cw16-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 16.915);
-      tl.to("#cw16-1", {color:"#ffffff", duration:0.1}, 17.300);
-      tl.fromTo("#cw16-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 17.300);
-      tl.to("#cw16-2", {color:"#ffffff", duration:0.1}, 17.458);
-      tl.fromTo("#cw16-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 17.458);
-      tl.to("#cw16-3", {color:"#ffffff", duration:0.1}, 17.707);
-      tl.fromTo("#cap17-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 17.657);
-      tl.fromTo("#cw17-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 17.707);
-      tl.to("#cw17-0", {color:"#ffffff", duration:0.1}, 18.001);
-      tl.fromTo("#cw17-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 18.001);
-      tl.to("#cw17-1", {color:"#ffffff", duration:0.1}, 18.250);
-      tl.fromTo("#cw17-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 18.250);
-      tl.to("#cw17-2", {color:"#ffffff", duration:0.1}, 18.408);
-      tl.fromTo("#cw17-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 18.408);
-      tl.to("#cw17-3", {color:"#ffffff", duration:0.1}, 18.657);
-      tl.fromTo("#cap18-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 19.007);
-      tl.fromTo("#cw18-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 19.057);
-      tl.to("#cw18-0", {color:"#ffffff", duration:0.1}, 19.242);
-      tl.fromTo("#cw18-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 19.242);
-      tl.to("#cw18-1", {color:"#ffffff", duration:0.1}, 19.509);
-      tl.fromTo("#cw18-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 19.509);
-      tl.to("#cw18-2", {color:"#ffffff", duration:0.1}, 19.817);
-      tl.fromTo("#cap19-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 19.767);
-      tl.fromTo("#cw19-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 19.817);
-      tl.to("#cw19-0", {color:"#ffffff", duration:0.1}, 20.044);
-      tl.fromTo("#cw19-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 20.044);
-      tl.to("#cw19-1", {color:"#ffffff", duration:0.1}, 20.352);
-      tl.fromTo("#cw19-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 20.352);
-      tl.to("#cw19-2", {color:"#ffffff", duration:0.1}, 20.578);
-      tl.fromTo("#cw19-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 20.578);
-      tl.to("#cw19-3", {color:"#ffffff", duration:0.1}, 20.804);
-      tl.fromTo("#cap20-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 20.754);
-      tl.fromTo("#cw20-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 20.804);
-      tl.to("#cw20-0", {color:"#ffffff", duration:0.1}, 20.948);
-      tl.fromTo("#cw20-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 20.948);
-      tl.to("#cw20-1", {color:"#ffffff", duration:0.1}, 21.133);
-      tl.fromTo("#cw20-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 21.133);
-      tl.to("#cw20-2", {color:"#ffffff", duration:0.1}, 21.483);
-      tl.fromTo("#cw20-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 21.483);
-      tl.to("#cw20-3", {color:"#ffffff", duration:0.1}, 21.668);
-      tl.fromTo("#cap21-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 21.618);
-      tl.fromTo("#cw21-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 21.668);
-      tl.to("#cw21-0", {color:"#ffffff", duration:0.1}, 21.935);
-      tl.fromTo("#cw21-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 21.935);
-      tl.to("#cw21-1", {color:"#ffffff", duration:0.1}, 22.162);
-      tl.fromTo("#cw21-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 22.162);
-      tl.to("#cw21-2", {color:"#ffffff", duration:0.1}, 22.347);
-      tl.fromTo("#cap22-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 22.707);
-      tl.fromTo("#cw22-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 22.757);
-      tl.to("#cw22-0", {color:"#ffffff", duration:0.1}, 22.922);
-      tl.fromTo("#cw22-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 22.922);
-      tl.to("#cw22-1", {color:"#ffffff", duration:0.1}, 23.087);
-      tl.fromTo("#cw22-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 23.087);
-      tl.to("#cw22-2", {color:"#ffffff", duration:0.1}, 23.312);
-      tl.fromTo("#cw22-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 23.312);
-      tl.to("#cw22-3", {color:"#ffffff", duration:0.1}, 23.447);
-      tl.fromTo("#cap23-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 23.807);
-      tl.fromTo("#cw23-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 23.857);
-      tl.to("#cw23-0", {color:"#ffffff", duration:0.1}, 23.985);
-      tl.fromTo("#cw23-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 23.985);
-      tl.to("#cw23-1", {color:"#ffffff", duration:0.1}, 24.223);
-      tl.fromTo("#cw23-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 24.223);
-      tl.to("#cw23-2", {color:"#ffffff", duration:0.1}, 24.425);
-      tl.fromTo("#cw23-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 24.425);
-      tl.to("#cw23-3", {color:"#ffffff", duration:0.1}, 24.590);
-      tl.fromTo("#cap24-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 24.540);
-      tl.fromTo("#cw24-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 24.590);
-      tl.to("#cw24-0", {color:"#ffffff", duration:0.1}, 24.792);
-      tl.fromTo("#cw24-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 24.792);
-      tl.to("#cw24-1", {color:"#ffffff", duration:0.1}, 24.957);
-      tl.fromTo("#cap25-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 25.307);
-      tl.fromTo("#cw25-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 25.357);
-      tl.to("#cw25-0", {color:"#ffffff", duration:0.1}, 25.576);
-      tl.fromTo("#cw25-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 25.576);
-      tl.to("#cw25-1", {color:"#ffffff", duration:0.1}, 25.921);
-      tl.fromTo("#cw25-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 25.921);
-      tl.to("#cw25-2", {color:"#ffffff", duration:0.1}, 26.329);
-      tl.fromTo("#cw25-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 26.329);
-      tl.to("#cw25-3", {color:"#ffffff", duration:0.1}, 26.612);
-      tl.fromTo("#cap26-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 26.562);
-      tl.fromTo("#cw26-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 26.612);
-      tl.to("#cw26-0", {color:"#ffffff", duration:0.1}, 26.831);
-      tl.fromTo("#cw26-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 26.831);
-      tl.to("#cw26-1", {color:"#ffffff", duration:0.1}, 27.177);
-      tl.fromTo("#cw26-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 27.370);
-      tl.to("#cw26-2", {color:"#ffffff", duration:0.1}, 27.618);
-      tl.fromTo("#cw26-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 27.618);
-      tl.to("#cw26-3", {color:"#ffffff", duration:0.1}, 27.904);
-      tl.fromTo("#cap27-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 27.854);
-      tl.fromTo("#cw27-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 27.904);
-      tl.to("#cw27-0", {color:"#ffffff", duration:0.1}, 28.152);
-      tl.fromTo("#cw27-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 28.152);
-      tl.to("#cw27-1", {color:"#ffffff", duration:0.1}, 28.400);
-      tl.fromTo("#cw27-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 28.400);
-      tl.to("#cw27-2", {color:"#ffffff", duration:0.1}, 28.610);
-      tl.fromTo("#cap28-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 28.920);
-      tl.fromTo("#cw28-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 28.970);
-      tl.to("#cw28-0", {color:"#ffffff", duration:0.1}, 29.090);
-      tl.fromTo("#cw28-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 29.088);
-      tl.to("#cw28-1", {color:"#ffffff", duration:0.1}, 29.239);
-      tl.fromTo("#cw28-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 29.239);
-      tl.to("#cw28-2", {color:"#ffffff", duration:0.1}, 29.457);
-      tl.fromTo("#cw28-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 29.457);
-      tl.to("#cw28-3", {color:"#ffffff", duration:0.1}, 29.676);
-      tl.fromTo("#cap29-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 29.626);
-      tl.fromTo("#cw29-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 29.676);
-      tl.to("#cw29-0", {color:"#ffffff", duration:0.1}, 29.860);
-      tl.fromTo("#cap30-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 30.207);
-      tl.fromTo("#cw30-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 30.257);
-      tl.to("#cw30-0", {color:"#ffffff", duration:0.1}, 30.533);
-      tl.fromTo("#cw30-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 30.533);
-      tl.to("#cw30-1", {color:"#ffffff", duration:0.1}, 30.661);
-      tl.fromTo("#cw30-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 30.661);
-      tl.to("#cw30-2", {color:"#ffffff", duration:0.1}, 30.900);
-      tl.fromTo("#cw30-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 30.900);
-      tl.to("#cw30-3", {color:"#ffffff", duration:0.1}, 31.029);
-      tl.fromTo("#cap31-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 30.979);
-      tl.fromTo("#cw31-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 31.029);
-      tl.to("#cw31-0", {color:"#ffffff", duration:0.1}, 31.195);
-      tl.fromTo("#cw31-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 31.195);
-      tl.to("#cw31-1", {color:"#ffffff", duration:0.1}, 31.544);
-      tl.fromTo("#cw31-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 31.544);
-      tl.to("#cw31-2", {color:"#ffffff", duration:0.1}, 31.747);
-      tl.fromTo("#cap32-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 32.107);
-      tl.fromTo("#cw32-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 32.157);
-      tl.to("#cw32-0", {color:"#ffffff", duration:0.1}, 32.464);
-      tl.fromTo("#cw32-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 32.464);
-      tl.to("#cw32-1", {color:"#ffffff", duration:0.1}, 32.591);
-      tl.fromTo("#cw32-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 32.591);
-      tl.to("#cw32-2", {color:"#ffffff", duration:0.1}, 32.826);
-      tl.fromTo("#cw32-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 32.826);
-      tl.to("#cw32-3", {color:"#ffffff", duration:0.1}, 32.953);
-      tl.fromTo("#cap33-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 32.903);
-      tl.fromTo("#cw33-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 32.953);
-      tl.to("#cw33-0", {color:"#ffffff", duration:0.1}, 33.224);
-      tl.fromTo("#cw33-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 33.224);
-      tl.to("#cw33-1", {color:"#ffffff", duration:0.1}, 33.568);
-      tl.fromTo("#cw33-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 33.568);
-      tl.to("#cw33-2", {color:"#ffffff", duration:0.1}, 33.767);
-      tl.fromTo("#cap34-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 34.140);
-      tl.fromTo("#cw34-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 34.190);
-      tl.to("#cw34-0", {color:"#ffffff", duration:0.1}, 34.387);
-      tl.fromTo("#cw34-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 34.387);
-      tl.to("#cw34-1", {color:"#ffffff", duration:0.1}, 34.585);
-      tl.fromTo("#cw34-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 34.585);
-      tl.to("#cw34-2", {color:"#ffffff", duration:0.1}, 34.818);
-      tl.fromTo("#cw34-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 34.818);
-      tl.to("#cw34-3", {color:"#ffffff", duration:0.1}, 35.015);
-      tl.fromTo("#cap35-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 34.965);
-      tl.fromTo("#cw35-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 35.015);
-      tl.to("#cw35-0", {color:"#ffffff", duration:0.1}, 35.212);
-      tl.fromTo("#cw35-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 35.212);
-      tl.to("#cw35-1", {color:"#ffffff", duration:0.1}, 35.410);
-      tl.fromTo("#cw35-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 35.410);
-      tl.to("#cw35-2", {color:"#ffffff", duration:0.1}, 35.643);
-      tl.fromTo("#cw35-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 35.643);
-      tl.to("#cw35-3", {color:"#ffffff", duration:0.1}, 35.840);
-      tl.fromTo("#cap36-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 35.987);
-      tl.fromTo("#cw36-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 36.037);
-      tl.to("#cw36-0", {color:"#ffffff", duration:0.1}, 36.507);
-      tl.fromTo("#cw36-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 36.507);
-      tl.to("#cw36-1", {color:"#ffffff", duration:0.1}, 36.760);
-      tl.fromTo("#cw36-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 36.760);
-      tl.to("#cw36-2", {color:"#ffffff", duration:0.1}, 37.013);
-      tl.fromTo("#cw36-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 37.013);
-      tl.to("#cw36-3", {color:"#ffffff", duration:0.1}, 37.267);
-      tl.fromTo("#cap37-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 37.640);
-      tl.fromTo("#cw37-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 37.690);
-      tl.to("#cw37-0", {color:"#ffffff", duration:0.1}, 38.049);
-      tl.fromTo("#cw37-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 38.049);
-      tl.to("#cw37-1", {color:"#ffffff", duration:0.1}, 38.217);
-      tl.fromTo("#cap38-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 38.167);
-      tl.fromTo("#cw38-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 38.217);
-      tl.to("#cw38-0", {color:"#ffffff", duration:0.1}, 38.385);
-      tl.fromTo("#cw38-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 38.385);
-      tl.to("#cw38-1", {color:"#ffffff", duration:0.1}, 38.840);
-      tl.fromTo("#cw38-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 38.840);
-      tl.to("#cw38-2", {color:"#ffffff", duration:0.1}, 39.007);
-      tl.fromTo("#cw38-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 39.007);
-      tl.to("#cw38-3", {color:"#ffffff", duration:0.1}, 39.175);
-      tl.fromTo("#cap39-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 39.125);
-      tl.fromTo("#cw39-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 39.175);
-      tl.to("#cw39-0", {color:"#ffffff", duration:0.1}, 39.487);
-      tl.fromTo("#cw39-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 39.487);
-      tl.to("#cw39-1", {color:"#ffffff", duration:0.1}, 39.750);
-      tl.fromTo("#cap40-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 40.107);
-      tl.fromTo("#cw40-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 40.157);
-      tl.to("#cw40-0", {color:"#ffffff", duration:0.1}, 40.381);
-      tl.fromTo("#cw40-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 40.381);
-      tl.to("#cw40-1", {color:"#ffffff", duration:0.1}, 40.656);
-      tl.fromTo("#cw40-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 40.656);
-      tl.to("#cw40-2", {color:"#ffffff", duration:0.1}, 40.981);
-      tl.fromTo("#cw40-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 40.981);
-      tl.to("#cw40-3", {color:"#ffffff", duration:0.1}, 41.155);
-      tl.fromTo("#cap41-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 41.105);
-      tl.fromTo("#cw41-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 41.155);
-      tl.to("#cw41-0", {color:"#ffffff", duration:0.1}, 41.430);
-      tl.fromTo("#cw41-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 41.430);
-      tl.to("#cw41-1", {color:"#ffffff", duration:0.1}, 41.804);
-      tl.fromTo("#cap42-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 41.754);
-      tl.fromTo("#cw42-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 41.804);
-      tl.to("#cw42-0", {color:"#ffffff", duration:0.1}, 41.979);
-      tl.fromTo("#cw42-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 41.979);
-      tl.to("#cw42-1", {color:"#ffffff", duration:0.1}, 42.454);
-      tl.fromTo("#cw42-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 42.454);
-      tl.to("#cw42-2", {color:"#ffffff", duration:0.1}, 42.678);
-      tl.fromTo("#cw42-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 42.678);
-      tl.to("#cw42-3", {color:"#ffffff", duration:0.1}, 43.103);
-      tl.fromTo("#cap43-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 43.053);
-      tl.fromTo("#cw43-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 43.103);
-      tl.to("#cw43-0", {color:"#ffffff", duration:0.1}, 43.377);
-      tl.fromTo("#cw43-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 43.377);
-      tl.to("#cw43-1", {color:"#ffffff", duration:0.1}, 43.652);
-      tl.fromTo("#cw43-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 43.652);
-      tl.to("#cw43-2", {color:"#ffffff", duration:0.1}, 43.877);
-      tl.fromTo("#cap44-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 44.020);
-      tl.fromTo("#cw44-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 44.070);
-      tl.to("#cw44-0", {color:"#ffffff", duration:0.1}, 44.221);
-      tl.fromTo("#cw44-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 44.221);
-      tl.to("#cw44-1", {color:"#ffffff", duration:0.1}, 44.501);
-      tl.fromTo("#cw44-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 44.501);
-      tl.to("#cw44-2", {color:"#ffffff", duration:0.1}, 44.738);
-      tl.fromTo("#cw44-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 44.738);
-      tl.to("#cw44-3", {color:"#ffffff", duration:0.1}, 45.104);
-      tl.fromTo("#cap45-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 45.054);
-      tl.fromTo("#cw45-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 45.104);
-      tl.to("#cw45-0", {color:"#ffffff", duration:0.1}, 45.255);
-      tl.fromTo("#cw45-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 45.255);
-      tl.to("#cw45-1", {color:"#ffffff", duration:0.1}, 45.449);
-      tl.fromTo("#cw45-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 45.449);
-      tl.to("#cw45-2", {color:"#ffffff", duration:0.1}, 45.686);
-      tl.fromTo("#cw45-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 45.686);
-      tl.to("#cw45-3", {color:"#ffffff", duration:0.1}, 45.966);
-      tl.fromTo("#cap46-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 45.916);
-      tl.fromTo("#cw46-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 45.966);
-      tl.to("#cw46-0", {color:"#ffffff", duration:0.1}, 46.160);
-      tl.fromTo("#cap47-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 46.507);
-      tl.fromTo("#cw47-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 46.557);
-      tl.to("#cw47-0", {color:"#ffffff", duration:0.1}, 46.785);
-      tl.fromTo("#cw47-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 46.785);
-      tl.to("#cw47-1", {color:"#ffffff", duration:0.1}, 47.405);
-      tl.fromTo("#cw47-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 47.405);
-      tl.to("#cw47-2", {color:"#ffffff", duration:0.1}, 47.765);
-      tl.fromTo("#cw47-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 47.765);
-      tl.to("#cw47-3", {color:"#ffffff", duration:0.1}, 47.993);
-      tl.fromTo("#cap48-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 47.943);
-      tl.fromTo("#cw48-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 47.993);
-      tl.to("#cw48-0", {color:"#ffffff", duration:0.1}, 48.222);
-      tl.fromTo("#cw48-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 48.222);
-      tl.to("#cw48-1", {color:"#ffffff", duration:0.1}, 48.450);
-      tl.fromTo("#cw48-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 48.450);
-      tl.to("#cw48-2", {color:"#ffffff", duration:0.1}, 48.875);
-      tl.fromTo("#cw48-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 48.875);
-      tl.to("#cw48-3", {color:"#ffffff", duration:0.1}, 49.299);
-      tl.fromTo("#cap49-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 49.249);
-      tl.fromTo("#cw49-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 49.299);
-      tl.to("#cw49-0", {color:"#ffffff", duration:0.1}, 49.658);
-      tl.fromTo("#cw49-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 49.658);
-      tl.to("#cw49-1", {color:"#ffffff", duration:0.1}, 49.887);
-      tl.fromTo("#cap50-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 50.240);
-      tl.fromTo("#cw50-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 50.290);
-      tl.to("#cw50-0", {color:"#ffffff", duration:0.1}, 50.633);
-      tl.fromTo("#cw50-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 50.633);
-      tl.to("#cw50-1", {color:"#ffffff", duration:0.1}, 50.924);
-      tl.fromTo("#cw50-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 50.924);
-      tl.to("#cw50-2", {color:"#ffffff", duration:0.1}, 51.267);
-      tl.fromTo("#cw50-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 51.267);
-      tl.to("#cw50-3", {color:"#ffffff", duration:0.1}, 51.611);
-      tl.fromTo("#cap51-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 51.561);
-      tl.fromTo("#cw51-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 51.611);
-      tl.to("#cw51-0", {color:"#ffffff", duration:0.1}, 52.060);
-      tl.fromTo("#cap52-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 52.187);
-      tl.fromTo("#cw52-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 52.237);
-      tl.to("#cw52-0", {color:"#ffffff", duration:0.1}, 52.441);
-      tl.fromTo("#cw52-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 52.441);
-      tl.to("#cw52-1", {color:"#ffffff", duration:0.1}, 52.994);
-      tl.fromTo("#cw52-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 52.994);
-      tl.to("#cw52-2", {color:"#ffffff", duration:0.1}, 53.256);
-      tl.fromTo("#cw52-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 53.256);
-      tl.to("#cw52-3", {color:"#ffffff", duration:0.1}, 53.460);
-      tl.fromTo("#cap53-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 53.410);
-      tl.fromTo("#cw53-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 53.460);
-      tl.to("#cw53-0", {color:"#ffffff", duration:0.1}, 53.664);
-      tl.fromTo("#cw53-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 53.664);
-      tl.to("#cw53-1", {color:"#ffffff", duration:0.1}, 53.984);
-      tl.fromTo("#cw53-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 53.984);
-      tl.to("#cw53-2", {color:"#ffffff", duration:0.1}, 54.362);
-      tl.fromTo("#cw53-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 54.362);
-      tl.to("#cw53-3", {color:"#ffffff", duration:0.1}, 54.857);
-      tl.fromTo("#cap54-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 54.807);
-      tl.fromTo("#cw54-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 54.857);
-      tl.to("#cw54-0", {color:"#ffffff", duration:0.1}, 55.120);
-      tl.fromTo("#cw54-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 55.120);
-      tl.to("#cw54-1", {color:"#ffffff", duration:0.1}, 55.440);
+      tl.fromTo("#cap13-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 14.053);
+      tl.fromTo("#cw13-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 14.103);
+      tl.to("#cw13-0", {color:"#ffffff", duration:0.1}, 14.392);
+      tl.fromTo("#cw13-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 14.392);
+      tl.to("#cw13-1", {color:"#ffffff", duration:0.1}, 14.734);
+      tl.fromTo("#cw13-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 14.734);
+      tl.to("#cw13-2", {color:"#ffffff", duration:0.1}, 15.023);
+      tl.fromTo("#cap14-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 15.273);
+      tl.fromTo("#cw14-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 15.323);
+      tl.to("#cw14-0", {color:"#ffffff", duration:0.1}, 15.555);
+      tl.fromTo("#cw14-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 15.555);
+      tl.to("#cw14-1", {color:"#ffffff", duration:0.1}, 15.679);
+      tl.fromTo("#cw14-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 15.679);
+      tl.to("#cw14-2", {color:"#ffffff", duration:0.1}, 15.875);
+      tl.fromTo("#cw14-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 15.875);
+      tl.to("#cw14-3", {color:"#ffffff", duration:0.1}, 16.177);
+      tl.fromTo("#cap15-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 16.127);
+      tl.fromTo("#cw15-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 16.177);
+      tl.to("#cw15-0", {color:"#ffffff", duration:0.1}, 16.373);
+      tl.fromTo("#cw15-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 16.373);
+      tl.to("#cw15-1", {color:"#ffffff", duration:0.1}, 16.533);
+      tl.fromTo("#cap16-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 16.987);
+      tl.fromTo("#cw16-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 17.037);
+      tl.to("#cw16-0", {color:"#ffffff", duration:0.1}, 17.195);
+      tl.fromTo("#cw16-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 17.195);
+      tl.to("#cw16-1", {color:"#ffffff", duration:0.1}, 17.580);
+      tl.fromTo("#cw16-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 17.580);
+      tl.to("#cw16-2", {color:"#ffffff", duration:0.1}, 17.738);
+      tl.fromTo("#cw16-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 17.738);
+      tl.to("#cw16-3", {color:"#ffffff", duration:0.1}, 17.987);
+      tl.fromTo("#cap17-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 17.937);
+      tl.fromTo("#cw17-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 17.987);
+      tl.to("#cw17-0", {color:"#ffffff", duration:0.1}, 18.281);
+      tl.fromTo("#cw17-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 18.281);
+      tl.to("#cw17-1", {color:"#ffffff", duration:0.1}, 18.530);
+      tl.fromTo("#cw17-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 18.530);
+      tl.to("#cw17-2", {color:"#ffffff", duration:0.1}, 18.688);
+      tl.fromTo("#cw17-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 18.688);
+      tl.to("#cw17-3", {color:"#ffffff", duration:0.1}, 18.937);
+      tl.fromTo("#cap18-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 19.387);
+      tl.fromTo("#cw18-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 19.437);
+      tl.to("#cw18-0", {color:"#ffffff", duration:0.1}, 19.622);
+      tl.fromTo("#cw18-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 19.622);
+      tl.to("#cw18-1", {color:"#ffffff", duration:0.1}, 19.889);
+      tl.fromTo("#cw18-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 19.889);
+      tl.to("#cw18-2", {color:"#ffffff", duration:0.1}, 20.197);
+      tl.fromTo("#cap19-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 20.147);
+      tl.fromTo("#cw19-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 20.197);
+      tl.to("#cw19-0", {color:"#ffffff", duration:0.1}, 20.424);
+      tl.fromTo("#cw19-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 20.424);
+      tl.to("#cw19-1", {color:"#ffffff", duration:0.1}, 20.732);
+      tl.fromTo("#cw19-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 20.732);
+      tl.to("#cw19-2", {color:"#ffffff", duration:0.1}, 20.958);
+      tl.fromTo("#cw19-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 20.958);
+      tl.to("#cw19-3", {color:"#ffffff", duration:0.1}, 21.184);
+      tl.fromTo("#cap20-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 21.134);
+      tl.fromTo("#cw20-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 21.184);
+      tl.to("#cw20-0", {color:"#ffffff", duration:0.1}, 21.328);
+      tl.fromTo("#cw20-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 21.328);
+      tl.to("#cw20-1", {color:"#ffffff", duration:0.1}, 21.513);
+      tl.fromTo("#cw20-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 21.513);
+      tl.to("#cw20-2", {color:"#ffffff", duration:0.1}, 21.863);
+      tl.fromTo("#cw20-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 21.863);
+      tl.to("#cw20-3", {color:"#ffffff", duration:0.1}, 22.048);
+      tl.fromTo("#cap21-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 21.998);
+      tl.fromTo("#cw21-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 22.048);
+      tl.to("#cw21-0", {color:"#ffffff", duration:0.1}, 22.315);
+      tl.fromTo("#cw21-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 22.315);
+      tl.to("#cw21-1", {color:"#ffffff", duration:0.1}, 22.542);
+      tl.fromTo("#cw21-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 22.542);
+      tl.to("#cw21-2", {color:"#ffffff", duration:0.1}, 22.727);
+      tl.fromTo("#cap22-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 23.153);
+      tl.fromTo("#cw22-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 23.203);
+      tl.to("#cw22-0", {color:"#ffffff", duration:0.1}, 23.368);
+      tl.fromTo("#cw22-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 23.368);
+      tl.to("#cw22-1", {color:"#ffffff", duration:0.1}, 23.533);
+      tl.fromTo("#cw22-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 23.533);
+      tl.to("#cw22-2", {color:"#ffffff", duration:0.1}, 23.758);
+      tl.fromTo("#cw22-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 23.758);
+      tl.to("#cw22-3", {color:"#ffffff", duration:0.1}, 23.893);
+      tl.fromTo("#cap23-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 24.320);
+      tl.fromTo("#cw23-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 24.370);
+      tl.to("#cw23-0", {color:"#ffffff", duration:0.1}, 24.498);
+      tl.fromTo("#cw23-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 24.498);
+      tl.to("#cw23-1", {color:"#ffffff", duration:0.1}, 24.737);
+      tl.fromTo("#cw23-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 24.737);
+      tl.to("#cw23-2", {color:"#ffffff", duration:0.1}, 24.938);
+      tl.fromTo("#cw23-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 24.938);
+      tl.to("#cw23-3", {color:"#ffffff", duration:0.1}, 25.103);
+      tl.fromTo("#cap24-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 25.053);
+      tl.fromTo("#cw24-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 25.103);
+      tl.to("#cw24-0", {color:"#ffffff", duration:0.1}, 25.305);
+      tl.fromTo("#cw24-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 25.305);
+      tl.to("#cw24-1", {color:"#ffffff", duration:0.1}, 25.470);
+      tl.fromTo("#cap25-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 25.910);
+      tl.fromTo("#cw25-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 25.960);
+      tl.to("#cw25-0", {color:"#ffffff", duration:0.1}, 26.180);
+      tl.fromTo("#cw25-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 26.180);
+      tl.to("#cw25-1", {color:"#ffffff", duration:0.1}, 26.525);
+      tl.fromTo("#cw25-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 26.525);
+      tl.to("#cw25-2", {color:"#ffffff", duration:0.1}, 26.933);
+      tl.fromTo("#cw25-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 26.933);
+      tl.to("#cw25-3", {color:"#ffffff", duration:0.1}, 27.215);
+      tl.fromTo("#cap26-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 27.165);
+      tl.fromTo("#cw26-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 27.215);
+      tl.to("#cw26-0", {color:"#ffffff", duration:0.1}, 27.435);
+      tl.fromTo("#cw26-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 27.435);
+      tl.to("#cw26-1", {color:"#ffffff", duration:0.1}, 27.780);
+      tl.fromTo("#cw26-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 27.970);
+      tl.to("#cw26-2", {color:"#ffffff", duration:0.1}, 28.218);
+      tl.fromTo("#cw26-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 28.218);
+      tl.to("#cw26-3", {color:"#ffffff", duration:0.1}, 28.504);
+      tl.fromTo("#cap27-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 28.454);
+      tl.fromTo("#cw27-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 28.504);
+      tl.to("#cw27-0", {color:"#ffffff", duration:0.1}, 28.752);
+      tl.fromTo("#cw27-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 28.752);
+      tl.to("#cw27-1", {color:"#ffffff", duration:0.1}, 29.000);
+      tl.fromTo("#cw27-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 29.000);
+      tl.to("#cw27-2", {color:"#ffffff", duration:0.1}, 29.210);
+      tl.fromTo("#cap28-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 29.520);
+      tl.fromTo("#cw28-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 29.570);
+      tl.to("#cw28-0", {color:"#ffffff", duration:0.1}, 29.690);
+      tl.fromTo("#cw28-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 29.688);
+      tl.to("#cw28-1", {color:"#ffffff", duration:0.1}, 29.839);
+      tl.fromTo("#cw28-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 29.839);
+      tl.to("#cw28-2", {color:"#ffffff", duration:0.1}, 30.057);
+      tl.fromTo("#cw28-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 30.057);
+      tl.to("#cw28-3", {color:"#ffffff", duration:0.1}, 30.276);
+      tl.fromTo("#cap29-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 30.226);
+      tl.fromTo("#cw29-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 30.276);
+      tl.to("#cw29-0", {color:"#ffffff", duration:0.1}, 30.460);
+      tl.fromTo("#cap30-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 30.857);
+      tl.fromTo("#cw30-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 30.907);
+      tl.to("#cw30-0", {color:"#ffffff", duration:0.1}, 31.183);
+      tl.fromTo("#cw30-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 31.183);
+      tl.to("#cw30-1", {color:"#ffffff", duration:0.1}, 31.311);
+      tl.fromTo("#cw30-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 31.311);
+      tl.to("#cw30-2", {color:"#ffffff", duration:0.1}, 31.550);
+      tl.fromTo("#cw30-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 31.550);
+      tl.to("#cw30-3", {color:"#ffffff", duration:0.1}, 31.679);
+      tl.fromTo("#cap31-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 31.629);
+      tl.fromTo("#cw31-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 31.679);
+      tl.to("#cw31-0", {color:"#ffffff", duration:0.1}, 31.845);
+      tl.fromTo("#cw31-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 31.845);
+      tl.to("#cw31-1", {color:"#ffffff", duration:0.1}, 32.194);
+      tl.fromTo("#cw31-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 32.194);
+      tl.to("#cw31-2", {color:"#ffffff", duration:0.1}, 32.397);
+      tl.fromTo("#cap32-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 32.820);
+      tl.fromTo("#cw32-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 32.870);
+      tl.to("#cw32-0", {color:"#ffffff", duration:0.1}, 33.178);
+      tl.fromTo("#cw32-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 33.178);
+      tl.to("#cw32-1", {color:"#ffffff", duration:0.1}, 33.304);
+      tl.fromTo("#cw32-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 33.304);
+      tl.to("#cw32-2", {color:"#ffffff", duration:0.1}, 33.539);
+      tl.fromTo("#cw32-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 33.539);
+      tl.to("#cw32-3", {color:"#ffffff", duration:0.1}, 33.666);
+      tl.fromTo("#cap33-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 33.616);
+      tl.fromTo("#cw33-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 33.666);
+      tl.to("#cw33-0", {color:"#ffffff", duration:0.1}, 33.937);
+      tl.fromTo("#cw33-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 33.937);
+      tl.to("#cw33-1", {color:"#ffffff", duration:0.1}, 34.281);
+      tl.fromTo("#cw33-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 34.281);
+      tl.to("#cw33-2", {color:"#ffffff", duration:0.1}, 34.480);
+      tl.fromTo("#cap34-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 34.910);
+      tl.fromTo("#cw34-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 34.960);
+      tl.to("#cw34-0", {color:"#ffffff", duration:0.1}, 35.157);
+      tl.fromTo("#cw34-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 35.157);
+      tl.to("#cw34-1", {color:"#ffffff", duration:0.1}, 35.355);
+      tl.fromTo("#cw34-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 35.355);
+      tl.to("#cw34-2", {color:"#ffffff", duration:0.1}, 35.588);
+      tl.fromTo("#cw34-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 35.588);
+      tl.to("#cw34-3", {color:"#ffffff", duration:0.1}, 35.785);
+      tl.fromTo("#cap35-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 35.735);
+      tl.fromTo("#cw35-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 35.785);
+      tl.to("#cw35-0", {color:"#ffffff", duration:0.1}, 35.982);
+      tl.fromTo("#cw35-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 35.982);
+      tl.to("#cw35-1", {color:"#ffffff", duration:0.1}, 36.180);
+      tl.fromTo("#cw35-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 36.180);
+      tl.to("#cw35-2", {color:"#ffffff", duration:0.1}, 36.413);
+      tl.fromTo("#cw35-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 36.413);
+      tl.to("#cw35-3", {color:"#ffffff", duration:0.1}, 36.610);
+      tl.fromTo("#cap36-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 36.753);
+      tl.fromTo("#cw36-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 36.803);
+      tl.to("#cw36-0", {color:"#ffffff", duration:0.1}, 37.274);
+      tl.fromTo("#cw36-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 37.274);
+      tl.to("#cw36-1", {color:"#ffffff", duration:0.1}, 37.527);
+      tl.fromTo("#cw36-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 37.527);
+      tl.to("#cw36-2", {color:"#ffffff", duration:0.1}, 37.780);
+      tl.fromTo("#cw36-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 37.780);
+      tl.to("#cw36-3", {color:"#ffffff", duration:0.1}, 38.033);
+      tl.fromTo("#cap37-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 38.414);
+      tl.fromTo("#cw37-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 38.464);
+      tl.to("#cw37-0", {color:"#ffffff", duration:0.1}, 38.823);
+      tl.fromTo("#cw37-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 38.823);
+      tl.to("#cw37-1", {color:"#ffffff", duration:0.1}, 38.991);
+      tl.fromTo("#cap38-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 38.941);
+      tl.fromTo("#cw38-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 38.991);
+      tl.to("#cw38-0", {color:"#ffffff", duration:0.1}, 39.158);
+      tl.fromTo("#cw38-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 39.158);
+      tl.to("#cw38-1", {color:"#ffffff", duration:0.1}, 39.613);
+      tl.fromTo("#cw38-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 39.613);
+      tl.to("#cw38-2", {color:"#ffffff", duration:0.1}, 39.781);
+      tl.fromTo("#cw38-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 39.781);
+      tl.to("#cw38-3", {color:"#ffffff", duration:0.1}, 39.949);
+      tl.fromTo("#cap39-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 39.899);
+      tl.fromTo("#cw39-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 39.949);
+      tl.to("#cw39-0", {color:"#ffffff", duration:0.1}, 40.260);
+      tl.fromTo("#cw39-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 40.260);
+      tl.to("#cw39-1", {color:"#ffffff", duration:0.1}, 40.524);
+      tl.fromTo("#cap40-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 40.653);
+      tl.fromTo("#cw40-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 40.703);
+      tl.to("#cw40-0", {color:"#ffffff", duration:0.1}, 40.854);
+      tl.fromTo("#cw40-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 40.854);
+      tl.to("#cw40-1", {color:"#ffffff", duration:0.1}, 41.134);
+      tl.fromTo("#cw40-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 41.134);
+      tl.to("#cw40-2", {color:"#ffffff", duration:0.1}, 41.371);
+      tl.fromTo("#cw40-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 41.371);
+      tl.to("#cw40-3", {color:"#ffffff", duration:0.1}, 41.738);
+      tl.fromTo("#cap41-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 41.688);
+      tl.fromTo("#cw41-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 41.738);
+      tl.to("#cw41-0", {color:"#ffffff", duration:0.1}, 41.888);
+      tl.fromTo("#cw41-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 41.888);
+      tl.to("#cw41-1", {color:"#ffffff", duration:0.1}, 42.082);
+      tl.fromTo("#cw41-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 42.082);
+      tl.to("#cw41-2", {color:"#ffffff", duration:0.1}, 42.319);
+      tl.fromTo("#cw41-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 42.319);
+      tl.to("#cw41-3", {color:"#ffffff", duration:0.1}, 42.599);
+      tl.fromTo("#cap42-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 42.549);
+      tl.fromTo("#cw42-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 42.599);
+      tl.to("#cw42-0", {color:"#ffffff", duration:0.1}, 42.793);
+      tl.fromTo("#cap43-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 43.220);
+      tl.fromTo("#cw43-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 43.270);
+      tl.to("#cw43-0", {color:"#ffffff", duration:0.1}, 43.499);
+      tl.fromTo("#cw43-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 43.499);
+      tl.to("#cw43-1", {color:"#ffffff", duration:0.1}, 44.119);
+      tl.fromTo("#cw43-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 44.119);
+      tl.to("#cw43-2", {color:"#ffffff", duration:0.1}, 44.478);
+      tl.fromTo("#cw43-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 44.478);
+      tl.to("#cw43-3", {color:"#ffffff", duration:0.1}, 44.706);
+      tl.fromTo("#cap44-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 44.656);
+      tl.fromTo("#cw44-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 44.706);
+      tl.to("#cw44-0", {color:"#ffffff", duration:0.1}, 44.935);
+      tl.fromTo("#cw44-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 44.935);
+      tl.to("#cw44-1", {color:"#ffffff", duration:0.1}, 45.164);
+      tl.fromTo("#cw44-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 45.164);
+      tl.to("#cw44-2", {color:"#ffffff", duration:0.1}, 45.588);
+      tl.fromTo("#cw44-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 45.588);
+      tl.to("#cw44-3", {color:"#ffffff", duration:0.1}, 46.012);
+      tl.fromTo("#cap45-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 45.962);
+      tl.fromTo("#cw45-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 46.012);
+      tl.to("#cw45-0", {color:"#ffffff", duration:0.1}, 46.371);
+      tl.fromTo("#cw45-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 46.371);
+      tl.to("#cw45-1", {color:"#ffffff", duration:0.1}, 46.600);
+      tl.fromTo("#cap46-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 47.053);
+      tl.fromTo("#cw46-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 47.103);
+      tl.to("#cw46-0", {color:"#ffffff", duration:0.1}, 47.447);
+      tl.fromTo("#cw46-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 47.447);
+      tl.to("#cw46-1", {color:"#ffffff", duration:0.1}, 47.737);
+      tl.fromTo("#cw46-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 47.737);
+      tl.to("#cw46-2", {color:"#ffffff", duration:0.1}, 48.081);
+      tl.fromTo("#cw46-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 48.081);
+      tl.to("#cw46-3", {color:"#ffffff", duration:0.1}, 48.424);
+      tl.fromTo("#cap47-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 48.374);
+      tl.fromTo("#cw47-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 48.424);
+      tl.to("#cw47-0", {color:"#ffffff", duration:0.1}, 48.873);
+      tl.fromTo("#cap48-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 49.020);
+      tl.fromTo("#cw48-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 49.070);
+      tl.to("#cw48-0", {color:"#ffffff", duration:0.1}, 49.274);
+      tl.fromTo("#cw48-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 49.274);
+      tl.to("#cw48-1", {color:"#ffffff", duration:0.1}, 49.827);
+      tl.fromTo("#cw48-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 49.827);
+      tl.to("#cw48-2", {color:"#ffffff", duration:0.1}, 50.089);
+      tl.fromTo("#cw48-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 50.089);
+      tl.to("#cw48-3", {color:"#ffffff", duration:0.1}, 50.293);
+      tl.fromTo("#cap49-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 50.243);
+      tl.fromTo("#cw49-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 50.293);
+      tl.to("#cw49-0", {color:"#ffffff", duration:0.1}, 50.497);
+      tl.fromTo("#cw49-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 50.497);
+      tl.to("#cw49-1", {color:"#ffffff", duration:0.1}, 50.817);
+      tl.fromTo("#cw49-2", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 50.817);
+      tl.to("#cw49-2", {color:"#ffffff", duration:0.1}, 51.196);
+      tl.fromTo("#cw49-3", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 51.196);
+      tl.to("#cw49-3", {color:"#ffffff", duration:0.1}, 51.691);
+      tl.fromTo("#cap50-in", {opacity:0, y:14}, {opacity:1, y:0, duration:0.14, ease:"power2.out"}, 51.641);
+      tl.fromTo("#cw50-0", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 51.691);
+      tl.to("#cw50-0", {color:"#ffffff", duration:0.1}, 51.953);
+      tl.fromTo("#cw50-1", {color:"#ffffff"}, {color:"#E8B44A", duration:0.06}, 51.953);
+      tl.to("#cw50-1", {color:"#ffffff", duration:0.1}, 52.273);
       window.__timelines["main"] = tl;
     </script>
   </body>

@@ -27,14 +27,14 @@
   {
    "gap": true,
    "out_start": 12.433,
-   "frames": 42,
+   "frames": 48,
    "section": "answer"
   },
   {
    "src_start": 10.16,
    "src_end": 11.26,
    "frames": 33,
-   "out_start": 13.833,
+   "out_start": 14.033,
    "section": "answer",
    "speaker": "doctor"
   },
@@ -42,47 +42,47 @@
    "src_start": 11.27,
    "src_end": 12.803,
    "frames": 46,
-   "out_start": 14.933,
+   "out_start": 15.133,
    "section": "answer",
    "speaker": "doctor"
   },
   {
-   "src_start": 13.13,
-   "src_end": 15.43,
+   "src_start": 13.05,
+   "src_end": 15.45,
+   "frames": 72,
+   "out_start": 16.667,
+   "section": "answer",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 15.81,
+   "src_end": 19.577,
+   "frames": 113,
+   "out_start": 19.067,
+   "section": "answer",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 19.79,
+   "src_end": 20.957,
+   "frames": 35,
+   "out_start": 22.833,
+   "section": "answer",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 21.23,
+   "src_end": 22.83,
+   "frames": 48,
+   "out_start": 24.0,
+   "section": "answer",
+   "speaker": "doctor"
+  },
+  {
+   "src_start": 22.83,
+   "src_end": 25.13,
    "frames": 69,
-   "out_start": 16.467,
-   "section": "answer",
-   "speaker": "doctor"
-  },
-  {
-   "src_start": 15.89,
-   "src_end": 19.59,
-   "frames": 111,
-   "out_start": 18.767,
-   "section": "answer",
-   "speaker": "doctor"
-  },
-  {
-   "src_start": 19.87,
-   "src_end": 20.97,
-   "frames": 33,
-   "out_start": 22.467,
-   "section": "answer",
-   "speaker": "doctor"
-  },
-  {
-   "src_start": 21.31,
-   "src_end": 22.81,
-   "frames": 45,
-   "out_start": 23.567,
-   "section": "answer",
-   "speaker": "doctor"
-  },
-  {
-   "src_start": 22.9,
-   "src_end": 25.133,
-   "frames": 67,
-   "out_start": 25.067,
+   "out_start": 25.6,
    "section": "answer",
    "speaker": "doctor"
   },
@@ -90,7 +90,7 @@
    "src_start": 25.94,
    "src_end": 27.373,
    "frames": 43,
-   "out_start": 27.3,
+   "out_start": 27.9,
    "section": "routine",
    "speaker": "doctor"
   },
@@ -98,31 +98,31 @@
    "src_start": 27.373,
    "src_end": 28.606,
    "frames": 37,
-   "out_start": 28.733,
+   "out_start": 29.333,
    "section": "routine",
    "speaker": "doctor"
   },
   {
-   "src_start": 28.67,
-   "src_end": 30.57,
-   "frames": 57,
-   "out_start": 29.967,
+   "src_start": 28.62,
+   "src_end": 30.553,
+   "frames": 58,
+   "out_start": 30.567,
    "section": "routine",
    "speaker": "doctor"
   },
   {
-   "src_start": 30.75,
-   "src_end": 32.783,
-   "frames": 61,
-   "out_start": 31.867,
+   "src_start": 30.67,
+   "src_end": 32.77,
+   "frames": 63,
+   "out_start": 32.5,
    "section": "routine",
    "speaker": "doctor"
   },
   {
-   "src_start": 32.84,
-   "src_end": 34.907,
-   "frames": 62,
-   "out_start": 33.9,
+   "src_start": 32.77,
+   "src_end": 34.903,
+   "frames": 64,
+   "out_start": 34.6,
    "section": "routine",
    "speaker": "doctor"
   },
@@ -130,23 +130,15 @@
    "src_start": 35.33,
    "src_end": 36.763,
    "frames": 43,
-   "out_start": 35.967,
+   "out_start": 36.733,
    "section": "clean",
    "speaker": "doctor"
   },
   {
-   "src_start": 36.77,
-   "src_end": 39.237,
+   "src_start": 36.763,
+   "src_end": 39.23,
    "frames": 74,
-   "out_start": 37.4,
-   "section": "clean",
-   "speaker": "doctor"
-  },
-  {
-   "src_start": 39.56,
-   "src_end": 43.693,
-   "frames": 124,
-   "out_start": 39.867,
+   "out_start": 38.167,
    "section": "clean",
    "speaker": "doctor"
   },
@@ -154,23 +146,23 @@
    "src_start": 44.31,
    "src_end": 46.577,
    "frames": 68,
-   "out_start": 44.0,
+   "out_start": 40.633,
    "section": "advice",
    "speaker": "doctor"
   },
   {
-   "src_start": 46.88,
-   "src_end": 50.613,
-   "frames": 112,
-   "out_start": 46.267,
+   "src_start": 46.8,
+   "src_end": 50.633,
+   "frames": 115,
+   "out_start": 42.9,
    "section": "advice",
    "speaker": "doctor"
   },
   {
-   "src_start": 50.91,
-   "src_end": 53.077,
-   "frames": 65,
-   "out_start": 50.0,
+   "src_start": 50.83,
+   "src_end": 53.097,
+   "frames": 68,
+   "out_start": 46.733,
    "section": "advice",
    "speaker": "doctor"
   },
@@ -178,7 +170,7 @@
    "src_start": 53.29,
    "src_end": 57.123,
    "frames": 115,
-   "out_start": 52.167,
+   "out_start": 49.0,
    "section": "takeaway",
    "speaker": "doctor"
   }
@@ -203,116 +195,110 @@
    "section": "question"
   },
   {
-   "start": 13.903,
-   "end": 14.823,
+   "start": 14.103,
+   "end": 15.023,
    "text": "Haan, bahut baar,",
    "section": "answer"
   },
   {
-   "start": 15.123,
-   "end": 16.333,
+   "start": 15.323,
+   "end": 16.533,
    "text": "aapne jo sahi observe kiya hai,",
    "section": "answer"
   },
   {
-   "start": 16.757,
-   "end": 18.657,
+   "start": 17.037,
+   "end": 18.937,
    "text": "ki patient ek baar theek hone ke baad",
    "section": "answer"
   },
   {
-   "start": 19.057,
-   "end": 22.347,
+   "start": 19.437,
+   "end": 22.727,
    "text": "har chaar mahine, chhe mahine baad phir se usi problem par lekar aata hai.",
    "section": "answer"
   },
   {
-   "start": 22.757,
-   "end": 23.447,
+   "start": 23.203,
+   "end": 23.893,
    "text": "Iska main kaaran hai",
    "section": "answer"
   },
   {
-   "start": 23.857,
-   "end": 24.957,
+   "start": 24.37,
+   "end": 25.47,
    "text": "ki piles mein kya hota hai,",
    "section": "answer"
   },
   {
-   "start": 25.357,
-   "end": 27.177,
+   "start": 25.96,
+   "end": 27.78,
    "text": "jo anus dwaar hai, \u2026 saaf\u2026",
    "section": "answer"
   },
   {
-   "start": 27.37,
-   "end": 28.61,
+   "start": 27.97,
+   "end": 29.21,
    "text": "Jaise hum-aap subah uthte hain,",
    "section": "routine"
   },
   {
-   "start": 28.97,
-   "end": 29.86,
+   "start": 29.57,
+   "end": 30.46,
    "text": "to hum brush karte hain,",
    "section": "routine"
   },
   {
-   "start": 30.257,
-   "end": 31.747,
+   "start": 30.907,
+   "end": 32.397,
    "text": "daaton ke andar ka mal nikaalte hain,",
    "section": "routine"
   },
   {
-   "start": 32.157,
-   "end": 33.767,
+   "start": 32.87,
+   "end": 34.48,
    "text": "aankhon ke andar ke chipad nikaalte hain,",
    "section": "routine"
   },
   {
-   "start": 34.19,
-   "end": 35.84,
+   "start": 34.96,
+   "end": 36.61,
    "text": "naak saaf karte hain, kaan saaf karte hain.",
    "section": "routine"
   },
   {
-   "start": 36.037,
-   "end": 37.267,
+   "start": 36.803,
+   "end": 38.033,
    "text": "Waise hi jo \u2026",
    "section": "clean"
   },
   {
-   "start": 37.69,
-   "end": 39.75,
+   "start": 38.464,
+   "end": 40.524,
    "text": "mootra ke, jo indriyon ke jo dwaar hain,",
    "section": "clean"
   },
   {
-   "start": 40.157,
-   "end": 43.877,
-   "text": "woh agar acche se saaf karein, to baar-baar yeh problem nahi aati hai.",
-   "section": "clean"
-  },
-  {
-   "start": 44.07,
-   "end": 46.16,
+   "start": 40.703,
+   "end": 42.793,
    "text": "To mujhe apne patient ko bhi yahi kehna hai",
    "section": "advice"
   },
   {
-   "start": 46.557,
-   "end": 49.887,
+   "start": 43.27,
+   "end": 46.6,
    "text": "ki baar-baar anus ke \u2026, ek ungli andar daal ke",
    "section": "advice"
   },
   {
-   "start": 50.29,
-   "end": 52.06,
+   "start": 47.103,
+   "end": 48.873,
    "text": "thoda usko clean karna hamesha.",
    "section": "advice"
   },
   {
-   "start": 52.237,
-   "end": 55.877,
+   "start": 49.07,
+   "end": 52.71,
    "text": "To baar-baar yeh \u2026 jo aane waali problem, woh nahi aayegi.",
    "section": "takeaway"
   }
@@ -672,1112 +658,1008 @@
   },
   {
    "text": "Haan,",
-   "start": 13.903,
-   "end": 14.192,
+   "start": 14.103,
+   "end": 14.392,
    "key": "haan",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "bahut",
-   "start": 14.192,
-   "end": 14.534,
+   "start": 14.392,
+   "end": 14.734,
    "key": "bahut",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "baar,",
-   "start": 14.534,
-   "end": 14.823,
+   "start": 14.734,
+   "end": 15.023,
    "key": "baar",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "aapne",
-   "start": 15.123,
-   "end": 15.355,
+   "start": 15.323,
+   "end": 15.555,
    "key": "aapne",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "jo",
-   "start": 15.355,
-   "end": 15.479,
+   "start": 15.555,
+   "end": 15.679,
    "key": "jo",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "sahi",
-   "start": 15.479,
-   "end": 15.675,
+   "start": 15.679,
+   "end": 15.875,
    "key": "sahi",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "observe",
-   "start": 15.675,
-   "end": 15.977,
+   "start": 15.875,
+   "end": 16.177,
    "key": "observe",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "kiya",
-   "start": 15.977,
-   "end": 16.173,
+   "start": 16.177,
+   "end": 16.373,
    "key": "kiya",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "hai,",
-   "start": 16.173,
-   "end": 16.333,
+   "start": 16.373,
+   "end": 16.533,
    "key": "hai",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "ki",
-   "start": 16.757,
-   "end": 16.915,
+   "start": 17.037,
+   "end": 17.195,
    "key": "ki",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "patient",
-   "start": 16.915,
-   "end": 17.3,
+   "start": 17.195,
+   "end": 17.58,
    "key": "patient",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "ek",
-   "start": 17.3,
-   "end": 17.458,
+   "start": 17.58,
+   "end": 17.738,
    "key": "ek",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "baar",
-   "start": 17.458,
-   "end": 17.707,
+   "start": 17.738,
+   "end": 17.987,
    "key": "baar",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "theek",
-   "start": 17.707,
-   "end": 18.001,
+   "start": 17.987,
+   "end": 18.281,
    "key": "theek",
    "kw": true,
    "section": "answer"
   },
   {
    "text": "hone",
-   "start": 18.001,
-   "end": 18.25,
+   "start": 18.281,
+   "end": 18.53,
    "key": "hone",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "ke",
-   "start": 18.25,
-   "end": 18.408,
+   "start": 18.53,
+   "end": 18.688,
    "key": "ke",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "baad",
-   "start": 18.408,
-   "end": 18.657,
+   "start": 18.688,
+   "end": 18.937,
    "key": "baad",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "har",
-   "start": 19.057,
-   "end": 19.242,
+   "start": 19.437,
+   "end": 19.622,
    "key": "har",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "chaar",
-   "start": 19.242,
-   "end": 19.509,
+   "start": 19.622,
+   "end": 19.889,
    "key": "chaar",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "mahine,",
-   "start": 19.509,
-   "end": 19.817,
+   "start": 19.889,
+   "end": 20.197,
    "key": "mahine",
    "kw": true,
    "section": "answer"
   },
   {
    "text": "chhe",
-   "start": 19.817,
-   "end": 20.044,
+   "start": 20.197,
+   "end": 20.424,
    "key": "chhe",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "mahine",
-   "start": 20.044,
-   "end": 20.352,
+   "start": 20.424,
+   "end": 20.732,
    "key": "mahine",
    "kw": true,
    "section": "answer"
   },
   {
    "text": "baad",
-   "start": 20.352,
-   "end": 20.578,
+   "start": 20.732,
+   "end": 20.958,
    "key": "baad",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "phir",
-   "start": 20.578,
-   "end": 20.804,
+   "start": 20.958,
+   "end": 21.184,
    "key": "phir",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "se",
-   "start": 20.804,
-   "end": 20.948,
+   "start": 21.184,
+   "end": 21.328,
    "key": "se",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "usi",
-   "start": 20.948,
-   "end": 21.133,
+   "start": 21.328,
+   "end": 21.513,
    "key": "usi",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "problem",
-   "start": 21.133,
-   "end": 21.483,
+   "start": 21.513,
+   "end": 21.863,
    "key": "problem",
    "kw": true,
    "section": "answer"
   },
   {
    "text": "par",
-   "start": 21.483,
-   "end": 21.668,
+   "start": 21.863,
+   "end": 22.048,
    "key": "par",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "lekar",
-   "start": 21.668,
-   "end": 21.935,
+   "start": 22.048,
+   "end": 22.315,
    "key": "lekar",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "aata",
-   "start": 21.935,
-   "end": 22.162,
+   "start": 22.315,
+   "end": 22.542,
    "key": "aata",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "hai.",
-   "start": 22.162,
-   "end": 22.347,
+   "start": 22.542,
+   "end": 22.727,
    "key": "hai",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "Iska",
-   "start": 22.757,
-   "end": 22.922,
+   "start": 23.203,
+   "end": 23.368,
    "key": "iska",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "main",
-   "start": 22.922,
-   "end": 23.087,
+   "start": 23.368,
+   "end": 23.533,
    "key": "main",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "kaaran",
-   "start": 23.087,
-   "end": 23.312,
+   "start": 23.533,
+   "end": 23.758,
    "key": "kaaran",
    "kw": true,
    "section": "answer"
   },
   {
    "text": "hai",
-   "start": 23.312,
-   "end": 23.447,
+   "start": 23.758,
+   "end": 23.893,
    "key": "hai",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "ki",
-   "start": 23.857,
-   "end": 23.985,
+   "start": 24.37,
+   "end": 24.498,
    "key": "ki",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "piles",
-   "start": 23.985,
-   "end": 24.223,
+   "start": 24.498,
+   "end": 24.737,
    "key": "piles",
    "kw": true,
    "section": "answer"
   },
   {
    "text": "mein",
-   "start": 24.223,
-   "end": 24.425,
+   "start": 24.737,
+   "end": 24.938,
    "key": "mein",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "kya",
-   "start": 24.425,
-   "end": 24.59,
+   "start": 24.938,
+   "end": 25.103,
    "key": "kya",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "hota",
-   "start": 24.59,
-   "end": 24.792,
+   "start": 25.103,
+   "end": 25.305,
    "key": "hota",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "hai,",
-   "start": 24.792,
-   "end": 24.957,
+   "start": 25.305,
+   "end": 25.47,
    "key": "hai",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "jo",
-   "start": 25.357,
-   "end": 25.576,
+   "start": 25.96,
+   "end": 26.18,
    "key": "jo",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "anus",
-   "start": 25.576,
-   "end": 25.921,
+   "start": 26.18,
+   "end": 26.525,
    "key": "anus",
    "kw": true,
    "section": "answer"
   },
   {
    "text": "dwaar",
-   "start": 25.921,
-   "end": 26.329,
+   "start": 26.525,
+   "end": 26.933,
    "key": "dwaar",
    "kw": true,
    "section": "answer"
   },
   {
    "text": "hai,",
-   "start": 26.329,
-   "end": 26.612,
+   "start": 26.933,
+   "end": 27.215,
    "key": "hai",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "\u2026",
-   "start": 26.612,
-   "end": 26.831,
+   "start": 27.215,
+   "end": 27.435,
    "key": "",
    "kw": false,
    "section": "answer"
   },
   {
    "text": "saaf\u2026",
-   "start": 26.831,
-   "end": 27.177,
+   "start": 27.435,
+   "end": 27.78,
    "key": "saaf",
    "kw": true,
    "section": "answer"
   },
   {
    "text": "Jaise",
-   "start": 27.37,
-   "end": 27.618,
+   "start": 27.97,
+   "end": 28.218,
    "key": "jaise",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "hum-aap",
-   "start": 27.618,
-   "end": 27.904,
+   "start": 28.218,
+   "end": 28.504,
    "key": "hum-aap",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "subah",
-   "start": 27.904,
-   "end": 28.152,
+   "start": 28.504,
+   "end": 28.752,
    "key": "subah",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "uthte",
-   "start": 28.152,
-   "end": 28.4,
+   "start": 28.752,
+   "end": 29.0,
    "key": "uthte",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "hain,",
-   "start": 28.4,
-   "end": 28.61,
+   "start": 29.0,
+   "end": 29.21,
    "key": "hain",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "to",
-   "start": 28.97,
-   "end": 29.088,
+   "start": 29.57,
+   "end": 29.688,
    "key": "to",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "hum",
-   "start": 29.088,
-   "end": 29.239,
+   "start": 29.688,
+   "end": 29.839,
    "key": "hum",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "brush",
-   "start": 29.239,
-   "end": 29.457,
+   "start": 29.839,
+   "end": 30.057,
    "key": "brush",
    "kw": true,
    "section": "routine"
   },
   {
    "text": "karte",
-   "start": 29.457,
-   "end": 29.676,
+   "start": 30.057,
+   "end": 30.276,
    "key": "karte",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "hain,",
-   "start": 29.676,
-   "end": 29.86,
+   "start": 30.276,
+   "end": 30.46,
    "key": "hain",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "daaton",
-   "start": 30.257,
-   "end": 30.533,
+   "start": 30.907,
+   "end": 31.183,
    "key": "daaton",
    "kw": true,
    "section": "routine"
   },
   {
    "text": "ke",
-   "start": 30.533,
-   "end": 30.661,
+   "start": 31.183,
+   "end": 31.311,
    "key": "ke",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "andar",
-   "start": 30.661,
-   "end": 30.9,
+   "start": 31.311,
+   "end": 31.55,
    "key": "andar",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "ka",
-   "start": 30.9,
-   "end": 31.029,
+   "start": 31.55,
+   "end": 31.679,
    "key": "ka",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "mal",
-   "start": 31.029,
-   "end": 31.195,
+   "start": 31.679,
+   "end": 31.845,
    "key": "mal",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "nikaalte",
-   "start": 31.195,
-   "end": 31.544,
+   "start": 31.845,
+   "end": 32.194,
    "key": "nikaalte",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "hain,",
-   "start": 31.544,
-   "end": 31.747,
+   "start": 32.194,
+   "end": 32.397,
    "key": "hain",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "aankhon",
-   "start": 32.157,
-   "end": 32.464,
+   "start": 32.87,
+   "end": 33.178,
    "key": "aankhon",
    "kw": true,
    "section": "routine"
   },
   {
    "text": "ke",
-   "start": 32.464,
-   "end": 32.591,
+   "start": 33.178,
+   "end": 33.304,
    "key": "ke",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "andar",
-   "start": 32.591,
-   "end": 32.826,
+   "start": 33.304,
+   "end": 33.539,
    "key": "andar",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "ke",
-   "start": 32.826,
-   "end": 32.953,
+   "start": 33.539,
+   "end": 33.666,
    "key": "ke",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "chipad",
-   "start": 32.953,
-   "end": 33.224,
+   "start": 33.666,
+   "end": 33.937,
    "key": "chipad",
    "kw": true,
    "section": "routine"
   },
   {
    "text": "nikaalte",
-   "start": 33.224,
-   "end": 33.568,
+   "start": 33.937,
+   "end": 34.281,
    "key": "nikaalte",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "hain,",
-   "start": 33.568,
-   "end": 33.767,
+   "start": 34.281,
+   "end": 34.48,
    "key": "hain",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "naak",
-   "start": 34.19,
-   "end": 34.387,
+   "start": 34.96,
+   "end": 35.157,
    "key": "naak",
    "kw": true,
    "section": "routine"
   },
   {
    "text": "saaf",
-   "start": 34.387,
-   "end": 34.585,
+   "start": 35.157,
+   "end": 35.355,
    "key": "saaf",
    "kw": true,
    "section": "routine"
   },
   {
    "text": "karte",
-   "start": 34.585,
-   "end": 34.818,
+   "start": 35.355,
+   "end": 35.588,
    "key": "karte",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "hain,",
-   "start": 34.818,
-   "end": 35.015,
+   "start": 35.588,
+   "end": 35.785,
    "key": "hain",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "kaan",
-   "start": 35.015,
-   "end": 35.212,
+   "start": 35.785,
+   "end": 35.982,
    "key": "kaan",
    "kw": true,
    "section": "routine"
   },
   {
    "text": "saaf",
-   "start": 35.212,
-   "end": 35.41,
+   "start": 35.982,
+   "end": 36.18,
    "key": "saaf",
    "kw": true,
    "section": "routine"
   },
   {
    "text": "karte",
-   "start": 35.41,
-   "end": 35.643,
+   "start": 36.18,
+   "end": 36.413,
    "key": "karte",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "hain.",
-   "start": 35.643,
-   "end": 35.84,
+   "start": 36.413,
+   "end": 36.61,
    "key": "hain",
    "kw": false,
    "section": "routine"
   },
   {
    "text": "Waise",
-   "start": 36.037,
-   "end": 36.507,
+   "start": 36.803,
+   "end": 37.274,
    "key": "waise",
    "kw": false,
    "section": "clean"
   },
   {
    "text": "hi",
-   "start": 36.507,
-   "end": 36.76,
+   "start": 37.274,
+   "end": 37.527,
    "key": "hi",
    "kw": false,
    "section": "clean"
   },
   {
    "text": "jo",
-   "start": 36.76,
-   "end": 37.013,
+   "start": 37.527,
+   "end": 37.78,
    "key": "jo",
    "kw": false,
    "section": "clean"
   },
   {
    "text": "\u2026",
-   "start": 37.013,
-   "end": 37.267,
+   "start": 37.78,
+   "end": 38.033,
    "key": "",
    "kw": false,
    "section": "clean"
   },
   {
    "text": "mootra",
-   "start": 37.69,
-   "end": 38.049,
+   "start": 38.464,
+   "end": 38.823,
    "key": "mootra",
    "kw": false,
    "section": "clean"
   },
   {
    "text": "ke,",
-   "start": 38.049,
-   "end": 38.217,
+   "start": 38.823,
+   "end": 38.991,
    "key": "ke",
    "kw": false,
    "section": "clean"
   },
   {
    "text": "jo",
-   "start": 38.217,
-   "end": 38.385,
+   "start": 38.991,
+   "end": 39.158,
    "key": "jo",
    "kw": false,
    "section": "clean"
   },
   {
    "text": "indriyon",
-   "start": 38.385,
-   "end": 38.84,
+   "start": 39.158,
+   "end": 39.613,
    "key": "indriyon",
    "kw": true,
    "section": "clean"
   },
   {
    "text": "ke",
-   "start": 38.84,
-   "end": 39.007,
+   "start": 39.613,
+   "end": 39.781,
    "key": "ke",
    "kw": false,
    "section": "clean"
   },
   {
    "text": "jo",
-   "start": 39.007,
-   "end": 39.175,
+   "start": 39.781,
+   "end": 39.949,
    "key": "jo",
    "kw": false,
    "section": "clean"
   },
   {
    "text": "dwaar",
-   "start": 39.175,
-   "end": 39.487,
+   "start": 39.949,
+   "end": 40.26,
    "key": "dwaar",
    "kw": true,
    "section": "clean"
   },
   {
    "text": "hain,",
-   "start": 39.487,
-   "end": 39.75,
+   "start": 40.26,
+   "end": 40.524,
    "key": "hain",
    "kw": false,
    "section": "clean"
   },
   {
-   "text": "woh",
-   "start": 40.157,
-   "end": 40.381,
-   "key": "woh",
-   "kw": false,
-   "section": "clean"
-  },
-  {
-   "text": "agar",
-   "start": 40.381,
-   "end": 40.656,
-   "key": "agar",
-   "kw": false,
-   "section": "clean"
-  },
-  {
-   "text": "acche",
-   "start": 40.656,
-   "end": 40.981,
-   "key": "acche",
-   "kw": false,
-   "section": "clean"
-  },
-  {
-   "text": "se",
-   "start": 40.981,
-   "end": 41.155,
-   "key": "se",
-   "kw": false,
-   "section": "clean"
-  },
-  {
-   "text": "saaf",
-   "start": 41.155,
-   "end": 41.43,
-   "key": "saaf",
-   "kw": true,
-   "section": "clean"
-  },
-  {
-   "text": "karein,",
-   "start": 41.43,
-   "end": 41.804,
-   "key": "karein",
-   "kw": false,
-   "section": "clean"
-  },
-  {
-   "text": "to",
-   "start": 41.804,
-   "end": 41.979,
-   "key": "to",
-   "kw": false,
-   "section": "clean"
-  },
-  {
-   "text": "baar-baar",
-   "start": 41.979,
-   "end": 42.454,
-   "key": "baar-baar",
-   "kw": true,
-   "section": "clean"
-  },
-  {
-   "text": "yeh",
-   "start": 42.454,
-   "end": 42.678,
-   "key": "yeh",
-   "kw": false,
-   "section": "clean"
-  },
-  {
-   "text": "problem",
-   "start": 42.678,
-   "end": 43.103,
-   "key": "problem",
-   "kw": true,
-   "section": "clean"
-  },
-  {
-   "text": "nahi",
-   "start": 43.103,
-   "end": 43.377,
-   "key": "nahi",
-   "kw": false,
-   "section": "clean"
-  },
-  {
-   "text": "aati",
-   "start": 43.377,
-   "end": 43.652,
-   "key": "aati",
-   "kw": false,
-   "section": "clean"
-  },
-  {
-   "text": "hai.",
-   "start": 43.652,
-   "end": 43.877,
-   "key": "hai",
-   "kw": false,
-   "section": "clean"
-  },
-  {
    "text": "To",
-   "start": 44.07,
-   "end": 44.221,
+   "start": 40.703,
+   "end": 40.854,
    "key": "to",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "mujhe",
-   "start": 44.221,
-   "end": 44.501,
+   "start": 40.854,
+   "end": 41.134,
    "key": "mujhe",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "apne",
-   "start": 44.501,
-   "end": 44.738,
+   "start": 41.134,
+   "end": 41.371,
    "key": "apne",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "patient",
-   "start": 44.738,
-   "end": 45.104,
+   "start": 41.371,
+   "end": 41.738,
    "key": "patient",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "ko",
-   "start": 45.104,
-   "end": 45.255,
+   "start": 41.738,
+   "end": 41.888,
    "key": "ko",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "bhi",
-   "start": 45.255,
-   "end": 45.449,
+   "start": 41.888,
+   "end": 42.082,
    "key": "bhi",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "yahi",
-   "start": 45.449,
-   "end": 45.686,
+   "start": 42.082,
+   "end": 42.319,
    "key": "yahi",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "kehna",
-   "start": 45.686,
-   "end": 45.966,
+   "start": 42.319,
+   "end": 42.599,
    "key": "kehna",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "hai",
-   "start": 45.966,
-   "end": 46.16,
+   "start": 42.599,
+   "end": 42.793,
    "key": "hai",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "ki",
-   "start": 46.557,
-   "end": 46.785,
+   "start": 43.27,
+   "end": 43.499,
    "key": "ki",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "baar-baar",
-   "start": 46.785,
-   "end": 47.405,
+   "start": 43.499,
+   "end": 44.119,
    "key": "baar-baar",
    "kw": true,
    "section": "advice"
   },
   {
    "text": "anus",
-   "start": 47.405,
-   "end": 47.765,
+   "start": 44.119,
+   "end": 44.478,
    "key": "anus",
    "kw": true,
    "section": "advice"
   },
   {
    "text": "ke",
-   "start": 47.765,
-   "end": 47.993,
+   "start": 44.478,
+   "end": 44.706,
    "key": "ke",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "\u2026,",
-   "start": 47.993,
-   "end": 48.222,
+   "start": 44.706,
+   "end": 44.935,
    "key": "",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "ek",
-   "start": 48.222,
-   "end": 48.45,
+   "start": 44.935,
+   "end": 45.164,
    "key": "ek",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "ungli",
-   "start": 48.45,
-   "end": 48.875,
+   "start": 45.164,
+   "end": 45.588,
    "key": "ungli",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "andar",
-   "start": 48.875,
-   "end": 49.299,
+   "start": 45.588,
+   "end": 46.012,
    "key": "andar",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "daal",
-   "start": 49.299,
-   "end": 49.658,
+   "start": 46.012,
+   "end": 46.371,
    "key": "daal",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "ke",
-   "start": 49.658,
-   "end": 49.887,
+   "start": 46.371,
+   "end": 46.6,
    "key": "ke",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "thoda",
-   "start": 50.29,
-   "end": 50.633,
+   "start": 47.103,
+   "end": 47.447,
    "key": "thoda",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "usko",
-   "start": 50.633,
-   "end": 50.924,
+   "start": 47.447,
+   "end": 47.737,
    "key": "usko",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "clean",
-   "start": 50.924,
-   "end": 51.267,
+   "start": 47.737,
+   "end": 48.081,
    "key": "clean",
    "kw": true,
    "section": "advice"
   },
   {
    "text": "karna",
-   "start": 51.267,
-   "end": 51.611,
+   "start": 48.081,
+   "end": 48.424,
    "key": "karna",
    "kw": false,
    "section": "advice"
   },
   {
    "text": "hamesha.",
-   "start": 51.611,
-   "end": 52.06,
+   "start": 48.424,
+   "end": 48.873,
    "key": "hamesha",
    "kw": true,
    "section": "advice"
   },
   {
    "text": "To",
-   "start": 52.237,
-   "end": 52.441,
+   "start": 49.07,
+   "end": 49.274,
    "key": "to",
    "kw": false,
    "section": "takeaway"
   },
   {
    "text": "baar-baar",
-   "start": 52.441,
-   "end": 52.994,
+   "start": 49.274,
+   "end": 49.827,
    "key": "baar-baar",
    "kw": true,
    "section": "takeaway"
   },
   {
    "text": "yeh",
-   "start": 52.994,
-   "end": 53.256,
+   "start": 49.827,
+   "end": 50.089,
    "key": "yeh",
    "kw": false,
    "section": "takeaway"
   },
   {
    "text": "\u2026",
-   "start": 53.256,
-   "end": 53.46,
+   "start": 50.089,
+   "end": 50.293,
    "key": "",
    "kw": false,
    "section": "takeaway"
   },
   {
    "text": "jo",
-   "start": 53.46,
-   "end": 53.664,
+   "start": 50.293,
+   "end": 50.497,
    "key": "jo",
    "kw": false,
    "section": "takeaway"
   },
   {
    "text": "aane",
-   "start": 53.664,
-   "end": 53.984,
+   "start": 50.497,
+   "end": 50.817,
    "key": "aane",
    "kw": false,
    "section": "takeaway"
   },
   {
    "text": "waali",
-   "start": 53.984,
-   "end": 54.362,
+   "start": 50.817,
+   "end": 51.196,
    "key": "waali",
    "kw": false,
    "section": "takeaway"
   },
   {
    "text": "problem,",
-   "start": 54.362,
-   "end": 54.857,
+   "start": 51.196,
+   "end": 51.691,
    "key": "problem",
    "kw": true,
    "section": "takeaway"
   },
   {
    "text": "woh",
-   "start": 54.857,
-   "end": 55.12,
+   "start": 51.691,
+   "end": 51.953,
    "key": "woh",
    "kw": false,
    "section": "takeaway"
   },
   {
    "text": "nahi",
-   "start": 55.12,
-   "end": 55.44,
+   "start": 51.953,
+   "end": 52.273,
    "key": "nahi",
    "kw": false,
    "section": "takeaway"
   },
   {
    "text": "aayegi.",
-   "start": 55.44,
-   "end": 55.877,
+   "start": 52.273,
+   "end": 52.71,
    "key": "aayegi",
    "kw": false,
    "section": "takeaway"
@@ -1799,39 +1681,39 @@
   {
    "name": "answer",
    "speaker": "doctor",
-   "start": 13.833,
-   "end": 27.3
+   "start": 14.033,
+   "end": 27.9
   },
   {
    "name": "routine",
    "speaker": "doctor",
-   "start": 27.3,
-   "end": 35.967
+   "start": 27.9,
+   "end": 36.733
   },
   {
    "name": "clean",
    "speaker": "doctor",
-   "start": 35.967,
-   "end": 44.0
+   "start": 36.733,
+   "end": 40.633
   },
   {
    "name": "advice",
    "speaker": "doctor",
-   "start": 44.0,
-   "end": 52.167
+   "start": 40.633,
+   "end": 49.0
   },
   {
    "name": "takeaway",
    "speaker": "doctor",
-   "start": 52.167,
-   "end": 56.0
+   "start": 49.0,
+   "end": 52.833
   }
  ],
  "gaps": [
   {
    "start": 12.433,
-   "end": 13.833
+   "end": 14.033
   }
  ],
- "speech_duration": 56.0
+ "speech_duration": 52.833
 }
